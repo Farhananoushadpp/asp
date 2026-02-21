@@ -1,0 +1,26 @@
+/**
+ * ASP Global Marine Trading LLC - Home Page
+ * 
+ * Home page specific styling
+ */
+
+.home-page {
+  min-height: 100vh;
+}
+
+/* Hero section specific styles for home page */
+.home-page .hero {
+  margin-bottom: 0;
+}
+
+/* Smooth transitions between sections */
+.home-page section {
+  scroll-margin-top: 80px;
+}
+
+/* Responsive adjustments for home page */
+@media (max-width: 768px) {
+  .home-page section {
+    scroll-margin-top: 60px;
+  }
+}

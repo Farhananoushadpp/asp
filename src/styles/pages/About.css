@@ -1,0 +1,216 @@
+/**
+ * ASP Global Marine Trading LLC - About Page
+ * 
+ * About page specific styling
+ */
+
+.about-page {
+  min-height: calc(100vh - 160px);
+}
+
+.page-header {
+  text-align: center;
+  padding: var(--spacing-4xl) 0;
+  background: var(--background-gradient);
+  margin-bottom: var(--spacing-4xl);
+}
+
+.page-title {
+  font-size: var(--font-size-6xl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 700;
+}
+
+.page-subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--secondary-color);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.company-mission-vision {
+  background: var(--white-color);
+  padding: var(--spacing-6xl) 0;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4xl);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.mission-box,
+.vision-box {
+  background: var(--background-color);
+  padding: var(--spacing-4xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.mission-box:hover,
+.vision-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.mission-box h2,
+.vision-box h2 {
+  color: var(--primary-color);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.mission-box p,
+.vision-box p {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.company-history {
+  background: var(--white-color);
+  padding: var(--spacing-6xl) 0;
+}
+
+.history-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 var(--container-padding);
+}
+
+.history-content h2 {
+  color: var(--primary-color);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.history-content p {
+  color: var(--text-color);
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+}
+
+.group-companies {
+  margin-top: var(--spacing-4xl);
+}
+
+.group-companies h3 {
+  color: var(--primary-color);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.company-item {
+  background: var(--background-color);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 500;
+  border: 1px solid var(--accent-color);
+  transition: all var(--transition-normal);
+}
+
+.company-item:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    padding: var(--spacing-3xl) 0;
+    margin-bottom: var(--spacing-3xl);
+  }
+  
+  .page-title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .page-subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .company-mission-vision {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    padding: 0 var(--container-padding);
+  }
+  
+  .mission-box,
+  .vision-box {
+    padding: var(--spacing-3xl);
+  }
+  
+  .mission-box h2,
+  .vision-box h2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .company-history {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .history-content h2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .history-content p {
+    font-size: var(--font-size-base);
+  }
+  
+  .group-companies h3 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .companies-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .page-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .mission-box,
+  .vision-box {
+    padding: var(--spacing-2xl);
+  }
+  
+  .mission-box h2,
+  .vision-box h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .company-item {
+    padding: var(--spacing-md);
+  }
+}

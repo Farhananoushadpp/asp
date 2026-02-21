@@ -1,0 +1,172 @@
+/**
+ * ASP Global Marine Trading LLC - About Component
+ * 
+ * About section with company information and values
+ */
+
+.about {
+  padding: var(--spacing-6xl) 0;
+  background: var(--white-color);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4xl);
+  align-items: center;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-size: var(--font-size-5xl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.2;
+}
+
+.about-content p {
+  font-size: var(--font-size-lg);
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+}
+
+.core-values {
+  margin-top: var(--spacing-3xl);
+}
+
+.core-values h3 {
+  color: var(--primary-color);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-features li {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+  font-size: var(--font-size-base);
+}
+
+.check-icon {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: var(--font-size-lg);
+  margin-right: var(--spacing-md);
+  min-width: 20px;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  background: var(--background-gradient);
+  border: 2px solid var(--accent-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-4xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.image-placeholder:hover {
+  transform: translateY(-5px);
+}
+
+.marine-icon {
+  font-size: var(--font-size-6xl);
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
+}
+
+.image-placeholder p {
+  color: var(--text-color);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3xl);
+    padding: 0 var(--container-padding);
+  }
+  
+  .about-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .about-content h2 {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .about-content p {
+    font-size: var(--font-size-base);
+  }
+  
+  .core-values h3 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .about-features li {
+    font-size: var(--font-size-sm);
+  }
+  
+  .image-placeholder {
+    padding: var(--spacing-3xl);
+  }
+  
+  .marine-icon {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .image-placeholder p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .about-grid {
+    gap: var(--spacing-2xl);
+  }
+  
+  .about-content h2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .image-placeholder {
+    padding: var(--spacing-2xl);
+  }
+  
+  .marine-icon {
+    font-size: var(--font-size-3xl);
+  }
+}

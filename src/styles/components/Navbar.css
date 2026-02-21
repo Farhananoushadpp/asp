@@ -1,0 +1,177 @@
+/**
+ * ASP Global Marine Trading LLC - Navbar Component
+ * 
+ * Navigation bar styling with responsive design
+ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+  transition: all var(--transition-normal);
+}
+
+.nav-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--container-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  flex: 1;
+}
+
+.nav-logo h2 {
+  color: var(--primary-color);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-xs);
+  transition: color var(--transition-normal);
+}
+
+.nav-logo p {
+  color: var(--secondary-color);
+  font-size: var(--font-size-xs);
+  font-style: italic;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-normal);
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-3xl);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color var(--transition-normal);
+  padding: var(--spacing-sm) 0;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--primary-color);
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width var(--transition-normal);
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+}
+
+.bar.active:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.bar.active:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.active:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: var(--spacing-md) var(--container-padding);
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--white-color);
+    box-shadow: var(--shadow-xl);
+    transition: right var(--transition-normal);
+    z-index: 999;
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-6xl) var(--spacing-3xl);
+    align-items: flex-start;
+  }
+  
+  .nav-list a {
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-md) 0;
+  }
+  
+  .nav-logo h2 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    width: 90%;
+  }
+  
+  .nav-list {
+    padding: var(--spacing-5xl) var(--spacing-2xl);
+  }
+}

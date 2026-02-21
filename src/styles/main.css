@@ -1,0 +1,177 @@
+/**
+ * ASP Global Marine Trading LLC - Main CSS File
+ * 
+ * Imports all modular CSS files for a clean, organized structure
+ */
+
+/* Base Styles */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+@import './base/layout.css';
+@import './base/utilities.css';
+
+/* Component Styles */
+@import './components/Navbar.css';
+@import './components/Hero.css';
+@import './components/About.css';
+@import './components/Products.css';
+@import './components/Strengths.css';
+@import './components/Certifications.css';
+@import './components/Contact.css';
+@import './components/Footer.css';
+
+/* Page Styles */
+@import './pages/Home.css';
+@import './pages/About.css';
+@import './pages/Products.css';
+@import './pages/Contact.css';
+
+/* Icon Styles */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white-color);
+  transition: all var(--transition-normal);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Product Icons */
+.icon-engine::before { content: "⚙"; }
+.icon-turbo::before { content: "🌀"; }
+.icon-hvac::before { content: "❄"; }
+.icon-pump::before { content: "💧"; }
+.icon-purifier::before { content: "🔬"; }
+.icon-boiler::before { content: "🔥"; }
+.icon-safety::before { content: "🚒"; }
+.icon-storage::before { content: "📦"; }
+
+/* Strength Icons */
+.icon-portfolio::before { content: "📦"; }
+.icon-oem::before { content: "⚙"; }
+.icon-solas::before { content: "🛡"; }
+.icon-fast::before { content: "🚀"; }
+.icon-network::before { content: "🌐"; }
+.icon-price::before { content: "💰"; }
+
+/* Contact Icons */
+.icon-location::before { content: "📍"; }
+.icon-phone::before { content: "📞"; }
+.icon-email::before { content: "✉"; }
+
+/* Certification Icons */
+.icon-cert::before { content: "✓"; }
+.icon-iso::before { content: "🏆"; }
+.icon-maritime::before { content: "⚓"; }
+.icon-global::before { content: "🌍"; }
+
+/* Floating Buttons */
+.floating-quote {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary-gradient);
+  color: var(--white-color);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.floating-quote:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  color: var(--white-color);
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-2xl);
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  transition: all var(--transition-normal);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Adjust floating button positions when both are present */
+.floating-quote {
+  bottom: 100px;
+}
+
+/* Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-quote {
+    bottom: 20px;
+    right: 20px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+  
+  .whatsapp-float {
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-quote {
+    bottom: 15px;
+    right: 15px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+  
+  .whatsapp-float {
+    bottom: 70px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-lg);
+  }
+}
