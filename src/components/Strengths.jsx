@@ -1,36 +1,34 @@
-import React from 'react';
-
 const Strengths = () => {
   const strengths = [
     {
       icon: "icon-portfolio",
       title: "Comprehensive Marine Product Portfolio",
-      description: "Wide range of marine and offshore equipment for all vessel types"
+      description: "Wide range of marine and offshore equipment for all vessel types including engines, pumps, compressors, safety equipment, and consumables."
     },
     {
       icon: "icon-oem",
-      title: "Genuine, OEM & Equivalent Spare Parts",
-      description: "Authentic parts ensuring optimal performance and longevity"
+      title: "Genuine, OEM & Equivalent Spare Parts Sourcing",
+      description: "Authentic parts ensuring optimal performance and longevity with access to original manufacturer specifications and quality alternatives."
     },
     {
       icon: "icon-solas",
-      title: "SOLAS & IMO Compliant Equipment",
-      description: "All equipment meets international maritime safety standards"
+      title: "SOLAS / IMO / Class Compliant Equipment",
+      description: "All equipment meets international maritime safety standards and classification society requirements for global vessel operations."
     },
     {
       icon: "icon-fast",
-      title: "Rapid Global Delivery",
-      description: "Fast and reliable shipping to ports worldwide"
+      title: "Rapid Response & Global Logistics",
+      description: "Fast and reliable shipping to ports worldwide with strong distribution networks and experienced logistics partners."
     },
     {
       icon: "icon-network",
-      title: "Strong Supplier Network",
-      description: "Strategic partnerships across Europe and Asia"
+      title: "Strong Supplier Network (Europe & Asia)",
+      description: "Strategic partnerships across Europe and Asia ensuring reliable sourcing and competitive pricing for all marine equipment needs."
     },
     {
       icon: "icon-price",
       title: "Competitive Pricing",
-      description: "Quality solutions without compromising on affordability"
+      description: "Quality solutions without compromising on affordability, offering value-driven pricing for marine and offshore equipment."
     }
   ];
 

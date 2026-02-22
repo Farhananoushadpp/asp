@@ -9,8 +9,8 @@
  * - JavaScript ES6+ features
  */
 
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
@@ -18,6 +18,20 @@ import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
 import Contact from "./pages/Contact.jsx";
 import "./styles/main.css";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   useEffect(() => {
@@ -83,6 +97,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Navbar />
         <main className="main-content">
           <Routes>
@@ -94,15 +109,7 @@ function App() {
         </main>
         <Footer />
 
-        {/* Floating Quote Button */}
-        <a
-          href="/contact"
-          className="floating-quote"
-        >
-          <span>💬</span>
-          Request Quote
-        </a>
-
+        
         {/* WhatsApp Floating Button */}
         <a
           href="https://wa.me/971525478137"
@@ -110,7 +117,6 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>📱</span>
         </a>
       </div>
     </Router>

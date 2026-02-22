@@ -1,106 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- 
         ASP Global Marine Trading LLC - Main HTML File
         Technology: HTML5 Semantic Markup
         Purpose: SEO-optimized structure for React application
     -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ASP Global Marine Trading LLC - Marine & Offshore Equipment Supply. Driven by Quality. Propelled by Trust.">
-    <meta name="keywords" content="marine equipment, offshore supplies, marine spare parts, SOLAS equipment, Dubai UAE">
-    <meta name="author" content="ASP Global Marine Trading LLC">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ASP Global Marine Trading LLC - Marine & Offshore Equipment Supply. Driven by Quality. Propelled by Trust."
+    />
+    <meta
+      name="keywords"
+      content="marine spare parts supplier UAE, marine engine spare parts Dubai, ship engine components supplier, marine safety equipment SOLAS, marine pump supplier Middle East, offshore equipment supplier UAE, turbocharger marine parts supplier, marine purifier spare parts, genuine OEM marine parts, SOLAS approved equipment, marine equipment Dubai"
+    />
+    <meta name="author" content="ASP Global Marine Trading LLC" />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="ASP Global Marine Trading LLC - Marine & Offshore Solutions">
-    <meta property="og:description" content="Supplying Genuine, OEM & Equivalent Marine Spare Parts and Safety Equipment Worldwide.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aspglobalmarine.com">
-    
+    <meta
+      property="og:title"
+      content="ASP Global Marine Trading LLC - Marine & Offshore Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Supplying Genuine, OEM & Equivalent Marine Spare Parts and Safety Equipment Worldwide."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aspglobalmarine.com" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%232E8B8B'/><text x='50' y='65' font-size='40' fill='white' text-anchor='middle'>⚓</text></svg>">
-    
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%232E8B8B'/><text x='50' y='65' font-size='40' fill='white' text-anchor='middle'>⚓</text></svg>"
+    />
+
     <title>ASP Global Marine Trading LLC - Marine & Offshore Solutions</title>
-    
+
     <!-- Preconnect to external domains for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- Google Fonts (optional - for better typography) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ASP Global Marine Trading LLC",
-      "description": "Marine & Offshore Equipment Supply - Driven by Quality. Propelled by Trust.",
-      "url": "https://aspglobalmarine.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dubai",
-        "addressCountry": "UAE"
-      },
-      "telephone": "+971 4 572 4542",
-      "email": "info@aspglobalmarine.com",
-      "sameAs": [
-        "https://wa.me/971525478137"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ASP Global Marine Trading LLC",
+        "description": "Marine & Offshore Equipment Supply - Driven by Quality. Propelled by Trust.",
+        "url": "https://aspglobalmarine.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "UAE"
+        },
+        "telephone": "+971 4 572 4542",
+        "email": "info@aspglobalmarine.com",
+        "sameAs": ["https://wa.me/971525478137"]
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <noscript>
-        <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-            <h1>ASP Global Marine Trading LLC</h1>
-            <p>JavaScript is required to view this website properly. Please enable JavaScript in your browser settings.</p>
-            <p>Contact us at: info@aspglobalmarine.com | +971 4 572 4542</p>
-        </div>
+      <div
+        style="
+          text-align: center;
+          padding: 50px;
+          font-family: Arial, sans-serif;
+        "
+      >
+        <h1>ASP Global Marine Trading LLC</h1>
+        <p>
+          JavaScript is required to view this website properly. Please enable
+          JavaScript in your browser settings.
+        </p>
+        <p>Contact us at: info@aspglobalmarine.com | +971 4 572 4542</p>
+      </div>
     </noscript>
-    
+
     <div id="root"></div>
-    
+
     <!-- Loading indicator -->
-    <div id="loading" style="
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%; 
-        background: #F4FBFB; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
+    <div
+      id="loading"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f4fbfb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 9999;
         transition: opacity 0.5s ease;
-    ">
-        <div style="
-            text-align: center;
-            color: #2E8B8B;
-        ">
-            <div style="
-                font-size: 3rem;
-                margin-bottom: 20px;
-                animation: spin 2s linear infinite;
-            ">⚓</div>
-            <h2 style="color: #2E8B8B; margin-bottom: 10px;">ASP Global Marine</h2>
-            <p style="color: #20B2AA;">Loading...</p>
+      "
+    >
+      <div style="text-align: center; color: #2e8b8b">
+        <div
+          style="
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: spin 2s linear infinite;
+          "
+        >
+          ⚓
         </div>
+        <h2 style="color: #2e8b8b; margin-bottom: 10px">ASP Global Marine</h2>
+        <p style="color: #20b2aa">Loading...</p>
+      </div>
     </div>
-    
+
     <style>
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-        
-        /* Hide loading screen when app loads */
-        #root:not(:empty) + #loading {
-            opacity: 0;
-            pointer-events: none;
+        100% {
+          transform: rotate(360deg);
         }
+      }
+
+      /* Hide loading screen when app loads */
+      #root:not(:empty) + #loading {
+        opacity: 0;
+        pointer-events: none;
+      }
     </style>
-</body>
+  </body>
 </html>

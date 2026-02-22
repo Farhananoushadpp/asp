@@ -5,7 +5,6 @@
  * Technology: React functional component with JSX
  */
 
-import React from "react";
 import Contact from "../components/Contact.jsx";
 
 const ContactPage = () => {
@@ -62,7 +61,7 @@ const ContactPage = () => {
             </div>
 
             <div className="contact-info-card">
-              <h3>Services Areas</h3>
+              <h3>Service Areas</h3>
               <div className="service-areas">
                 <ul>
                   <li>Dubai & UAE</li>
@@ -73,6 +72,30 @@ const ContactPage = () => {
                   <li>Americas</li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="group-companies">
+        <div className="container">
+          <h2>Group Companies</h2>
+          <div className="companies-grid">
+            <div className="company-card">
+              <h4>Ocean Serenity FZ-LLC</h4>
+              <p>Marine services and solutions provider</p>
+            </div>
+            <div className="company-card">
+              <h4>Ocean Infinity Marine Service LLC</h4>
+              <p>Comprehensive marine engineering services</p>
+            </div>
+            <div className="company-card">
+              <h4>ANC Arabia Contracting Company</h4>
+              <p>Industrial contracting and solutions</p>
+            </div>
+            <div className="company-card">
+              <h4>Warmsol Marine & Industrial Company</h4>
+              <p>Marine and industrial equipment solutions</p>
             </div>
           </div>
         </div>

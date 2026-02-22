@@ -5,7 +5,6 @@
  * Technology: React functional component with JSX
  */
 
-import React from "react";
 import Hero from "../components/Hero.jsx";
 import About from "../components/About.jsx";
 import Strengths from "../components/Strengths.jsx";

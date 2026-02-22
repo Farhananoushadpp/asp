@@ -5,7 +5,7 @@
  * Technology: React functional component with JSX
  */
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Products from "../components/Products.jsx";
 
 const ProductsPage = () => {
