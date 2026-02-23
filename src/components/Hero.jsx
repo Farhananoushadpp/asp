@@ -1,121 +1,122 @@
-import { useNavigate } from 'react-router-dom';
+/**
+ * ASP Global Marine Trading LLC - Hero Section
+ * 
+ * Enhanced hero with ocean wave animation and trust badges
+ * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ */
+
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/components/Hero.css';
 
 const Hero = () => {
-  const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(false);
 
-  const navigateToContact = () => {
-    navigate('/contact');
-  };
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-  const navigateToProducts = () => {
-    navigate('/products');
-  };
+  const trustBadges = [
+    { icon: 'shield', label: 'SOLAS Compliant' },
+    { icon: 'certificate', label: 'IMO Approved' },
+    { icon: 'globe', label: 'Global Logistics Support' }
+  ];
 
   return (
-    <section id="home" className="hero">
-      <div className="hero-background">
-        <div className="hero-particles"></div>
-        <div className="hero-gradient"></div>
-        <div className="hero-overlay"></div>
+    <section className="hero">
+      {/* Ocean Wave Background */}
+      <div className="hero-ocean">
+        <div className="hero-wave wave-1"></div>
+        <div className="hero-wave wave-2"></div>
+        <div className="hero-wave wave-3"></div>
+        <div className="hero-gradient-overlay"></div>
       </div>
-      <div className="hero-container">
-        <div className="hero-content">
-          <div className="hero-announcement">
-            <div className="announcement-badge">
-              <span className="badge-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-              </span>
-              <span className="badge-text">Trusted by 500+ Marine Companies Worldwide</span>
-            </div>
-            <div className="announcement-tagline">
-              Driven by Quality. Propelled by Trust.
-            </div>
+
+      {/* Floating Particles */}
+      <div className="hero-particles">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 15}s`,
+              animationDuration: `${12 + Math.random() * 8}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container">
+        <div className={`hero-content ${isVisible ? 'visible' : ''}`}>
+          {/* Badge */}
+          <div className="hero-badge">
+            <svg className="badge-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L13.09 8.26L20 9.27L15 13.14L16.18 20.02L12 16.77L7.82 20.02L9 13.14L4 9.27L10.91 8.26L12 2Z"/>
+            </svg>
+            <span className="badge-text">Driven by Quality. Propelled by Trust.</span>
           </div>
-          
-          <div className="hero-headline">
-            <h1 className="hero-title">
-              <span className="title-main">Marine & Offshore Solutions</span>
-              <span className="title-subtitle">Engineered for Reliability</span>
-            </h1>
-            <p className="hero-description">
-              Supplying Genuine, OEM & Equivalent Marine Spare Parts, Equipment & Safety Solutions Worldwide.
-            </p>
+
+          {/* Headline */}
+          <h1 className="hero-headline">
+            <span className="headline-line">Reliable Marine &</span>
+            <span className="headline-line">Offshore Product</span>
+            <span className="headline-line highlight">Solutions Worldwide</span>
+          </h1>
+
+          {/* Subtext */}
+          <p className="hero-subtext">
+            Delivering high-quality marine equipment, genuine spare parts, safety systems 
+            and industrial solutions to vessels and offshore installations globally.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="hero-ctas">
+            <Link to="/products" className="btn btn-primary">
+              <span>Explore Product Portfolio</span>
+              <svg className="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"/>
+              </svg>
+            </Link>
+            <Link to="/contact" className="btn btn-secondary">
+              <span>Request a Quote</span>
+            </Link>
           </div>
-          
-          <div className="hero-features">
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <div className="feature-content">
-                <div className="feature-number">9500+</div>
-                <div className="feature-label">Products</div>
-              </div>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-              </div>
-              <div className="feature-content">
-                <div className="feature-number">50+</div>
-                <div className="feature-label">Countries</div>
-              </div>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
-                </svg>
-              </div>
-              <div className="feature-content">
-                <div className="feature-number">2005</div>
-                <div className="feature-label">Established</div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="hero-actions">
-            <button 
-              className="btn btn-primary btn-large hero-cta"
-              onClick={navigateToContact}
-            >
-              <span>Get a Quote</span>
-              <span className="btn-arrow">→</span>
-            </button>
-            <button 
-              className="btn btn-secondary btn-large hero-secondary"
-              onClick={navigateToProducts}
-            >
-              <span>View Products</span>
-              <span className="btn-arrow">→</span>
-            </button>
-          </div>
-          
+
+          {/* Trust Badges */}
           <div className="hero-trust">
-            <div className="trust-indicators">
-              <div className="trust-item">
-                <span className="trust-icon">✓</span>
-                <span>SOLAS Compliant</span>
+            {trustBadges.map((badge, index) => (
+              <div key={index} className="trust-badge">
+                <div className="trust-icon">
+                  {badge.icon === 'shield' && (
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+                    </svg>
+                  )}
+                  {badge.icon === 'certificate' && (
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM12 19L10 17L8 19V11H12V19ZM12 9V4L17 9H12Z"/>
+                    </svg>
+                  )}
+                  {badge.icon === 'globe' && (
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.44 4 16.08 4 12C4 11.38 4.08 10.78 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.77 20 8.64 20 12C20 14.08 19.2 15.97 17.9 17.39Z"/>
+                    </svg>
+                  )}
+                </div>
+                <span className="trust-label">{badge.label}</span>
               </div>
-              <div className="trust-item">
-                <span className="trust-icon">✓</span>
-                <span>IMO Certified</span>
-              </div>
-              <div className="trust-item">
-                <span className="trust-icon">✓</span>
-                <span>Class Approved</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="hero-scroll">
+        <div className="scroll-mouse">
+          <div className="scroll-wheel"></div>
+        </div>
+        <span className="scroll-text">Scroll to explore</span>
       </div>
     </section>
   );

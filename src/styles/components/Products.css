@@ -1,205 +1,235 @@
 /**
- * ASP Global Marine Trading LLC - Products Component
+ * ASP Global Marine Trading LLC - Product Solutions Styles
  * 
- * Products section with category cards
+ * Expandable accordion for 9 product categories
+ * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
 .products {
-  padding: var(--spacing-6xl) 0;
-  background: var(--white-color);
+  padding: var(--spacing-5xl) 0;
+  background: var(--background-color);
 }
 
-.section-title {
-  font-size: var(--font-size-5xl);
-  color: var(--primary-color);
+.products .section-label {
+  display: block;
   text-align: center;
-  margin-bottom: var(--spacing-4xl);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-md);
+}
+
+.products-headline {
+  text-align: center;
+  font-size: var(--font-size-4xl);
   font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
 }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-3xl);
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
-
-.product-card {
-  background: var(--white-color);
-  border: 1px solid var(--accent-color);
-  border-radius: var(--radius-xl);
-  padding: var(--spacing-3xl);
+.products-subtext {
   text-align: center;
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-normal);
-  position: relative;
-  overflow: hidden;
+  font-size: var(--font-size-lg);
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-3xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.product-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--primary-gradient);
-  transform: scaleX(0);
+/* Accordion */
+.accordion {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background: var(--white-color);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.accordion-item:hover {
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-md);
+}
+
+.accordion-item.active {
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-normal);
+}
+
+.accordion-number {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--accent-color);
+  min-width: 32px;
+}
+
+.accordion-title {
+  flex: 1;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--secondary-color);
   transition: transform var(--transition-normal);
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+  color: var(--accent-color);
 }
 
-.product-card:hover::before {
-  transform: scaleX(1);
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow);
 }
 
-.product-icon {
-  margin-bottom: var(--spacing-lg);
-  display: flex;
-  justify-content: center;
+.accordion-item.active .accordion-content {
+  max-height: 500px;
 }
 
-.product-icon span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  font-size: var(--font-size-3xl);
-  border-radius: var(--radius-full);
-  background: var(--primary-gradient);
-  color: var(--white-color);
-  transition: all var(--transition-normal);
+.accordion-inner {
+  padding: 0 var(--spacing-xl) var(--spacing-xl);
 }
 
-.product-card:hover .product-icon span {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-lg);
-}
-
-.product-card h3 {
-  font-size: var(--font-size-xl);
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-sm);
-  font-weight: 600;
-}
-
-.product-card h4 {
-  font-size: var(--font-size-sm);
-  color: var(--secondary-color);
+.manufacturers,
+.products-list {
   margin-bottom: var(--spacing-md);
-  font-weight: 500;
 }
 
-.product-card p {
-  color: var(--text-color);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-2xl);
-  font-size: var(--font-size-base);
-}
-
-.product-card .btn {
-  background: var(--primary-color);
-  color: var(--white-color);
-  border: none;
-  padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: var(--radius-lg);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  cursor: pointer;
-  transition: all var(--transition-normal);
+.label {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--dark-gray);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-sm);
 }
 
-.product-card .btn:hover {
-  background: var(--secondary-color);
+.tags,
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.tag {
+  background: var(--background-color);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--secondary-color);
+  transition: all var(--transition-normal);
+}
+
+.tag:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+.product-tag {
+  background: var(--primary-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--white-color);
+  transition: all var(--transition-normal);
+}
+
+.product-tag:hover {
+  background: var(--accent-color);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+}
+
+.note {
+  font-size: var(--font-size-sm);
+  color: var(--accent-color);
+  font-style: italic;
+  margin: var(--spacing-md) 0 0 0;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--light-gray);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .products {
-    padding: var(--spacing-4xl) 0;
+  .products-headline {
+    font-size: var(--font-size-3xl);
   }
   
-  .section-title {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-3xl);
+  .accordion-header {
+    padding: var(--spacing-md) var(--spacing-lg);
   }
   
-  .products-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-2xl);
-    padding: 0 var(--container-padding);
-  }
-  
-  .product-card {
-    padding: var(--spacing-2xl);
-  }
-  
-  .product-icon span {
-    width: 50px;
-    height: 50px;
-    font-size: var(--font-size-2xl);
-  }
-  
-  .product-card h3 {
-    font-size: var(--font-size-lg);
-  }
-  
-  .product-card h4 {
+  .accordion-number {
     font-size: var(--font-size-xs);
+    min-width: 24px;
   }
   
-  .product-card p {
-    font-size: var(--font-size-sm);
-    margin-bottom: var(--spacing-lg);
+  .accordion-title {
+    font-size: var(--font-size-base);
   }
   
-  .product-card .btn {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    font-size: var(--font-size-xs);
+  .accordion-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .accordion-inner {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
   }
 }
 
 @media (max-width: 480px) {
-  .products {
-    padding: var(--spacing-3xl) 0;
+  .products-headline {
+    font-size: var(--font-size-2xl);
   }
   
-  .section-title {
-    font-size: var(--font-size-3xl);
-  }
-  
-  .products-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
-    padding: 0 var(--spacing-md);
-  }
-  
-  .product-card {
-    padding: var(--spacing-xl);
-  }
-  
-  .product-icon span {
-    width: 45px;
-    height: 45px;
-    font-size: var(--font-size-xl);
-  }
-  
-  .product-card h3 {
+  .products-subtext {
     font-size: var(--font-size-base);
   }
   
-  .product-card p {
+  .accordion-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+  
+  .accordion-title {
     font-size: var(--font-size-sm);
+  }
+  
+  .tag,
+  .product-tag {
+    font-size: var(--font-size-xs);
+    padding: 4px 8px;
   }
 }

@@ -1,104 +1,143 @@
-const Products = ({ onCategorySelect }) => {
+/**
+ * ASP Global Marine Trading LLC - Product Solutions Section
+ * 
+ * Expandable accordion structure for 9 product categories
+ * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ */
+
+import { useState } from 'react';
+import '../styles/components/Products.css';
+
+const Products = () => {
+  const [activeAccordion, setActiveAccordion] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveAccordion(activeAccordion === index ? null : index);
+  };
+
   const productCategories = [
     {
-      id: 'engine-spares-2stroke',
-      title: "Engine Spares - 2 Stroke",
-      subtitle: "YANMAR, Wärtsilä, MAN Energy Solutions, Cummins, MHI, Wingd",
-      description: "Complete range of 2-stroke engine spare parts for RT-FLEX, RTA, X, MC/MCC/MEC/MEB, and UEC series. Including pistons, piston crowns, rings, cylinder liners, fuel pumps, injection nozzles, camshafts, oil pumps, and sensors.",
-      icon: "icon-engine",
-      features: ["Pistons & Piston Crowns", "Cylinder Liners & Covers", "Fuel Pumps & Injection Nozzles", "Camshafts & Oil Pumps", "Sensors & Auxiliary Parts"]
+      id: 'engine-2stroke',
+      number: '01',
+      title: 'Engine Spares – 2 Stroke',
+      manufacturers: ['YANMAR', 'WARTSILA', 'MAN', 'CUMMINS', 'SULZER', 'WINGD', 'MITSUBISHI UEC'],
+      products: ['Pistons', 'Cylinder Liners', 'Fuel Pumps', 'Injection Nozzles', 'Camshafts', 'Oil Pumps', 'Sensors', 'Valves']
     },
     {
-      id: 'engine-spares-4stroke',
-      title: "Engine Spares - 4 Stroke",
-      subtitle: "Caterpillar, Cummins, Yanmar, Daihatsu, Weichai",
-      description: "Comprehensive 4-stroke engine components including cylinder covers, piston crowns, cooling jackets, air starting motors, fuel transfer pumps, cam shafts, valves, heat exchangers, and lube oil pumps.",
-      icon: "icon-engine",
-      features: ["Cylinder Covers & Pistons", "Cooling Systems", "Air Starting Motors", "Valves & Cam Shafts", "Heat Exchangers & Pumps"]
+      id: 'engine-4stroke',
+      number: '02',
+      title: 'Engine Spares – 4 Stroke',
+      manufacturers: [],
+      products: ['Cylinder Cover', 'Piston Crown', 'Cooling Jacket', 'Fuel Pump Housing', 'Air Starting Motor', 'Heat Exchangers', 'Plate Coolers', 'Sea Water Pump']
     },
     {
-      id: 'turbochargers',
-      title: "Turbochargers & Auxiliary Engine Products",
-      subtitle: "ABB (VTR, VTC Series), KBB, Mitsubishi (MET Series)",
-      description: "Turbocharger units, bearings, impeller wheels, repair kits, seal plates, and gaskets for marine auxiliary engines and main propulsion systems.",
-      icon: "icon-turbo",
-      features: ["Turbocharger Units", "Bearings & Impellers", "Repair Kits", "Seal Plates & Gaskets", "Complete Overhaul Solutions"]
-    },
-    {
-      id: 'hvac',
-      title: "HVAC Compressors & Spares",
-      subtitle: "Sabroe, Bitzer, Daikin",
-      description: "Bearings, shafts, impellers, mechanical seals, couplings, and wear rings for marine HVAC and refrigeration systems on vessels and offshore installations.",
-      icon: "icon-hvac",
-      features: ["Bearings & Shafts", "Impellers & Mechanical Seals", "Couplings & Wear Rings", "Compressor Spares", "HVAC System Components"]
+      id: 'turbo-hvac',
+      number: '03',
+      title: 'Turbochargers & HVAC',
+      manufacturers: ['ABB', 'KBB', 'Mitsubishi', 'Sabroe', 'Bitzer', 'Daikin'],
+      products: ['Bearings', 'Impellers', 'Seal Plates', 'Repair Kits', 'Shafts', 'Gaskets']
     },
     {
       id: 'pumps',
-      title: "Pumps - Marine & Industrial",
-      subtitle: "Desmi, Allweiler, Grundfos, Jabsco",
-      description: "Twin screw, three screw, gear, centrifugal, deep well, emergency fire, vacuum, and diaphragm pumps. CE, ISO9001, ISO14001, OHSAS18001 certified with CCS, BV, KR, ABS, NK, RINA, RMRS class approvals.",
-      icon: "icon-pump",
-      features: ["Twin/Three Screw Pumps", "Gear & Centrifugal Pumps", "Fire & Vacuum Pumps", "Class Approved Equipment", "Industrial Pump Solutions"]
-    },
-    {
-      id: 'purifiers',
-      title: "Purifiers & Separators",
-      subtitle: "Alfa Laval, GEA Westfalia",
-      description: "S-Type Separator, P-Type Separator, PLC controlled separator modules, disc separators, marine oil separators, and liquid solid centrifuge systems for efficient fuel and oil treatment.",
-      icon: "icon-purifier",
-      features: ["S-Type & P-Type Separators", "PLC Controlled Modules", "Disc Separators", "Marine Oil Separators", "Centrifuge Systems"]
+      number: '04',
+      title: 'Pumps – Marine & Industrial',
+      manufacturers: ['Desmi', 'Allweiler', 'Grundfos', 'Jabsco'],
+      products: ['Deep Well Pump', 'Twin Screw Pump', 'Centrifugal Pump', 'Vacuum Pump', 'Emergency Fire Pump']
     },
     {
       id: 'boilers',
-      title: "Boilers, Heat Exchangers & Air Compressor Spares",
-      subtitle: "Tanabe, Sauer Compressors, Sperre, Hatlapa",
-      description: "Boiler feed pumps, burner nozzles, safety valves, pressure gauges, LP/HP valves, piston rings, cylinder liners, lube oil pumps, and unloader valves for marine boiler and compressor systems.",
-      icon: "icon-boiler",
-      features: ["Boiler Feed Pumps & Burners", "Safety Valves & Gauges", "Compressor Spares", "Heat Exchanger Components", "Complete Boiler Systems"]
+      number: '05',
+      title: 'Boilers & Air Compressors',
+      manufacturers: ['Tanabe', 'JP Sauer & Sohn', 'Sperre', 'Hatlapa'],
+      products: ['Piston Rings', 'Cylinder Liners', 'LP/HP Valves', 'Burner Nozzles', 'Control PCB', 'Temperature Sensors']
     },
     {
-      id: 'safety',
-      title: "LSA & FFA (Life Saving & Fire Fighting Equipment)",
-      subtitle: "SOLAS Approved & IMO Compliant",
-      description: "Complete range of life-saving appliances and fire fighting equipment including life rafts, lifebuoys, fire hoses, fireman suits, immersion suits, EEBD, SCBA, and pyrotechnics.",
-      icon: "icon-safety",
-      features: ["Life Rafts & Lifebuoys", "Fire Fighting Equipment", "Immersion Suits & EEBD", "SCBA & Gas Detectors", "SOLAS Compliant Equipment"]
+      id: 'hydraulic',
+      number: '06',
+      title: 'Hydraulic Systems',
+      manufacturers: [],
+      products: ['Hatch Cover Systems', 'Steering Gear Pumps', 'Hydraulic Motors', 'Control Blocks', 'Gearboxes', 'Power Packs']
+    },
+    {
+      id: 'purifiers',
+      number: '07',
+      title: 'Purifiers & Separators',
+      manufacturers: ['GEA Westfalia', 'Alfa Laval'],
+      products: ['Oil Separators', 'Disc Separators', 'Separator Modules', 'Gravity Ring Systems']
     },
     {
       id: 'deck-stores',
-      title: "Deck Stores & Engine Stores",
-      subtitle: "Complete Marine Consumables",
-      description: "Ropes, shackles, gauging tapes, navigation lights, tools, welding consumables, filters, bearings, mechanical seals, high pressure washers, explosion proof lamps, PPE kits, and first aid supplies.",
-      icon: "icon-storage",
-      features: ["Ropes & Shackles", "Navigation Equipment", "Tools & Welding Supplies", "Safety Equipment & PPE", "Marine Consumables"]
+      number: '08',
+      title: 'Deck Stores & Engine Stores',
+      manufacturers: [],
+      products: ['Ropes', 'Shackles', 'Fenders', 'Navigation Lights', 'Flags', 'Tarpaulin', 'Gaskets', 'Bearings', 'Hoses', 'Relays', 'Transformers', 'Carbon Brushes']
+    },
+    {
+      id: 'safety',
+      number: '09',
+      title: 'LSA & FFA Equipment',
+      manufacturers: [],
+      products: ['Life Rafts', 'Fire Hoses', 'SCBA', 'EEBD', 'Immersion Suits', 'Fire Extinguishers', 'Gas Detectors'],
+      note: 'All safety equipment supplied in compliance with international maritime regulations.'
     }
   ];
-
-  const handleLearnMore = (category) => {
-    if (onCategorySelect) {
-      onCategorySelect(category.id);
-    }
-    // In a real application, this would navigate to a detailed product page
-    console.log('Learn more about:', category.title);
-  };
 
   return (
     <section id="products" className="products">
       <div className="container">
-        <h2 className="section-title">Our Products</h2>
-        <div className="products-grid">
-          {productCategories.map((category) => (
-            <div key={category.id} className="product-card">
-              <div className="product-icon"><span className={category.icon}></span></div>
-              <h3>{category.title}</h3>
-              {category.subtitle && <h4>{category.subtitle}</h4>}
-              <p>{category.description}</p>
+        <span className="section-label">PRODUCT PORTFOLIO</span>
+        <h2 className="products-headline">Product Solutions Overview</h2>
+        <p className="products-subtext">
+          Comprehensive range of marine equipment and spare parts for all vessel types
+        </p>
+
+        <div className="accordion">
+          {productCategories.map((category, index) => (
+            <div 
+              key={category.id}
+              className={`accordion-item ${activeAccordion === index ? 'active' : ''}`}
+            >
               <button 
-                className="btn btn-secondary"
-                onClick={() => handleLearnMore(category)}
+                className="accordion-header"
+                onClick={() => toggleAccordion(index)}
+                aria-expanded={activeAccordion === index}
               >
-                Learn More
+                <span className="accordion-number">{category.number}</span>
+                <span className="accordion-title">{category.title}</span>
+                <span className="accordion-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 10l5 5 5-5z"/>
+                  </svg>
+                </span>
               </button>
+              
+              <div className="accordion-content">
+                <div className="accordion-inner">
+                  {category.manufacturers.length > 0 && (
+                    <div className="manufacturers">
+                      <span className="label">Supported Manufacturers:</span>
+                      <div className="tags">
+                        {category.manufacturers.map((mfg, i) => (
+                          <span key={i} className="tag">{mfg}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="products-list">
+                    <span className="label">Products:</span>
+                    <div className="product-tags">
+                      {category.products.map((product, i) => (
+                        <span key={i} className="product-tag">{product}</span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {category.note && (
+                    <p className="note">{category.note}</p>
+                  )}
+                </div>
+              </div>
             </div>
           ))}
         </div>

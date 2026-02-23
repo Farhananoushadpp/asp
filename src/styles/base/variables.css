@@ -1,31 +1,56 @@
 /**
  * ASP Global Marine Trading LLC - CSS Variables
  * 
- * Central location for all CSS custom properties
- * Theme: Modern Marine Green
+ * ASP PDF Design System - Strictly Followed
+ * Theme: Deep Ocean Blue Maritime Corporate
  */
 
 :root {
-  /* Enhanced Color Palette */
-  --primary-color: #3BBFA7; /* Modern Marine Green */
-  --secondary-color: #2DA87A; /* Darker Marine Green */
-  --accent-color: #E6F7F4; /* Light Background Accent */
-  --background-color: #F8FFFD; /* Very Light Marine */
-  --text-color: #0A2E2A; /* Dark Marine Text */
-  --white-color: #FFFFFF;
-  --light-gray: #F7F9FA;
-  --medium-gray: #E9ECEF;
-  --dark-gray: #6C757D;
-  
-  /* Enhanced Gradient Colors */
-  --primary-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  --background-gradient: linear-gradient(135deg, var(--background-color), var(--accent-color));
-  --hero-gradient: linear-gradient(135deg, #3BBFA7 0%, #2DA87A 50%, #1F7A6E 100%);
-  --card-gradient: linear-gradient(145deg, #FFFFFF 0%, #F8FFFD 100%);
-  
-  /* Enhanced Typography */
-  --font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-family-heading: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* ASP PDF Color Palette - STRICT */
+  --primary-color: #0d2c4a; /* Deep Ocean Blue */
+  --secondary-color: #0f5c5e; /* Marine Teal */
+  --accent-color: #1faf9a; /* Sea Green */
+  --background-color: #f4f8fa; /* Soft Ice Grey */
+  --text-color: #1c2733; /* Charcoal Navy */
+  --white-color: #ffffff;
+  --light-gray: #e8edf0;
+  --medium-gray: #b8c5ce;
+  --dark-gray: #5a6b7a;
+
+  /* ASP PDF Gradients */
+  --primary-gradient: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  --accent-gradient: linear-gradient(
+    135deg,
+    var(--accent-color) 0%,
+    var(--secondary-color) 100%
+  );
+  --background-gradient: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    var(--white-color) 100%
+  );
+  --hero-gradient: linear-gradient(
+    135deg,
+    #0d2c4a 0%,
+    #0f5c5e 50%,
+    #1faf9a 100%
+  );
+  --ocean-wave-gradient: linear-gradient(
+    180deg,
+    rgba(13, 44, 74, 0.9) 0%,
+    rgba(15, 92, 94, 0.8) 50%,
+    rgba(31, 175, 154, 0.7) 100%
+  );
+
+  /* Typography - Clean Corporate */
+  --font-family:
+    "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-heading:
+    "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -36,8 +61,8 @@
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
   --font-size-6xl: 3.75rem;
-  
-  /* Enhanced Spacing */
+
+  /* Spacing - Spacious Layout */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -48,39 +73,35 @@
   --spacing-4xl: 80px;
   --spacing-5xl: 96px;
   --spacing-6xl: 128px;
-  
-  /* Enhanced Border Radius */
-  --radius-sm: 6px;
+
+  /* Border Radius - Clean */
+  --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-2xl: 24px;
   --radius-full: 50%;
-  
-  /* Enhanced Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
-  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
-  --shadow-primary: 0 10px 25px rgba(59, 191, 167, 0.25);
-  
-  /* Enhanced Transitions */
-  --transition-fast: 0.15s ease;
+
+  /* Shadows - Subtle */
+  --shadow-sm: 0 1px 2px rgba(13, 44, 74, 0.05);
+  --shadow-md: 0 4px 6px rgba(13, 44, 74, 0.08);
+  --shadow-lg: 0 10px 15px rgba(13, 44, 74, 0.1);
+  --shadow-xl: 0 20px 25px rgba(13, 44, 74, 0.12);
+  --shadow-primary: 0 10px 25px rgba(13, 44, 74, 0.2);
+
+  /* Transitions - Smooth */
+  --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
-  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  
+
   /* Container */
   --container-max-width: 1200px;
-  --container-padding: 0 24px;
-  
-  /* Z-index scale */
+  --container-padding: 24px;
+
+  /* Z-index */
   --z-dropdown: 1000;
   --z-sticky: 1020;
   --z-fixed: 1030;
   --z-modal-backdrop: 1040;
   --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
 }
