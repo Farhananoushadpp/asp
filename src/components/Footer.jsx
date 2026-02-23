@@ -16,7 +16,13 @@ const Footer = () => {
         <div className="footer-grid">
           {/* Company Info */}
           <div className="footer-block">
-            <h3 className="footer-title">ASP Global Marine</h3>
+            <div className="footer-logo">
+              <img 
+                src="/asplogo.svg" 
+                alt="ASP Global Marine Trading LLC" 
+                className="footer-logo-image"
+              />
+            </div>
             <p className="footer-description">
               Specialized marine and offshore product solution provider delivering 
               high-quality equipment and spare parts worldwide.

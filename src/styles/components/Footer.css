@@ -24,6 +24,22 @@
   padding: var(--spacing-md);
 }
 
+.footer-logo {
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-logo-image {
+  height: 60px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+}
+
+.footer-logo-image:hover {
+  transform: scale(1.05);
+}
+
 .footer-title {
   font-size: var(--font-size-xl);
   font-weight: 700;

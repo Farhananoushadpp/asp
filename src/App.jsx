@@ -17,6 +17,24 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
 import Contact from "./pages/Contact.jsx";
+
+// Products Pages
+import EngineSpares2Stroke from "./pages/EngineSpares2Stroke.jsx";
+import EngineSpares4Stroke from "./pages/EngineSpares4Stroke.jsx";
+import TurbochargersAuxiliary from "./pages/TurbochargersAuxiliary.jsx";
+import HVACCompressors from "./pages/HVACCompressors.jsx";
+import PumpsMarineIndustrial from "./pages/PumpsMarineIndustrial.jsx";
+import BoilersIncineratorsHeatExchangers from "./pages/BoilersIncineratorsHeatExchangers.jsx";
+import AirCompressorSpares from "./pages/AirCompressorSpares.jsx";
+import Purifiers from "./pages/Purifiers.jsx";
+import HydraulicSystems from "./pages/HydraulicSystems.jsx";
+import DeckStoresGeneral from "./pages/DeckStoresGeneral.jsx";
+import EngineStores from "./pages/EngineStores.jsx";
+import LSAFFA from "./pages/LSAFFA.jsx";
+
+// Authorizations Page
+import Authorizations from "./pages/Authorizations.jsx";
+
 import "./styles/main.css";
 
 function ScrollToTop() {
@@ -102,8 +120,29 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
+            
+            {/* About Us Route - Single Page */}
             <Route path="/about" element={<About />} />
+            
+            {/* Products Routes */}
             <Route path="/products" element={<Products />} />
+            <Route path="/products/engine-spares-2stroke" element={<EngineSpares2Stroke />} />
+            <Route path="/products/engine-spares-4stroke" element={<EngineSpares4Stroke />} />
+            <Route path="/products/turbochargers-auxiliary" element={<TurbochargersAuxiliary />} />
+            <Route path="/products/hvac-compressors" element={<HVACCompressors />} />
+            <Route path="/products/pumps-marine-industrial" element={<PumpsMarineIndustrial />} />
+            <Route path="/products/boilers-incinerators-heat-exchangers" element={<BoilersIncineratorsHeatExchangers />} />
+            <Route path="/products/air-compressor-spares" element={<AirCompressorSpares />} />
+            <Route path="/products/purifiers" element={<Purifiers />} />
+            <Route path="/products/hydraulic-systems" element={<HydraulicSystems />} />
+            <Route path="/products/deck-stores-general" element={<DeckStoresGeneral />} />
+            <Route path="/products/engine-stores" element={<EngineStores />} />
+            <Route path="/products/lsa-ffa" element={<LSAFFA />} />
+            
+            {/* Authorizations Route */}
+            <Route path="/authorizations" element={<Authorizations />} />
+            
+            {/* Contact Route */}
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

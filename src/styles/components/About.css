@@ -180,6 +180,122 @@
   color: var(--primary-color);
 }
 
+/* Highlight Cards */
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.highlight-card {
+  background: var(--background-color);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-color);
+}
+
+.highlight-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--white-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+  color: var(--secondary-color);
+}
+
+.highlight-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.highlight-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.highlight-description {
+  font-size: var(--font-size-sm);
+  color: var(--dark-gray);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Client Types */
+.client-types {
+  margin: var(--spacing-xl) 0;
+}
+
+.client-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+.client-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+}
+
+.client-bullet {
+  color: var(--accent-color);
+}
+
+/* Section Label */
+.section-label {
+  display: block;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-headline {
+  text-align: center;
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-description {
+  font-size: var(--font-size-lg);
+  color: var(--text-color);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .image-placeholder p {
   color: var(--text-color);
   font-size: var(--font-size-base);

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -11,6 +12,11 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setProductsDropdownOpen(false);
+  };
+
+  const toggleProductsDropdown = () => {
+    setProductsDropdownOpen(!productsDropdownOpen);
   };
 
   const isActive = (path) => {
@@ -22,15 +28,11 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="nav-logo">
           <Link to="/" className="logo-link">
-            <div className="logo-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-              </svg>
-            </div>
-            <div className="logo-text">
-              <h2>ASP Global Marine</h2>
-              <span>Driven by Quality. Propelled by Trust.</span>
-            </div>
+            <img 
+              src="/asplogo.svg" 
+              alt="ASP Global Marine Trading LLC" 
+              className="logo-image"
+            />
           </Link>
         </div>
         
@@ -44,19 +46,63 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`} onClick={closeMenu}>
-                <span className="nav-text">About</span>
+                <span className="nav-text">About Us</span>
                 <span className="nav-indicator"></span>
               </Link>
             </li>
-            <li>
-              <Link to="/products" className={`nav-link ${isActive('/products') ? 'active' : ''}`} onClick={closeMenu}>
+            <li className={`nav-dropdown ${productsDropdownOpen ? 'active' : ''}`}>
+              <button className="nav-link dropdown-toggle" onClick={toggleProductsDropdown}>
                 <span className="nav-text">Products</span>
+                <span className="nav-indicator"></span>
+              </button>
+              <div className="dropdown-menu">
+                <Link to="/products/engine-spares-2stroke" className="dropdown-item" onClick={closeMenu}>
+                  Engine Spares - 2-Stroke
+                </Link>
+                <Link to="/products/engine-spares-4stroke" className="dropdown-item" onClick={closeMenu}>
+                  Engine Spares - 4-Stroke
+                </Link>
+                <Link to="/products/turbochargers-auxiliary" className="dropdown-item" onClick={closeMenu}>
+                  Turbochargers & Auxiliary Engine Products
+                </Link>
+                <Link to="/products/hvac-compressors" className="dropdown-item" onClick={closeMenu}>
+                  HVAC Compressors & Spares
+                </Link>
+                <Link to="/products/pumps-marine-industrial" className="dropdown-item" onClick={closeMenu}>
+                  Pumps – Marine & Industrial
+                </Link>
+                <Link to="/products/boilers-incinerators-heat-exchangers" className="dropdown-item" onClick={closeMenu}>
+                  Boilers, Incinerators & Heat Exchangers
+                </Link>
+                <Link to="/products/air-compressor-spares" className="dropdown-item" onClick={closeMenu}>
+                  Air Compressor Spares
+                </Link>
+                <Link to="/products/purifiers" className="dropdown-item" onClick={closeMenu}>
+                  Purifiers
+                </Link>
+                <Link to="/products/hydraulic-systems" className="dropdown-item" onClick={closeMenu}>
+                  Hydraulic Systems & Components
+                </Link>
+                <Link to="/products/deck-stores-general" className="dropdown-item" onClick={closeMenu}>
+                  Deck Stores & General Marine Stores
+                </Link>
+                <Link to="/products/engine-stores" className="dropdown-item" onClick={closeMenu}>
+                  Engine Stores
+                </Link>
+                <Link to="/products/lsa-ffa" className="dropdown-item" onClick={closeMenu}>
+                  LSA & FFA (Life-Saving & Fire-Fighting Equipment)
+                </Link>
+              </div>
+            </li>
+            <li>
+              <Link to="/authorizations" className={`nav-link ${isActive('/authorizations') ? 'active' : ''}`} onClick={closeMenu}>
+                <span className="nav-text">Authorizations</span>
                 <span className="nav-indicator"></span>
               </Link>
             </li>
             <li>
               <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`} onClick={closeMenu}>
-                <span className="nav-text">Contact</span>
+                <span className="nav-text">Contact Us</span>
                 <span className="nav-indicator"></span>
               </Link>
             </li>
