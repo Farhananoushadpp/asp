@@ -14,7 +14,8 @@ const Contact = () => {
     email: '',
     vesselName: '',
     productRequirement: '',
-    urgencyLevel: 'normal'
+    urgencyLevel: 'normal',
+    attachment: null
   });
 
   const handleSubmit = (e) => {
@@ -26,15 +27,24 @@ const Contact = () => {
       email: '',
       vesselName: '',
       productRequirement: '',
-      urgencyLevel: 'normal'
+      urgencyLevel: 'normal',
+      attachment: null
     });
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value, files } = e.target;
+    if (name === 'attachment' && files) {
+      setFormData({
+        ...formData,
+        [name]: files[0]
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
   };
 
   return (
@@ -154,6 +164,28 @@ const Contact = () => {
                   <option value="urgent">Urgent</option>
                   <option value="critical">Critical</option>
                 </select>
+              </div>
+
+              <div className="form-group file-upload">
+                <label htmlFor="attachment">
+                  <span className="file-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                      <path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z"/>
+                    </svg>
+                  </span>
+                  Attach Technical Specification
+                </label>
+                <input
+                  type="file"
+                  id="attachment"
+                  name="attachment"
+                  onChange={handleChange}
+                  accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png"
+                  className="file-input"
+                />
+                {formData.attachment && (
+                  <p className="file-name">{formData.attachment.name}</p>
+                )}
               </div>
 
               <button type="submit" className="submit-btn">

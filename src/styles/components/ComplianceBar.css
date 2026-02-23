@@ -1,0 +1,66 @@
+/**
+ * ASP Global Marine Trading LLC - Compliance Bar Styles
+ * 
+ * Thin horizontal authority bar
+ * Senior Level: Builds psychological authority
+ */
+
+.compliance-bar {
+  background: var(--primary-color);
+  border-top: 1px solid rgba(31, 175, 154, 0.2);
+  padding: var(--spacing-md) 0;
+}
+
+.compliance-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.compliance-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.compliance-icon {
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compliance-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: #F4F8FA;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.compliance-separator {
+  color: rgba(244, 248, 250, 0.3);
+  margin-left: var(--spacing-md);
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .compliance-content {
+    gap: var(--spacing-sm);
+  }
+  
+  .compliance-item {
+    gap: var(--spacing-xs);
+  }
+  
+  .compliance-label {
+    font-size: 10px;
+  }
+  
+  .compliance-separator {
+    display: none;
+  }
+}

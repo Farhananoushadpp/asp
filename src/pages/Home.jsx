@@ -14,6 +14,7 @@ import Partners from "../components/Partners.jsx";
 import Clients from "../components/Clients.jsx";
 import SisterConcerns from "../components/SisterConcerns.jsx";
 import Contact from "../components/Contact.jsx";
+import ComplianceBar from "../components/ComplianceBar.jsx";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <Clients />
       <SisterConcerns />
       <Contact />
+      <ComplianceBar />
     </div>
   );
 };
