@@ -33,6 +33,10 @@ const Navbar = () => {
             className="logo-image"
           />
         </Link>
+        {/* <div className="nav-branding">
+          <h1 className="nav-company-name">ASP GLOBAL MARINE TRADING LLC</h1>
+          <p className="nav-group-name">Part of Ocean Serenity Group</p>
+        </div> */}
 
         <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <ul className="nav-list">

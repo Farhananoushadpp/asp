@@ -7,7 +7,6 @@
 
 .sister-concerns {
   padding: var(--spacing-5xl) 0;
-  background: var(--white-color);
 }
 
 .sister-concerns .section-label {
@@ -53,20 +52,19 @@
 
 .company-block:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
   border-color: var(--accent-color);
 }
 
 .company-icon {
-  width: 56px;
-  height: 56px;
-  background: var(--white-color);
+  width: 60px;
+  height: 60px;
+  background: var(--primary-gradient);
+  color: var(--white-color);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--spacing-lg);
-  box-shadow: var(--shadow-sm);
 }
 
 .company-icon svg {

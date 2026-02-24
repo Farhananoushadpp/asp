@@ -15,7 +15,15 @@
   font-display: swap;
 }
 
+/* Footer Container Override - Ensure full-width footer */
+.footer .container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
 .footer {
+  width: 100%;
   background: #0d2c4a;
   color: #f4f8fa;
   padding: var(--spacing-5xl) 0 var(--spacing-2xl);
@@ -64,7 +72,7 @@
 }
 
 .footer-logo-image {
-  height: 60px;
+  height: 90px;
   width: auto;
   max-width: 250px;
   object-fit: contain;

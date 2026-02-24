@@ -32,6 +32,10 @@
 .client-showcase {
   max-width: 800px;
   margin: 0 auto;
+  background: var(--background-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-3xl);
+  text-align: center;
 }
 
 .client-block {
@@ -40,7 +44,6 @@
   border-radius: var(--radius-xl);
   padding: var(--spacing-3xl);
   text-align: center;
-  box-shadow: var(--shadow-md);
 }
 
 .client-logo {

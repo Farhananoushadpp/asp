@@ -36,7 +36,6 @@
   padding: var(--spacing-4xl);
   border-radius: var(--radius-xl);
   margin-bottom: var(--spacing-4xl);
-  box-shadow: var(--shadow-md);
 }
 
 .intro-content h2 {
@@ -81,7 +80,6 @@
 
 .manufacturer-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
   border-color: var(--accent-color);
 }
 
@@ -115,12 +113,10 @@
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
   transition: all var(--transition-normal);
-  box-shadow: var(--shadow-sm);
 }
 
 .category-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
   border-color: var(--accent-color);
 }
 
@@ -215,7 +211,6 @@
 
 .spec-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .spec-card h3 {
@@ -275,7 +270,6 @@
 
 .quality-item:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
   border-color: var(--accent-color);
 }
 
@@ -362,7 +356,6 @@
   background: var(--background-color);
   padding: var(--spacing-4xl);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -371,7 +364,6 @@
 
 .product-detail-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
 }
 
 .product-detail-card h2 {
@@ -555,7 +547,6 @@
   background: var(--white-color);
   padding: var(--spacing-xl) var(--spacing-2xl);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
@@ -564,7 +555,6 @@
 
 .quality-badge:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
 }
 
 .badge-icon {

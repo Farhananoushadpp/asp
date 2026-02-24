@@ -19,26 +19,26 @@ import {
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
-// import About from "./pages/About.jsx";
-// import Products from "./pages/Products.jsx";
-// import Contact from "./pages/Contact.jsx";
+import About from "./pages/About.jsx";
+import Products from "./pages/Products.jsx";
+import Contact from "./pages/Contact.jsx";
 
 // Products Pages
-// import EngineSpares2Stroke from "./pages/EngineSpares2Stroke.jsx";
-// import EngineSpares4Stroke from "./pages/EngineSpares4Stroke.jsx";
-// import TurbochargersAuxiliary from "./pages/TurbochargersAuxiliary.jsx";
-// import HVACCompressors from "./pages/HVACCompressors.jsx";
-// import PumpsMarineIndustrial from "./pages/PumpsMarineIndustrial.jsx";
-// import BoilersIncineratorsHeatExchangers from "./pages/BoilersIncineratorsHeatExchangers.jsx";
-// import AirCompressorSpares from "./pages/AirCompressorSpares.jsx";
-// import Purifiers from "./pages/Purifiers.jsx";
-// import HydraulicSystems from "./pages/HydraulicSystems.jsx";
-// import DeckStoresGeneral from "./pages/DeckStoresGeneral.jsx";
-// import EngineStores from "./pages/EngineStores.jsx";
-// import LSAFFA from "./pages/LSAFFA.jsx";
+import EngineSpares2Stroke from "./pages/EngineSpares2Stroke.jsx";
+import EngineSpares4Stroke from "./pages/EngineSpares4Stroke.jsx";
+import TurbochargersAuxiliary from "./pages/TurbochargersAuxiliary.jsx";
+import HVACCompressors from "./pages/HVACCompressors.jsx";
+import PumpsMarineIndustrial from "./pages/PumpsMarineIndustrial.jsx";
+import BoilersIncineratorsHeatExchangers from "./pages/BoilersIncineratorsHeatExchangers.jsx";
+import AirCompressorSpares from "./pages/AirCompressorSpares.jsx";
+import Purifiers from "./pages/Purifiers.jsx";
+import HydraulicSystems from "./pages/HydraulicSystems.jsx";
+import DeckStoresGeneral from "./pages/DeckStoresGeneral.jsx";
+import EngineStores from "./pages/EngineStores.jsx";
+import LSAFFA from "./pages/LSAFFA.jsx";
 
 // Authorizations Page
-// import Authorizations from "./pages/Authorizations.jsx";
+import Authorizations from "./pages/Authorizations.jsx";
 
 import "./styles/main.css";
 
@@ -127,55 +127,57 @@ function App() {
             <Route path="/" element={<Home />} />
 
             {/* About Us Route - Single Page */}
-            {/* <Route path="/about" element={<About />} /> */}
+            <Route path="/about" element={<About />} />
 
-            {/* Products Routes */}
-            {/* <Route path="/products" element={<Products />} /> */}
-            {/* <Route
+            {/* Products Routes - Main products page first */}
+            <Route path="/products" element={<Products />} />
+
+            {/* Specific Product Categories */}
+            <Route
               path="/products/engine-spares-2stroke"
               element={<EngineSpares2Stroke />}
-            /> */}
-            {/* <Route
+            />
+            <Route
               path="/products/engine-spares-4stroke"
               element={<EngineSpares4Stroke />}
-            /> */}
-            {/* <Route
+            />
+            <Route
               path="/products/turbochargers-auxiliary"
               element={<TurbochargersAuxiliary />}
-            /> */}
-            {/* <Route
+            />
+            <Route
               path="/products/hvac-compressors"
               element={<HVACCompressors />}
-            /> */}
-            {/* <Route
+            />
+            <Route
               path="/products/pumps-marine-industrial"
               element={<PumpsMarineIndustrial />}
-            /> */}
-            {/* <Route
+            />
+            <Route
               path="/products/boilers-incinerators-heat-exchangers"
               element={<BoilersIncineratorsHeatExchangers />}
-            /> */}
-            {/* <Route
+            />
+            <Route
               path="/products/air-compressor-spares"
               element={<AirCompressorSpares />}
-            /> */}
-            {/* <Route path="/products/purifiers" element={<Purifiers />} /> */}
-            {/* <Route
+            />
+            <Route path="/products/purifiers" element={<Purifiers />} />
+            <Route
               path="/products/hydraulic-systems"
               element={<HydraulicSystems />}
-            /> */}
-            {/* <Route
+            />
+            <Route
               path="/products/deck-stores-general"
               element={<DeckStoresGeneral />}
-            /> */}
-            {/* <Route path="/products/engine-stores" element={<EngineStores />} /> */}
-            {/* <Route path="/products/lsa-ffa" element={<LSAFFA />} /> */}
+            />
+            <Route path="/products/engine-stores" element={<EngineStores />} />
+            <Route path="/products/lsa-ffa" element={<LSAFFA />} />
 
             {/* Authorizations Route */}
-            {/* <Route path="/authorizations" element={<Authorizations />} /> */}
+            <Route path="/authorizations" element={<Authorizations />} />
 
             {/* Contact Route */}
-            {/* <Route path="/contact" element={<Contact />} /> */}
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

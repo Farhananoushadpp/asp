@@ -7,7 +7,6 @@
 
 .commitment {
   padding: var(--spacing-5xl) 0;
-  background: var(--background-color);
   position: relative;
 }
 
@@ -76,7 +75,6 @@
 
 .commitment-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
   border-color: var(--accent-color);
 }
 

@@ -7,7 +7,6 @@
 
 .products {
   padding: var(--spacing-5xl) 0;
-  background: var(--background-color);
 }
 
 .products .section-label {
@@ -56,12 +55,10 @@
 
 .accordion-item:hover {
   border-color: var(--accent-color);
-  box-shadow: var(--shadow-md);
 }
 
 .accordion-item.active {
   border-color: var(--accent-color);
-  box-shadow: var(--shadow-lg);
 }
 
 .accordion-header {
