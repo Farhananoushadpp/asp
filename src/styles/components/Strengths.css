@@ -12,13 +12,18 @@
 }
 
 .strengths::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
 }
 
 .strengths .section-label {
@@ -60,7 +65,7 @@
 }
 
 .strength-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -146,28 +151,28 @@
     text-align: center;
     padding: var(--spacing-xl);
   }
-  
+
   .strength-card::before {
     width: 100%;
     height: 4px;
     transform: scaleX(0);
   }
-  
+
   .strength-card:hover::before {
     transform: scaleX(1);
   }
-  
+
   .strength-card:hover {
     transform: translateY(-4px);
   }
-  
+
   .strength-number {
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
     font-size: var(--font-size-2xl);
   }
-  
+
   .strengths-headline {
     font-size: var(--font-size-3xl);
   }
@@ -178,12 +183,12 @@
     width: 48px;
     height: 48px;
   }
-  
+
   .strength-icon svg {
     width: 24px;
     height: 24px;
   }
-  
+
   .strength-title {
     font-size: var(--font-size-base);
   }

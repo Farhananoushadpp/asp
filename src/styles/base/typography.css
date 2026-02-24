@@ -6,11 +6,11 @@
  */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@500;600&family=Oswald:wght@500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@500;600&family=Oswald:wght@500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap");
 
 /* Professional Heading Font - Oswald */
 /* Note: Oswald is a modern, professional sans-serif font perfect for corporate headings */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap");
 
 /* Aston Script Font - Commercial Font */
 /* Note: This is a commercial font. For production, you'll need to:
@@ -19,17 +19,17 @@
    3. Font features: Closed oval D, circular Q with short tail, long T crossbar, narrow y descender */
 
 @font-face {
-  font-family: 'Aston Script';
-  src: local('Aston Script'), 
-       local('AstonScript'),
-       url('https://fonts.cdnfonts.com/css/aston-script'); /* Fallback CDN */
+  font-family: "Aston Script";
+  src:
+    local("Aston Script"), local("AstonScript"),
+    url("https://fonts.cdnfonts.com/css/aston-script"); /* Fallback CDN */
   font-weight: normal;
   font-style: normal;
 }
 
 /* Fallback elegant script font for development */
 .signature-text {
-  font-family: 'Aston Script', 'Great Vibes', 'Dancing Script', cursive;
+  font-family: "Aston Script", "Great Vibes", "Dancing Script", cursive;
   font-size: 4rem;
   font-weight: normal;
   line-height: 1.2;
@@ -55,7 +55,7 @@
 
 /* Base typography settings */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: var(--font-size-base);
   font-weight: 400;
   line-height: 1.6;
@@ -65,11 +65,16 @@ body {
 }
 
 /* Enhanced heading hierarchy with Montserrat */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  color: #0A1F44; /* Deep Navy */
+  color: #0a1f44; /* Deep Navy */
   margin-bottom: var(--spacing-lg);
   letter-spacing: 1px;
 }
@@ -85,15 +90,17 @@ h2 {
   font-size: var(--font-size-4xl);
   font-weight: 600;
   letter-spacing: 1px;
-  color: #0A1F44; /* Deep Navy */
+  color: #0a1f44; /* Deep Navy */
   position: relative;
 }
 
+/* All h2 underlines centered - universal fix */
 h2::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
   background: var(--primary-gradient);
@@ -104,33 +111,50 @@ h3 {
   font-size: var(--font-size-3xl);
   font-weight: 500;
   letter-spacing: 1px;
-  color: #0C4B65; /* Dark Teal */
+  color: #0c4b65; /* Dark Teal */
 }
 
 h4 {
   font-size: var(--font-size-2xl);
   font-weight: 500;
   letter-spacing: 1px;
-  color: #0A1F44; /* Deep Navy */
+  color: #0a1f44; /* Deep Navy */
 }
 
 h5 {
   font-size: var(--font-size-xl);
   font-weight: 500;
   letter-spacing: 1px;
-  color: #0A1F44; /* Deep Navy */
+  color: #0a1f44; /* Deep Navy */
 }
 
 h6 {
   font-size: var(--font-size-lg);
   font-weight: 500;
   letter-spacing: 1px;
-  color: #0A1F44; /* Deep Navy */
+  color: #0a1f44; /* Deep Navy */
+}
+
+/* Page title styles with centered underline */
+.page-title {
+  position: relative;
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-full);
 }
 
 /* Enhanced paragraph styling with Inter */
 p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   margin-bottom: var(--spacing-lg);
   line-height: 1.6;
@@ -141,8 +165,8 @@ p {
 
 /* Enhanced link styling */
 a {
-  font-family: 'Inter', sans-serif;
-  color: #0A1F44; /* Navy Blue */
+  font-family: "Inter", sans-serif;
+  color: #0a1f44; /* Navy Blue */
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -150,18 +174,18 @@ a {
 }
 
 a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 0;
   height: 2px;
-  background: #2ABAA3; /* Sea Green */
+  background: #2abaa3; /* Sea Green */
   transition: width var(--transition-normal);
 }
 
 a:hover {
-  color: #2ABAA3; /* Sea Green */
+  color: #2abaa3; /* Sea Green */
 }
 
 a:hover::after {
@@ -170,10 +194,10 @@ a:hover::after {
 
 /* Button styling with Montserrat */
 .btn {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #FFFFFF;
-  background-color: #2ABAA3; /* Sea Green */
+  color: #ffffff;
+  background-color: #2abaa3; /* Sea Green */
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
@@ -186,7 +210,7 @@ a:hover::after {
 }
 
 .btn:hover {
-  background-color: #239F89; /* Darker Sea Green */
+  background-color: #239f89; /* Darker Sea Green */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(42, 186, 163, 0.3);
 }
@@ -208,51 +232,51 @@ a:hover::after {
 
 /* Navigation styling */
 .nav-link {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
-  color: #0A1F44; /* Navy Blue */
+  color: #0a1f44; /* Navy Blue */
   transition: all var(--transition-normal);
 }
 
 .nav-link:hover {
-  color: #2ABAA3; /* Sea Green */
+  color: #2abaa3; /* Sea Green */
 }
 
 .dropdown-item {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   color: #333333; /* Charcoal Gray */
   transition: all var(--transition-normal);
 }
 
 .dropdown-item:hover {
-  color: #2ABAA3; /* Sea Green */
+  color: #2abaa3; /* Sea Green */
 }
 
 /* Special sections with Poppins */
 .text-highlight {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: #2ABAA3; /* Sea Blue */
+  color: #2abaa3; /* Sea Blue */
 }
 
 .text-accent {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: #0C4B65; /* Accent Color */
+  color: #0c4b65; /* Accent Color */
 }
 
 .stat-number {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: #2ABAA3; /* Sea Blue */
+  color: #2abaa3; /* Sea Blue */
 }
 
 .quote-text {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: italic;
-  color: #0C4B65; /* Accent Color */
+  color: #0c4b65; /* Accent Color */
 }
 
 /* Text utilities */
@@ -273,15 +297,15 @@ a:hover::after {
 }
 
 .text-primary {
-  color: #0A1F44; /* Deep Navy */
+  color: #0a1f44; /* Deep Navy */
 }
 
 .text-secondary {
-  color: #2ABAA3; /* Sea Green */
+  color: #2abaa3; /* Sea Green */
 }
 
 .text-accent {
-  color: #0C4B65; /* Dark Teal */
+  color: #0c4b65; /* Dark Teal */
 }
 
 .text-white {

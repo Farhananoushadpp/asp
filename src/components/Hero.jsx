@@ -1,14 +1,14 @@
 /**
  * ASP Global Marine Trading LLC - Standard Hero Section
- * 
+ *
  * Clean, standard hero design following industry best practices
  * Essential elements only for maximum conversion
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/components/Hero.css';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "../styles/components/Hero.css";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,13 +21,7 @@ const Hero = () => {
     <section className="hero">
       {/* Video Background */}
       <div className="hero-video-background">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="hero-video"
-        >
+        <video autoPlay muted loop playsInline className="hero-video">
           <source src="/homebanner.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -37,13 +31,12 @@ const Hero = () => {
 
       {/* Standard Hero Content */}
       <div className="hero-container">
-        <div className={`hero-content ${isVisible ? 'visible' : ''}`}>
-          
+        <div className={`hero-content ${isVisible ? "visible" : ""}`}>
           {/* Main Headline */}
           <h1 className="hero-headline">
-            ASP Global Marine Trading LLC
+            "Driven by Quality. Propelled by Trust. "
           </h1>
-          
+
           {/* Value Proposition */}
           <p className="hero-subtitle">
             Your Trusted Partner in Marine Solutions
@@ -51,8 +44,8 @@ const Hero = () => {
 
           {/* Brief Description */}
           <p className="hero-description">
-            Leading supplier of marine and offshore equipment, genuine spare parts, 
-            and comprehensive logistics support worldwide.
+            Leading supplier of marine and offshore equipment, genuine spare
+            parts, and comprehensive logistics support worldwide.
           </p>
 
           {/* Call to Action Buttons */}

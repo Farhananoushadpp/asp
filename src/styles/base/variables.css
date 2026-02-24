@@ -7,12 +7,12 @@
 
 :root {
   /* ASP PDF Color Palette - Updated with Recommended Colors */
-  --primary-color: #0A1F44; /* Deep Navy */
-  --secondary-color: #0C4B65; /* Dark Teal */
-  --accent-color: #2ABAA3; /* Sea Green */
+  --primary-color: #0a1f44; /* Deep Navy */
+  --secondary-color: #0c4b65; /* Dark Teal */
+  --accent-color: #2abaa3; /* Sea Green */
   --background-color: #f4f8fa; /* Soft Ice Grey */
   --text-color: #333333; /* Charcoal Gray */
-  --navy-gray: #1A2A40; /* Navy Gray */
+  --navy-gray: #1a2a40; /* Navy Gray */
   --white-color: #ffffff;
   --light-gray: #e8edf0;
   --medium-gray: #b8c5ce;
@@ -36,9 +36,9 @@
   );
   --hero-gradient: linear-gradient(
     135deg,
-    #0A1F44 0%,
-    #0C4B65 50%,
-    #2ABAA3 100%
+    #0a1f44 0%,
+    #0c4b65 50%,
+    #2abaa3 100%
   );
   --ocean-wave-gradient: linear-gradient(
     180deg,

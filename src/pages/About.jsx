@@ -1,6 +1,6 @@
 /**
  * ASP Global Marine Trading LLC - About Us Page (Single Page)
- * 
+ *
  * Comprehensive About Us page with all sections
  * No sub-pages - single scrollable page design
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
@@ -11,20 +11,29 @@ const About = () => {
     <div className="about-page">
       {/* Hero Section */}
       <section className="about-hero">
-        {/* Video Background */}
-        <div className="hero-video-background">
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            className="hero-video"
-          >
-            <source src="/homebanner.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          {/* Video Overlay for content readability */}
-          <div className="video-overlay"></div>
+        {/* Animated Cargo Ship */}
+        <div className="cargo-ship-animation">
+          <div className="cargo-ship">
+            <div className="ship-hull"></div>
+            <div className="ship-deck"></div>
+            <div className="ship-containers">
+              <div className="container container1"></div>
+              <div className="container container2"></div>
+              <div className="container container3"></div>
+              <div className="container container4"></div>
+              <div className="container container5"></div>
+              <div className="container container6"></div>
+              <div className="container container7"></div>
+            </div>
+            <div className="ship-bridge"></div>
+            <div className="ship-chimney"></div>
+            <div className="ship-radar"></div>
+            <div className="water-waves">
+              <div className="wave wave1"></div>
+              <div className="wave wave2"></div>
+              <div className="wave wave3"></div>
+            </div>
+          </div>
         </div>
 
         <div className="about-hero-content">
@@ -44,18 +53,20 @@ const About = () => {
           </div>
           <div className="section-content">
             <p>
-              Founded in 2005 and part of Ocean Serenity Group, ASP Global Marine Trading LLC has established 
-              itself as a leading supplier of marine and offshore equipment. With strong sourcing networks 
-              across Europe and Asia, we understand the critical importance of quality, reliability, and 
-              timely delivery.
+              Founded in 2005 and part of Ocean Serenity Group, ASP Global
+              Marine Trading LLC has established itself as a leading supplier of
+              marine and offshore equipment. With strong sourcing networks
+              across Europe and Asia, we understand the critical importance of
+              quality, reliability, and timely delivery.
             </p>
             <p>
-              Our commitment to excellence has earned us the trust of ship owners, operators, and offshore 
-              installations worldwide. We pride ourselves on our technical expertise, competitive pricing, 
-              and unwavering dedication to customer satisfaction.
+              Our commitment to excellence has earned us the trust of ship
+              owners, operators, and offshore installations worldwide. We pride
+              ourselves on our technical expertise, competitive pricing, and
+              unwavering dedication to customer satisfaction.
             </p>
           </div>
-          
+
           <div className="stats-grid">
             <div className="stat-item">
               <div className="stat-number">18+</div>
@@ -77,24 +88,29 @@ const About = () => {
         </section>
 
         {/* Mission & Vision Section */}
-        <section className="about-section mission-vision-section" id="mission-vision">
+        <section
+          className="about-section mission-vision-section"
+          id="mission-vision"
+        >
           <div className="mission-vision-grid">
             <div className="mission-box">
               <div className="box-icon">🎯</div>
               <h3>Our Mission</h3>
               <p>
-                To deliver accurate, reliable, and compliant marine solutions at the right time, every time. 
-                We focus on operational reliability, technical compliance, maritime industry standards, and 
-                long-term client partnerships.
+                To deliver accurate, reliable, and compliant marine solutions at
+                the right time, every time. We focus on operational reliability,
+                technical compliance, maritime industry standards, and long-term
+                client partnerships.
               </p>
             </div>
             <div className="vision-box">
               <div className="box-icon">🌟</div>
               <h3>Our Vision</h3>
               <p>
-                To become a globally trusted marine supply partner known for technical excellence and 
-                operational reliability. Serving shipowners, ship managers, operators, and offshore 
-                companies worldwide with unparalleled expertise.
+                To become a globally trusted marine supply partner known for
+                technical excellence and operational reliability. Serving
+                shipowners, ship managers, operators, and offshore companies
+                worldwide with unparalleled expertise.
               </p>
             </div>
           </div>
@@ -138,9 +154,11 @@ const About = () => {
           </div>
           <div className="quality-content">
             <p className="quality-statement">
-              ASP Global Marine Trading LLC is committed to delivering accurate, reliable, and compliant 
-              marine solutions at the right time, every time. Our quality management system ensures all 
-              products and services meet the highest standards of safety, reliability, and performance.
+              ASP Global Marine Trading LLC is committed to delivering accurate,
+              reliable, and compliant marine solutions at the right time, every
+              time. Our quality management system ensures all products and
+              services meet the highest standards of safety, reliability, and
+              performance.
             </p>
             <div className="quality-principles">
               <div className="principle-item">
@@ -206,32 +224,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Group Companies Section */}
-        <section className="about-section" id="group-companies">
-          <div className="section-header">
-            <span className="section-label">Our Group</span>
-            <h2>Ocean Serenity Group</h2>
-          </div>
-          <div className="companies-grid">
-            <div className="company-card">
-              <h4>Ocean Serenity FZ-LLC</h4>
-              <p>Strategic management and operations</p>
-            </div>
-            <div className="company-card">
-              <h4>Ocean Infinity Marine Service LLC</h4>
-              <p>Marine services and technical support</p>
-            </div>
-            <div className="company-card">
-              <h4>ANC Arabia Contracting Company</h4>
-              <p>Contracting and project solutions</p>
-            </div>
-            <div className="company-card">
-              <h4>Warmsol Marine & Industrial Company</h4>
-              <p>Industrial and marine equipment</p>
-            </div>
-          </div>
-        </section>
-
         {/* Message Section */}
         <section className="about-section message-section" id="message">
           <div className="section-header">
@@ -240,16 +232,18 @@ const About = () => {
           </div>
           <div className="message-content">
             <p className="message-text">
-              &ldquo;Welcome to ASP Global Marine Trading LLC. Since our establishment in 2005, we have been 
-              committed to excellence in the marine and offshore industry. Our journey has been guided 
-              by a simple yet powerful principle: delivering quality products and services that our 
-              clients can rely on, every time.&rdquo;
+              &ldquo;Welcome to ASP Global Marine Trading LLC. Since our
+              establishment in 2005, we have been committed to excellence in the
+              marine and offshore industry. Our journey has been guided by a
+              simple yet powerful principle: delivering quality products and
+              services that our clients can rely on, every time.&rdquo;
             </p>
             <p className="message-text">
-              &ldquo;As part of the Ocean Serenity Group, we benefit from shared expertise, resources, and a 
-              collective vision for excellence in maritime services. We look forward to serving you 
-              with the same dedication and excellence that has defined ASP Global Marine for nearly 
-              two decades.&rdquo;
+              &ldquo;As part of the Ocean Serenity Group, we benefit from shared
+              expertise, resources, and a collective vision for excellence in
+              maritime services. We look forward to serving you with the same
+              dedication and excellence that has defined ASP Global Marine for
+              nearly two decades.&rdquo;
             </p>
             <div className="message-signature">
               <p className="signature-name">The Management Team</p>

@@ -201,7 +201,7 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-2xl);
   }
-  
+
   .contact-headline {
     font-size: var(--font-size-3xl);
   }

@@ -91,15 +91,15 @@
   .clients-headline {
     font-size: var(--font-size-3xl);
   }
-  
+
   .client-block {
     padding: var(--spacing-2xl);
   }
-  
+
   .client-name {
     font-size: var(--font-size-xl);
   }
-  
+
   .client-testimonial {
     font-size: var(--font-size-base);
   }
@@ -109,12 +109,12 @@
   .client-block {
     padding: var(--spacing-xl);
   }
-  
+
   .client-logo {
     width: 80px;
     height: 80px;
   }
-  
+
   .client-logo svg {
     width: 40px;
     height: 40px;

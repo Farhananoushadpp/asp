@@ -10,9 +10,6 @@ import About from "../components/About.jsx";
 import Commitment from "../components/Commitment.jsx";
 import Strengths from "../components/Strengths.jsx";
 import Products from "../components/Products.jsx";
-import Partners from "../components/Partners.jsx";
-import Clients from "../components/Clients.jsx";
-import SisterConcerns from "../components/SisterConcerns.jsx";
 import Contact from "../components/Contact.jsx";
 import ComplianceBar from "../components/ComplianceBar.jsx";
 
@@ -24,9 +21,6 @@ const Home = () => {
       <Commitment />
       <Strengths />
       <Products />
-      <Partners />
-      <Clients />
-      <SisterConcerns />
       <Contact />
       <ComplianceBar />
     </div>

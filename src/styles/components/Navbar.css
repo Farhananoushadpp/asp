@@ -29,12 +29,6 @@
   align-items: center;
 }
 
-.nav-logo {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
 .logo-link {
   display: flex;
   align-items: center;
@@ -54,9 +48,9 @@
 }
 
 .logo-image {
-  height: 50px;
+  height: 70px;
   width: auto;
-  max-width: 200px;
+  max-width: 280px;
   object-fit: contain;
   transition: transform var(--transition-normal);
 }
@@ -68,6 +62,8 @@
 .nav-menu {
   display: flex;
   align-items: center;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-list {
@@ -204,7 +200,7 @@
 .nav-actions {
   display: flex;
   align-items: center;
-  margin-left: var(--spacing-3xl);
+  margin-left: var(--spacing-4xl);
 }
 
 .btn-sm {
@@ -272,15 +268,15 @@
   .nav-container {
     padding: var(--spacing-md) var(--container-padding);
   }
-  
+
   .hamburger {
     display: flex;
   }
-  
+
   .nav-actions {
     display: none;
   }
-  
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -292,19 +288,21 @@
     transition: right var(--transition-bounce);
     z-index: 999;
     overflow-y: auto;
+    flex: none;
+    justify-content: flex-start;
   }
-  
+
   .nav-menu.active {
     right: 0;
   }
-  
+
   .nav-list {
     flex-direction: column;
     gap: var(--spacing-xl);
     padding: var(--spacing-6xl) var(--spacing-3xl);
     align-items: flex-start;
   }
-  
+
   .nav-link {
     font-size: var(--font-size-lg);
     padding: var(--spacing-md) 0;
@@ -342,21 +340,21 @@
     color: var(--white-color);
     padding-left: var(--spacing-md);
   }
-  
+
   .nav-indicator {
     bottom: -4px;
     height: 2px;
   }
-  
+
   .logo-text h2 {
     font-size: var(--font-size-xl);
   }
-  
+
   .logo-icon {
     width: 40px;
     height: 40px;
   }
-  
+
   .logo-icon svg {
     width: 20px;
     height: 20px;
@@ -367,19 +365,19 @@
   .nav-menu {
     width: 90%;
   }
-  
+
   .nav-list {
     padding: var(--spacing-5xl) var(--spacing-2xl);
   }
-  
+
   .nav-container {
     padding: var(--spacing-sm) var(--container-padding);
   }
-  
+
   .logo-text h2 {
     font-size: var(--font-size-lg);
   }
-  
+
   .logo-text span {
     font-size: 10px;
   }

@@ -1,48 +1,48 @@
 /**
  * ASP Global Marine Trading LLC - Contact Section
- * 
+ *
  * Office info and Quick RFQ Form
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-import { useState } from 'react';
-import '../styles/components/Contact.css';
+import { useState } from "react";
+import "../styles/components/Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    vesselName: '',
-    productRequirement: '',
-    urgencyLevel: 'normal',
-    attachment: null
+    name: "",
+    email: "",
+    vesselName: "",
+    productRequirement: "",
+    urgencyLevel: "normal",
+    attachment: null,
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('RFQ Submitted:', formData);
-    alert('Thank you for your inquiry. We will contact you shortly.');
+    console.log("RFQ Submitted:", formData);
+    alert("Thank you for your inquiry. We will contact you shortly.");
     setFormData({
-      name: '',
-      email: '',
-      vesselName: '',
-      productRequirement: '',
-      urgencyLevel: 'normal',
-      attachment: null
+      name: "",
+      email: "",
+      vesselName: "",
+      productRequirement: "",
+      urgencyLevel: "normal",
+      attachment: null,
     });
   };
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === 'attachment' && files) {
+    if (name === "attachment" && files) {
       setFormData({
         ...formData,
-        [name]: files[0]
+        [name]: files[0],
       });
     } else {
       setFormData({
         ...formData,
-        [name]: value
+        [name]: value,
       });
     }
   };
@@ -60,14 +60,16 @@ const Contact = () => {
             <div className="info-block">
               <div className="info-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                 </svg>
               </div>
               <div className="info-content">
                 <p className="info-label">Address</p>
                 <p className="info-value">
-                  Xavier Business Center<br />
-                  Office Suite A5-18<br />
+                  Xavier Business Center
+                  <br />
+                  Office Suite A5-18
+                  <br />
                   Dubai, UAE
                 </p>
               </div>
@@ -76,13 +78,14 @@ const Contact = () => {
             <div className="info-block">
               <div className="info-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                 </svg>
               </div>
               <div className="info-content">
                 <p className="info-label">Phone</p>
                 <p className="info-value">
-                  +971 4 572 4542<br />
+                  +971 4 572 4542
+                  <br />
                   +971 52 547 8137
                 </p>
               </div>
@@ -91,7 +94,7 @@ const Contact = () => {
             <div className="info-block">
               <div className="info-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
               </div>
               <div className="info-content">
@@ -169,8 +172,13 @@ const Contact = () => {
               <div className="form-group file-upload">
                 <label htmlFor="attachment">
                   <span className="file-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                      <path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z"/>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      width="20"
+                      height="20"
+                    >
+                      <path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z" />
                     </svg>
                   </span>
                   Attach Technical Specification

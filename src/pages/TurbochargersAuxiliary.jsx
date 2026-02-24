@@ -1,115 +1,363 @@
 /**
  * ASP Global Marine Trading LLC - Turbochargers & Auxiliary Engine Products Page
- * 
- * Turbochargers and auxiliary engine components
+ *
+ * Comprehensive turbocharger and auxiliary engine solutions
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-import '../styles/pages/Products.css';
+import "../styles/pages/Products.css";
 
 const TurbochargersAuxiliary = () => {
-  const products = [
+  const turbochargerManufacturers = [
+    "ABB",
+    "KBB",
+    "Mitsubishi",
+    "MAN",
+    "Wärtsilä",
+    "IHI",
+    "Napier",
+  ];
+
+  const auxiliaryManufacturers = [
+    "Caterpillar",
+    "Cummins",
+    "Yanmar",
+    "Daihatsu",
+    "Weichai",
+    "John Deere",
+    "Volvo Penta",
+    "Scania",
+  ];
+
+  const turbochargerCategories = [
     {
-      name: "Turbocharger Units",
-      description: "Complete turbocharger assemblies and units",
-      manufacturers: ["ABB", "MAN", "Wärtsilä", "Mitsubishi", "IHI"]
+      category: "Complete Turbocharger Units",
+      icon: "🌀",
+      products: [
+        "VTR Series Turbochargers",
+        "VTC Series Turbochargers",
+        "MET Series Turbochargers",
+        "A Series Turbochargers",
+        "H Series Turbochargers",
+        "M Series Turbochargers",
+        "TCA Series Turbochargers",
+        "TCA-B Series Turbochargers",
+      ],
+      description:
+        "Complete turbocharger assemblies for marine and industrial applications",
     },
     {
-      name: "Turbocharger Rotors",
-      description: "Turbocharger rotors and impeller wheels",
-      manufacturers: ["ABB", "MAN", "Wärtsilä", "Mitsubishi", "IHI"]
+      category: "Turbocharger Rotors & Wheels",
+      icon: "🔄",
+      products: [
+        "Turbine Wheels",
+        "Compressor Wheels",
+        "Rotor Assemblies",
+        "Blower Wheels",
+        "Impeller Wheels",
+        "Shaft Assemblies",
+        "Balance Shafts",
+        "Coupling Shafts",
+      ],
+      description:
+        "High-precision rotating components for optimal turbocharger performance",
     },
     {
-      name: "Turbocharger Bearings",
-      description: "Journal bearings, thrust bearings and seals",
-      manufacturers: ["ABB", "MAN", "Wärtsilä", "Mitsubishi", "IHI"]
+      category: "Bearings & Seals",
+      icon: "⚙️",
+      products: [
+        "Journal Bearings",
+        "Thrust Bearings",
+        "Ball Bearings",
+        "Roller Bearings",
+        "Labyrinth Seals",
+        "Oil Seals",
+        "Gas Seals",
+        "Seal Plates",
+      ],
+      description:
+        "Critical bearing and sealing components for reliable operation",
     },
     {
-      name: "Turbocharger Nozzles",
-      description: "Nozzle rings and guide vanes",
-      manufacturers: ["ABB", "MAN", "Wärtsilä", "Mitsubishi", "IHI"]
+      category: "Nozzles & Guide Vanes",
+      icon: "🌪️",
+      products: [
+        "Nozzle Rings",
+        "Guide Vanes",
+        "Nozzle Carriers",
+        "Turbine Nozzles",
+        "Compressor Nozzles",
+        "Vane Assemblies",
+        "Diaphragm Plates",
+        "Ring Segments",
+      ],
+      description: "Precision flow control components for efficient gas flow",
     },
     {
-      name: "Auxiliary Engine Parts",
-      description: "Complete range of auxiliary engine components",
-      manufacturers: ["Caterpillar", "Cummins", "MAN", "Wärtsilä", "Yanmar"]
+      category: "Repair Kits & Spares",
+      icon: "🔧",
+      products: [
+        "Overhaul Kits",
+        "Maintenance Kits",
+        "Bearing Kits",
+        "Seal Kits",
+        "Gasket Sets",
+        "Bolt Sets",
+        "Washer Sets",
+        "O-ring Kits",
+      ],
+      description:
+        "Comprehensive repair and maintenance kits for turbocharger servicing",
+    },
+  ];
+
+  const auxiliaryCategories = [
+    {
+      category: "Generator Sets",
+      icon: "⚡",
+      products: [
+        "Marine Generators",
+        "Diesel Generators",
+        "AC Generators",
+        "DC Generators",
+        "Stator Assemblies",
+        "Rotor Assemblies",
+        "Voltage Regulators",
+        "Control Panels",
+      ],
+      description: "Complete power generation solutions for marine vessels",
     },
     {
-      name: "Generator Components",
-      description: "Generator sets and power generation components",
-      manufacturers: ["Caterpillar", "Cummins", "MAN", "Wärtsilä", "Yanmar"]
-    }
+      category: "Auxiliary Engines",
+      icon: "🔥",
+      products: [
+        "Marine Auxiliary Engines",
+        "Generator Engines",
+        "Pump Engines",
+        "Compressor Engines",
+        "Engine Blocks",
+        "Cylinder Heads",
+        "Crankshafts",
+        "Camshafts",
+      ],
+      description: "Reliable auxiliary engines for various marine applications",
+    },
+    {
+      category: "Engine Components",
+      icon: "⚙️",
+      products: [
+        "Piston Assemblies",
+        "Cylinder Liners",
+        "Valve Train Components",
+        "Fuel Injection Systems",
+        "Cooling Systems",
+        "Lubrication Systems",
+        "Starting Systems",
+        "Exhaust Systems",
+      ],
+      description:
+        "Complete range of engine components for maintenance and repair",
+    },
+    {
+      category: "Control Systems",
+      icon: "🎛️",
+      products: [
+        "Engine Control Units",
+        "Speed Governors",
+        "Safety Systems",
+        "Monitoring Systems",
+        "Sensors",
+        "Actuators",
+        "Switches",
+        "Indicators",
+      ],
+      description:
+        "Advanced control and monitoring systems for engine management",
+    },
   ];
 
   return (
     <div className="product-page">
       <div className="container">
         <div className="page-header">
-          <h1 className="page-title">Turbochargers & Auxiliary Engine Products</h1>
+          <h1 className="page-title">
+            Turbochargers & Auxiliary Engine Products
+          </h1>
           <p className="page-subtitle">
-            High-performance turbochargers and auxiliary engine components
+            Comprehensive Turbocharger and Auxiliary Engine Solutions for Marine
+            Applications
           </p>
         </div>
 
         <section className="product-intro">
-          <p>
-            We specialize in supplying high-quality turbochargers and auxiliary engine components from 
-            leading manufacturers. Our comprehensive range includes complete turbocharger units, spare 
-            parts, and auxiliary engine components for reliable power generation and propulsion systems.
-          </p>
+          <div className="intro-content">
+            <h2>Advanced Power Solutions</h2>
+            <p>
+              ASP Global Marine Trading LLC provides comprehensive turbocharger
+              and auxiliary engine solutions for the maritime industry. Our
+              extensive inventory includes complete turbocharger units,
+              precision components, and auxiliary engine systems from leading
+              manufacturers worldwide. With over 18 years of expertise, we
+              ensure reliable performance, compliance with maritime standards,
+              and exceptional technical support.
+            </p>
+            <div className="manufacturer-showcase">
+              <h3>Turbocharger Manufacturers</h3>
+              <div className="manufacturer-grid">
+                {turbochargerManufacturers.map((manufacturer, index) => (
+                  <div key={index} className="manufacturer-card">
+                    <span className="manufacturer-name">{manufacturer}</span>
+                  </div>
+                ))}
+              </div>
+              <h3>Auxiliary Engine Manufacturers</h3>
+              <div className="manufacturer-grid">
+                {auxiliaryManufacturers.map((manufacturer, index) => (
+                  <div key={index} className="manufacturer-card">
+                    <span className="manufacturer-name">{manufacturer}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section className="products-grid">
-          {products.map((product, index) => (
-            <div key={index} className="product-card">
-              <div className="product-header">
-                <h3>{product.name}</h3>
-                <p className="product-description">{product.description}</p>
-              </div>
-              <div className="product-manufacturers">
-                <h4>Available for:</h4>
-                <div className="manufacturer-list">
-                  {product.manufacturers.map((manufacturer, idx) => (
-                    <span key={idx} className="manufacturer-tag">{manufacturer}</span>
-                  ))}
+        <section className="product-categories">
+          <h2>Turbocharger Solutions</h2>
+          <div className="category-grid">
+            {turbochargerCategories.map((category, index) => (
+              <div key={index} className="category-card">
+                <div className="category-header">
+                  <div className="category-icon">{category.icon}</div>
+                  <h3>{category.category}</h3>
+                </div>
+                <p className="category-description">{category.description}</p>
+                <div className="product-list">
+                  <h4>Available Products:</h4>
+                  <div className="product-tags">
+                    {category.products.map((product, idx) => (
+                      <span key={idx} className="product-tag">
+                        {product}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
 
-        <section className="services">
-          <h2>Our Services</h2>
-          <div className="services-grid">
-            <div className="service-card">
+        <section className="product-categories">
+          <h2>Auxiliary Engine Solutions</h2>
+          <div className="category-grid">
+            {auxiliaryCategories.map((category, index) => (
+              <div key={index} className="category-card">
+                <div className="category-header">
+                  <div className="category-icon">{category.icon}</div>
+                  <h3>{category.category}</h3>
+                </div>
+                <p className="category-description">{category.description}</p>
+                <div className="product-list">
+                  <h4>Available Products:</h4>
+                  <div className="product-tags">
+                    {category.products.map((product, idx) => (
+                      <span key={idx} className="product-tag">
+                        {product}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="technical-specifications">
+          <h2>Technical Excellence & Services</h2>
+          <div className="spec-grid">
+            <div className="spec-card">
               <h3>Technical Consultation</h3>
-              <p>Expert advice on turbocharger selection and compatibility</p>
+              <ul>
+                <li>Turbocharger selection and sizing</li>
+                <li>Performance optimization</li>
+                <li>System integration support</li>
+                <li>Failure analysis and troubleshooting</li>
+                <li>Upgrade recommendations</li>
+              </ul>
             </div>
-            <div className="service-card">
-              <h3>Overhaul Support</h3>
-              <p>Complete support for turbocharger overhaul and maintenance</p>
+            <div className="spec-card">
+              <h3>Overhaul & Repair</h3>
+              <ul>
+                <li>Complete turbocharger overhaul</li>
+                <li>Bearing replacement services</li>
+                <li>Rotor balancing and repair</li>
+                <li>Performance testing</li>
+                <li>On-site service support</li>
+              </ul>
             </div>
-            <div className="service-card">
-              <h3>Spare Parts Management</h3>
-              <p>Comprehensive spare parts inventory and logistics</p>
+            <div className="spec-card">
+              <h3>Quality Assurance</h3>
+              <ul>
+                <li>OEM specification compliance</li>
+                <li>Material certification</li>
+                <li>Performance testing</li>
+                <li>Classification society approval</li>
+                <li>Warranty and guarantee support</li>
+              </ul>
             </div>
           </div>
         </section>
 
         <section className="quality-assurance">
-          <h2>Quality Assurance</h2>
-          <div className="quality-points">
+          <h2>Quality & Compliance Standards</h2>
+          <div className="quality-grid">
             <div className="quality-item">
-              <h4>Original Equipment</h4>
-              <p>100% genuine OEM parts with manufacturer warranty</p>
+              <div className="quality-icon">✓</div>
+              <h3>Original Equipment Quality</h3>
+              <p>
+                100% genuine OEM parts with manufacturer warranty and full
+                traceability
+              </p>
             </div>
             <div className="quality-item">
-              <h4>Performance Testing</h4>
-              <p>All parts undergo rigorous performance testing</p>
+              <div className="quality-icon">✓</div>
+              <h3>Performance Testing</h3>
+              <p>
+                All components undergo rigorous performance testing and quality
+                inspection
+              </p>
             </div>
             <div className="quality-item">
-              <h4>Technical Documentation</h4>
-              <p>Complete technical documentation and certificates</p>
+              <div className="quality-icon">✓</div>
+              <h3>Marine Certification</h3>
+              <p>
+                SOLAS, IMO, and classification society approved components and
+                systems
+              </p>
+            </div>
+            <div className="quality-item">
+              <div className="quality-icon">✓</div>
+              <h3>Technical Documentation</h3>
+              <p>
+                Complete technical documentation, certificates, and compliance
+                records
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="contact-cta">
+          <div className="cta-content">
+            <h2>Need Turbocharger or Auxiliary Engine Solutions?</h2>
+            <p>
+              Contact our technical team for expert assistance with your
+              turbocharger and auxiliary engine requirements. We provide
+              comprehensive solutions with rapid delivery worldwide and 24/7
+              technical support.
+            </p>
+            <div className="cta-buttons">
+              <button className="btn btn-primary">Request Quote</button>
+              <button className="btn btn-secondary">Technical Support</button>
             </div>
           </div>
         </section>

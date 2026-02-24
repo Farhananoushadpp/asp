@@ -1,44 +1,271 @@
 /**
  * ASP Global Marine Trading LLC - Deck Stores & General Marine Stores Page
- * 
- * Deck stores and general marine supplies
+ *
+ * Comprehensive deck equipment and general marine supplies solutions
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-import '../styles/pages/Products.css';
+import "../styles/pages/Products.css";
 
 const DeckStoresGeneral = () => {
-  const products = [
+  const manufacturers = [
+    "Bridon",
+    "Lankhorst",
+    "Samson",
+    "Rope",
+    "Van der Giessen",
+    "Vicinay",
+    "Briare",
+    "Mampaey",
+    "Trelleborg",
+    "Hendrik",
+    "Survitec",
+    "Viking",
+    "Hansen Protection",
+    "Mustang",
+    "Crewsaver",
+    "Jotun",
+    "Hempel",
+    "International Paint",
+    "PPG",
+    "Chugoku",
+    "Unitor",
+    "Drew",
+    "Wilhelmsen",
+  ];
+
+  const deckCategories = [
     {
-      name: "Mooring Equipment",
-      description: "Mooring ropes, chains and deck fittings",
-      manufacturers: ["Bridon", "Lankhorst", "Samson", "Rope", "Van der Giessen"]
+      category: "Mooring Equipment",
+      icon: "⚓",
+      products: [
+        "Mooring Ropes",
+        "Anchor Chains",
+        "Mooring Lines",
+        "Synthetic Ropes",
+        "Wire Ropes",
+        "Mooring Winches",
+        "Capstans",
+        "Windlasses",
+      ],
+      description:
+        "Complete mooring systems for vessel anchoring and berthing operations",
     },
     {
-      name: "Anchoring Equipment",
-      description: "Anchors, chains and anchoring accessories",
-      manufacturers: ["Vicinay", "Briare", "Mampaey", "Trelleborg", "Van der Giessen"]
+      category: "Anchoring Systems",
+      icon: "🔗",
+      products: [
+        "Marine Anchors",
+        "Anchor Chains",
+        "Shackles",
+        "Swivels",
+        "Connectors",
+        "Chain Stoppers",
+        "Anchor Windlasses",
+        "Anchor Handling Systems",
+      ],
+      description:
+        "Comprehensive anchoring equipment for secure vessel positioning",
     },
     {
-      name: "Deck Fittings",
-      description: "Bollards, fairleads, chocks and deck hardware",
-      manufacturers: ["Mampaey", "Trelleborg", "Lankhorst", "Van der Giessen", "Hendrik"]
+      category: "Deck Fittings",
+      icon: "🔩",
+      products: [
+        "Bollards",
+        "Fairleads",
+        "Chocks",
+        "Cleats",
+        "Rollers",
+        "Guide Rings",
+        "Deck Hardware",
+        "Fittings",
+      ],
+      description:
+        "Essential deck fittings for rope handling and deck operations",
     },
     {
-      name: "Safety Equipment",
-      description: "Personal protective equipment and safety gear",
-      manufacturers: ["Survitec", "Viking", "Hansen Protection", "Mustang", "Crewsaver"]
+      category: "Safety Equipment",
+      icon: "🛡️",
+      products: [
+        "Life Jackets",
+        "Immersion Suits",
+        "Life Rafts",
+        "Fire Extinguishers",
+        "Safety Harnesses",
+        "Personal Protective Equipment",
+        "Emergency Equipment",
+        "Safety Signs",
+      ],
+      description:
+        "Comprehensive safety equipment for crew protection and emergency response",
     },
     {
-      name: "Paints & Coatings",
-      description: "Marine paints, coatings and surface preparation",
-      manufacturers: ["Jotun", "Hempel", "International Paint", "PPG", "Chugoku"]
+      category: "Paints & Coatings",
+      icon: "🎨",
+      products: [
+        "Marine Paints",
+        "Anti-Fouling Paints",
+        "Primers",
+        "Topcoats",
+        "Hull Coatings",
+        "Deck Coatings",
+        "Tank Coatings",
+        "Surface Preparation Materials",
+      ],
+      description:
+        "Professional marine paints and coatings for vessel protection and maintenance",
     },
     {
-      name: "Cleaning Supplies",
-      description: "Marine cleaning chemicals and supplies",
-      manufacturers: ["Unitor", "Drew", "Jotun", "Hempel", "International Paint"]
-    }
+      category: "Cleaning & Maintenance",
+      icon: "🧹",
+      products: [
+        "Marine Cleaners",
+        "Degreasers",
+        "Solvents",
+        "Maintenance Chemicals",
+        "Cleaning Equipment",
+        "Waste Management Supplies",
+        "Lubricants",
+        "Corrosion Inhibitors",
+      ],
+      description:
+        "Complete cleaning and maintenance supplies for vessel upkeep",
+    },
+    {
+      category: "General Stores",
+      icon: "📦",
+      products: [
+        "Marine Tools",
+        "Electrical Supplies",
+        "Plumbing Supplies",
+        "Hardware",
+        "Fasteners",
+        "Sealing Materials",
+        "Gaskets",
+        "O-Rings",
+      ],
+      description:
+        "Essential general stores and consumables for vessel operations",
+    },
+    {
+      category: "Navigation Equipment",
+      icon: "🧭",
+      products: [
+        "Navigation Lights",
+        "Signal Flags",
+        "Charts",
+        "Compasses",
+        "Binoculars",
+        "Communication Equipment",
+        "Navigation Instruments",
+        "Safety Signaling",
+      ],
+      description:
+        "Navigation and signaling equipment for safe vessel operations",
+    },
+  ];
+
+  const applications = [
+    {
+      category: "Commercial Vessels",
+      icon: "🚢",
+      description: "Deck stores solutions for commercial shipping operations",
+      vessels: [
+        "Cargo Ships",
+        "Tankers",
+        "Container Ships",
+        "Bulk Carriers",
+        "General Cargo Vessels",
+      ],
+      applications: [
+        "Cargo Operations",
+        "Deck Safety",
+        "Mooring Operations",
+        "Maintenance",
+      ],
+    },
+    {
+      category: "Passenger Vessels",
+      icon: "🛳️",
+      description: "Deck equipment for passenger and cruise ship operations",
+      vessels: ["Cruise Ships", "Ferries", "Passenger Ships", "Ro-Ro Vessels"],
+      applications: [
+        "Passenger Safety",
+        "Deck Operations",
+        "Emergency Equipment",
+        "Comfort Systems",
+      ],
+    },
+    {
+      category: "Offshore Vessels",
+      icon: "🏗️",
+      description: "Specialized deck stores for offshore operations",
+      vessels: [
+        "Supply Vessels",
+        "Anchor Handlers",
+        "Platform Supply Vessels",
+        "Offshore Support Vessels",
+      ],
+      applications: [
+        "Offshore Operations",
+        "Special Equipment",
+        "Safety Systems",
+        "Heavy Duty Operations",
+      ],
+    },
+    {
+      category: "Special Vessels",
+      icon: "⚓",
+      description: "Deck equipment for specialized vessel types",
+      vessels: [
+        "Naval Ships",
+        "Research Vessels",
+        "Fishing Vessels",
+        "Tugboats",
+      ],
+      applications: [
+        "Special Operations",
+        "Research Equipment",
+        "Fishing Gear",
+        "Towing Equipment",
+      ],
+    },
+  ];
+
+  const technicalSpecs = [
+    {
+      category: "Quality Standards",
+      icon: "📊",
+      specs: [
+        "ISO 9001 Certified Suppliers",
+        "Classification Society Approved",
+        "SOLAS Compliant Equipment",
+        "Marine Grade Materials",
+        "International Standards Compliance",
+      ],
+    },
+    {
+      category: "Performance Specifications",
+      icon: "✅",
+      specs: [
+        "Load Capacity: 1-500 tons",
+        "Breaking Strength: 10-1000 tons",
+        "Corrosion Resistance: 10+ years",
+        "Temperature Range: -40°C to 80°C",
+        "UV Resistance: Marine Grade",
+      ],
+    },
+    {
+      category: "Service Capabilities",
+      icon: "🔧",
+      specs: [
+        "24/7 Technical Support",
+        "Marine Installation",
+        "Inspection Services",
+        "Maintenance Contracts",
+        "Emergency Supply Services",
+      ],
+    },
   ];
 
   return (
@@ -47,92 +274,166 @@ const DeckStoresGeneral = () => {
         <div className="page-header">
           <h1 className="page-title">Deck Stores & General Marine Stores</h1>
           <p className="page-subtitle">
-            Comprehensive deck equipment and general marine supplies
+            Comprehensive Deck Equipment and General Marine Supplies Solutions
           </p>
         </div>
 
         <section className="product-intro">
-          <p>
-            We provide a complete range of deck stores and general marine supplies essential for 
-            vessel operations. Our inventory includes mooring equipment, anchoring gear, deck fittings, 
-            safety equipment, paints, and cleaning supplies from leading manufacturers, ensuring 
-            comprehensive support for all deck operations.
-          </p>
-        </section>
-
-        <section className="products-grid">
-          {products.map((product, index) => (
-            <div key={index} className="product-card">
-              <div className="product-header">
-                <h3>{product.name}</h3>
-                <p className="product-description">{product.description}</p>
+          <div className="intro-content">
+            <h2>Complete Marine Deck Solutions</h2>
+            <p>
+              ASP Global Marine Trading LLC provides comprehensive deck stores
+              and general marine supplies for vessels, offshore platforms, and
+              maritime operations. With over 18 years of expertise, we supply
+              essential deck equipment, safety gear, paints, and maintenance
+              supplies from leading manufacturers worldwide, ensuring reliable
+              performance, safety compliance, and operational excellence for all
+              deck operations.
+            </p>
+            <div className="manufacturer-showcase">
+              <h3>Leading Manufacturers</h3>
+              <div className="manufacturer-grid">
+                {manufacturers.map((manufacturer, index) => (
+                  <div key={index} className="manufacturer-card">
+                    <span className="manufacturer-name">{manufacturer}</span>
+                  </div>
+                ))}
               </div>
-              <div className="product-manufacturers">
-                <h4>Available for:</h4>
-                <div className="manufacturer-list">
-                  {product.manufacturers.map((manufacturer, idx) => (
-                    <span key={idx} className="manufacturer-tag">{manufacturer}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
-
-        <section className="deck-categories">
-          <h2>Deck Equipment Categories</h2>
-          <div className="categories-grid">
-            <div className="category-card">
-              <h3>Mooring & Anchoring</h3>
-              <p>Complete mooring and anchoring solutions</p>
-            </div>
-            <div className="category-card">
-              <h3>Deck Hardware</h3>
-              <p>Essential deck fittings and hardware</p>
-            </div>
-            <div className="category-card">
-              <h3>Safety Equipment</h3>
-              <p>Personal and vessel safety equipment</p>
-            </div>
-            <div className="category-card">
-              <h3>Maintenance Supplies</h3>
-              <p>Paints, coatings and cleaning supplies</p>
             </div>
           </div>
         </section>
 
-        <section className="quality-standards">
-          <h2>Quality Standards</h2>
-          <div className="standards-grid">
-            <div className="standard-card">
-              <h3>SOLAS Compliant</h3>
-              <p>All safety equipment meets SOLAS requirements</p>
-            </div>
-            <div className="standard-card">
-              <h3>Class Approved</h3>
-              <p>Equipment approved by classification societies</p>
-            </div>
-            <div className="standard-card">
-              <h3>ISO Certified</h3>
-              <p>Quality management systems certified</p>
-            </div>
+        <section className="product-categories">
+          <h2>Deck Store Categories</h2>
+          <div className="category-grid">
+            {deckCategories.map((category, index) => (
+              <div key={index} className="category-card">
+                <div className="category-header">
+                  <div className="category-icon">{category.icon}</div>
+                  <h3>{category.category}</h3>
+                </div>
+                <p className="category-description">{category.description}</p>
+                <div className="product-list">
+                  <h4>Available Products:</h4>
+                  <div className="product-tags">
+                    {category.products.map((product, idx) => (
+                      <span key={idx} className="product-tag">
+                        {product}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="product-categories">
+          <h2>Applications & Solutions</h2>
+          <div className="category-grid">
+            {applications.map((application, index) => (
+              <div key={index} className="category-card">
+                <div className="category-header">
+                  <div className="category-icon">{application.icon}</div>
+                  <h3>{application.category}</h3>
+                </div>
+                <p className="category-description">
+                  {application.description}
+                </p>
+                <div className="product-list">
+                  <h4>Vessel Types:</h4>
+                  <div className="product-tags">
+                    {application.vessels.map((vessel, idx) => (
+                      <span key={idx} className="product-tag">
+                        {vessel}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="product-list">
+                  <h4>Applications:</h4>
+                  <div className="product-tags">
+                    {application.applications.map((app, idx) => (
+                      <span key={idx} className="product-tag">
+                        {app}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="technical-specifications">
+          <h2>Technical Specifications & Services</h2>
+          <div className="spec-grid">
+            {technicalSpecs.map((spec, index) => (
+              <div key={index} className="spec-card">
+                <div className="category-header">
+                  <div className="category-icon">{spec.icon}</div>
+                  <h3>{spec.category}</h3>
+                </div>
+                <ul>
+                  {spec.specs.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="quality-assurance">
-          <h2>Quality Assurance</h2>
-          <div className="quality-points">
+          <h2>Quality Assurance & Compliance</h2>
+          <div className="quality-grid">
             <div className="quality-item">
-              <h4>Quality Brands</h4>
-              <p>Products from leading marine equipment manufacturers</p>
+              <div className="quality-icon">✓</div>
+              <h3>Marine Certification</h3>
+              <p>
+                All equipment meets SOLAS, IMO, and classification society
+                requirements with full certification
+              </p>
             </div>
             <div className="quality-item">
-              <h4>Technical Support</h4>
-              <p>Expert advice on equipment selection and application</p>
+              <div className="quality-icon">✓</div>
+              <h3>Safety Compliance</h3>
+              <p>
+                Safety equipment meets international maritime safety standards
+                and regulations
+              </p>
             </div>
             <div className="quality-item">
-              <h4>Complete Inventory</h4>
-              <p>Comprehensive stock of essential deck supplies</p>
+              <div className="quality-icon">✓</div>
+              <h3>Quality Materials</h3>
+              <p>
+                Marine-grade materials with corrosion resistance and durability
+                for harsh environments
+              </p>
+            </div>
+            <div className="quality-item">
+              <div className="quality-icon">✓</div>
+              <h3>Technical Expertise</h3>
+              <p>
+                Expert guidance on equipment selection, installation, and
+                maintenance for optimal performance
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="contact-cta">
+          <div className="cta-content">
+            <h2>Need Deck Stores & Marine Supplies?</h2>
+            <p>
+              Contact our technical team for expert assistance with your deck
+              stores and general marine supply requirements. We provide
+              comprehensive solutions with rapid delivery worldwide and 24/7
+              technical support.
+            </p>
+            <div className="cta-buttons">
+              <button className="btn btn-primary">Request Quote</button>
+              <button className="btn btn-secondary">Technical Support</button>
             </div>
           </div>
         </section>

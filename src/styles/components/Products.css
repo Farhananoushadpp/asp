@@ -185,25 +185,25 @@
   .products-headline {
     font-size: var(--font-size-3xl);
   }
-  
+
   .accordion-header {
     padding: var(--spacing-md) var(--spacing-lg);
   }
-  
+
   .accordion-number {
     font-size: var(--font-size-xs);
     min-width: 24px;
   }
-  
+
   .accordion-title {
     font-size: var(--font-size-base);
   }
-  
+
   .accordion-icon {
     width: 20px;
     height: 20px;
   }
-  
+
   .accordion-inner {
     padding: 0 var(--spacing-lg) var(--spacing-lg);
   }
@@ -213,20 +213,20 @@
   .products-headline {
     font-size: var(--font-size-2xl);
   }
-  
+
   .products-subtext {
     font-size: var(--font-size-base);
   }
-  
+
   .accordion-header {
     padding: var(--spacing-sm) var(--spacing-md);
     gap: var(--spacing-md);
   }
-  
+
   .accordion-title {
     font-size: var(--font-size-sm);
   }
-  
+
   .tag,
   .product-tag {
     font-size: var(--font-size-xs);

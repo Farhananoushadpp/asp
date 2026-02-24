@@ -112,11 +112,11 @@
   .partners-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .partners-headline {
     font-size: var(--font-size-3xl);
   }
-  
+
   .partner-card {
     padding: var(--spacing-lg);
   }

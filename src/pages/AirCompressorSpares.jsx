@@ -1,44 +1,237 @@
 /**
  * ASP Global Marine Trading LLC - Air Compressor Spares Page
- * 
- * Marine air compressors and spare parts
+ *
+ * Comprehensive marine air compressors and spare parts solutions
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-import '../styles/pages/Products.css';
+import "../styles/pages/Products.css";
 
 const AirCompressorSpares = () => {
-  const products = [
+  const manufacturers = [
+    "Atlas Copco",
+    "Ingersoll Rand",
+    "Kaeser Kompressoren",
+    "Sullair",
+    "Boge",
+    "Hankison",
+    "Donaldson",
+    "Gardner Denver",
+    "Bauer",
+    "Chiaphua",
+    "Mattei",
+    "ELGi",
+    "Chicago Pneumatic",
+    "Kaishan",
+    "Doosan",
+  ];
+
+  const compressorCategories = [
     {
-      name: "Marine Air Compressors",
-      description: "Complete marine air compressor units and systems",
-      manufacturers: ["Atlas Copco", "Ingersoll Rand", "Kaeser", "Sullair", "Boge"]
+      category: "Marine Air Compressors",
+      icon: "🌀",
+      products: [
+        "Reciprocating Air Compressors",
+        "Screw Air Compressors",
+        "Rotary Vane Compressors",
+        "Centrifugal Compressors",
+        "Portable Compressors",
+        "Stationary Compressors",
+        "Oil-Free Compressors",
+        "Lubricated Compressors",
+      ],
+      description:
+        "Complete marine air compressor systems for various vessel applications",
     },
     {
-      name: "Compressor Pistons",
-      description: "High-quality compressor pistons and piston rings",
-      manufacturers: ["Atlas Copco", "Ingersoll Rand", "Kaeser", "Sullair", "Boge"]
+      category: "Compressor Components",
+      icon: "⚙️",
+      products: [
+        "Compressor Pistons",
+        "Piston Rings",
+        "Connecting Rods",
+        "Crankshafts",
+        "Cylinder Liners",
+        "Valve Plates",
+        "Suction Valves",
+        "Discharge Valves",
+      ],
+      description:
+        "Critical compressor components for reliable operation and maintenance",
     },
     {
-      name: "Compressor Valves",
-      description: "Suction and discharge valves for air compressors",
-      manufacturers: ["Atlas Copco", "Ingersoll Rand", "Kaeser", "Sullair", "Boge"]
+      category: "Air Treatment Systems",
+      icon: "💨",
+      products: [
+        "Refrigerated Air Dryers",
+        "Desiccant Air Dryers",
+        "Membrane Dryers",
+        "Moisture Separators",
+        "Water Separators",
+        "Oil Separators",
+        "Aftercoolers",
+        "Air Receivers",
+      ],
+      description:
+        "Advanced air treatment systems for clean, dry compressed air",
     },
     {
-      name: "Air Dryers",
-      description: "Marine air dryers and moisture separation systems",
-      manufacturers: ["Atlas Copco", "Ingersoll Rand", "Kaeser", "Hankison", "Boge"]
+      category: "Filtration Systems",
+      icon: "🔍",
+      products: [
+        "Air Intake Filters",
+        "Oil Filters",
+        "Air/Oil Separators",
+        "Particulate Filters",
+        "Coalescing Filters",
+        "Activated Carbon Filters",
+        "Breather Filters",
+        "Filter Elements",
+      ],
+      description: "Comprehensive filtration solutions for air and oil systems",
     },
     {
-      name: "Air Filters",
-      description: "Air intake filters and filtration systems",
-      manufacturers: ["Atlas Copco", "Ingersoll Rand", "Kaeser", "Donaldson", "Boge"]
+      category: "Control Systems",
+      icon: "📊",
+      products: [
+        "Pressure Switches",
+        "Temperature Switches",
+        "Pressure Regulators",
+        "Solenoid Valves",
+        "Control Panels",
+        "Pressure Gauges",
+        "Flow Meters",
+        "Safety Valves",
+      ],
+      description:
+        "Advanced control and monitoring systems for optimal compressor performance",
     },
     {
-      name: "Compressor Oil Systems",
-      description: "Lubrication systems and compressor oils",
-      manufacturers: ["Atlas Copco", "Ingersoll Rand", "Kaeser", "Shell", "Total"]
-    }
+      category: "Lubrication Systems",
+      icon: "💧",
+      products: [
+        "Compressor Oils",
+        "Oil Pumps",
+        "Oil Coolers",
+        "Oil Filters",
+        "Oil Separators",
+        "Lubricators",
+        "Grease Systems",
+        "Oil Level Gauges",
+      ],
+      description:
+        "Complete lubrication systems and products for compressor maintenance",
+    },
+  ];
+
+  const applications = [
+    {
+      category: "Marine Vessel Systems",
+      icon: "🚢",
+      description:
+        "Air compressor solutions for various vessel types and applications",
+      vessels: [
+        "Cargo Ships",
+        "Tankers",
+        "Container Ships",
+        "Passenger Vessels",
+        "Offshore Support Vessels",
+      ],
+      applications: [
+        "Starting Air Systems",
+        "Control Air Systems",
+        "Service Air Systems",
+        "Deck Operations",
+      ],
+    },
+    {
+      category: "Engine Room Applications",
+      icon: "⚙️",
+      description: "Air compressor systems for engine room operations",
+      vessels: [
+        "Main Engines",
+        "Auxiliary Engines",
+        "Generator Sets",
+        "Pump Systems",
+      ],
+      applications: [
+        "Engine Starting",
+        "Control Systems",
+        "Pneumatic Tools",
+        "Instrumentation Air",
+      ],
+    },
+    {
+      category: "Deck Operations",
+      icon: "⚓",
+      description: "Air compressor solutions for deck and cargo operations",
+      vessels: [
+        "Cargo Handling",
+        "Deck Machinery",
+        "Mooring Systems",
+        "Safety Systems",
+      ],
+      applications: [
+        "Pneumatic Tools",
+        "Air Horns",
+        "Winch Systems",
+        "Safety Equipment",
+      ],
+    },
+    {
+      category: "Industrial Applications",
+      icon: "🏭",
+      description:
+        "Air compressor systems for industrial and offshore applications",
+      vessels: [
+        "Offshore Platforms",
+        "Industrial Plants",
+        "Construction Sites",
+        "Mining Operations",
+      ],
+      applications: [
+        "Process Control",
+        "Pneumatic Systems",
+        "Tool Operation",
+        "Maintenance Operations",
+      ],
+    },
+  ];
+
+  const technicalSpecs = [
+    {
+      category: "Performance Specifications",
+      icon: "📊",
+      specs: [
+        "Air Flow: 50-5000 CFM",
+        "Pressure Range: 7-500 bar",
+        "Power Range: 5-500 kW",
+        "Tank Capacity: 50-5000 liters",
+        "Dew Point: -40°C to 3°C",
+      ],
+    },
+    {
+      category: "Marine Compliance",
+      icon: "✅",
+      specs: [
+        "IMO SOLAS Compliant",
+        "Classification Society Approved",
+        "Marine Grade Materials",
+        "Corrosion Resistant",
+        "Explosion Proof Options",
+      ],
+    },
+    {
+      category: "Service Capabilities",
+      icon: "🔧",
+      specs: [
+        "24/7 Technical Support",
+        "Marine Installation",
+        "Commissioning Services",
+        "Maintenance Contracts",
+        "Emergency Repair Services",
+      ],
+    },
   ];
 
   return (
@@ -47,92 +240,166 @@ const AirCompressorSpares = () => {
         <div className="page-header">
           <h1 className="page-title">Air Compressor Spares</h1>
           <p className="page-subtitle">
-            Marine air compressors and comprehensive spare parts
+            Comprehensive Marine Air Compressors and Spare Parts Solutions
           </p>
         </div>
 
         <section className="product-intro">
-          <p>
-            We supply a complete range of marine air compressors and spare parts from leading manufacturers. 
-            Our inventory includes compressor units, critical components, and accessories ensuring reliable 
-            compressed air supply for various marine applications including starting air, control air, and 
-            service air systems.
-          </p>
-        </section>
-
-        <section className="products-grid">
-          {products.map((product, index) => (
-            <div key={index} className="product-card">
-              <div className="product-header">
-                <h3>{product.name}</h3>
-                <p className="product-description">{product.description}</p>
+          <div className="intro-content">
+            <h2>Advanced Compressed Air Solutions</h2>
+            <p>
+              ASP Global Marine Trading LLC provides comprehensive marine air
+              compressors and spare parts for vessels, offshore platforms, and
+              industrial facilities. With over 18 years of expertise, we supply
+              advanced air compression equipment from leading manufacturers
+              worldwide, ensuring reliable performance, energy efficiency, and
+              compliance with maritime standards for all compressed air
+              requirements.
+            </p>
+            <div className="manufacturer-showcase">
+              <h3>Leading Manufacturers</h3>
+              <div className="manufacturer-grid">
+                {manufacturers.map((manufacturer, index) => (
+                  <div key={index} className="manufacturer-card">
+                    <span className="manufacturer-name">{manufacturer}</span>
+                  </div>
+                ))}
               </div>
-              <div className="product-manufacturers">
-                <h4>Available for:</h4>
-                <div className="manufacturer-list">
-                  {product.manufacturers.map((manufacturer, idx) => (
-                    <span key={idx} className="manufacturer-tag">{manufacturer}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
-
-        <section className="compressor-applications">
-          <h2>Compressor Applications</h2>
-          <div className="applications-grid">
-            <div className="application-card">
-              <h3>Starting Air Systems</h3>
-              <p>Main engine starting air compressors and systems</p>
-            </div>
-            <div className="application-card">
-              <h3>Control Air Systems</h3>
-              <p>Pneumatic control and automation air supply</p>
-            </div>
-            <div className="application-card">
-              <h3>Service Air Systems</h3>
-              <p>General service air for tools and equipment</p>
-            </div>
-            <div className="application-card">
-              <h3>Breathing Air Systems</h3>
-              <p>High-quality breathing air for safety applications</p>
             </div>
           </div>
         </section>
 
-        <section className="compressor-types">
-          <h2>Compressor Types</h2>
-          <div className="compressor-types-grid">
-            <div className="compressor-type-card">
-              <h3>Reciprocating Compressors</h3>
-              <p>High-pressure reciprocating air compressors</p>
-            </div>
-            <div className="compressor-type-card">
-              <h3>Screw Compressors</h3>
-              <p>Rotary screw compressors for continuous operation</p>
-            </div>
-            <div className="compressor-type-card">
-              <h3>Centrifugal Compressors</h3>
-              <p>High-capacity centrifugal air compressors</p>
-            </div>
+        <section className="product-categories">
+          <h2>Compressor System Categories</h2>
+          <div className="category-grid">
+            {compressorCategories.map((category, index) => (
+              <div key={index} className="category-card">
+                <div className="category-header">
+                  <div className="category-icon">{category.icon}</div>
+                  <h3>{category.category}</h3>
+                </div>
+                <p className="category-description">{category.description}</p>
+                <div className="product-list">
+                  <h4>Available Products:</h4>
+                  <div className="product-tags">
+                    {category.products.map((product, idx) => (
+                      <span key={idx} className="product-tag">
+                        {product}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="product-categories">
+          <h2>Applications & Solutions</h2>
+          <div className="category-grid">
+            {applications.map((application, index) => (
+              <div key={index} className="category-card">
+                <div className="category-header">
+                  <div className="category-icon">{application.icon}</div>
+                  <h3>{application.category}</h3>
+                </div>
+                <p className="category-description">
+                  {application.description}
+                </p>
+                <div className="product-list">
+                  <h4>System Types:</h4>
+                  <div className="product-tags">
+                    {application.vessels.map((vessel, idx) => (
+                      <span key={idx} className="product-tag">
+                        {vessel}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="product-list">
+                  <h4>Applications:</h4>
+                  <div className="product-tags">
+                    {application.applications.map((app, idx) => (
+                      <span key={idx} className="product-tag">
+                        {app}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="technical-specifications">
+          <h2>Technical Specifications & Services</h2>
+          <div className="spec-grid">
+            {technicalSpecs.map((spec, index) => (
+              <div key={index} className="spec-card">
+                <div className="category-header">
+                  <div className="category-icon">{spec.icon}</div>
+                  <h3>{spec.category}</h3>
+                </div>
+                <ul>
+                  {spec.specs.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="quality-assurance">
-          <h2>Quality Assurance</h2>
-          <div className="quality-points">
+          <h2>Quality Assurance & Compliance</h2>
+          <div className="quality-grid">
             <div className="quality-item">
-              <h4>OEM Quality</h4>
-              <p>Genuine OEM parts with manufacturer warranty</p>
+              <div className="quality-icon">✓</div>
+              <h3>Marine Certification</h3>
+              <p>
+                All systems meet SOLAS, IMO, and classification society
+                requirements with full certification
+              </p>
             </div>
             <div className="quality-item">
-              <h4>Marine Certification</h4>
-              <p>All compressors meet SOLAS and class requirements</p>
+              <div className="quality-icon">✓</div>
+              <h3>Performance Testing</h3>
+              <p>
+                Comprehensive testing for air flow, pressure, and operational
+                reliability
+              </p>
             </div>
             <div className="quality-item">
-              <h4>Technical Support</h4>
-              <p>Expert technical support and maintenance services</p>
+              <div className="quality-icon">✓</div>
+              <h3>Genuine Parts</h3>
+              <p>
+                100% genuine manufacturer parts with full traceability and
+                warranty
+              </p>
+            </div>
+            <div className="quality-item">
+              <div className="quality-icon">✓</div>
+              <h3>Technical Expertise</h3>
+              <p>
+                Expert guidance on system selection, installation, and
+                optimization for maximum efficiency
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="contact-cta">
+          <div className="cta-content">
+            <h2>Need Air Compressor Solutions?</h2>
+            <p>
+              Contact our technical team for expert assistance with your air
+              compressor and spare parts requirements. We provide comprehensive
+              solutions with rapid delivery worldwide and 24/7 technical
+              support.
+            </p>
+            <div className="cta-buttons">
+              <button className="btn btn-primary">Request Quote</button>
+              <button className="btn btn-secondary">Technical Support</button>
             </div>
           </div>
         </section>

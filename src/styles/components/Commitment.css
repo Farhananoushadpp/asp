@@ -12,13 +12,18 @@
 }
 
 .commitment::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
 }
 
 .commitment .section-label {
@@ -58,7 +63,7 @@
 }
 
 .commitment-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -132,7 +137,7 @@
   .commitment-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .commitment-headline {
     font-size: var(--font-size-3xl);
   }
