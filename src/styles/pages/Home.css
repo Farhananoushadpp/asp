@@ -1,26 +1,208 @@
 /**
- * ASP Global Marine Trading LLC - Home Page
- * 
- * Home page specific styling
+ * ASP Global Marine Trading LLC - Home Page Styles
+ *
+ * Simplified home page with only Who We Are section
+ * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
+/* Home Page Container */
 .home-page {
-  min-height: 100vh;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
-/* Hero section specific styles for home page */
-.home-page .hero {
+/* Who We Are Section */
+.who-we-are-section {
+  padding: var(--spacing-6xl) 0;
+  background: var(--white-color);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
+  position: relative;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-md);
+  padding: 6px 16px;
+  background: rgba(42, 186, 163, 0.1);
+  border-radius: var(--radius-full);
+}
+
+.section-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 var(--spacing-lg);
+  font-family: var(--font-family-heading);
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--dark-gray);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Content with Icon Layout */
+.content-with-icon {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--spacing-4xl);
+  align-items: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.content-text {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.content-text p {
+  margin-bottom: var(--spacing-lg);
+}
+
+.content-text p:last-child {
   margin-bottom: 0;
 }
 
-/* Smooth transitions between sections */
-.home-page section {
-  scroll-margin-top: 80px;
+.content-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Responsive adjustments for home page */
+.asp-global-icon {
+  width: 120px;
+  height: auto;
+  opacity: 0.8;
+  transition: all var(--transition-normal);
+  filter: drop-shadow(0 4px 12px rgba(10, 31, 68, 0.15));
+}
+
+.asp-global-icon:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 20px rgba(10, 31, 68, 0.25));
+}
+
+/* Statistics Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-4xl);
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--white-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-number {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-family-heading);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--dark-gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content-with-icon {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .asp-global-icon {
+    width: 100px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+}
+
 @media (max-width: 768px) {
-  .home-page section {
-    scroll-margin-top: 60px;
+  .who-we-are-section {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .asp-global-icon {
+    width: 100px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .asp-global-icon {
+    width: 80px;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
   }
 }

@@ -5,7 +5,7 @@
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-/* Hero Section - Using Cargo Ship Animation */
+/* Hero Section - Using Moving Boat Animation */
 .about-hero {
   position: relative;
   min-height: 60vh;
@@ -16,8 +16,8 @@
   background: linear-gradient(135deg, #0d2c4a 0%, #1a3a52 50%, #0d2c4a 100%);
 }
 
-/* Cargo Ship Animation */
-.cargo-ship-animation {
+/* Moving Ship Container */
+.moving-ship-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -27,25 +27,96 @@
   overflow: hidden;
 }
 
-.cargo-ship {
+/* Moving Ship */
+.moving-ship {
   position: absolute;
-  bottom: 38%;
-  left: -320px;
-  width: 300px;
-  height: 100px;
-  animation: shipMove 20s linear infinite;
+  bottom: 15%;
+  left: -300px;
+  width: 280px;
+  height: auto;
+  animation: shipMove 18s linear infinite;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+  z-index: 5;
 }
 
-.ship-hull {
+/* Ship Wake Trail */
+.ship-wake {
   position: absolute;
-  bottom: 25px;
-  left: 10px;
-  width: 280px;
-  height: 40px;
-  background: linear-gradient(180deg, #2c3e50 0%, #34495e 50%, #1a252f 100%);
-  border-radius: 15px 60px 8px 8px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  border: 2px solid #1a252f;
+  bottom: 12%;
+  left: -350px;
+  width: 400px;
+  height: 60px;
+  animation: shipMove 18s linear infinite;
+  z-index: 3;
+}
+
+.wake-line {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 300px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.3) 80%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.wake-1 {
+  bottom: 0;
+  animation: wakeMotion 2s ease-in-out infinite;
+}
+
+.wake-2 {
+  bottom: 10px;
+  animation: wakeMotion 2s ease-in-out infinite 0.3s;
+  opacity: 0.7;
+}
+
+.wake-3 {
+  bottom: 20px;
+  animation: wakeMotion 2s ease-in-out infinite 0.6s;
+  opacity: 0.5;
+}
+
+/* Ship Movement Animation */
+@keyframes shipMove {
+  0% {
+    left: -300px;
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(1deg);
+  }
+  100% {
+    left: 100%;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Wake Motion Animation */
+@keyframes wakeMotion {
+  0%,
+  100% {
+    transform: scaleX(1) translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleX(1.2) translateX(10px);
+    opacity: 1;
+  }
 }
 
 .ship-hull::before {
@@ -75,37 +146,21 @@
   border-radius: 10px 50px 5px 5px;
 }
 
-.ship-deck {
-  position: absolute;
-  bottom: 65px;
-  left: 15px;
-  width: 270px;
-  height: 6px;
-  background: linear-gradient(180deg, #4a5568 0%, #2d3748 100%);
-  border-radius: 2px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.ship-containers {
-  position: absolute;
-  bottom: 71px;
-  left: 20px;
-  width: 260px;
-  height: 28px;
-  display: flex;
-  gap: 3px;
-  padding: 0 5px;
+/* Hero Content Positioning */
+.about-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: var(--white-color);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
 .container {
   flex: 1;
   height: 100%;
-  border-radius: 3px;
-  box-shadow:
-    0 3px 8px rgba(0, 0, 0, 0.4),
-    inset 0 1px 2px rgba(255, 255, 255, 0.2);
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .container::before {
@@ -159,7 +214,25 @@
   border: 1px solid #a0aec0;
 }
 
-.ship-bridge::before {
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.ship-bridge::after {
   content: "";
   position: absolute;
   top: 8px;
@@ -175,7 +248,7 @@
   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
 }
 
-.ship-bridge::after {
+.ship-bridge::before {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -306,16 +379,7 @@
   );
 }
 
-/* Realistic Animations */
-@keyframes shipMove {
-  0% {
-    left: -320px;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
+/* Wave Animation */
 @keyframes waveMove {
   0% {
     transform: translateX(0) translateY(0);
@@ -736,13 +800,64 @@
   font-weight: 700;
   margin-bottom: var(--spacing-lg);
   line-height: 1.2;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #2ABAA3;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .about-hero-subtitle {
   font-size: var(--font-size-xl);
-  opacity: 0.9;
+  color: #ffffff;
+  opacity: 0.95;
   line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Content */
+.section-content {
+  margin-bottom: var(--spacing-4xl);
+}
+
+/* Content with Icon Layout */
+.content-with-icon {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--spacing-4xl);
+  align-items: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.content-text {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.content-text p {
+  margin-bottom: var(--spacing-lg);
+}
+
+.content-text p:last-child {
+  margin-bottom: 0;
+}
+
+.content-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.asp-global-icon {
+  width: 120px;
+  height: auto;
+  opacity: 0.8;
+  transition: all var(--transition-normal);
+  filter: drop-shadow(0 4px 12px rgba(10, 31, 68, 0.15));
+}
+
+.asp-global-icon:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 20px rgba(10, 31, 68, 0.25));
 }
 
 /* Section Styling */
@@ -1038,9 +1153,6 @@
   max-width: 800px;
   margin: 0 auto var(--spacing-3xl);
   padding: var(--spacing-2xl);
-  background: var(--background-color);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--light-gray);
 }
 
 .authorizations-grid {
@@ -1051,19 +1163,13 @@
 }
 
 .auth-card {
-  background: var(--background-color);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
   text-align: center;
   transition: all var(--transition-normal);
-  position: relative;
 }
 
 .auth-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--accent-color);
 }
 
 .auth-icon {
@@ -1136,15 +1242,11 @@
 .step-item {
   text-align: center;
   padding: var(--spacing-2xl);
-  background: var(--background-color);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-lg);
   transition: all var(--transition-normal);
 }
 
 .step-item:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .step-number {
@@ -1194,9 +1296,6 @@
 }
 
 .partner-card {
-  background: var(--background-color);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-lg);
   padding: var(--spacing-2xl);
   text-align: center;
   transition: all var(--transition-normal);
@@ -1204,7 +1303,6 @@
 
 .partner-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .partner-card h3 {
@@ -1240,9 +1338,6 @@
 }
 
 .compliance-item {
-  background: var(--background-color);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-lg);
   padding: var(--spacing-2xl);
   text-align: center;
   transition: all var(--transition-normal);
@@ -1250,7 +1345,6 @@
 
 .compliance-item:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .compliance-item h3 {
@@ -1270,6 +1364,17 @@
 @media (max-width: 768px) {
   .about-hero {
     padding: var(--spacing-4xl) 0;
+  }
+
+  .content-with-icon {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .asp-global-icon {
+    width: 100px;
+    margin: 0 auto;
   }
 
   .about-hero-title {
@@ -1323,6 +1428,10 @@
 @media (max-width: 480px) {
   .about-hero-title {
     font-size: var(--font-size-3xl);
+  }
+
+  .asp-global-icon {
+    width: 80px;
   }
 
   .section-header h2 {

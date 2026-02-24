@@ -72,6 +72,20 @@ const Navbar = () => {
               </button>
               <div className="dropdown-menu">
                 <Link
+                  to="/products/engine-stores"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
+                  Engine Stores
+                </Link>
+                <Link
+                  to="/products/deck-stores-general"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
+                  Deck Stores & General Marine Stores
+                </Link>
+                <Link
                   to="/products/engine-spares-2stroke"
                   className="dropdown-item"
                   onClick={closeMenu}
@@ -133,20 +147,6 @@ const Navbar = () => {
                   onClick={closeMenu}
                 >
                   Hydraulic Systems & Components
-                </Link>
-                <Link
-                  to="/products/deck-stores-general"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Deck Stores & General Marine Stores
-                </Link>
-                <Link
-                  to="/products/engine-stores"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Engine Stores
                 </Link>
                 <Link
                   to="/products/lsa-ffa"

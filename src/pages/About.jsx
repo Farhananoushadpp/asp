@@ -11,28 +11,18 @@ const About = () => {
     <div className="about-page">
       {/* Hero Section */}
       <section className="about-hero">
-        {/* Animated Cargo Ship */}
-        <div className="cargo-ship-animation">
-          <div className="cargo-ship">
-            <div className="ship-hull"></div>
-            <div className="ship-deck"></div>
-            <div className="ship-containers">
-              <div className="container container1"></div>
-              <div className="container container2"></div>
-              <div className="container container3"></div>
-              <div className="container container4"></div>
-              <div className="container container5"></div>
-              <div className="container container6"></div>
-              <div className="container container7"></div>
-            </div>
-            <div className="ship-bridge"></div>
-            <div className="ship-chimney"></div>
-            <div className="ship-radar"></div>
-            <div className="water-waves">
-              <div className="wave wave1"></div>
-              <div className="wave wave2"></div>
-              <div className="wave wave3"></div>
-            </div>
+        {/* Moving Ship */}
+        <div className="moving-ship-container">
+          <img 
+            src="/ship.svg" 
+            alt="Marine Vessel" 
+            className="moving-ship"
+          />
+          {/* Wake Trail */}
+          <div className="ship-wake">
+            <div className="wake-line wake-1"></div>
+            <div className="wake-line wake-2"></div>
+            <div className="wake-line wake-3"></div>
           </div>
         </div>
 
@@ -52,19 +42,30 @@ const About = () => {
             <h2>Who We Are</h2>
           </div>
           <div className="section-content">
-            <p>
-              Founded in 2005 and part of Ocean Serenity Group, ASP Global
-              Marine Trading LLC has established itself as a leading supplier of
-              marine and offshore equipment. With strong sourcing networks
-              across Europe and Asia, we understand the critical importance of
-              quality, reliability, and timely delivery.
-            </p>
-            <p>
-              Our commitment to excellence has earned us the trust of ship
-              owners, operators, and offshore installations worldwide. We pride
-              ourselves on our technical expertise, competitive pricing, and
-              unwavering dedication to customer satisfaction.
-            </p>
+            <div className="content-with-icon">
+              <div className="content-text">
+                <p>
+                  Founded in 2005 and part of Ocean Serenity Group, ASP Global
+                  Marine Trading LLC has established itself as a leading supplier of
+                  marine and offshore equipment. With strong sourcing networks
+                  across Europe and Asia, we understand the critical importance of
+                  quality, reliability, and timely delivery.
+                </p>
+                <p>
+                  Our commitment to excellence has earned us the trust of ship
+                  owners, operators, and offshore installations worldwide. We pride
+                  ourselves on our technical expertise, competitive pricing, and
+                  unwavering dedication to customer satisfaction.
+                </p>
+              </div>
+              <div className="content-icon">
+                <img 
+                  src="/asplogo.svg" 
+                  alt="ASP Global Marine Trading LLC" 
+                  className="asp-global-icon"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="stats-grid">

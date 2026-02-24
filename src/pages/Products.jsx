@@ -12,6 +12,36 @@ const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const productDetails = {
+    "engine-stores": {
+      title: "Engine Stores",
+      description: "Comprehensive engine room stores and consumables for all major marine engine manufacturers. Complete inventory of filters, bearings, gaskets, seals, and essential engine components.",
+      features: [
+        "Engine Spares for YANMAR, WARTSILA, MAN, CUMMINS, SULZER, WINGD",
+        "High-Quality Filters: Oil, Fuel, Air Filters",
+        "Bearings: Main Bearings, Connecting Rod Bearings, Camshaft Bearings",
+        "Gaskets & Seals: Cylinder Head Gaskets, Valve Stem Seals",
+        "Pistons & Cylinder Liners for All Engine Types",
+        "Fuel System Components: Pumps, Injectors, Nozzles",
+        "Valves: Inlet, Exhaust, Safety Relief Valves",
+        "24/7 Technical Support and Global Delivery"
+      ],
+      brands: ["YANMAR", "WARTSILA", "MAN", "CUMMINS", "SULZER", "WINGD", "MITSUBISHI UEC"]
+    },
+    "deck-stores": {
+      title: "Deck Stores & General Marine Stores",
+      description: "Complete range of deck and general marine stores including ropes, shackles, navigation equipment, safety gear, tools, and maintenance supplies for vessel operations.",
+      features: [
+        "Deck Equipment: Mooring Ropes, Anchor Chains, Shackles, Bollards",
+        "Navigation: Navigation Lights, Signal Flags, Compasses, Binoculars",
+        "Safety Equipment: Life Jackets, Fire Extinguishers, Safety Harnesses",
+        "Tools: Hand Tools, Power Tools, Welding Equipment, Measuring Tools",
+        "Maintenance: Lubricants, Cleaning Chemicals, Paints, Sealants",
+        "Electrical: Lamps, Switches, Relays, Transformers, Carbon Brushes",
+        "Hardware: Fasteners, Bolts, Nuts, Washers, Fittings",
+        "Global Sourcing from Leading Marine Suppliers"
+      ],
+      brands: ["Multiple Marine Equipment Brands Available"]
+    },
     "engine-spares-2stroke": {
       title: "Engine Spares - 2 Stroke",
       description: "Complete range of 2-stroke engine spare parts for major manufacturers including YANMAR, Wärtsilä, MAN Energy Solutions, Cummins, Mitsubishi Heavy Industries, and Wingd.",
@@ -115,19 +145,6 @@ const ProductsPage = () => {
         "Gas Detection Systems"
       ],
       brands: ["SOLAS Approved", "IMO Compliant"]
-    },
-    "deck-stores": {
-      title: "Deck Stores & Engine Stores",
-      description: "Complete range of deck and engine room consumables including ropes, shackles, tools, and safety equipment.",
-      features: [
-        "Deck Equipment: Ropes, Shackles, Gauging Tapes",
-        "Navigation: Anchor Equipment, Navigation Lights",
-        "Tools: Hand Tools, Power Tools, Welding Consumables",
-        "Engine: Filters, Bearings, Mechanical Seals",
-        "Equipment: High Pressure Washers, Explosion Proof Lamps",
-        "Safety: Helmets, PPE Kits, First Aid Kits"
-      ],
-      brands: ["Multiple Brands Available"]
     }
   };
 

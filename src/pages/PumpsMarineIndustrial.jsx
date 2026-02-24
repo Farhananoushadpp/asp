@@ -6,293 +6,156 @@
  */
 
 import "../styles/pages/Products.css";
+import { useState } from "react";
 
 const PumpsMarineIndustrial = () => {
-  const manufacturers = [
-    "KSB",
-    "Sulzer",
-    "Alfa Laval",
-    "Grundfos",
-    "Wärtsilä",
-    "IMO",
-    "Bornemann",
-    "Allweiler",
-    "Roper",
-    "Tuthill",
-    "Waukesha",
-    "Viking",
-    "Rosenbauer",
-    "Ebara",
-    "Flowserve",
-    "ITT",
-    "Siemens",
-    "Yanmar",
-    "Caterpillar",
-  ];
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const pumpCategories = [
+  const pumpProducts = [
     {
+      id: 1,
+      name: "Centrifugal Pumps",
+      image: "/products/enginestores/Asset 33.webp",
       category: "Centrifugal Pumps",
-      icon: "🌀",
-      products: [
-        "Single Stage Centrifugal Pumps",
-        "Multi Stage Centrifugal Pumps",
-        "Horizontal Split Case Pumps",
-        "Vertical Turbine Pumps",
-        "Submersible Centrifugal Pumps",
-        "Self-Priming Pumps",
-        "End Suction Pumps",
-        "Inline Pumps",
-      ],
       description:
-        "High-efficiency centrifugal pumps for general marine and industrial applications",
+        "High-efficiency centrifugal pumps for marine and industrial applications. Reliable fluid transfer solutions.",
+      whatsappMessage:
+        "Hi, I'm interested in Centrifugal Pumps. Please provide more information and pricing.",
     },
     {
-      category: "Positive Displacement Pumps",
-      icon: "⚙️",
-      products: [
-        "Gear Pumps",
-        "Screw Pumps (Twin & Triple)",
-        "Rotary Vane Pumps",
-        "Piston Pumps",
-        "Diaphragm Pumps",
-        "Peristaltic Pumps",
-        "Lobe Pumps",
-        "Progressive Cavity Pumps",
-      ],
+      id: 2,
+      name: "Gear Pumps",
+      image: "/products/enginestores/NeEeih.webp",
+      category: "Gear Pumps",
       description:
-        "Precision positive displacement pumps for high-pressure and metering applications",
+        "Precision gear pumps for oil transfer, fuel delivery, and hydraulic systems.",
+      whatsappMessage:
+        "Hi, I'm interested in Gear Pumps. Please provide more information and pricing.",
     },
     {
-      category: "Marine Specialty Pumps",
-      icon: "🚢",
-      products: [
-        "Ballast Pumps",
-        "Bilge Pumps",
-        "Fire Fighting Pumps",
-        "Cargo Pumps",
-        "Scavenge Pumps",
-        "Sea Water Cooling Pumps",
-        "Fresh Water Pumps",
-        "Sanitary Pumps",
-      ],
+      id: 3,
+      name: "Screw Pumps",
+      image: "/products/enginestores/Asset 34.webp",
+      category: "Screw Pumps",
       description:
-        "Specialized pumps designed for specific marine vessel operations",
+        "Twin and triple screw pumps for high-viscosity fluids and oil transfer applications.",
+      whatsappMessage:
+        "Hi, I'm interested in Screw Pumps. Please provide more information and pricing.",
     },
     {
-      category: "Industrial Process Pumps",
-      icon: "🏭",
-      products: [
-        "Chemical Process Pumps",
-        "Slurry Pumps",
-        "Metering Pumps",
-        "Boiler Feed Pumps",
-        "Condensate Pumps",
-        "Dosing Pumps",
-        "Transfer Pumps",
-        "Circulation Pumps",
-      ],
+      id: 4,
+      name: "Diaphragm Pumps",
+      image: "/products/enginestores/Asset 35.webp",
+      category: "Diaphragm Pumps",
       description:
-        "Industrial pumps for process manufacturing and plant operations",
+        "Chemical-resistant diaphragm pumps for aggressive fluids and chemical transfer.",
+      whatsappMessage:
+        "Hi, I'm interested in Diaphragm Pumps. Please provide more information and pricing.",
     },
     {
-      category: "Pump Systems & Accessories",
-      icon: "🔧",
-      products: [
-        "Pump Controllers",
-        "Pump Seals",
-        "Mechanical Seals",
-        "Pump Motors",
-        "Pump Couplings",
-        "Strainers",
-        "Pressure Gauges",
-        "Flow Meters",
-      ],
-      description: "Complete pump systems, controls, and accessory components",
+      id: 5,
+      name: "Submersible Pumps",
+      image: "/products/enginestores/Asset 36.webp",
+      category: "Submersible Pumps",
+      description:
+        "Marine-grade submersible pumps for bilge, ballast, and wastewater applications.",
+      whatsappMessage:
+        "Hi, I'm interested in Submersible Pumps. Please provide more information and pricing.",
+    },
+    {
+      id: 6,
+      name: "Fire Fighting Pumps",
+      image: "/products/enginestores/Asset 37.webp",
+      category: "Fire Pumps",
+      description:
+        "High-pressure fire fighting pumps compliant with SOLAS and classification society requirements.",
+      whatsappMessage:
+        "Hi, I'm interested in Fire Fighting Pumps. Please provide more information and pricing.",
+    },
+    {
+      id: 7,
+      name: "Hydraulic Pumps",
+      image: "/products/enginestores/Asset 38.webp",
+      category: "Hydraulic Pumps",
+      description:
+        "Hydraulic power units and pumps for steering gear, deck machinery, and cranes.",
+      whatsappMessage:
+        "Hi, I'm interested in Hydraulic Pumps. Please provide more information and pricing.",
+    },
+    {
+      id: 8,
+      name: "Pump Spare Parts",
+      image: "/products/enginestores/Asset 39.webp",
+      category: "Spare Parts",
+      description:
+        "Comprehensive pump spare parts including impellers, seals, bearings, and casings.",
+      whatsappMessage:
+        "Hi, I'm interested in Pump Spare Parts. Please provide more information and pricing.",
     },
   ];
 
-  const applications = [
-    {
-      category: "Ballast Water Management",
-      icon: "💧",
-      description: "Ballast water pumping, treatment, and management systems",
-      pumpTypes: [
-        "Ballast Pumps",
-        "Sea Water Pumps",
-        "Treatment Pumps",
-        "Discharge Pumps",
-      ],
-      standards: [
-        "IMO Ballast Water Convention",
-        "SOLAS",
-        "Class Society Requirements",
-      ],
-    },
-    {
-      category: "Fire Protection Systems",
-      icon: "🔥",
-      description: "Fire fighting pumps and emergency response systems",
-      pumpTypes: [
-        "Fire Fighting Pumps",
-        "Booster Pumps",
-        "Sprinkler Pumps",
-        "Foam Pumps",
-      ],
-      standards: [
-        "SOLAS Fire Safety",
-        "IMO FSS Code",
-        "NFPA Standards",
-        "Class Approval",
-      ],
-    },
-    {
-      category: "Cargo Operations",
-      icon: "📦",
-      description: "Cargo pumping, transfer, and handling systems",
-      pumpTypes: [
-        "Cargo Pumps",
-        "Stripper Pumps",
-        "Oil Transfer Pumps",
-        "Chemical Pumps",
-      ],
-      standards: ["MARPOL", "SOLAS", "IMO Codes", "Classification Rules"],
-    },
-    {
-      category: "Machinery Systems",
-      icon: "⚙️",
-      description: "Engine room and machinery cooling/lubrication systems",
-      pumpTypes: [
-        "Cooling Pumps",
-        "Lubrication Pumps",
-        "Fuel Pumps",
-        "Scavenge Pumps",
-      ],
-      standards: [
-        "Classification Society",
-        "Engine Manufacturer Specs",
-        "Marine Standards",
-      ],
-    },
-  ];
-
-  const technicalSpecs = [
-    {
-      category: "Performance Specifications",
-      icon: "📊",
-      specs: [
-        "Flow Rates: 1-10,000 m³/h",
-        "Pressure Heads: Up to 1,000 bar",
-        "Temperature Range: -50°C to 350°C",
-        "Viscosity Range: 1-10,000 cSt",
-        "Materials: Cast Iron, Stainless Steel, Bronze, Duplex",
-      ],
-    },
-    {
-      category: "Marine Compliance",
-      icon: "✅",
-      specs: [
-        "SOLAS Compliant",
-        "IMO Approved",
-        "Classification Society Certified",
-        "Marine Environment Certified",
-        "Explosion Proof Options Available",
-      ],
-    },
-    {
-      category: "Service Capabilities",
-      icon: "🔧",
-      specs: [
-        "24/7 Technical Support",
-        "On-site Installation",
-        "Commissioning Services",
-        "Maintenance Contracts",
-        "Emergency Repair Services",
-      ],
-    },
-  ];
+  const filteredProducts = pumpProducts.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="product-page">
       <div className="container">
         <div className="page-header">
-          <h1 className="page-title">Pumps – Marine & Industrial</h1>
+          <h1 className="page-title">Pumps - Marine & Industrial</h1>
           <p className="page-subtitle">
-            Comprehensive Marine and Industrial Pumping Solutions
+            Complete Pump Solutions for Marine & Industrial Applications
           </p>
         </div>
 
-        <section className="product-intro">
-          <div className="intro-content">
-            <h2>Complete Pumping Solutions</h2>
-            <p>
-              ASP Global Marine Trading LLC provides comprehensive marine and
-              industrial pumping solutions for vessels, offshore platforms, and
-              industrial facilities. With over 18 years of expertise, we supply
-              genuine and OEM pumps from leading manufacturers worldwide,
-              ensuring reliable performance, compliance with maritime standards,
-              and exceptional technical support for all pumping applications.
-            </p>
-            <div className="manufacturer-showcase">
-              <h3>Leading Manufacturers</h3>
-              <div className="manufacturer-grid">
-                {manufacturers.map((manufacturer, index) => (
-                  <div key={index} className="manufacturer-card">
-                    <span className="manufacturer-name">{manufacturer}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <section className="product-gallery">
+          <div className="search-bar-container">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="search-input"
+            />
           </div>
-        </section>
-
-        <section className="product-categories">
-          <h2>Pump Categories</h2>
-          <div className="category-grid">
-            {pumpCategories.map((category, index) => (
-              <div key={index} className="category-card">
-                <div className="category-header">
-                  <div className="category-icon">{category.icon}</div>
-                  <h3>{category.category}</h3>
+          <h2>Featured Pump Products</h2>
+          <div className="gallery-grid">
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="gallery-item">
+                <div className="product-image">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    loading="lazy"
+                  />
                 </div>
-                <p className="category-description">{category.description}</p>
-                <div className="product-list">
-                  <h4>Available Products:</h4>
-                  <div className="product-tags">
-                    {category.products.map((product, idx) => (
-                      <span key={idx} className="product-tag">
-                        {product}
-                      </span>
-                    ))}
-                  </div>
+                <div className="product-details">
+                  <span className="product-category">{product.category}</span>
+                  <h3 className="product-name">{product.name}</h3>
+                  <p className="product-desc">{product.description}</p>
+                  <a
+                    href={`https://wa.me/971505398975?text=${encodeURIComponent(
+                      product.whatsappMessage,
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-btn"
+                  >
+                    Get Product
+                  </a>
                 </div>
               </div>
             ))}
           </div>
         </section>
+      </div>
+    </div>
+  );
+};
 
-        <section className="product-categories">
-          <h2>Marine Applications</h2>
-          <div className="category-grid">
-            {applications.map((application, index) => (
-              <div key={index} className="category-card">
-                <div className="category-header">
-                  <div className="category-icon">{application.icon}</div>
-                  <h3>{application.category}</h3>
-                </div>
-                <p className="category-description">
-                  {application.description}
-                </p>
-                <div className="product-list">
-                  <h4>Pump Types:</h4>
-                  <div className="product-tags">
-                    {application.pumpTypes.map((pump, idx) => (
-                      <span key={idx} className="product-tag">
-                        {pump}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+export default PumpsMarineIndustrial;
                 <div className="product-list">
                   <h4>Compliance Standards:</h4>
                   <div className="product-tags">

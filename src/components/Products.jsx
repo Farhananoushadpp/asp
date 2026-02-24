@@ -17,8 +17,50 @@ const Products = () => {
 
   const productCategories = [
     {
-      id: "engine-2stroke",
+      id: "engine-stores",
       number: "01",
+      title: "Engine Stores",
+      manufacturers: ["YANMAR", "WARTSILA", "MAN", "CUMMINS", "SULZER", "WINGD", "MITSUBISHI UEC"],
+      products: [
+        "Engine Spares",
+        "Filters",
+        "Bearings",
+        "Gaskets",
+        "Seals",
+        "Pistons",
+        "Cylinder Liners",
+        "Valves",
+        "Fuel Pumps",
+        "Injection Systems"
+      ],
+    },
+    {
+      id: "deck-stores",
+      number: "02",
+      title: "Deck Stores & General Marine Stores",
+      manufacturers: [],
+      products: [
+        "Ropes",
+        "Shackles",
+        "Fenders",
+        "Navigation Lights",
+        "Flags",
+        "Tarpaulin",
+        "Gaskets",
+        "Bearings",
+        "Hoses",
+        "Relays",
+        "Transformers",
+        "Carbon Brushes",
+        "Safety Equipment",
+        "Tools",
+        "Paints",
+        "Cleaning Supplies"
+      ],
+    },
+    {
+      id: "engine-2stroke",
+      number: "03",
       title: "Engine Spares – 2 Stroke",
       manufacturers: [
         "YANMAR",
@@ -42,7 +84,7 @@ const Products = () => {
     },
     {
       id: "engine-4stroke",
-      number: "02",
+      number: "04",
       title: "Engine Spares – 4 Stroke",
       manufacturers: [],
       products: [
@@ -58,7 +100,7 @@ const Products = () => {
     },
     {
       id: "turbo-hvac",
-      number: "03",
+      number: "05",
       title: "Turbochargers & HVAC",
       manufacturers: ["ABB", "KBB", "Mitsubishi", "Sabroe", "Bitzer", "Daikin"],
       products: [
@@ -72,7 +114,7 @@ const Products = () => {
     },
     {
       id: "pumps",
-      number: "04",
+      number: "06",
       title: "Pumps – Marine & Industrial",
       manufacturers: ["Desmi", "Allweiler", "Grundfos", "Jabsco"],
       products: [
@@ -85,7 +127,7 @@ const Products = () => {
     },
     {
       id: "boilers",
-      number: "05",
+      number: "07",
       title: "Boilers & Air Compressors",
       manufacturers: ["Tanabe", "JP Sauer & Sohn", "Sperre", "Hatlapa"],
       products: [
@@ -99,7 +141,7 @@ const Products = () => {
     },
     {
       id: "hydraulic",
-      number: "06",
+      number: "08",
       title: "Hydraulic Systems",
       manufacturers: [],
       products: [
@@ -113,7 +155,7 @@ const Products = () => {
     },
     {
       id: "purifiers",
-      number: "07",
+      number: "09",
       title: "Purifiers & Separators",
       manufacturers: ["GEA Westfalia", "Alfa Laval"],
       products: [
@@ -124,28 +166,8 @@ const Products = () => {
       ],
     },
     {
-      id: "deck-stores",
-      number: "08",
-      title: "Deck Stores & Engine Stores",
-      manufacturers: [],
-      products: [
-        "Ropes",
-        "Shackles",
-        "Fenders",
-        "Navigation Lights",
-        "Flags",
-        "Tarpaulin",
-        "Gaskets",
-        "Bearings",
-        "Hoses",
-        "Relays",
-        "Transformers",
-        "Carbon Brushes",
-      ],
-    },
-    {
       id: "safety",
-      number: "09",
+      number: "10",
       title: "LSA & FFA Equipment",
       manufacturers: [],
       products: [

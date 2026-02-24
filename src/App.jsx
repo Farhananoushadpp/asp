@@ -24,6 +24,8 @@ import Products from "./pages/Products.jsx";
 import Contact from "./pages/Contact.jsx";
 
 // Products Pages
+import EngineStores from "./pages/EngineStores.jsx";
+import DeckStoresGeneral from "./pages/DeckStoresGeneral.jsx";
 import EngineSpares2Stroke from "./pages/EngineSpares2Stroke.jsx";
 import EngineSpares4Stroke from "./pages/EngineSpares4Stroke.jsx";
 import TurbochargersAuxiliary from "./pages/TurbochargersAuxiliary.jsx";
@@ -33,8 +35,8 @@ import BoilersIncineratorsHeatExchangers from "./pages/BoilersIncineratorsHeatEx
 import AirCompressorSpares from "./pages/AirCompressorSpares.jsx";
 import Purifiers from "./pages/Purifiers.jsx";
 import HydraulicSystems from "./pages/HydraulicSystems.jsx";
-import DeckStoresGeneral from "./pages/DeckStoresGeneral.jsx";
-import EngineStores from "./pages/EngineStores.jsx";
+
+
 import LSAFFA from "./pages/LSAFFA.jsx";
 
 // Authorizations Page
@@ -133,6 +135,11 @@ function App() {
             <Route path="/products" element={<Products />} />
 
             {/* Specific Product Categories */}
+            <Route path="/products/engine-stores" element={<EngineStores />} />
+            <Route
+              path="/products/deck-stores-general"
+              element={<DeckStoresGeneral />}
+            />
             <Route
               path="/products/engine-spares-2stroke"
               element={<EngineSpares2Stroke />}
@@ -166,11 +173,8 @@ function App() {
               path="/products/hydraulic-systems"
               element={<HydraulicSystems />}
             />
-            <Route
-              path="/products/deck-stores-general"
-              element={<DeckStoresGeneral />}
-            />
-            <Route path="/products/engine-stores" element={<EngineStores />} />
+           
+            
             <Route path="/products/lsa-ffa" element={<LSAFFA />} />
 
             {/* Authorizations Route */}
