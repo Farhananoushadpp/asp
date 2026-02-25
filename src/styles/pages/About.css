@@ -34,7 +34,7 @@
   left: -300px;
   width: 280px;
   height: auto;
-  animation: shipMove 18s linear infinite;
+  animation: shipMove 25s linear infinite;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
   z-index: 5;
 }
@@ -221,7 +221,7 @@
 }
 
 .section-header::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -16px;
   left: 50%;
@@ -800,7 +800,7 @@
   font-weight: 700;
   margin-bottom: var(--spacing-lg);
   line-height: 1.2;
-  color: #2ABAA3;
+  color: #2abaa3;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 

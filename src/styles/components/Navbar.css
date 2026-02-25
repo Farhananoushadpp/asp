@@ -23,7 +23,7 @@
 .nav-container {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: var(--spacing-lg) var(--container-padding);
+  padding: var(--spacing-md) var(--container-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,9 +49,9 @@
 }
 
 .logo-image {
-  height: 80px;
+  height: 60px;
   width: auto;
-  max-width: 100px;
+  max-width: 80px;
   object-fit: contain;
   transition: transform var(--transition-normal);
 }

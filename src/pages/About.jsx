@@ -13,11 +13,7 @@ const About = () => {
       <section className="about-hero">
         {/* Moving Ship */}
         <div className="moving-ship-container">
-          <img 
-            src="/ship.svg" 
-            alt="Marine Vessel" 
-            className="moving-ship"
-          />
+          <img src="/ship.png" alt="Marine Vessel" className="moving-ship" />
           {/* Wake Trail */}
           <div className="ship-wake">
             <div className="wake-line wake-1"></div>
@@ -46,22 +42,23 @@ const About = () => {
               <div className="content-text">
                 <p>
                   Founded in 2005 and part of Ocean Serenity Group, ASP Global
-                  Marine Trading LLC has established itself as a leading supplier of
-                  marine and offshore equipment. With strong sourcing networks
-                  across Europe and Asia, we understand the critical importance of
-                  quality, reliability, and timely delivery.
+                  Marine Trading LLC has established itself as a leading
+                  supplier of marine and offshore equipment. With strong
+                  sourcing networks across Europe and Asia, we understand the
+                  critical importance of quality, reliability, and timely
+                  delivery.
                 </p>
                 <p>
                   Our commitment to excellence has earned us the trust of ship
-                  owners, operators, and offshore installations worldwide. We pride
-                  ourselves on our technical expertise, competitive pricing, and
-                  unwavering dedication to customer satisfaction.
+                  owners, operators, and offshore installations worldwide. We
+                  pride ourselves on our technical expertise, competitive
+                  pricing, and unwavering dedication to customer satisfaction.
                 </p>
               </div>
               <div className="content-icon">
-                <img 
-                  src="/asplogo.svg" 
-                  alt="ASP Global Marine Trading LLC" 
+                <img
+                  src="/asplogo.svg"
+                  alt="ASP Global Marine Trading LLC"
                   className="asp-global-icon"
                 />
               </div>
@@ -95,7 +92,7 @@ const About = () => {
         >
           <div className="mission-vision-grid">
             <div className="mission-box">
-              <div className="box-icon">🎯</div>
+              <div className="box-icon">🚢</div>
               <h3>Our Mission</h3>
               <p>
                 To deliver accurate, reliable, and compliant marine solutions at
@@ -105,7 +102,7 @@ const About = () => {
               </p>
             </div>
             <div className="vision-box">
-              <div className="box-icon">🌟</div>
+              <div className="box-icon">⚓</div>
               <h3>Our Vision</h3>
               <p>
                 To become a globally trusted marine supply partner known for

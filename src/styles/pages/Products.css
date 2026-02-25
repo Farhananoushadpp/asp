@@ -710,7 +710,7 @@
   padding: var(--spacing-md) var(--spacing-lg);
   font-size: var(--font-size-base);
   border: 2px solid var(--light-gray);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-lg);
   background: var(--white-color);
   color: var(--text-color);
   transition: all var(--transition-normal);
@@ -850,11 +850,11 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-xl);
   }
-  
+
   .product-image {
     height: 180px;
   }
-  
+
   .product-details {
     padding: var(--spacing-md);
   }
@@ -864,28 +864,28 @@
   .product-gallery {
     padding: var(--spacing-3xl) 0;
   }
-  
+
   .product-gallery h2 {
     font-size: var(--font-size-2xl);
   }
-  
+
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
   }
-  
+
   .product-image {
     height: 160px;
   }
-  
+
   .product-details {
     padding: var(--spacing-md);
   }
-  
+
   .product-name {
     font-size: var(--font-size-base);
   }
-  
+
   .product-desc {
     font-size: var(--font-size-xs);
   }
@@ -896,23 +896,23 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
-  
+
   .product-image {
     height: 140px;
   }
-  
+
   .product-details {
     padding: var(--spacing-sm);
   }
-  
+
   .product-name {
     font-size: var(--font-size-sm);
   }
-  
+
   .product-desc {
     font-size: var(--font-size-xs);
   }
-  
+
   .whatsapp-btn {
     padding: var(--spacing-xs) var(--spacing-md);
     font-size: var(--font-size-xs);

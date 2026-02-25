@@ -94,10 +94,11 @@ const PumpsMarineIndustrial = () => {
     },
   ];
 
-  const filteredProducts = pumpProducts.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.description.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredProducts = pumpProducts.filter(
+    (product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.description.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -125,11 +126,7 @@ const PumpsMarineIndustrial = () => {
             {filteredProducts.map((product) => (
               <div key={product.id} className="gallery-item">
                 <div className="product-image">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    loading="lazy"
-                  />
+                  <img src={product.image} alt={product.name} loading="lazy" />
                 </div>
                 <div className="product-details">
                   <span className="product-category">{product.category}</span>
@@ -148,98 +145,6 @@ const PumpsMarineIndustrial = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </section>
-      </div>
-    </div>
-  );
-};
-
-export default PumpsMarineIndustrial;
-                <div className="product-list">
-                  <h4>Compliance Standards:</h4>
-                  <div className="product-tags">
-                    {application.standards.map((standard, idx) => (
-                      <span key={idx} className="product-tag">
-                        {standard}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="technical-specifications">
-          <h2>Technical Specifications & Services</h2>
-          <div className="spec-grid">
-            {technicalSpecs.map((spec, index) => (
-              <div key={index} className="spec-card">
-                <div className="category-header">
-                  <div className="category-icon">{spec.icon}</div>
-                  <h3>{spec.category}</h3>
-                </div>
-                <ul>
-                  {spec.specs.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="quality-assurance">
-          <h2>Quality Assurance & Compliance</h2>
-          <div className="quality-grid">
-            <div className="quality-item">
-              <div className="quality-icon">✓</div>
-              <h3>Marine Certification</h3>
-              <p>
-                All pumps meet SOLAS, IMO, and classification society
-                requirements with full certification
-              </p>
-            </div>
-            <div className="quality-item">
-              <div className="quality-icon">✓</div>
-              <h3>Performance Testing</h3>
-              <p>
-                Comprehensive testing for marine conditions including vibration,
-                noise, and efficiency
-              </p>
-            </div>
-            <div className="quality-item">
-              <div className="quality-icon">✓</div>
-              <h3>Spare Parts Availability</h3>
-              <p>
-                Complete range of genuine spare parts and components with rapid
-                delivery worldwide
-              </p>
-            </div>
-            <div className="quality-item">
-              <div className="quality-icon">✓</div>
-              <h3>Technical Expertise</h3>
-              <p>
-                Expert guidance on pump selection, installation, and maintenance
-                for optimal performance
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="contact-cta">
-          <div className="cta-content">
-            <h2>Need Marine or Industrial Pumps?</h2>
-            <p>
-              Contact our technical team for expert assistance with your pumping
-              system requirements. We provide comprehensive solutions with rapid
-              delivery worldwide and 24/7 technical support.
-            </p>
-            <div className="cta-buttons">
-              <button className="btn btn-primary">Request Quote</button>
-              <button className="btn btn-secondary">Technical Support</button>
-            </div>
           </div>
         </section>
       </div>

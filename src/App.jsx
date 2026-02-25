@@ -36,7 +36,6 @@ import AirCompressorSpares from "./pages/AirCompressorSpares.jsx";
 import Purifiers from "./pages/Purifiers.jsx";
 import HydraulicSystems from "./pages/HydraulicSystems.jsx";
 
-
 import LSAFFA from "./pages/LSAFFA.jsx";
 
 // Authorizations Page
@@ -144,7 +143,7 @@ function App() {
               path="/products/engine-spares-2stroke"
               element={<EngineSpares2Stroke />}
             />
-            <Route
+            {/* <Route
               path="/products/engine-spares-4stroke"
               element={<EngineSpares4Stroke />}
             />
@@ -172,13 +171,12 @@ function App() {
             <Route
               path="/products/hydraulic-systems"
               element={<HydraulicSystems />}
-            />
-           
-            
-            <Route path="/products/lsa-ffa" element={<LSAFFA />} />
+            /> */}
+
+            {/* <Route path="/products/lsa-ffa" element={<LSAFFA />} /> */}
 
             {/* Authorizations Route */}
-            <Route path="/authorizations" element={<Authorizations />} />
+            {/* <Route path="/authorizations" element={<Authorizations />} /> */}
 
             {/* Contact Route */}
             <Route path="/contact" element={<Contact />} />
