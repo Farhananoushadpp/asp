@@ -14,163 +14,148 @@ const EngineStores = () => {
   const engineProducts = [
     {
       id: 1,
-      name: "Lube Oil",
+      name: "High Temp. Gaskets",
       image: "/products/enginestores/Asset 1.webp",
-      category: "Lube Oil",
-      description:
-        "Professional marine engine tools for maintenance and repair operations. High-quality precision tools for engine room tasks.",
+      category: "High Temp. Gaskets",
+      description: "High Temp. Gaskets",
       whatsappMessage:
-        "Hi, I'm interested in Marine Engine Tools. Please provide more information and pricing.",
+        "Hi, I'm interested in High Temp. Gaskets. Please provide more information and pricing.",
     },
     {
       id: 2,
-      name: "Engine Maintenance Equipment",
+      name: "Pipe Bender",
       image: "/products/enginestores/Asset 2.webp",
-      category: "Maintenance",
-      description:
-        "Comprehensive engine maintenance equipment for vessel operations. Essential tools for engine upkeep and servicing.",
+      category: "Pipe Bender",
+      description: "Pipe Bender",
       whatsappMessage:
-        "Hi, I'm interested in Engine Maintenance Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Pipe Bender. Please provide more information and pricing.",
     },
     {
       id: 3,
-      name: "Engine Room Supplies",
+      name: "Cargo Sling Bag",
       image: "/products/enginestores/Asset 3.webp",
-      category: "Engine Supplies",
-      description:
-        "Complete engine room supplies and consumables. Quality materials for engine room operations and maintenance.",
+      category: "Cargo Sling Bag",
+      description: "Cargo Sling Bag",
       whatsappMessage:
-        "Hi, I'm interested in Engine Room Supplies. Please provide more information and pricing.",
+        "Hi, I'm interested in Cargo Sling Bag. Please provide more information and pricing.",
     },
     {
       id: 4,
-      name: "Marine Engine Components",
+      name: "Submersible Pumps",
       image: "/products/enginestores/Asset 4.webp",
-      category: "Engine Components",
+      category: "Submersible Pumps",
       description:
         "High-quality marine engine components for various engine types. Reliable parts for optimal engine performance.",
       whatsappMessage:
-        "Hi, I'm interested in Marine Engine Components. Please provide more information and pricing.",
+        "Hi, I'm interested in Submersible Pumps. Please provide more information and pricing.",
     },
     {
       id: 5,
-      name: "Engine Filtration Systems",
+      name: "Red Silicon",
       image: "/products/enginestores/Asset 5.webp",
-      category: "Filtration",
-      description:
-        "Advanced engine filtration systems for clean operation. High-efficiency filters for fuel, oil, and air systems.",
+      category: "Red Silicon",
+      description: "Red Silicon",
       whatsappMessage:
-        "Hi, I'm interested in Engine Filtration Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Red Silicon. Please provide more information and pricing.",
     },
     {
       id: 6,
-      name: "Engine Lubrication Equipment",
+      name: "Rust Removers",
       image: "/products/enginestores/Asset 6.webp",
-      category: "Lubrication",
-      description:
-        "Professional engine lubrication equipment for marine vessels. Complete systems for oil management and distribution.",
+      category: "Rust Removers",
+      description: "Rust Removers",
       whatsappMessage:
-        "Hi, I'm interested in Engine Lubrication Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Rust Removers. Please provide more information and pricing.",
     },
     {
       id: 7,
-      name: "Engine Cooling Systems",
+      name: "Insulation Test Kit",
       image: "/products/enginestores/Asset 7.webp",
-      category: "Cooling Systems",
-      description:
-        "Marine engine cooling systems for temperature management. Efficient heat exchangers and cooling components.",
+      category: "Insulation Test Kit",
+      description: "Insulation Test Kit",
       whatsappMessage:
-        "Hi, I'm interested in Engine Cooling Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Insulation Test Kit. Please provide more information and pricing.",
     },
     {
       id: 8,
-      name: "Engine Fuel Systems",
+      name: "Clamp Meter",
       image: "/products/enginestores/Asset 8.webp",
-      category: "Fuel Systems",
-      description:
-        "Complete engine fuel systems for marine applications. Fuel injection, pumps, and filtration components.",
+      category: "Clamp Meter",
+      description: "Clamp Meter",
       whatsappMessage:
-        "Hi, I'm interested in Engine Fuel Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Clamp Meter. Please provide more information and pricing.",
     },
     {
       id: 9,
-      name: "Engine Electrical Components",
+      name: "Gas/Smoke Detectors",
       image: "/products/enginestores/Asset 9.webp",
-      category: "Electrical",
-      description:
-        "Marine engine electrical components and systems. Alternators, starters, and electrical control systems.",
+      category: "Gas/Smoke Detectors",
+      description: "Gas/Smoke Detectors",
       whatsappMessage:
-        "Hi, I'm interested in Engine Electrical Components. Please provide more information and pricing.",
+        "Hi, I'm interested in Gas/Smoke Detectors. Please provide more information and pricing.",
     },
     {
       id: 10,
-      name: "Engine Monitoring Equipment",
+      name: "Magnetic Drilling Machine",
       image: "/products/enginestores/Asset 10.webp",
-      category: "Monitoring",
-      description:
-        "Advanced engine monitoring and control equipment. Real-time monitoring systems for engine performance.",
+      category: "Drilling Machine",
+      description: "Magnetic Drilling Machine",
       whatsappMessage:
-        "Hi, I'm interested in Engine Monitoring Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Magnetic Drilling Machine. Please provide more information and pricing.",
     },
     {
       id: 11,
-      name: "Engine Sealing Solutions",
+      name: "Adhesives",
       image: "/products/enginestores/Asset 11.webp",
-      category: "Sealing",
-      description:
-        "High-quality engine sealing solutions and gaskets. Leak-proof sealing solutions for engine compartments.",
+      category: "Adhesives",
+      description: "Adhesives",
       whatsappMessage:
-        "Hi, I'm interested in Engine Sealing Solutions. Please provide more information and pricing.",
+        "Hi, I'm interested in Adhesives. Please provide more information and pricing.",
     },
     {
       id: 12,
-      name: "Engine Safety Equipment",
+      name: "CRC",
       image: "/products/enginestores/Asset 12.webp",
-      category: "Safety Equipment",
-      description:
-        "Marine engine safety equipment and protection systems. Emergency shutdown and safety monitoring devices.",
+      category: "CRC",
+      description: "CRC",
       whatsappMessage:
-        "Hi, I'm interested in Engine Safety Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in CRC. Please provide more information and pricing.",
     },
     {
       id: 13,
-      name: "Engine Control Systems",
+      name: "Explossion Proof Hand Lamp",
       image: "/products/enginestores/Asset 13.webp",
-      category: "Control Systems",
-      description:
-        "Advanced engine control and automation systems. Digital controls for efficient engine management.",
+      category: "Explossion Proof Hand Lamp",
+      description: "Explossion Proof Hand Lamp",
       whatsappMessage:
-        "Hi, I'm interested in Engine Control Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Explossion Proof Hand Lamp. Please provide more information and pricing.",
     },
     {
       id: 14,
-      name: "Engine Consumables",
+      name: "Bearing Puller",
       image: "/products/enginestores/Asset 14.webp",
-      category: "Consumables",
-      description:
-        "Engine consumables and supplies for daily operations. Oils, lubricants, and maintenance materials.",
+      category: "Bearing Puller",
+      description: "Bearing Puller",
       whatsappMessage:
-        "Hi, I'm interested in Engine Consumables. Please provide more information and pricing.",
+        "Hi, I'm interested in Bearing Puller. Please provide more information and pricing.",
     },
     {
       id: 15,
-      name: "Engine Repair Kits",
+      name: "Emery Tape",
       image: "/products/enginestores/Asset 15.webp",
-      category: "Repair Kits",
-      description:
-        "Comprehensive engine repair kits for maintenance tasks. Complete sets for various repair operations.",
+      category: "Emery Tape",
+      description: "Emery Tape",
       whatsappMessage:
-        "Hi, I'm interested in Engine Repair Kits. Please provide more information and pricing.",
+        "Hi, I'm interested in Emery Tape. Please provide more information and pricing.",
     },
     {
       id: 16,
-      name: "Engine Testing Equipment",
+      name: "Diaphragm Pump",
       image: "/products/enginestores/Asset 16.webp",
-      category: "Testing",
-      description:
-        "Professional engine testing and diagnostic equipment. Tools for performance analysis and troubleshooting.",
+      category: "Diaphragm Pump",
+      description: "Diaphragm Pump",
       whatsappMessage:
-        "Hi, I'm interested in Engine Testing Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Diaphragm Pump. Please provide more information and pricing.",
     },
     {
       id: 17,
@@ -429,7 +414,6 @@ const EngineStores = () => {
                   <img src={product.image} alt={product.name} loading="lazy" />
                 </div>
                 <div className="product-details">
-                  <span className="product-category">{product.category}</span>
                   <h3 className="product-name">{product.name}</h3>
                   <p className="product-desc">{product.description}</p>
                   <a

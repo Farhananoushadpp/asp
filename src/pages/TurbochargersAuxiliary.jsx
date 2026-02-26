@@ -132,7 +132,6 @@ const TurbochargersAuxiliary = () => {
                   <img src={product.image} alt={product.name} loading="lazy" />
                 </div>
                 <div className="product-details">
-                  <span className="product-category">{product.category}</span>
                   <h3 className="product-name">{product.name}</h3>
                   <p className="product-desc">{product.description}</p>
                   <a
