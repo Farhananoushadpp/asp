@@ -1,218 +1,184 @@
 /**
- * ASP Global Marine Trading LLC - Products Page
+ * ASP Global Marine Trading LLC - Products Main Page
  *
- * React page component with detailed product categories and information
- * Technology: React functional component with JSX
+ * Marine Industrial Product Catalog Landing Page
+ * Professional structured catalog with category navigation
  */
 
-import { useState } from "react";
-import Products from "../components/Products.jsx";
+import "../styles/pages/Products.css";
+import { Link } from "react-router-dom";
 
 const ProductsPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const productDetails = {
-    "engine-stores": {
-      title: "Engine Stores",
-      description: "Comprehensive engine room stores and consumables for all major marine engine manufacturers. Complete inventory of filters, bearings, gaskets, seals, and essential engine components.",
-      features: [
-        "Engine Spares for YANMAR, WARTSILA, MAN, CUMMINS, SULZER, WINGD",
-        "High-Quality Filters: Oil, Fuel, Air Filters",
-        "Bearings: Main Bearings, Connecting Rod Bearings, Camshaft Bearings",
-        "Gaskets & Seals: Cylinder Head Gaskets, Valve Stem Seals",
-        "Pistons & Cylinder Liners for All Engine Types",
-        "Fuel System Components: Pumps, Injectors, Nozzles",
-        "Valves: Inlet, Exhaust, Safety Relief Valves",
-        "24/7 Technical Support and Global Delivery"
-      ],
-      brands: ["YANMAR", "WARTSILA", "MAN", "CUMMINS", "SULZER", "WINGD", "MITSUBISHI UEC"]
-    },
-    "deck-stores": {
-      title: "Deck Stores & General Marine Stores",
-      description: "Complete range of deck and general marine stores including ropes, shackles, navigation equipment, safety gear, tools, and maintenance supplies for vessel operations.",
-      features: [
-        "Deck Equipment: Mooring Ropes, Anchor Chains, Shackles, Bollards",
-        "Navigation: Navigation Lights, Signal Flags, Compasses, Binoculars",
-        "Safety Equipment: Life Jackets, Fire Extinguishers, Safety Harnesses",
-        "Tools: Hand Tools, Power Tools, Welding Equipment, Measuring Tools",
-        "Maintenance: Lubricants, Cleaning Chemicals, Paints, Sealants",
-        "Electrical: Lamps, Switches, Relays, Transformers, Carbon Brushes",
-        "Hardware: Fasteners, Bolts, Nuts, Washers, Fittings",
-        "Global Sourcing from Leading Marine Suppliers"
-      ],
-      brands: ["Multiple Marine Equipment Brands Available"]
-    },
-    "engine-spares-2stroke": {
+  const productCategories = [
+    {
+      id: "engine-spares-2stroke",
       title: "Engine Spares - 2 Stroke",
-      description: "Complete range of 2-stroke engine spare parts for major manufacturers including YANMAR, Wärtsilä, MAN Energy Solutions, Cummins, Mitsubishi Heavy Industries, and Wingd.",
-      features: [
-        "Supported Models: RT-FLEX Series, RTA Series, X Series",
-        "Supported Models: MC/MCC/MEC/MEB Series, UEC Series",
-        "Products: Pistons, Piston Crowns, Piston Rings, Cylinder Liners",
-        "Products: Cylinder Covers, Fuel Pumps, Injection Nozzles",
-        "Products: Camshafts, Oil Pumps, Stuffing Boxes, Sensors",
-        "Auxiliary Engine Parts Available"
-      ],
-      brands: ["YANMAR", "Wärtsilä", "MAN Energy Solutions", "Cummins", "Mitsubishi Heavy Industries", "Wingd"]
+      description: "Complete range of 2-stroke engine spare parts for major marine engine manufacturers",
+      icon: "⚙️",
+      brands: ["YANMAR", "HIMSEN", "WARTSILA", "CUMMINS", "MAN", "SULZER", "WINGD", "MITSUBISHI-UEC"]
     },
-    "engine-spares-4stroke": {
+    {
+      id: "engine-spares-4stroke",
       title: "Engine Spares - 4 Stroke",
-      description: "Comprehensive 4-stroke engine components for Caterpillar, Cummins, Yanmar, Daihatsu, and Weichai engines with full technical support.",
-      features: [
-        "Products: Cylinder Covers, Piston Crowns, Cooling Jackets",
-        "Products: Air Starting Motors, Fuel Transfer Pumps",
-        "Products: Cam Shafts, Inlet & Exhaust Valves",
-        "Products: Heat Exchangers, Lube Oil Pumps, Head Gasket Kits",
-        "Full Technical Documentation Available",
-        "OEM Quality Guaranteed"
-      ],
-      brands: ["Caterpillar", "Cummins", "Yanmar", "Daihatsu", "Weichai"]
+      description: "Comprehensive 4-stroke engine components and spare parts for marine applications",
+      icon: "🔧",
+      brands: ["YANMAR", "WARTSILA", "MAN", "CUMMINS", "CATERPILLAR", "MITSUBISHI"]
     },
-    "turbochargers": {
-      title: "Turbochargers & Auxiliary Engine Products",
-      description: "High-performance turbocharger units and components from ABB, KBB, and Mitsubishi with complete repair and overhaul capabilities.",
-      features: [
-        "ABB Series: VTR, VTC Series Available",
-        "KBB Turbocharger Units and Spares",
-        "Mitsubishi MET Series Support",
-        "Products: Turbocharger Units, Bearings, Impeller Wheels",
-        "Products: Repair Kits, Seal Plates, Gaskets",
-        "24/7 Technical Support"
-      ],
-      brands: ["ABB (VTR, VTC Series)", "KBB", "Mitsubishi (MET Series)"]
+    {
+      id: "turbochargers-auxiliary",
+      title: "Turbochargers & Auxiliary",
+      description: "Turbochargers, superchargers, and auxiliary engine systems",
+      icon: "🌪️",
+      brands: ["ABB", "MAN", "IHI", "MHI", "KBB"]
     },
-    "hvac": {
-      title: "HVAC Compressors & Spares",
-      description: "Marine HVAC compressor components from Sabroe, Bitzer, and Daikin for reliable climate control systems on vessels.",
-      features: [
-        "Sabroe Compressor Spares and Components",
-        "Bitzer Marine HVAC Systems Support",
-        "Daikin Compressor Parts Available",
-        "Products: Bearings, Shafts, Impellers",
-        "Products: Mechanical Seals, Couplings, Wear Rings",
-        "Energy Efficient Solutions"
-      ],
-      brands: ["Sabroe", "Bitzer", "Daikin"]
-    },
-    "pumps": {
+    {
+      id: "pumps-marine-industrial",
       title: "Pumps - Marine & Industrial",
-      description: "Complete range of marine and industrial pumps with CE, ISO9001, ISO14001, OHSAS18001 certifications and major class approvals.",
-      features: [
-        "Pump Types: Twin Screw, Three Screw, Gear Pumps",
-        "Pump Types: Centrifugal, Deep Well, Emergency Fire Pumps",
-        "Pump Types: Vacuum Pumps, Diaphragm Pumps",
-        "Certifications: CE, ISO9001, ISO14001, OHSAS18001",
-        "Class Approvals: CCS, BV, KR, ABS, NK, RINA, RMRS",
-        "Global Service Network"
-      ],
-      brands: ["Desmi", "Allweiler", "Grundfos", "Jabsco"]
+      description: "Complete range of marine and industrial pumping systems",
+      icon: "💧",
+      brands: ["ALFA LAVAL", "WARTSILA", "SPX FLOW", "KSB", "GRUNDFOS"]
     },
-    "purifiers": {
+    {
+      id: "hvac-compressors",
+      title: "HVAC Compressors & Spares",
+      description: "Marine HVAC systems, compressors, and climate control solutions",
+      icon: "❄️",
+      brands: ["CARRIER", "TRANE", "DAIKIN", "MITSUBISHI", "YORK"]
+    },
+    {
+      id: "boilers-incinerators-heat-exchangers",
+      title: "Boilers & Heat Exchangers",
+      description: "Marine boilers, incinerators, and heat exchange systems",
+      icon: "🔥",
+      brands: ["ALFA LAVAL", "WARTSILA", "AALBORG", "KAWASAKI"]
+    },
+    {
+      id: "air-compressor-spares",
+      title: "Air Compressor Spares",
+      description: "Air compressors and spare parts for marine applications",
+      icon: "💨",
+      brands: ["ATLAS COPCO", "KAESER", "INGERSOLL RAND", "SULLAIR"]
+    },
+    {
+      id: "hydraulic-systems",
+      title: "Hydraulic Systems & Components",
+      description: "Complete hydraulic systems, components, and spare parts",
+      icon: "🛠️",
+      brands: ["BOSCH REXROTH", "PARKER", "EATON", "DANFOSS"]
+    },
+    {
+      id: "purifiers",
       title: "Purifiers & Separators",
-      description: "Advanced fuel oil purifiers and water separators from Alfa Laval and GEA Westfalia for clean fuel systems.",
-      features: [
-        "Alfa Laval S-Type and P-Type Separators",
-        "GEA Westfalia Separator Systems",
-        "PLC Controlled Separator Modules",
-        "Disc Separators and Marine Oil Separators",
-        "Liquid Solid Centrifuge Systems",
-        "Automated Control Systems"
-      ],
-      brands: ["Alfa Laval", "GEA Westfalia"]
+      description: "Oil purifiers, water separators, and filtration systems",
+      icon: "🔄",
+      brands: ["ALFA LAVAL", "WARTSILA", "GEA", "SPX FLOW"]
     },
-    "boilers": {
-      title: "Boilers, Heat Exchangers & Air Compressor Spares",
-      description: "Comprehensive boiler and air compressor components from Tanabe, Sauer Compressors, Sperre, and Hatlapa.",
-      features: [
-        "Tanabe Boiler Systems and Components",
-        "Sauer Compressor Spares Available",
-        "Sperre Marine Compressor Parts",
-        "Hatlapa Pump and Boiler Systems",
-        "Products: Boiler Feed Pumps, Burner Nozzles",
-        "Products: Safety Valves, Pressure Gauges, LP/HP Valves"
-      ],
-      brands: ["Tanabe", "Sauer Compressors", "Sperre", "Hatlapa"]
+    {
+      id: "deck-stores-general",
+      title: "Deck Stores & General",
+      description: "Complete deck equipment and general marine stores",
+      icon: "⚓",
+      brands: ["Multiple Marine Equipment Brands"]
     },
-    "lsa-ffa": {
-      title: "LSA & FFA (Life Saving & Fire Fighting Equipment)",
-      description: "SOLAS approved and IMO compliant life-saving appliances and fire-fighting equipment for maritime safety.",
-      features: [
-        "Life Saving: Life Rafts, Lifebuoys, Immersion Suits",
-        "Fire Fighting: Fire Hoses, Fire Couplings, Fireman Suits",
-        "Safety Equipment: EEBD, SCBA, Fire Extinguishers",
-        "Additional: HRU, Pyrotechnics, Oil Spill Kits",
-        "Navigation: Pilot Ladders, MOB Line Throwing Apparatus",
-        "Gas Detection Systems"
-      ],
-      brands: ["SOLAS Approved", "IMO Compliant"]
+    {
+      id: "engine-stores",
+      title: "Engine Stores",
+      description: "Engine room stores, consumables, and maintenance supplies",
+      icon: "🔩",
+      brands: ["YANMAR", "WARTSILA", "MAN", "CUMMINS", "SULZER"]
+    },
+    {
+      id: "lsa-ffa",
+      title: "LSA & FFA Equipment",
+      description: "Life-saving appliances and fire-fighting equipment",
+      icon: "🚨",
+      brands: ["VIKING", "Survitec", "WINSLOW", "MFC"]
     }
-  };
-
-  const handleCategorySelect = (category) => {
-    setSelectedCategory(category);
-  };
-
-  const selectedDetail = selectedCategory
-    ? productDetails[selectedCategory]
-    : null;
+  ];
 
   return (
     <div className="products-page">
-      <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">Our Products</h1>
-          <p className="page-subtitle">
-            Comprehensive marine and offshore equipment solutions
+      {/* Hero Section */}
+      <section className="products-hero">
+        <div className="container">
+          <h1>Marine Industrial Product Catalog</h1>
+          <p>
+            Comprehensive range of marine equipment, spare parts, and technical solutions 
+            for vessels and offshore installations. Supporting all major manufacturers 
+            with genuine OEM and equivalent quality components.
           </p>
-        </div>
-      </div>
-
-      <Products onCategorySelect={handleCategorySelect} />
-
-      {selectedDetail && (
-        <section className="product-details">
-          <div className="container">
-            <div className="product-detail-card">
-              <h2>{selectedDetail.title}</h2>
-              <p className="product-description">
-                {selectedDetail.description}
-              </p>
-
-              <div className="product-features">
-                <h3>Key Features:</h3>
-                <ul>
-                  {selectedDetail.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-
-              {selectedDetail.brands && (
-                <div className="product-brands">
-                  <h3>Supported Brands:</h3>
-                  <div className="brands-list">
-                    {selectedDetail.brands.map((brand, index) => (
-                      <span key={index} className="brand-tag">{brand}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <div className="product-actions">
-                <button className="btn btn-primary">Request Quote</button>
-                <button className="btn btn-outline">Download Catalog</button>
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => setSelectedCategory(null)}
-                >
-                  Back to Categories
-                </button>
-              </div>
+          <div className="hero-stats">
+            <div className="stat">
+              <span className="stat-number">12+</span>
+              <span className="stat-label">Product Categories</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">50+</span>
+              <span className="stat-label">Manufacturer Brands</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">1000+</span>
+              <span className="stat-label">Spare Parts Available</span>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
+      {/* Product Categories Grid */}
+      <section className="products-section">
+        <div className="container">
+          <h2>Product Categories</h2>
+          <p className="section-intro">
+            Click on any category to view detailed technical specifications, 
+            manufacturer compatibility, and available spare parts.
+          </p>
+          
+          <div className="products-grid">
+            {productCategories.map((category) => (
+              <Link 
+                key={category.id} 
+                to={`/products/${category.id}`}
+                className="product-card"
+              >
+                <div className="card-icon">{category.icon}</div>
+                <h3>{category.title}</h3>
+                <p>{category.description}</p>
+                <div className="card-brands">
+                  <span className="brands-label">Brands:</span>
+                  <div className="brands-list">
+                    {category.brands.slice(0, 3).map((brand, index) => (
+                      <span key={index} className="brand-tag">{brand}</span>
+                    ))}
+                    {category.brands.length > 3 && (
+                      <span className="brand-more">+{category.brands.length - 3} more</span>
+                    )}
+                  </div>
+                </div>
+                <div className="card-action">
+                  <span>View Technical Details →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="products-cta">
+        <div className="container">
+          <h2>Need Technical Assistance?</h2>
+          <p>
+            Our technical team can help you identify the exact parts and specifications 
+            for your marine equipment. Contact us for detailed catalogs and 
+            compatibility information.
+          </p>
+          <Link to="/contact" className="cta-button">
+            Request Technical Catalog
+          </Link>
+        </div>
+      </section>
+
+      {/* Quality Assurance Section */}
       <section className="product-quality">
         <div className="container">
           <div className="quality-content">

@@ -7,6 +7,7 @@
 
 import "../styles/pages/Products.css";
 import { useState } from "react";
+import { MessageCircle, Mail } from "lucide-react";
 
 const EngineStores = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -478,14 +479,16 @@ const EngineStores = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="whatsapp-btn"
+                      aria-label="WhatsApp"
                     >
-                      WhatsApp
+                      <MessageCircle />
                     </a>
                     <a
                       href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage.split("\n")[0].replace("Subject: ", ""))}&body=${encodeURIComponent(product.emailMessage.split("\n").slice(2).join("\n").trim())}`}
                       className="email-btn"
+                      aria-label="Email"
                     >
-                      Email
+                      <Mail />
                     </a>
                   </div>
                 </div>

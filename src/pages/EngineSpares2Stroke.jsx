@@ -1,148 +1,289 @@
 /**
  * ASP Global Marine Trading LLC - Engine Spares 2-Stroke Page
  *
- * Comprehensive 2-Stroke engine spare parts and components
- * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ * Marine Industrial Product Subpage with Technical Tables
+ * Professional structured catalog with manufacturer data
  */
 
 import "../styles/pages/Products.css";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const EngineSpares2Stroke = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const engineProducts = [
+  const manufacturers = [
     {
-      id: 1,
-      name: "2-Stroke Piston Components",
-      image: "/products/enginestores/Asset 1.webp",
-      category: "Piston Components",
-      description:
-        "Complete piston assembly components for 2-stroke engines including crowns, rings, skirts, and cooling nozzles.",
-      whatsappMessage:
-        "Hi, I'm interested in 2-Stroke Piston Components. Please provide more information and pricing.",
+      name: "YANMAR",
+      models: ["N18", "EY18", "N21", "EY26", "N260", "N280", "M200"],
+      series: ["N Series", "EY Series", "M Series"]
     },
     {
-      id: 2,
-      name: "2-Stroke Cylinder System",
-      image: "/products/enginestores/Asset 2.webp",
-      category: "Cylinder System",
-      description:
-        "Comprehensive cylinder system components including liners, covers, lubricators, and cooling jackets.",
-      whatsappMessage:
-        "Hi, I'm interested in 2-Stroke Cylinder System. Please provide more information and pricing.",
+      name: "HIMSEN",
+      models: ["H28/17", "H32/21", "H33/25", "H40/32"],
+      series: ["H Series"]
     },
     {
-      id: 3,
-      name: "2-Stroke Fuel Injection",
-      image: "/products/enginestores/Asset 3.webp",
-      category: "Fuel Injection",
-      description:
-        "Precision fuel injection systems for 2-stroke engines including pumps, nozzles, and control systems.",
-      whatsappMessage:
-        "Hi, I'm interested in 2-Stroke Fuel Injection. Please provide more information and pricing.",
+      name: "MAN",
+      models: ["K80", "L35", "K90", "K98"],
+      series: ["K Series", "L Series"]
     },
     {
-      id: 4,
-      name: "2-Stroke Turbocharger Parts",
-      image: "/products/enginestores/Asset 4.webp",
-      category: "Turbocharger",
-      description:
-        "Turbocharger components and spares for 2-stroke engines including turbines, compressors, and bearings.",
-      whatsappMessage:
-        "Hi, I'm interested in 2-Stroke Turbocharger Parts. Please provide more information and pricing.",
+      name: "WARTSILA",
+      models: ["L42", "L46", "L50", "L60", "L70"],
+      series: ["L Series"]
     },
     {
-      id: 5,
-      name: "2-Stroke Valve Components",
-      image: "/products/enginestores/Asset 5.webp",
-      category: "Valve Components",
-      description:
-        "Complete valve train components for 2-stroke engines including exhaust valves, cages, seats, and rotators.",
-      whatsappMessage:
-        "Hi, I'm interested in 2-Stroke Valve Components. Please provide more information and pricing.",
+      name: "SULZER",
+      models: ["RTA48", "RTA52", "RTA58T", "RTA62"],
+      series: ["RTA Series"]
     },
     {
-      id: 6,
-      name: "2-Stroke Bearing Components",
-      image: "/products/enginestores/Asset 6.webp",
-      category: "Bearings",
-      description:
-        "High-quality bearing components for 2-stroke engines including main bearings, crosshead bearings, and thrust bearings.",
-      whatsappMessage:
-        "Hi, I'm interested in 2-Stroke Bearing Components. Please provide more information and pricing.",
+      name: "RT-FLEX",
+      models: ["RT-FLEX50", "RT-FLEX58", "RT-FLEX68"],
+      series: ["RT-FLEX Series"]
     },
     {
-      id: 7,
-      name: "2-Stroke Camshaft Components",
-      image: "/products/enginestores/Asset 7.webp",
-      category: "Camshaft System",
-      description:
-        "Complete camshaft and drive components for 2-stroke engines including cams, followers, and timing gears.",
-      whatsappMessage:
-        "Hi, I'm interested in 2-Stroke Camshaft Components. Please provide more information and pricing.",
+      name: "WINGD",
+      models: ["5RT-FLEX50", "6RT-FLEX58", "7RT-FLEX68"],
+      series: ["RT-FLEX Series"]
     },
     {
-      id: 8,
-      name: "2-Stroke Shaft Components",
-      image: "/products/enginestores/Asset 8.webp",
-      category: "Shaft Components",
-      description:
-        "Critical shaft components for 2-stroke engine power transmission including crankshafts and couplings.",
-      whatsappMessage:
-        "Hi, I'm interested in 2-Stroke Shaft Components. Please provide more information and pricing.",
-    },
+      name: "MITSUBISHI-UEC",
+      models: ["UEC-L52", "UEC-L58", "UEC-L60", "UEC-L70"],
+      series: ["UEC-L Series"]
+    }
   ];
 
-  const filteredProducts = engineProducts.filter(
-    (product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
+  const spareParts = [
+    "Pistons",
+    "Piston Crowns",
+    "Cylinder Liners",
+    "Fuel Pumps",
+    "Injection Nozzles",
+    "Camshafts",
+    "Sensors",
+    "Oil Pumps",
+    "Stuffing Boxes",
+    "Main Bearings",
+    "Connecting Rod Bearings",
+    "Thrust Bearings",
+    "Valve Seats",
+    "Valve Guides",
+    "Exhaust Valves",
+    "Inlet Valves",
+    "Fuel Valves",
+    "Starting Air Valves",
+    "Turbocharger Parts",
+    "Gasket Sets"
+  ];
+
+  const technicalSpecs = [
+    {
+      category: "Engine Types",
+      specifications: [
+        "Bore: 260-960mm",
+        "Stroke: 400-2500mm", 
+        "Power: 600-20,000 kW per cylinder",
+        "Speed: 50-300 rpm"
+      ]
+    },
+    {
+      category: "Fuel Systems",
+      specifications: [
+        "Heavy Fuel Oil (HFO) compatible",
+        "Marine Diesel Oil (MDO) compatible",
+        "Low Sulphur Fuel Oil (LSFO) compatible",
+        "Common Rail Systems"
+      ]
+    },
+    {
+      category: "Materials",
+      specifications: [
+        "Cast Iron Cylinder Blocks",
+        "Alloy Steel Pistons",
+        "Bronze Bearings",
+        "Stainless Steel Valves"
+      ]
+    }
+  ];
 
   return (
-    <div className="product-page">
+    <div className="product-subpage">
       <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">Engine Spares - 2-Stroke</h1>
-          <p className="page-subtitle">
-            Comprehensive 2-Stroke Marine Engine Spare Parts Solutions
+        {/* Header */}
+        <header className="product-header">
+          <Link to="/products" className="back-link">← Back to Products</Link>
+          <h1>Engine Spares - 2 Stroke</h1>
+          <p className="intro">
+            Complete range of 2-stroke marine engine spare parts for major manufacturers. 
+            Genuine OEM and equivalent quality components with full technical documentation 
+            and classification society approval.
           </p>
-        </div>
+        </header>
 
-        <section className="product-gallery">
-          <div className="search-bar-container">
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
-          </div>
-          <h2>Featured 2-Stroke Engine Products</h2>
-          <div className="gallery-grid">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="gallery-item">
-                <div className="product-image">
-                  <img src={product.image} alt={product.name} loading="lazy" />
-                </div>
-                <div className="product-details">
-                  <h3 className="product-name">{product.name}</h3>
-                  <p className="product-desc">{product.description}</p>
-                  <a
-                    href={`https://wa.me/971505398975?text=${encodeURIComponent(product.whatsappMessage)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="whatsapp-btn"
-                  >
-                    Get Product
-                  </a>
-                </div>
+        {/* Brands Supported */}
+        <section className="brands-section">
+          <h2>Brands Supported</h2>
+          <div className="brands-grid">
+            {manufacturers.map((manufacturer, index) => (
+              <div key={index} className="brand-item">
+                {manufacturer.name}
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Manufacturer & Models Table */}
+        <section>
+          <h2>Manufacturer & Model Compatibility</h2>
+          <table className="product-table">
+            <thead>
+              <tr>
+                <th>Manufacturer</th>
+                <th>Models Supported</th>
+                <th>Series</th>
+              </tr>
+            </thead>
+            <tbody>
+              {manufacturers.map((manufacturer, index) => (
+                <tr key={index}>
+                  <td>
+                    <strong>{manufacturer.name}</strong>
+                  </td>
+                  <td>{manufacturer.models.join(", ")}</td>
+                  <td>{manufacturer.series.join(", ")}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        {/* Spare Parts Available */}
+        <section>
+          <h2>Spare Parts Available</h2>
+          <table className="product-table">
+            <thead>
+              <tr>
+                <th>Component Category</th>
+                <th>Description</th>
+                <th>Material/Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Pistons</strong></td>
+                <td>Complete piston assemblies with crowns and pins</td>
+                <td>Alloy Steel, Cast Iron</td>
+              </tr>
+              <tr>
+                <td><strong>Cylinder Liners</strong></td>
+                <td>Wet and dry type liners with precision bore</td>
+                <td>Cast Iron, Chrome Plated</td>
+              </tr>
+              <tr>
+                <td><strong>Fuel Pumps</strong></td>
+                <td>High-pressure fuel injection pumps</td>
+                <td>Steel Alloy</td>
+              </tr>
+              <tr>
+                <td><strong>Injection Nozzles</strong></td>
+                <td>Multi-hole and pintle type nozzles</td>
+                <td>Tool Steel</td>
+              </tr>
+              <tr>
+                <td><strong>Camshafts</strong></td>
+                <td>Complete camshaft assemblies</td>
+                <td>Forged Steel</td>
+              </tr>
+              <tr>
+                <td><strong>Main Bearings</strong></td>
+                <td>Shell type main bearings</td>
+                <td>Bronze, Babbitt</td>
+              </tr>
+              <tr>
+                <td><strong>Connecting Rod Bearings</strong></td>
+                <td>Connecting rod bearing shells</td>
+                <td>Bronze, Babbitt</td>
+              </tr>
+              <tr>
+                <td><strong>Valves</strong></td>
+                <td>Inlet, exhaust, and fuel valves</td>
+                <td>Stainless Steel, Tool Steel</td>
+              </tr>
+              <tr>
+                <td><strong>Turbocharger Parts</strong></td>
+                <td>Rotors, nozzles, casings, bearings</td>
+                <td>High-Speed Steel, Bronze</td>
+              </tr>
+              <tr>
+                <td><strong>Gasket Sets</strong></td>
+                <td>Complete engine gasket kits</td>
+                <td>Composite, Graphite</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        {/* Technical Specifications */}
+        <section>
+          <h2>Technical Specifications</h2>
+          <table className="product-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Specifications</th>
+              </tr>
+            </thead>
+            <tbody>
+              {technicalSpecs.map((spec, index) => (
+                <tr key={index}>
+                  <td><strong>{spec.category}</strong></td>
+                  <td>{spec.specifications.join(" | ")}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        {/* Equipment Compatibility */}
+        <section>
+          <h2>Supported Equipment Types</h2>
+          <table className="product-table">
+            <thead>
+              <tr>
+                <th>Equipment Type</th>
+                <th>Applications</th>
+                <th>Vessel Types</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Main Propulsion Engines</strong></td>
+                <td>Primary propulsion for large vessels</td>
+                <td>Container Ships, Tankers, Bulk Carriers</td>
+              </tr>
+              <tr>
+                <td><strong>Auxiliary Engines</strong></td>
+                <td>Power generation, pump drives</td>
+                <td>All vessel types</td>
+              </tr>
+              <tr>
+                <td><strong>Generator Sets</strong></td>
+                <td>Electrical power generation</td>
+                <td>Commercial vessels, Offshore platforms</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        {/* CTA Section */}
+        <section className="product-cta">
+          <h2>Request Technical Details</h2>
+          <p>
+            Need detailed technical specifications, compatibility charts, or pricing information? 
+            Our technical team can provide comprehensive documentation and application guidance.
+          </p>
+          <Link to="/contact" className="cta-button">
+            Contact Technical Support
+          </Link>
         </section>
       </div>
     </div>

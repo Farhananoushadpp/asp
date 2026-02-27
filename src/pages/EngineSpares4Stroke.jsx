@@ -7,6 +7,7 @@
 
 import "../styles/pages/Products.css";
 import { useState } from "react";
+import { MessageCircle, Mail } from "lucide-react";
 
 const EngineSpares4Stroke = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -131,14 +132,24 @@ const EngineSpares4Stroke = () => {
                 <div className="product-details">
                   <h3 className="product-name">{product.name}</h3>
                   <p className="product-desc">{product.description}</p>
-                  <a
-                    href={`https://wa.me/971505398975?text=${encodeURIComponent(product.whatsappMessage)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="whatsapp-btn"
-                  >
-                    Get Product
-                  </a>
+                  <div className="product-buttons">
+                    <a
+                      href={`https://wa.me/971505398975?text=${encodeURIComponent(product.whatsappMessage)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-btn"
+                      aria-label="WhatsApp"
+                    >
+                      <MessageCircle />
+                    </a>
+                    <a
+                      href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n")[0].replace("Subject: ", "") : "Inquiry about " + product.name)}&body=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n").slice(2).join("\n").trim() : "Dear ASP Global Marine Trading,\n\nI'm interested in " + product.name + ". Please provide more information and pricing.\n\nThank you.")}`}
+                      className="email-btn"
+                      aria-label="Email"
+                    >
+                      <Mail />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

@@ -39,7 +39,7 @@ import HydraulicSystems from "./pages/HydraulicSystems.jsx";
 import LSAFFA from "./pages/LSAFFA.jsx";
 
 // Authorizations Page
-import Authorizations from "./pages/Authorizations.jsx";
+import Authorization from "./pages/Authorization.jsx";
 
 import "./styles/main.css";
 
@@ -100,12 +100,14 @@ function App() {
     // Navbar scroll effect
     const handleNavbarScroll = () => {
       const navbar = document.querySelector(".navbar");
-      if (window.scrollY > 50) {
-        navbar.style.background = "rgba(255, 255, 255, 0.98)";
-        navbar.style.boxShadow = "0 4px 30px rgba(46, 139, 139, 0.15)";
-      } else {
-        navbar.style.background = "rgba(255, 255, 255, 0.95)";
-        navbar.style.boxShadow = "0 2px 20px rgba(46, 139, 139, 0.1)";
+      if (navbar) {
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(255, 255, 255, 0.98)";
+          navbar.style.boxShadow = "0 4px 30px rgba(46, 139, 139, 0.15)";
+        } else {
+          navbar.style.background = "rgba(255, 255, 255, 0.95)";
+          navbar.style.boxShadow = "0 2px 20px rgba(46, 139, 139, 0.1)";
+        }
       }
     };
 
@@ -143,7 +145,7 @@ function App() {
               path="/products/engine-spares-2stroke"
               element={<EngineSpares2Stroke />}
             />
-            {/* <Route
+            <Route
               path="/products/engine-spares-4stroke"
               element={<EngineSpares4Stroke />}
             />
@@ -171,12 +173,12 @@ function App() {
             <Route
               path="/products/hydraulic-systems"
               element={<HydraulicSystems />}
-            /> */}
+            />
 
             <Route path="/products/lsa-ffa" element={<LSAFFA />} />
 
             {/* Authorizations Route */}
-            {/* <Route path="/authorizations" element={<Authorizations />} /> */}
+            <Route path="/authorizations" element={<Authorization />} />
 
             {/* Contact Route */}
             <Route path="/contact" element={<Contact />} />
