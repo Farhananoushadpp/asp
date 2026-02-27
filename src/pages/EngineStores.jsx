@@ -20,6 +20,8 @@ const EngineStores = () => {
       description: "High Temp. Gaskets",
       whatsappMessage:
         "Hi, I'm interested in High Temp. Gaskets. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about High Temp. Gaskets\n\nDear ASP Global Marine Trading,\n\nI'm interested in High Temp. Gaskets. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 2,
@@ -29,6 +31,8 @@ const EngineStores = () => {
       description: "Pipe Bender",
       whatsappMessage:
         "Hi, I'm interested in Pipe Bender. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Pipe Bender\n\nDear ASP Global Marine Trading,\n\nI'm interested in Pipe Bender. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 3,
@@ -38,6 +42,8 @@ const EngineStores = () => {
       description: "Cargo Sling Bag",
       whatsappMessage:
         "Hi, I'm interested in Cargo Sling Bag. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Cargo Sling Bag\n\nDear ASP Global Marine Trading,\n\nI'm interested in Cargo Sling Bag. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 4,
@@ -48,6 +54,8 @@ const EngineStores = () => {
         "High-quality marine engine components for various engine types. Reliable parts for optimal engine performance.",
       whatsappMessage:
         "Hi, I'm interested in Submersible Pumps. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Submersible Pumps\n\nDear ASP Global Marine Trading,\n\nI'm interested in Submersible Pumps. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 5,
@@ -57,6 +65,8 @@ const EngineStores = () => {
       description: "Red Silicon",
       whatsappMessage:
         "Hi, I'm interested in Red Silicon. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Red Silicon\n\nDear ASP Global Marine Trading,\n\nI'm interested in Red Silicon. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 6,
@@ -66,6 +76,8 @@ const EngineStores = () => {
       description: "Rust Removers",
       whatsappMessage:
         "Hi, I'm interested in Rust Removers. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Rust Removers\n\nDear ASP Global Marine Trading,\n\nI'm interested in Rust Removers. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 7,
@@ -75,6 +87,8 @@ const EngineStores = () => {
       description: "Insulation Test Kit",
       whatsappMessage:
         "Hi, I'm interested in Insulation Test Kit. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Insulation Test Kit\n\nDear ASP Global Marine Trading,\n\nI'm interested in Insulation Test Kit. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 8,
@@ -84,6 +98,8 @@ const EngineStores = () => {
       description: "Clamp Meter",
       whatsappMessage:
         "Hi, I'm interested in Clamp Meter. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Clamp Meter\n\nDear ASP Global Marine Trading,\n\nI'm interested in Clamp Meter. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 9,
@@ -93,6 +109,8 @@ const EngineStores = () => {
       description: "Gas/Smoke Detectors",
       whatsappMessage:
         "Hi, I'm interested in Gas/Smoke Detectors. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Gas/Smoke Detectors\n\nDear ASP Global Marine Trading,\n\nI'm interested in Gas/Smoke Detectors. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 10,
@@ -102,6 +120,8 @@ const EngineStores = () => {
       description: "Magnetic Drilling Machine",
       whatsappMessage:
         "Hi, I'm interested in Magnetic Drilling Machine. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Magnetic Drilling Machine\n\nDear ASP Global Marine Trading,\n\nI'm interested in Magnetic Drilling Machine. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 11,
@@ -111,6 +131,8 @@ const EngineStores = () => {
       description: "Adhesives",
       whatsappMessage:
         "Hi, I'm interested in Adhesives. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Adhesives\n\nDear ASP Global Marine Trading,\n\nI'm interested in Adhesives. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 12,
@@ -120,6 +142,8 @@ const EngineStores = () => {
       description: "CRC",
       whatsappMessage:
         "Hi, I'm interested in CRC. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about CRC\n\nDear ASP Global Marine Trading,\n\nI'm interested in CRC. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 13,
@@ -129,6 +153,8 @@ const EngineStores = () => {
       description: "Explossion Proof Hand Lamp",
       whatsappMessage:
         "Hi, I'm interested in Explossion Proof Hand Lamp. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Explossion Proof Hand Lamp\n\nDear ASP Global Marine Trading,\n\nI'm interested in Explossion Proof Hand Lamp. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 14,
@@ -138,6 +164,8 @@ const EngineStores = () => {
       description: "Bearing Puller",
       whatsappMessage:
         "Hi, I'm interested in Bearing Puller. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Bearing Puller\n\nDear ASP Global Marine Trading,\n\nI'm interested in Bearing Puller. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 15,
@@ -147,6 +175,8 @@ const EngineStores = () => {
       description: "Emery Tape",
       whatsappMessage:
         "Hi, I'm interested in Emery Tape. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Emery Tape\n\nDear ASP Global Marine Trading,\n\nI'm interested in Emery Tape. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 16,
@@ -156,226 +186,252 @@ const EngineStores = () => {
       description: "Diaphragm Pump",
       whatsappMessage:
         "Hi, I'm interested in Diaphragm Pump. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Diaphragm Pump\n\nDear ASP Global Marine Trading,\n\nI'm interested in Diaphragm Pump. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 17,
-      name: "Engine Mounting Systems",
+      name: "Mechanical Seal",
       image: "/products/enginestores/Asset 17.webp",
-      category: "Mounting",
-      description:
-        "Marine engine mounting and vibration isolation systems. Secure mounting solutions for engine stability.",
+      category: "Mechanical Seal",
+      description: "Mechanical Seal",
       whatsappMessage:
-        "Hi, I'm interested in Engine Mounting Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Mechanical Seal. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Mechanical Seal\n\nDear ASP Global Marine Trading,\n\nI'm interested in Mechanical Seal. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 18,
-      name: "Engine Exhaust Systems",
+      name: "O Rings",
       image: "/products/enginestores/Asset 18.webp",
-      category: "Exhaust",
-      description:
-        "Complete engine exhaust systems for marine vessels. Exhaust manifolds, silencers, and emission control.",
+      category: "O Rings",
+      description: "O Rings",
       whatsappMessage:
-        "Hi, I'm interested in Engine Exhaust Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in O Rings. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about O Rings\n\nDear ASP Global Marine Trading,\n\nI'm interested in O Rings. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 19,
-      name: "Engine Air Systems",
+      name: "Gland Packing",
       image: "/products/enginestores/Asset 19.webp",
-      category: "Air Systems",
-      description:
-        "Engine air intake and turbocharging systems. High-performance air management for optimal combustion.",
+      category: "Gland Packing",
+      description: "Gland Packing.",
       whatsappMessage:
-        "Hi, I'm interested in Engine Air Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Gland Packing. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Gland Packing\n\nDear ASP Global Marine Trading,\n\nI'm interested in Gland Packing. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 20,
-      name: "Engine Piping Systems",
+      name: "Chain Block",
       image: "/products/enginestores/Asset 20.webp",
-      category: "Piping",
-      description:
-        "Marine engine piping systems and fittings. Complete piping solutions for fuel, oil, and cooling systems.",
+      category: "Chain Block",
+      description: "Chain Block.",
       whatsappMessage:
-        "Hi, I'm interested in Engine Piping Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Chain Block. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Chain Block\n\nDear ASP Global Marine Trading,\n\nI'm interested in Chain Block. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 21,
-      name: "Engine Valves & Fittings",
+      name: "Vacuum Pump",
       image: "/products/enginestores/Asset 21.webp",
-      category: "Valves",
-      description:
-        "Engine valves and fittings for marine applications. High-pressure valves for engine systems.",
+      category: "Vacuum Pump",
+      description: "Vacuum Pump",
       whatsappMessage:
-        "Hi, I'm interested in Engine Valves & Fittings. Please provide more information and pricing.",
+        "Hi, I'm interested in Vacuum Pump. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Vacuum Pump\n\nDear ASP Global Marine Trading,\n\nI'm interested in Vacuum Pump. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 22,
-      name: "Engine Pumps",
+      name: "RHIB-Boat Repair Kit",
       image: "/products/enginestores/Asset 22.webp",
-      category: "Pumps",
-      description:
-        "Marine engine pumps for various applications. Fuel pumps, oil pumps, and water circulation pumps.",
+      category: "RHIB-Boat Repair Kit",
+      description: "RHIB-Boat Repair Kit",
       whatsappMessage:
-        "Hi, I'm interested in Engine Pumps. Please provide more information and pricing.",
+        "Hi, I'm interested in RHIB-Boat Repair Kit. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about RHIB-Boat Repair Kit\n\nDear ASP Global Marine Trading,\n\nI'm interested in RHIB-Boat Repair Kit. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 23,
-      name: "Engine Gauges & Instruments",
+      name: "Bearings",
       image: "/products/enginestores/Asset 23.webp",
-      category: "Instruments",
+      category: "Bearings",
       description:
         "Engine gauges and monitoring instruments. Pressure, temperature, and RPM monitoring devices.",
       whatsappMessage:
-        "Hi, I'm interested in Engine Gauges & Instruments. Please provide more information and pricing.",
+        "Hi, I'm interested in Bearings. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Bearings\n\nDear ASP Global Marine Trading,\n\nI'm interested in Bearings. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 24,
-      name: "Engine Belts & Pulleys",
+      name: "A/C Split & Tower",
       image: "/products/enginestores/Asset 24.webp",
-      category: "Belts",
-      description:
-        "Engine belts and pulleys for power transmission. High-strength belts for reliable operation.",
+      category: "A/C Split & Tower",
+      description: "A/C Split & Tower",
       whatsappMessage:
-        "Hi, I'm interested in Engine Belts & Pulleys. Please provide more information and pricing.",
+        "Hi, I'm interested in A/C Split & Tower. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about A/C Split & Tower\n\nDear ASP Global Marine Trading,\n\nI'm interested in A/C Split & Tower. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 25,
-      name: "Engine Bearings",
+      name: "Water Filters",
       image: "/products/enginestores/Asset 25.webp",
-      category: "Bearings",
-      description:
-        "Marine engine bearings and bushings. High-quality bearings for engine components and assemblies.",
+      category: "Water Filters",
+      description: "Water Filters",
       whatsappMessage:
-        "Hi, I'm interested in Engine Bearings. Please provide more information and pricing.",
+        "Hi, I'm interested in Water Filters. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Water Filters\n\nDear ASP Global Marine Trading,\n\nI'm interested in Water Filters. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 26,
-      name: "Engine Sensors",
+      name: "Switches",
       image: "/products/enginestores/Asset 26.webp",
-      category: "Sensors",
-      description:
-        "Engine sensors and monitoring devices. Temperature, pressure, and position sensors for engines.",
+      category: "Switches",
+      description: "Switches",
       whatsappMessage:
-        "Hi, I'm interested in Engine Sensors. Please provide more information and pricing.",
+        "Hi, I'm interested in Switches. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Switches\n\nDear ASP Global Marine Trading,\n\nI'm interested in Switches. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 27,
-      name: "Engine Gaskets",
+      name: "Thermo Meters",
       image: "/products/enginestores/Asset 27.webp",
-      category: "Gaskets",
-      description:
-        "Complete range of engine gaskets and seals. Leak-proof sealing solutions for engine compartments.",
+      category: "Thermo Meters",
+      description: "Thermo Meters",
       whatsappMessage:
-        "Hi, I'm interested in Engine Gaskets. Please provide more information and pricing.",
+        "Hi, I'm interested in Thermo Meters. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Thermo Meters\n\nDear ASP Global Marine Trading,\n\nI'm interested in Thermo Meters. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 28,
-      name: "Engine Fasteners",
+      name: "Coolants",
       image: "/products/enginestores/Asset 28.webp",
-      category: "Fasteners",
-      description:
-        "Marine engine fasteners and hardware. High-strength bolts, nuts, and washers for engine assembly.",
+      category: "Coolants",
+      description: "Coolants",
       whatsappMessage:
-        "Hi, I'm interested in Engine Fasteners. Please provide more information and pricing.",
+        "Hi, I'm interested in Coolants. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Coolants\n\nDear ASP Global Marine Trading,\n\nI'm interested in Coolants. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 29,
-      name: "Engine Hoses",
+      name: "Battery/Charger",
       image: "/products/enginestores/Asset 29.webp",
-      category: "Hoses",
-      description:
-        "Engine hoses and tubing for marine applications. Flexible hoses for fuel, oil, and cooling systems.",
+      category: "Battery/Charger",
+      description: "Battery/Charger",
       whatsappMessage:
-        "Hi, I'm interested in Engine Hoses. Please provide more information and pricing.",
+        "Hi, I'm interested in Battery/Charger. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Battery/Charger\n\nDear ASP Global Marine Trading,\n\nI'm interested in Battery/Charger. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 30,
-      name: "Engine Filters",
+      name: "Transformers",
       image: "/products/enginestores/Asset 30.webp",
-      category: "Filters",
-      description:
-        "Comprehensive engine filtration products. Oil filters, fuel filters, and air filters for engines.",
+      category: "Transformers",
+      description: "Transformers",
       whatsappMessage:
-        "Hi, I'm interested in Engine Filters. Please provide more information and pricing.",
+        "Hi, I'm interested in Transformers. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Transformers\n\nDear ASP Global Marine Trading,\n\nI'm interested in Transformers. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 31,
-      name: "Engine Lubricants",
+      name: "Flood / Tube Lights",
       image: "/products/enginestores/Asset 31.webp",
-      category: "Lubricants",
-      description:
-        "Marine engine lubricants and oils. High-performance lubricants for engine protection and efficiency.",
+      category: "Flood / Tube Lights",
+      description: "Flood / Tube Lights",
       whatsappMessage:
-        "Hi, I'm interested in Engine Lubricants. Please provide more information and pricing.",
+        "Hi, I'm interested in Flood / Tube Lights. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Flood / Tube Lights\n\nDear ASP Global Marine Trading,\n\nI'm interested in Flood / Tube Lights. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 32,
-      name: "Engine Cleaning Supplies",
+      name: "Junction Box",
       image: "/products/enginestores/Asset 32.webp",
-      category: "Cleaning",
-      description:
-        "Engine cleaning supplies and degreasers. Professional cleaning products for engine maintenance.",
+      category: "Junction Box",
+      description: "Junction Box",
       whatsappMessage:
-        "Hi, I'm interested in Engine Cleaning Supplies. Please provide more information and pricing.",
+        "Hi, I'm interested in Junction Box. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Junction Box\n\nDear ASP Global Marine Trading,\n\nI'm interested in Junction Box. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 33,
-      name: "Engine Spare Parts",
+      name: "Carbon Brushes",
       image: "/products/enginestores/NeEeih.webp",
-      category: "Spare Parts",
-      description:
-        "Complete range of engine spare parts. Replacement parts for various engine models and types.",
+      category: "Carbon Brushes",
+      description: "Carbon Brushes",
       whatsappMessage:
-        "Hi, I'm interested in Engine Spare Parts. Please provide more information and pricing.",
+        "Hi, I'm interested in Carbon Brushes. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Carbon Brushes\n\nDear ASP Global Marine Trading,\n\nI'm interested in Carbon Brushes. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 34,
-      name: "Engine Couplings",
+      name: "Relays",
       image: "/products/enginestores/Asset 34.webp",
-      category: "Couplings",
-      description:
-        "Marine engine couplings and flexible connections. Shaft couplings and transmission components.",
+      category: "Relays",
+      description: "Relays",
       whatsappMessage:
-        "Hi, I'm interested in Engine Couplings. Please provide more information and pricing.",
+        "Hi, I'm interested in Relays. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Relays\n\nDear ASP Global Marine Trading,\n\nI'm interested in Relays. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 35,
-      name: "Engine Alignment Tools",
+      name: "Blower",
       image: "/products/enginestores/Asset 35.webp",
-      category: "Alignment",
-      description:
-        "Professional engine alignment tools and equipment. Precision tools for shaft and coupling alignment.",
+      category: "Blower",
+      description: "Blower",
       whatsappMessage:
-        "Hi, I'm interested in Engine Alignment Tools. Please provide more information and pricing.",
+        "Hi, I'm interested in Blower. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Blower\n\nDear ASP Global Marine Trading,\n\nI'm interested in Blower. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 36,
-      name: "Engine Ventilation",
+      name: "Engine Log Book",
       image: "/products/enginestores/Asset 36.webp",
-      category: "Ventilation",
+      category: "Log Book",
       description:
-        "Engine room ventilation systems. Air circulation and cooling systems for engine compartments.",
+        "Engine room log book. Record-keeping and documentation for engine operations.",
       whatsappMessage:
-        "Hi, I'm interested in Engine Ventilation. Please provide more information and pricing.",
+        "Hi, I'm interested in Engine Log Book. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Engine Log Book\n\nDear ASP Global Marine Trading,\n\nI'm interested in Engine Log Book. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 37,
-      name: "Engine Insulation",
+      name: "Refregerant",
       image: "/products/enginestores/Asset 37.webp",
-      category: "Insulation",
-      description:
-        "Engine room insulation and soundproofing materials. Thermal and acoustic insulation solutions.",
+      category: "Refregerant",
+      description: "Refregerant",
       whatsappMessage:
-        "Hi, I'm interested in Engine Insulation. Please provide more information and pricing.",
+        "Hi, I'm interested in Refregerant. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Refregerant\n\nDear ASP Global Marine Trading,\n\nI'm interested in Refregerant. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 38,
-      name: "Engine Fire Protection",
+      name: "Welding Consumables",
       image: "/products/enginestores/Asset 38.webp",
-      category: "Fire Protection",
-      description:
-        "Engine room fire protection systems. Automatic fire detection and suppression systems.",
+      category: "Welding Consumables",
+      description: "Welding Consumables",
       whatsappMessage:
-        "Hi, I'm interested in Engine Fire Protection. Please provide more information and pricing.",
+        "Hi, I'm interested in Welding Consumables. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Welding Consumables\n\nDear ASP Global Marine Trading,\n\nI'm interested in Welding Consumables. Please provide more information and pricing.\n\nThank you.",
     },
   ];
 
@@ -416,14 +472,22 @@ const EngineStores = () => {
                 <div className="product-details">
                   <h3 className="product-name">{product.name}</h3>
                   <p className="product-desc">{product.description}</p>
-                  <a
-                    href={`https://wa.me/971505398975?text=${encodeURIComponent(product.whatsappMessage)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="whatsapp-btn"
-                  >
-                    Get Product
-                  </a>
+                  <div className="product-buttons">
+                    <a
+                      href={`https://wa.me/9715478137?text=${encodeURIComponent(product.whatsappMessage)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-btn"
+                    >
+                      WhatsApp
+                    </a>
+                    <a
+                      href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage.split("\n")[0].replace("Subject: ", ""))}&body=${encodeURIComponent(product.emailMessage.split("\n").slice(2).join("\n").trim())}`}
+                      className="email-btn"
+                    >
+                      Email
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

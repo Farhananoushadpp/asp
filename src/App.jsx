@@ -173,7 +173,7 @@ function App() {
               element={<HydraulicSystems />}
             /> */}
 
-            {/* <Route path="/products/lsa-ffa" element={<LSAFFA />} /> */}
+            <Route path="/products/lsa-ffa" element={<LSAFFA />} />
 
             {/* Authorizations Route */}
             {/* <Route path="/authorizations" element={<Authorizations />} /> */}

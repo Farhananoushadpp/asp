@@ -14,53 +14,48 @@ const LSAFFA = () => {
   const lsaProducts = [
     {
       id: 1,
-      name: "Lifeboats & Rescue Boats",
+      name: "Sea Sickness Tablet",
       image: "/products/lsa&ffa/Asset 45.webp",
-      category: "Life-Saving Appliances",
-      description:
-        "Complete range of lifeboats and rescue boats for maritime safety operations. SOLAS compliant survival craft for emergency evacuation.",
+      category: "Sea Sickness Tablet",
+      description: "Sea Sickness Tablet",
       whatsappMessage:
-        "Hi, I'm interested in Lifeboats & Rescue Boats. Please provide more information and pricing.",
+        "Hi, I'm interested in Sea Sickness Tablet. Please provide more information and pricing.",
     },
     {
       id: 2,
-      name: "Life Jackets & Immersion Suits",
+      name: "Ration",
       image: "/products/lsa&ffa/Asset 46.webp",
-      category: "Personal Safety",
-      description:
-        "High-quality life jackets and immersion suits for crew protection. Advanced materials for maximum buoyancy and thermal protection.",
+      category: "Ration",
+      description: "Ration",
       whatsappMessage:
-        "Hi, I'm interested in Life Jackets & Immersion Suits. Please provide more information and pricing.",
+        "Hi, I'm interested in Ration. Please provide more information and pricing.",
     },
     {
       id: 3,
-      name: "Fire Extinguishers",
+      name: "Fire Coupling Seal",
       image: "/products/lsa&ffa/Asset 47.webp",
-      category: "Fire-Fighting",
-      description:
-        "Marine-grade fire extinguishers for various fire types. Portable and fixed systems for comprehensive fire protection.",
+      category: "Fire Coupling Seal",
+      description: "Fire Coupling Seal",
       whatsappMessage:
-        "Hi, I'm interested in Fire Extinguishers. Please provide more information and pricing.",
+        "Hi, I'm interested in Fire Coupling Seal. Please provide more information and pricing.",
     },
     {
       id: 4,
-      name: "Fire Detection Systems",
+      name: "Oil Absorbent Boom",
       image: "/products/lsa&ffa/Asset 48.webp",
-      category: "Fire Detection",
-      description:
-        "Advanced fire detection and alarm systems. Early warning technology for rapid fire identification and response.",
+      category: "Oil Absorbent Boom",
+      description: "Oil Absorbent Boom",
       whatsappMessage:
-        "Hi, I'm interested in Fire Detection Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Oil Absorbent Boom. Please provide more information and pricing.",
     },
     {
       id: 5,
-      name: "Emergency Escape Breathing Devices",
+      name: "Oil Absorbent Spill Kit",
       image: "/products/lsa&ffa/Asset 49.webp",
-      category: "Breathing Protection",
-      description:
-        "EEBD systems for emergency evacuation. Self-contained breathing apparatus for smoke-filled environments.",
+      category: "Oil Absorbent Spill Kit",
+      description: "Oil Absorbent Spill Kit",
       whatsappMessage:
-        "Hi, I'm interested in Emergency Escape Breathing Devices. Please provide more information and pricing.",
+        "Hi, I'm interested in Oil Absorbent Spill Kit. Please provide more information and pricing.",
     },
     {
       id: 6,

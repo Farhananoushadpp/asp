@@ -21,6 +21,8 @@ const DeckStoresGeneral = () => {
         "High-quality navigation lights for vessel operations. Professional grade materials ensuring maximum safety and durability in harsh marine environments.",
       whatsappMessage:
         "Hi, I'm interested in Navigation Light. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Navigation Light\n\nDear ASP Global Marine Trading,\n\nI'm interested in Navigation Light. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 2,
@@ -31,6 +33,8 @@ const DeckStoresGeneral = () => {
         "Waterproof flashlights for deck operations. Durable and reliable flashlights designed for maritime environments.",
       whatsappMessage:
         "Hi, I'm interested in Water Proof Flash Light. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Water Proof Flash Light\n\nDear ASP Global Marine Trading,\n\nI'm interested in Water Proof Flash Light. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 3,
@@ -41,6 +45,8 @@ const DeckStoresGeneral = () => {
         "Comprehensive safety equipment for crew protection. SOLAS compliant safety gear meeting international maritime safety standards.",
       whatsappMessage:
         "Hi, I'm interested in Marine Safety Equipment. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Marine Safety Equipment\n\nDear ASP Global Marine Trading,\n\nI'm interested in Marine Safety Equipment. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 4,
@@ -51,6 +57,8 @@ const DeckStoresGeneral = () => {
         "Professional husbandary items for vessel protection. Advanced anti-fouling and corrosion protection solutions for extended vessel life.",
       whatsappMessage:
         "Hi, I'm interested in Husbandary Items. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Husbandary Items\n\nDear ASP Global Marine Trading,\n\nI'm interested in Husbandary Items. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 5,
@@ -61,6 +69,8 @@ const DeckStoresGeneral = () => {
         "Navigation and Stationary for deck operations. State-of-the-art navigation aids ensuring vessel safety and compliance.",
       whatsappMessage:
         "Hi, I'm interested in Stationary. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Stationary\n\nDear ASP Global Marine Trading,\n\nI'm interested in Stationary. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 6,
@@ -455,14 +465,22 @@ const DeckStoresGeneral = () => {
                 <div className="product-details">
                   <h3 className="product-name">{product.name}</h3>
                   <p className="product-desc">{product.description}</p>
-                  <a
-                    href={`https://wa.me/971525478137?text=${encodeURIComponent(product.whatsappMessage)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="whatsapp-btn"
-                  >
-                    Get Product
-                  </a>
+                  <div className="product-buttons">
+                    <a
+                      href={`https://wa.me/971525478137?text=${encodeURIComponent(product.whatsappMessage)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-btn"
+                    >
+                      WhatsApp
+                    </a>
+                    <a
+                      href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n")[0].replace("Subject: ", "") : "Inquiry about " + product.name)}&body=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n").slice(2).join("\n").trim() : "Dear ASP Global Marine Trading,\n\nI'm interested in " + product.name + ". Please provide more information and pricing.\n\nThank you.")}`}
+                      className="email-btn"
+                    >
+                      Email
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
