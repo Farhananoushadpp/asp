@@ -1,290 +1,376 @@
 /**
  * ASP Global Marine Trading LLC - Engine Spares 2-Stroke Page
  *
- * Marine Industrial Product Subpage with Technical Tables
- * Professional structured catalog with manufacturer data
+ * Product Portfolio Design with Blue Header and Technical Tables
+ * Exact replica of the provided design
  */
 
-import "../styles/pages/Products.css";
 import { Link } from "react-router-dom";
+import "../styles/pages/EngineSpares2Stroke.css";
 
 const EngineSpares2Stroke = () => {
   const manufacturers = [
     {
       name: "YANMAR",
-      models: ["N18", "EY18", "N21", "EY26", "N260", "N280", "M200"],
-      series: ["N Series", "EY Series", "M Series"]
+      models: [
+        "N18",
+        "EY18",
+        "N21",
+        "EY26",
+        "N260",
+        "N280",
+        "M200",
+        "N330",
+        "EY22",
+        "SI65L-HN",
+      ],
     },
     {
       name: "HIMSEN",
-      models: ["H28/17", "H32/21", "H33/25", "H40/32"],
-      series: ["H Series"]
-    },
-    {
-      name: "MAN",
-      models: ["K80", "L35", "K90", "K98"],
-      series: ["K Series", "L Series"]
+      models: ["H28/17", "H32/21", "H33/25", "H40/32", "", "", "", "", "", ""],
     },
     {
       name: "WARTSILA",
-      models: ["L42", "L46", "L50", "L60", "L70"],
-      series: ["L Series"]
+      models: ["L20", "", "", "", "", "", "", "", "", ""],
     },
     {
-      name: "SULZER",
-      models: ["RTA48", "RTA52", "RTA58T", "RTA62"],
-      series: ["RTA Series"]
+      name: "CUMMINS",
+      models: [
+        "N855DM",
+        "K19-DM",
+        "6BT-5-D(M)",
+        "6CTA8.3",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+      ],
     },
     {
-      name: "RT-FLEX",
-      models: ["RT-FLEX50", "RT-FLEX58", "RT-FLEX68"],
-      series: ["RT-FLEX Series"]
+      name: "MAN",
+      hasSubRows: true,
+      subRows: [
+        {
+          type: "L-MC/MCC/MEC/MEB",
+          models: ["k80", "K90", "K98", "", "", "", "", "", "", ""],
+        },
+        {
+          type: "L-MC/MCC/MEC/MEB",
+          models: ["L35", "L42", "L46", "L50", "L60", "L70", "", "", "", ""],
+        },
+        {
+          type: "S-MC/MCC/MEC/MEB",
+          models: [
+            "S26",
+            "S35",
+            "S42",
+            "S46",
+            "S50",
+            "S60",
+            "S70",
+            "S80",
+            "S90",
+            "",
+          ],
+        },
+        {
+          type: "G-MC/MCC/MEC/MEB",
+          models: ["G45", "G50", "G60", "G70", "G80", "G95", "", "", "", ""],
+        },
+      ],
+    },
+    {
+      name: "SULZER&WARTSILA",
+      hasSubRows: true,
+      subRows: [
+        {
+          type: "RTA-T/TB/TD/TE/U",
+          models: [
+            "RTA48",
+            "RTA52",
+            "RTA58T",
+            "RTA62",
+            "RTA72",
+            "RTA82",
+            "RTA84",
+            "RTA96C",
+            "",
+            "",
+          ],
+        },
+        {
+          type: "RT-FLEX-B/D/TB/TD/TE",
+          models: [
+            "RT-FLEX50",
+            "",
+            "RT-FLEX58",
+            "",
+            "RT-FLEX68",
+            "",
+            "RT-FLEX82",
+            "",
+            "RT-FLEX96C",
+            "",
+          ],
+        },
+      ],
     },
     {
       name: "WINGD",
-      models: ["5RT-FLEX50", "6RT-FLEX58", "7RT-FLEX68"],
-      series: ["RT-FLEX Series"]
+      models: ["X52", "X62", "X72", "X82", "X92", "", "", "", "", ""],
     },
     {
-      name: "MITSUBISHI-UEC",
-      models: ["UEC-L52", "UEC-L58", "UEC-L60", "UEC-L70"],
-      series: ["UEC-L Series"]
-    }
-  ];
-
-  const spareParts = [
-    "Pistons",
-    "Piston Crowns",
-    "Cylinder Liners",
-    "Fuel Pumps",
-    "Injection Nozzles",
-    "Camshafts",
-    "Sensors",
-    "Oil Pumps",
-    "Stuffing Boxes",
-    "Main Bearings",
-    "Connecting Rod Bearings",
-    "Thrust Bearings",
-    "Valve Seats",
-    "Valve Guides",
-    "Exhaust Valves",
-    "Inlet Valves",
-    "Fuel Valves",
-    "Starting Air Valves",
-    "Turbocharger Parts",
-    "Gasket Sets"
-  ];
-
-  const technicalSpecs = [
-    {
-      category: "Engine Types",
-      specifications: [
-        "Bore: 260-960mm",
-        "Stroke: 400-2500mm", 
-        "Power: 600-20,000 kW per cylinder",
-        "Speed: 50-300 rpm"
-      ]
+      name: "MITSUBISHI-UEC 33/35LSE",
+      models: [
+        "37LA",
+        "45",
+        "50LA/LS/LSE",
+        "52",
+        "60LA/LS",
+        "68LSE",
+        "85LS",
+        "",
+        "",
+        "",
+      ],
     },
-    {
-      category: "Fuel Systems",
-      specifications: [
-        "Heavy Fuel Oil (HFO) compatible",
-        "Marine Diesel Oil (MDO) compatible",
-        "Low Sulphur Fuel Oil (LSFO) compatible",
-        "Common Rail Systems"
-      ]
-    },
-    {
-      category: "Materials",
-      specifications: [
-        "Cast Iron Cylinder Blocks",
-        "Alloy Steel Pistons",
-        "Bronze Bearings",
-        "Stainless Steel Valves"
-      ]
-    }
   ];
 
   return (
-    <div className="product-subpage">
-      <div className="container">
-        {/* Header */}
-        <header className="product-header">
-          <Link to="/products" className="back-link">← Back to Products</Link>
-          <h1>Engine Spares - 2 Stroke</h1>
-          <p className="intro">
-            Complete range of 2-stroke marine engine spare parts for major manufacturers. 
-            Genuine OEM and equivalent quality components with full technical documentation 
-            and classification society approval.
-          </p>
-        </header>
+    <div className="engine-spares-page">
+      {/* Product Portfolio Header */}
+      <section className="portfolio-header">
+        <div className="header-bg">
+          <div className="ship-container">
+            <img
+              src="/images/cargo-ship.png"
+              alt="Cargo Ship"
+              className="ship-image"
+              onError={(e) => (e.target.style.display = "none")}
+            />
+          </div>
+        </div>
+        <div className="header-overlay">
+          <h1>PRODUCT PORTFOLIO</h1>
+        </div>
+      </section>
 
-        {/* Brands Supported */}
-        <section className="brands-section">
-          <h2>Brands Supported</h2>
-          <div className="brands-grid">
-            {manufacturers.map((manufacturer, index) => (
-              <div key={index} className="brand-item">
-                {manufacturer.name}
+      {/* Main Content */}
+      <div className="portfolio-content">
+        {/* Section Title with Ship Icon */}
+        <div className="section-header-bar">
+          <div className="blue-bar">
+            <h2>ENGINE SPARES- 2 STROKE</h2>
+          </div>
+          <div className="ship-icon">
+            <svg viewBox="0 0 100 50" className="mini-ship">
+              <path
+                d="M5,40 L15,40 L20,30 L30,30 L35,25 L65,25 L70,30 L80,30 L85,40 L95,40 L98,45 L2,45 Z"
+                fill="#0B2F4A"
+              />
+              <rect x="40" y="20" width="20" height="8" fill="#0B2F4A" />
+              <rect x="45" y="12" width="10" height="8" fill="#0B2F4A" />
+              <line
+                x1="50"
+                y1="12"
+                x2="50"
+                y2="5"
+                stroke="#0B2F4A"
+                strokeWidth="3"
+              />
+              <circle cx="50" cy="5" r="2" fill="#0B2F4A" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Product Grid Layout */}
+        <section className="product-grid-layout">
+          {/* Row 1 - Two columns */}
+          <div className="grid-row row-2-col">
+            <div className="product-item">
+              <div className="blue-text-box left">
+                <p>Pistons, piston crowns & piston rings</p>
               </div>
-            ))}
+              <div className="connector left-connector"></div>
+              <div className="image-container">
+                <img
+                  src="/products/engine-spares/pistons.jpg"
+                  alt="Pistons"
+                  onError={(e) =>
+                    (e.target.parentElement.style.background = "#e0e0e0")
+                  }
+                />
+              </div>
+            </div>
+            <div className="product-item">
+              <div className="image-container">
+                <img
+                  src="/products/engine-spares/cylinder-liners.jpg"
+                  alt="Cylinder Liners"
+                  onError={(e) =>
+                    (e.target.parentElement.style.background = "#e0e0e0")
+                  }
+                />
+              </div>
+              <div className="connector right-connector"></div>
+              <div className="blue-text-box right">
+                <p>Cylinder liners & cylinder covers</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2 - Three columns with center image */}
+          <div className="grid-row row-3-col">
+            <div className="product-item">
+              <div className="blue-text-box left">
+                <p>Oil pumps, camshafts & stuffing boxes</p>
+              </div>
+              <div className="connector left-connector"></div>
+              <div className="image-container">
+                <img
+                  src="/products/engine-spares/oil-pumps.jpg"
+                  alt="Oil Pumps"
+                  onError={(e) =>
+                    (e.target.parentElement.style.background = "#e0e0e0")
+                  }
+                />
+              </div>
+            </div>
+            <div className="product-item wide">
+              <div className="image-container large">
+                <img
+                  src="/products/engine-spares/injection-nozzles.jpg"
+                  alt="Injection Nozzles"
+                  onError={(e) =>
+                    (e.target.parentElement.style.background = "#e0e0e0")
+                  }
+                />
+              </div>
+              <div className="connector right-connector"></div>
+              <div className="blue-text-box right">
+                <p>Fuel pumps, injection nozzles & valves</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 3 - Three columns */}
+          <div className="grid-row row-3-col-alt">
+            <div className="product-item">
+              <div className="blue-text-box left">
+                <p>Oil pumps, camshafts & stuffing boxes</p>
+              </div>
+              <div className="connector left-connector"></div>
+              <div className="image-container">
+                <img
+                  src="/products/engine-spares/camshafts.jpg"
+                  alt="Camshafts"
+                  onError={(e) =>
+                    (e.target.parentElement.style.background = "#e0e0e0")
+                  }
+                />
+              </div>
+            </div>
+            <div className="product-item center-item">
+              <div className="image-container">
+                <img
+                  src="/products/engine-spares/sensors.jpg"
+                  alt="Sensors"
+                  onError={(e) =>
+                    (e.target.parentElement.style.background = "#e0e0e0")
+                  }
+                />
+              </div>
+              <div className="center-label">
+                Sensors & auxiliary engine parts
+              </div>
+            </div>
+            <div className="product-item">
+              <div className="blue-text-box right">
+                <p>Sensors & auxiliary engine parts</p>
+              </div>
+              <div className="connector right-connector-short"></div>
+              <div className="image-container">
+                <img
+                  src="/products/engine-spares/stuffing-boxes.jpg"
+                  alt="Stuffing Boxes"
+                  onError={(e) =>
+                    (e.target.parentElement.style.background = "#e0e0e0")
+                  }
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Manufacturer & Models Table */}
-        <section>
-          <h2>Manufacturer & Model Compatibility</h2>
-          <table className="product-table">
+        {/* Manufacturer Table */}
+        <section className="manufacturer-table-section">
+          <table className="manufacturer-table">
             <thead>
               <tr>
-                <th>Manufacturer</th>
-                <th>Models Supported</th>
-                <th>Series</th>
+                <th className="col-manufacturer">Manufacturer</th>
+                <th className="col-type">Model</th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
               </tr>
             </thead>
             <tbody>
-              {manufacturers.map((manufacturer, index) => (
-                <tr key={index}>
-                  <td>
-                    <strong>{manufacturer.name}</strong>
-                  </td>
-                  <td>{manufacturer.models.join(", ")}</td>
-                  <td>{manufacturer.series.join(", ")}</td>
-                </tr>
-              ))}
+              {manufacturers.map((manufacturer, index) =>
+                manufacturer.hasSubRows ? (
+                  manufacturer.subRows.map((subRow, subIndex) => (
+                    <tr key={`${index}-${subIndex}`} className="sub-row">
+                      {subIndex === 0 && (
+                        <td
+                          rowSpan={manufacturer.subRows.length}
+                          className="manufacturer-name"
+                        >
+                          {manufacturer.name}
+                        </td>
+                      )}
+                      <td className="sub-type">{subRow.type}</td>
+                      {subRow.models.map((model, idx) => (
+                        <td
+                          key={idx}
+                          className={model ? "model-value" : "empty-model"}
+                        >
+                          {model}
+                        </td>
+                      ))}
+                    </tr>
+                  ))
+                ) : (
+                  <tr key={index}>
+                    <td className="manufacturer-name">{manufacturer.name}</td>
+                    <td className="sub-type">-</td>
+                    {manufacturer.models.map((model, idx) => (
+                      <td
+                        key={idx}
+                        className={model ? "model-value" : "empty-model"}
+                      >
+                        {model}
+                      </td>
+                    ))}
+                  </tr>
+                ),
+              )}
             </tbody>
           </table>
         </section>
 
-        {/* Spare Parts Available */}
-        <section>
-          <h2>Spare Parts Available</h2>
-          <table className="product-table">
-            <thead>
-              <tr>
-                <th>Component Category</th>
-                <th>Description</th>
-                <th>Material/Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Pistons</strong></td>
-                <td>Complete piston assemblies with crowns and pins</td>
-                <td>Alloy Steel, Cast Iron</td>
-              </tr>
-              <tr>
-                <td><strong>Cylinder Liners</strong></td>
-                <td>Wet and dry type liners with precision bore</td>
-                <td>Cast Iron, Chrome Plated</td>
-              </tr>
-              <tr>
-                <td><strong>Fuel Pumps</strong></td>
-                <td>High-pressure fuel injection pumps</td>
-                <td>Steel Alloy</td>
-              </tr>
-              <tr>
-                <td><strong>Injection Nozzles</strong></td>
-                <td>Multi-hole and pintle type nozzles</td>
-                <td>Tool Steel</td>
-              </tr>
-              <tr>
-                <td><strong>Camshafts</strong></td>
-                <td>Complete camshaft assemblies</td>
-                <td>Forged Steel</td>
-              </tr>
-              <tr>
-                <td><strong>Main Bearings</strong></td>
-                <td>Shell type main bearings</td>
-                <td>Bronze, Babbitt</td>
-              </tr>
-              <tr>
-                <td><strong>Connecting Rod Bearings</strong></td>
-                <td>Connecting rod bearing shells</td>
-                <td>Bronze, Babbitt</td>
-              </tr>
-              <tr>
-                <td><strong>Valves</strong></td>
-                <td>Inlet, exhaust, and fuel valves</td>
-                <td>Stainless Steel, Tool Steel</td>
-              </tr>
-              <tr>
-                <td><strong>Turbocharger Parts</strong></td>
-                <td>Rotors, nozzles, casings, bearings</td>
-                <td>High-Speed Steel, Bronze</td>
-              </tr>
-              <tr>
-                <td><strong>Gasket Sets</strong></td>
-                <td>Complete engine gasket kits</td>
-                <td>Composite, Graphite</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        {/* Technical Specifications */}
-        <section>
-          <h2>Technical Specifications</h2>
-          <table className="product-table">
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Specifications</th>
-              </tr>
-            </thead>
-            <tbody>
-              {technicalSpecs.map((spec, index) => (
-                <tr key={index}>
-                  <td><strong>{spec.category}</strong></td>
-                  <td>{spec.specifications.join(" | ")}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-
-        {/* Equipment Compatibility */}
-        <section>
-          <h2>Supported Equipment Types</h2>
-          <table className="product-table">
-            <thead>
-              <tr>
-                <th>Equipment Type</th>
-                <th>Applications</th>
-                <th>Vessel Types</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Main Propulsion Engines</strong></td>
-                <td>Primary propulsion for large vessels</td>
-                <td>Container Ships, Tankers, Bulk Carriers</td>
-              </tr>
-              <tr>
-                <td><strong>Auxiliary Engines</strong></td>
-                <td>Power generation, pump drives</td>
-                <td>All vessel types</td>
-              </tr>
-              <tr>
-                <td><strong>Generator Sets</strong></td>
-                <td>Electrical power generation</td>
-                <td>Commercial vessels, Offshore platforms</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        {/* CTA Section */}
-        <section className="product-cta">
-          <h2>Request Technical Details</h2>
-          <p>
-            Need detailed technical specifications, compatibility charts, or pricing information? 
-            Our technical team can provide comprehensive documentation and application guidance.
-          </p>
-          <Link to="/contact" className="cta-button">
-            Contact Technical Support
+        {/* Back Navigation */}
+        <div className="back-navigation">
+          <Link to="/products" className="back-button">
+            ← Back to Products
           </Link>
-        </section>
+        </div>
       </div>
     </div>
   );

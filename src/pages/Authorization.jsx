@@ -2,9 +2,17 @@
  * ASP Global Marine Trading LLC - Authorization & Associated Partners Page
  *
  * Comprehensive information about our authorized partners and manufacturers
- * Professional marine corporate design with improved layout
+ * Professional marine corporate design with blue card theme
  */
 
+import {
+  Ship,
+  Globe,
+  FileCheck,
+  DollarSign,
+  Handshake,
+  CheckCircle,
+} from "lucide-react";
 import "../styles/pages/Authorization.css";
 
 const Authorization = () => {
@@ -12,120 +20,119 @@ const Authorization = () => {
     {
       id: 1,
       name: "Guangzhou HG Marine Co. Ltd.",
-      founded: "Founded in 2005",
-      image: "/partners/hg-marine.jpg",
-      description: "Guangzhou HG Marine develops and manufactures innovative marine steering gear and rim thrusters, backed by over 100 patents in steering and electric propulsion technology.",
+      logo: "/partners/hg-marine-logo.png",
+      description:
+        "Founded in 2005, develops and manufactures innovative marine steering gear and rim thrusters, backed by over 100 patents in steering and electric propulsion technology.",
+      mainProduct:
+        "Latest Technology Rim Thruster is composed of ring motor, propeller, water lubricated bearing and energy-saving duct. The motor directly drives the propeller to generate thrust, and the energy-saving duct further improves the thrust force.",
       features: [
-        "Ring Motor",
-        "Propeller",
-        "Water Lubricated Bearing",
-        "Energy-Saving Duct"
+        "No Engagement, Less Noise, No shaft",
+        "No Transmission, High Efficiency, No appendage",
+        "Less Resistance, Lighter Weight, No seal",
       ],
-      note: "The motor directly drives the propeller to generate thrust, and the energy-saving duct further improves thrust force."
+      productImages: [
+        "/products/partners/hg-marine-1.jpg",
+        "/products/partners/hg-marine-2.jpg",
+        "/products/partners/hg-marine-3.jpg",
+      ],
     },
     {
       id: 2,
       name: "Hg Machinery Group",
-      image: "/partners/hg-machinery.jpg",
-      description: "A large professional manufacturer specializing in pumps and industrial valves with comprehensive certifications and marine approvals.",
-      products: {
-        "Pump Systems": [
-          "Twin Screw Pumps",
-          "Three Screw Pumps",
-          "Gear Pumps",
-          "Vacuum Pumps",
-          "Centrifugal Pumps",
-          "Deep Well Cargo Pumps",
-          "Hydraulic Pumps",
-          "Electric Pumps"
-        ],
-        "Industrial Valves": ["Various Industrial Valves"],
-        "Certifications": ["CE", "ISO 9001", "ISO 14001", "OHSAS 18001"],
-        "Marine Approvals": ["CCS", "BV", "KR", "ABS", "NK", "RINA", "RMRS"]
-      }
+      logo: "/partners/hg-machinery-logo.png",
+      description:
+        "A large professional manufacturer specializing in twin screw, three screw, gear, vacuum, centrifugal, and deep well cargo pumps, along with hydraulic, electric pumps, and various valves. The group is certified with CE, ISO9001, ISO14001, and OHSAS18001, and its marine products are approved by major classification societies including CCS, BV, KR, ABS, NK, RINA, and RMRS.",
+      productsInclude: [
+        "Deep Well Pump",
+        "Twin Screw Pump",
+        "Three Screw Pump",
+        "Gear Pump",
+        "Centrifugal Pump",
+        "Emergency Fire Pump",
+        "Diaphragm Pump",
+        "Vacuum Pump",
+      ],
+      productImages: [
+        "/products/partners/hg-machinery-1.jpg",
+        "/products/partners/hg-machinery-2.jpg",
+        "/products/partners/hg-machinery-3.jpg",
+      ],
     },
     {
       id: 3,
-      name: "Zhejiang Huayi Ship Equipment Manufacture Co., LTD.",
-      image: "/partners/huayi-ship.jpg",
-      description: "Specializes in marine oil treatment equipment including separators, oil supply units, and sewage treatment systems.",
-      products: [
-        "Heavy Fuel Oil Separators",
-        "Lubricating Oil Separators",
-        "Oil Supply Units",
-        "Sewage Treatment Units",
-        "Self-Cleaning Oil Filters"
+      name: "Zhejiang Kintowe Sealing Technology Co.",
+      logo: "/partners/kintowe-logo.png",
+      description:
+        "Founded in 1986 and specializes in sealing systems and marine bearing solutions, including hydraulic seals and composite components.",
+      categories: [
+        {
+          title: "Water Lubricated Stern Tube Bearings",
+          description:
+            "Eco-friendly bearings designed for efficient stern tube and rudder applications.",
+        },
+        {
+          title: "Marine Bearing Series",
+          description:
+            "Composite Rudder Bearings with self-lubricating properties for long service life.",
+        },
+        {
+          title: "Rudder Pintle Bushes",
+          description:
+            "Durable composite bushes with smooth performance, built for harsh marine conditions.",
+        },
       ],
-      series: [
-        {
-          name: "S-TYPE Separator",
-          features: [
-            "No gravity ring",
-            "Suitable for high-density fuel oils up to 1,100 kg/m³",
-            "Viscosities up to 700 cSt at 50°C"
-          ]
-        },
-        {
-          name: "S-TYPE Separator Module",
-          features: [
-            "PLC Controlled",
-            "Automatic Operation",
-            "Alarm System",
-            "Touch Screen Monitoring",
-            "Remote Control Room Connectivity"
-          ]
-        },
-        {
-          name: "P-TYPE Separator",
-          features: [
-            "Adjustable gravity ring",
-            "Effective oil and water separation"
-          ]
-        },
-        {
-          name: "P-TYPE Separator Module",
-          features: [
-            "Compact PLC Controlled System",
-            "Fault Analysis",
-            "Data Storage",
-            "Remote Monitoring Capability"
-          ]
-        }
-      ]
+      materials: [
+        "Composite Material PFC-6 and Composite Material PFC-22",
+        "Phenolic-Based Composite Water-Lubricated Bearings",
+        "Polyurethane Water-Lubricated Bearings",
+      ],
+      productImages: [
+        "/products/partners/kintowe-1.jpg",
+        "/products/partners/kintowe-2.jpg",
+        "/products/partners/kintowe-3.jpg",
+      ],
     },
     {
       id: 4,
-      name: "Zhejiang Kintowe Sealing Technology Co.",
-      founded: "Founded in 1986",
-      image: "/partners/kintowe-sealing.jpg",
-      description: "Specializes in sealing systems and marine bearing solutions with advanced composite materials.",
+      name: "Zhejiang Huayi Ship Equipment Manufacture Co., LTD.",
+      logo: "/partners/huayi-logo.png",
+      description:
+        "Specializes in marine oil treatment equipment, including heavy fuel and lubricating oil separators, oil supply units, sewage treatment units, and self-cleaning oil filters.",
       products: [
-        "Hydraulic Seals",
-        "Composite Components",
-        "Water Lubricated Stern Tube Bearings",
-        "Composite Rudder Bearings",
-        "Rudder Pintle Bushes"
+        {
+          name: "S-TYPE Separator",
+          description:
+            "A separator without a gravity ring, suitable for high-density fuel oils up to 1,100 kg/m³ and viscosities up to 700 cSt at 50°C.",
+        },
+        {
+          name: "S-TYPE Separator Module",
+          description:
+            "An integrated, PLC-controlled unit with automatic operation, alarms, monitoring, touch-screen display, and remote control room connectivity.",
+        },
+        {
+          name: "P-TYPE Separator",
+          description:
+            "A separator that uses an adjustable gravity ring to effectively separate oil and water for oil purification.",
+        },
+        {
+          name: "P-TYPE Separator Module",
+          description:
+            "A compact, PLC-controlled system with touch-screen monitoring, fault analysis, data storage, and remote monitoring capability.",
+        },
       ],
-      materials: [
-        "Composite Material PFC-6",
-        "Composite Material PFC-22",
-        "Phenolic-Based Composite Water-Lubricated Bearings",
-        "Polyurethane Water-Lubricated Bearings"
+      productImages: [
+        "/products/partners/huayi-1.jpg",
+        "/products/partners/huayi-2.jpg",
+        "/products/partners/huayi-3.jpg",
       ],
-      features: [
-        "Low Wear",
-        "Low Maintenance",
-        "Self-Lubricating Properties",
-        "Designed for Harsh Marine Conditions"
-      ]
     },
     {
       id: 5,
       name: "Beijing Zhonghanghua Safety Valve Sales Co., Ltd.",
-      founded: "Established in 1998",
-      image: "/partners/zhonghanghua-valve.jpg",
-      description: "The official sales entity for safety valves and specialty valves designed and manufactured by Beijing Aerospace Propulsion Institute Pressure Relief Branch.",
-      products: [
+      logo: "/partners/zhonghanghua-logo.png",
+      description:
+        "Established by 1998 which is the sales entity especially for safety valves and specialty valve designed and manufactured by Beijing Aerospace Propulsion Institute Pressure Relief Branch.",
+      productsInclude: [
         "Safety Valves",
         "Pilot Operated Safety Valves",
         "Pressure Relief Valves",
@@ -133,30 +140,32 @@ const Authorization = () => {
         "Pressure Vacuum Valves",
         "Gas Blanket Pressure Vacuum Valves",
         "Emergency Pressure Vacuum Valves",
-        "Automatic Recirculation Valves"
-      ]
+        "Automatic Recirculation Valves",
+      ],
+      productImages: [
+        "/products/partners/zhonghanghua-1.jpg",
+        "/products/partners/zhonghanghua-2.jpg",
+        "/products/partners/zhonghanghua-3.jpg",
+      ],
     },
     {
       id: 6,
-      name: "Changzhou Qianmai Mechanical Equipment Technology Co., Ltd",
-      image: "/partners/qianmai-mechanical.jpg",
-      description: "A professional company dedicated to research, development, production, sales, and after-sales of disc separators.",
-      industries: [
-        "Equipment Manufacturing",
-        "Industrial Environmental Protection",
-        "Oils & Chemicals",
-        "Pharmaceuticals",
-        "Food & Beverages",
-        "Biopharmaceuticals",
-        "Shipbuilding"
-      ],
-      products: [
+      name: "Changzhou Qianmai Mechanical Eqpt. Tech. Co. Ltd",
+      logo: "/partners/qianmai-logo.png",
+      description:
+        "A professional company dedicated to the research and development, production, sales, and after-sales of disc separators. Accurately serving industries such as equipment manufacturing, industrial environmental protection, oils, chemicals, pharmaceuticals, food, beverages, biopharmaceuticals, and shipbuilding.",
+      productsInclude: [
         "Coal Tar Oil Centrifuge Disc Separator",
         "Marine Oil Separator",
         "Liquid Solid Separation Centrifuge Separator",
-        "Industrial Liquid Solid Separation Equipment"
-      ]
-    }
+        "Industrial Liquid Solid Separation Equipment",
+      ],
+      productImages: [
+        "/products/partners/qianmai-1.jpg",
+        "/products/partners/qianmai-2.jpg",
+        "/products/partners/qianmai-3.jpg",
+      ],
+    },
   ];
 
   return (
@@ -168,21 +177,26 @@ const Authorization = () => {
             <div className="header-text">
               <h1>Authorization & Associated Partners</h1>
               <p className="header-description">
-                ASP Global Marine Trading LLC collaborates with internationally recognized marine equipment manufacturers and specialized industrial solution providers. These strategic associations enable us to deliver genuine OEM and equivalent spare parts, certified marine-grade equipment, and technically compliant solutions to vessels and offshore installations worldwide.
+                ASP Global Marine Trading LLC collaborates with internationally
+                recognized marine equipment manufacturers and specialized
+                industrial solution providers. These strategic associations
+                enable us to deliver genuine OEM and equivalent spare parts,
+                certified marine-grade equipment, and technically compliant
+                solutions to vessels and offshore installations worldwide.
               </p>
             </div>
             <div className="header-visual">
               <div className="certification-badges">
                 <div className="badge">
-                  <span className="badge-icon">✓</span>
+                  <CheckCircle className="badge-icon" />
                   <span className="badge-text">ISO 9001</span>
                 </div>
                 <div className="badge">
-                  <span className="badge-icon">✓</span>
+                  <CheckCircle className="badge-icon" />
                   <span className="badge-text">SOLAS Compliant</span>
                 </div>
                 <div className="badge">
-                  <span className="badge-icon">✓</span>
+                  <CheckCircle className="badge-icon" />
                   <span className="badge-text">Class Approved</span>
                 </div>
               </div>
@@ -196,184 +210,171 @@ const Authorization = () => {
         <div className="container">
           <div className="section-header">
             <h2>Our Partnerships Ensure</h2>
-            <p className="section-subtitle">Strategic advantages for maritime excellence</p>
+            <p className="section-subtitle">
+              Strategic advantages for maritime excellence
+            </p>
           </div>
           <div className="benefits-grid">
             <div className="benefit-card">
-              <div className="benefit-icon">🚢</div>
+              <Ship className="benefit-icon" />
               <h3>Genuine OEM & Equivalent Spare Parts Sourcing</h3>
-              <p>Direct access to original manufacturer parts and high-quality alternatives</p>
+              <p>
+                Direct access to original manufacturer parts and high-quality
+                alternatives
+              </p>
             </div>
             <div className="benefit-card">
-              <div className="benefit-icon">🌍</div>
+              <Globe className="benefit-icon" />
               <h3>Rapid Global Logistics Support</h3>
-              <p>Worldwide distribution network with expedited shipping capabilities</p>
+              <p>
+                Worldwide distribution network with expedited shipping
+                capabilities
+              </p>
             </div>
             <div className="benefit-card">
-              <div className="benefit-icon">📋</div>
+              <FileCheck className="benefit-icon" />
               <h3>SOLAS, IMO & Class Compliant Equipment</h3>
               <p>All equipment meets international maritime safety standards</p>
             </div>
             <div className="benefit-card">
-              <div className="benefit-icon">💰</div>
+              <DollarSign className="benefit-icon" />
               <h3>Competitive Pricing Without Compromise on Quality</h3>
-              <p>Cost-effective solutions maintaining highest quality standards</p>
+              <p>
+                Cost-effective solutions maintaining highest quality standards
+              </p>
             </div>
             <div className="benefit-card">
-              <div className="benefit-icon">🤝</div>
+              <Handshake className="benefit-icon" />
               <h3>Strong Supplier Network Across Europe and Asia</h3>
-              <p>Established relationships with leading manufacturers globally</p>
+              <p>
+                Established relationships with leading manufacturers globally
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Partners Grid */}
-      <section className="partners-section">
+      {/* Partners Grid - New Design */}
+      <section className="partners-section-new">
         <div className="container">
           <div className="section-header">
-            <h2>Authorized Manufacturing Partners</h2>
-            <p className="section-subtitle">Industry-leading manufacturers and technical solution providers</p>
+            <h2>Our Associated Partner</h2>
+            <p className="section-subtitle">
+              Industry-leading manufacturers and technical solution providers
+            </p>
           </div>
-          <div className="partners-grid">
+          <div className="partners-grid-new">
             {partners.map((partner) => (
-              <div key={partner.id} className="partner-card">
-                <div className="partner-header">
-                  <div className="partner-image-container">
-                    <img 
-                      src={partner.image} 
-                      alt={partner.name}
-                      className="partner-image"
+              <div key={partner.id} className="partner-card-new">
+                {/* Logo Header */}
+                <div className="partner-logo-header">
+                  <div className="partner-logo-container">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} Logo`}
+                      className="partner-logo"
                       onError={(e) => {
-                        e.target.src = `https://via.placeholder.com/300x200/0B2F4A/FFFFFF?text=${encodeURIComponent(partner.name.split(' ')[0])}`;
+                        e.target.style.display = "none";
+                        e.target.nextSibling.style.display = "flex";
                       }}
                     />
-                    <div className="partner-overlay">
-                      <span className="partner-id">#{partner.id}</span>
+                    <div
+                      className="partner-logo-fallback"
+                      style={{ display: "none" }}
+                    >
+                      {partner.name.split(" ")[0]}
                     </div>
-                  </div>
-                  <div className="partner-info">
-                    <div className="partner-meta">
-                      {partner.founded && <span className="founded">{partner.founded}</span>}
-                    </div>
-                    <h3 className="partner-name">{partner.name}</h3>
-                    <p className="partner-description">{partner.description}</p>
                   </div>
                 </div>
 
-                <div className="partner-content">
+                {/* Content */}
+                <div className="partner-content-new">
+                  <h3 className="partner-name-new">{partner.name}</h3>
+                  <p className="partner-description-new">
+                    {partner.description}
+                  </p>
+
+                  {/* Main Product */}
+                  {partner.mainProduct && (
+                    <p className="partner-main-product">
+                      {partner.mainProduct}
+                    </p>
+                  )}
+
+                  {/* Features List */}
                   {partner.features && (
-                    <div className="content-section">
-                      <h4>
-                        <span className="section-icon">⚙️</span>
-                        Key Components
-                      </h4>
-                      <div className="feature-list">
-                        {Array.isArray(partner.features) && partner.features.map((feature, index) => (
-                          <div key={index} className="feature-item">
-                            <span className="feature-bullet">•</span>
-                            <span>{feature}</span>
-                          </div>
+                    <ul className="partner-features-list">
+                      {partner.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {/* Products Include */}
+                  {partner.productsInclude && (
+                    <div className="partner-products-section">
+                      <h4>Products Include:</h4>
+                      <ul className="partner-products-list">
+                        {partner.productsInclude.map((product, index) => (
+                          <li key={index}>{product}</li>
                         ))}
-                      </div>
-                      {partner.note && <p className="note">{partner.note}</p>}
+                      </ul>
                     </div>
                   )}
 
+                  {/* Categories */}
+                  {partner.categories && (
+                    <div className="partner-categories">
+                      {partner.categories.map((category, index) => (
+                        <div key={index} className="partner-category-item">
+                          <h4>{category.title}</h4>
+                          <p>{category.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Products with Descriptions */}
                   {partner.products && (
-                    <div className="content-section">
-                      <h4>
-                        <span className="section-icon">📦</span>
-                        Product Range
-                      </h4>
-                      {typeof partner.products === 'object' && !Array.isArray(partner.products) ? (
-                        <div className="product-categories">
-                          {Object.entries(partner.products).map(([category, items]) => (
-                            <div key={category} className="product-category">
-                              <h5>{category}</h5>
-                              <div className="product-list">
-                                {Array.isArray(items) && items.map((item, index) => (
-                                  <span key={index} className="product-tag">{item}</span>
-                                ))}
-                              </div>
-                            </div>
-                          ))}
+                    <div className="partner-products-detailed">
+                      {partner.products.map((product, index) => (
+                        <div key={index} className="partner-product-item">
+                          <h4>{product.name}</h4>
+                          <p>{product.description}</p>
                         </div>
-                      ) : (
-                        <div className="product-list">
-                          {Array.isArray(partner.products) && partner.products.map((product, index) => (
-                            <span key={index} className="product-tag">{product}</span>
-                          ))}
-                        </div>
-                      )}
+                      ))}
                     </div>
                   )}
 
-                  {partner.series && (
-                    <div className="content-section">
-                      <h4>
-                        <span className="section-icon">🔧</span>
-                        Product Series
-                      </h4>
-                      <div className="series-list">
-                        {Array.isArray(partner.series) && partner.series.map((series, index) => (
-                          <div key={index} className="series-item">
-                            <h5>{series.name}</h5>
-                            <div className="series-features">
-                              {Array.isArray(series.features) && series.features.map((feature, featureIndex) => (
-                                <span key={featureIndex} className="feature-tag">{feature}</span>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
+                  {/* Materials */}
                   {partner.materials && (
-                    <div className="content-section">
-                      <h4>
-                        <span className="section-icon">🔬</span>
-                        Bearing Materials
-                      </h4>
-                      <div className="materials-list">
-                        {Array.isArray(partner.materials) && partner.materials.map((material, index) => (
-                          <div key={index} className="material-item">
+                    <div className="partner-materials">
+                      <h4>Bearing Bearing Materials:</h4>
+                      <ul className="partner-materials-list">
+                        {partner.materials.map((material, index) => (
+                          <li key={index}>
                             <span className="material-number">{index + 1}</span>
-                            <span className="material-name">{material}</span>
-                          </div>
+                            {material}
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
                   )}
+                </div>
 
-                  {partner.industries && (
-                    <div className="content-section">
-                      <h4>
-                        <span className="section-icon">🏭</span>
-                        Industries Served
-                      </h4>
-                      <div className="industries-grid">
-                        {Array.isArray(partner.industries) && partner.industries.map((industry, index) => (
-                          <div key={index} className="industry-item">{industry}</div>
-                        ))}
-                      </div>
+                {/* Product Images */}
+                <div className="partner-product-images">
+                  {partner.productImages.map((img, index) => (
+                    <div key={index} className="product-image-container">
+                      <img
+                        src={img}
+                        alt={`${partner.name} Product ${index + 1}`}
+                        onError={(e) => {
+                          e.target.style.display = "none";
+                        }}
+                      />
                     </div>
-                  )}
-
-                  {partner.features && !partner.series && (
-                    <div className="content-section">
-                      <h4>
-                        <span className="section-icon">✨</span>
-                        Key Features
-                      </h4>
-                      <div className="features-grid">
-                        {Array.isArray(partner.features) && partner.features.map((feature, index) => (
-                          <div key={index} className="feature-card">{feature}</div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  ))}
                 </div>
               </div>
             ))}
@@ -388,13 +389,16 @@ const Authorization = () => {
             <div className="cta-text">
               <h2>Request Authorization Documents</h2>
               <p>
-                Get detailed authorization certificates and compliance documentation for our partnered manufacturers and products. Our technical team is ready to assist with your specific requirements.
+                Get detailed authorization certificates and compliance
+                documentation for our partnered manufacturers and products. Our
+                technical team is ready to assist with your specific
+                requirements.
               </p>
             </div>
             <div className="cta-actions">
-              <button 
+              <button
                 className="cta-button primary"
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => (window.location.href = "/contact")}
               >
                 Request Technical Documentation
               </button>

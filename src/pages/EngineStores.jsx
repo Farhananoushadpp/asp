@@ -484,7 +484,7 @@ const EngineStores = () => {
                       <MessageCircle />
                     </a>
                     <a
-                      href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage.split("\n")[0].replace("Subject: ", ""))}&body=${encodeURIComponent(product.emailMessage.split("\n").slice(2).join("\n").trim())}`}
+                      href={`mailto:sales@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage.split("\n")[0].replace("Subject: ", ""))}&body=${encodeURIComponent(product.emailMessage.split("\n").slice(2).join("\n").trim())}`}
                       className="email-btn"
                       aria-label="Email"
                     >
