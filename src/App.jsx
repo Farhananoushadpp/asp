@@ -40,6 +40,7 @@ import LSAFFA from "./pages/LSAFFA.jsx";
 
 // Authorizations Page
 import Authorization from "./pages/Authorization.jsx";
+import GuangzhouHGMarine from "./pages/GuangzhouHGMarine.jsx";
 
 import "./styles/main.css";
 
@@ -145,10 +146,10 @@ function App() {
               path="/products/engine-spares-2stroke"
               element={<EngineSpares2Stroke />}
             />
-            <Route
+            {/* <Route
               path="/products/engine-spares-4stroke"
               element={<EngineSpares4Stroke />}
-            />
+            /> */}
             <Route
               path="/products/turbochargers-auxiliary"
               element={<TurbochargersAuxiliary />}
@@ -161,24 +162,28 @@ function App() {
               path="/products/pumps-marine-industrial"
               element={<PumpsMarineIndustrial />}
             />
-            <Route
+            {/* <Route
               path="/products/boilers-incinerators-heat-exchangers"
               element={<BoilersIncineratorsHeatExchangers />}
-            />
-            <Route
+            /> */}
+            {/* <Route
               path="/products/air-compressor-spares"
               element={<AirCompressorSpares />}
-            />
-            <Route path="/products/purifiers" element={<Purifiers />} />
+            /> */}
+            {/* <Route path="/products/purifiers" element={<Purifiers />} />
             <Route
               path="/products/hydraulic-systems"
               element={<HydraulicSystems />}
-            />
+            /> */}
 
             <Route path="/products/lsa-ffa" element={<LSAFFA />} />
 
             {/* Authorizations Route */}
             <Route path="/authorizations" element={<Authorization />} />
+            <Route
+              path="/guangzhou-hg-marine"
+              element={<GuangzhouHGMarine />}
+            />
 
             {/* Contact Route */}
             <Route path="/contact" element={<Contact />} />

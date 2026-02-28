@@ -41,18 +41,19 @@ const About = () => {
             <div className="content-with-icon">
               <div className="content-text">
                 <p>
-                  Founded in 2005 and part of Ocean Serenity Group, ASP Global
-                  Marine Trading LLC has established itself as a leading
-                  supplier of marine and offshore equipment. With strong
-                  sourcing networks across Europe and Asia, we understand the
-                  critical importance of quality, reliability, and timely
-                  delivery.
+                  ASP Global Marine is a specialized marine and offshore product
+                  solution provider delivering high-quality equipment, spare
+                  parts, and consumbales to vessels and offshore installations
+                  worldwide. With a strong focus on operational reliability and
+                  compliance requirements of the maritime industry, ASP Global
+                  offers product solutions for equipment/mechanical systems,
+                  safety items, deck/engine stores and engine spares.
                 </p>
                 <p>
-                  Our commitment to excellence has earned us the trust of ship
-                  owners, operators, and offshore installations worldwide. We
-                  pride ourselves on our technical expertise, competitive
-                  pricing, and unwavering dedication to customer satisfaction.
+                  This is backed by extensive sourcing capabilities and
+                  technical product knowledge, which enables ASP Global marine
+                  to serve shipowners, ship managers, operators, and marine
+                  service companies throughout the maritime sector.
                 </p>
               </div>
               <div className="content-icon">
@@ -218,6 +219,167 @@ const About = () => {
                 <li>Drilling Companies</li>
                 <li>FPSO Operators</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Logos Slider Section */}
+        <section
+          className="about-section client-logos-section"
+          id="client-logos"
+        >
+          <div className="section-header">
+            <span className="section-label">Trusted Partners</span>
+            <h2>Our Valued Clients</h2>
+          </div>
+          <div className="client-logos-slider">
+            <div className="client-logos-track">
+              {/* First set of logos */}
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%202.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%203.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%204.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%205.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%206.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%207.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%208.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%209.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2010.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2011.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2012.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2013.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2014.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2015.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2016.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2017.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2018.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2019.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2020.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2021.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2022.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2023.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2024.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2025.webp" alt="Client Logo" />
+              </div>
+              {/* Duplicate set for seamless loop */}
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%202.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%203.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%204.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%205.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%206.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%207.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%208.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%209.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2010.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2011.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2012.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2013.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2014.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2015.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2016.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2017.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2018.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2019.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2020.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2021.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2022.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2023.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2024.webp" alt="Client Logo" />
+              </div>
+              <div className="client-logo-item">
+                <img src="/Client%20Logo/Asset%2025.webp" alt="Client Logo" />
+              </div>
             </div>
           </div>
         </section>

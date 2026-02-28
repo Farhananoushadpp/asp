@@ -14,11 +14,493 @@
   overflow-x: hidden;
 }
 
+/* Clickable Partner Card */
+.partner-card-new.clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.partner-card-new.clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.partner-card-new.clickable::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 191, 167, 0.05) 0%,
+    rgba(45, 168, 122, 0.05) 100%
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.partner-card-new.clickable:hover::before {
+  opacity: 1;
+}
+
+/* Learn More Button */
+.partner-learn-more {
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.learn-more-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #3bbfa7 0%, #2da87a 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.learn-more-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 191, 167, 0.3);
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.learn-more-button:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Company Overview Section */
+.company-overview {
+  padding: 4rem 0;
+  background: white;
+}
+
+.overview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.overview-text h2 {
+  font-size: 2.5rem;
+  color: #0b2f4a;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.overview-text p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.key-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border-left: 4px solid #3bbfa7;
+}
+
+.highlight-icon {
+  width: 48px;
+  height: 48px;
+  color: #3bbfa7;
+  flex-shrink: 0;
+}
+
+.highlight-item h4 {
+  font-size: 1.1rem;
+  color: #0b2f4a;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.highlight-item p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.overview-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo-large {
+  max-width: 300px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.logo-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  background: #f3f4f6;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Main Product Section */
+.main-product-section {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.product-description h3 {
+  font-size: 1.8rem;
+  color: #0b2f4a;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.product-description p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.product-features h4 {
+  font-size: 1.2rem;
+  color: #0b2f4a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  color: #4b5563;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.feature-icon {
+  width: 20px;
+  height: 20px;
+  color: #3bbfa7;
+  flex-shrink: 0;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* Technical Specifications */
+.technical-specs {
+  padding: 4rem 0;
+  background: white;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.spec-card {
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.spec-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-color: #3bbfa7;
+}
+
+.spec-icon {
+  width: 64px;
+  height: 64px;
+  color: #3bbfa7;
+  margin: 0 auto 1.5rem;
+}
+
+.spec-card h3 {
+  font-size: 1.3rem;
+  color: #0b2f4a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.spec-card p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #0b2f4a 0%, #1a4d6d 100%);
+  color: white;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.contact-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(10px);
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: #3bbfa7;
+  flex-shrink: 0;
+}
+
+.contact-method h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.contact-method p {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, #3bbfa7 0%, #2da87a 100%);
+  color: white;
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(59, 191, 167, 0.4);
+}
+
+.cta-button.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.button-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Back Navigation */
+.back-navigation {
+  padding: 2rem 0;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: #f3f4f6;
+  border-color: #3bbfa7;
+  color: #3bbfa7;
+}
+
+.back-icon {
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overview-content,
+  .product-showcase,
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .overview-text h2,
+  .contact-text h2 {
+    font-size: 2rem;
+  }
+
+  .key-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .company-logo-large {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-text h2,
+  .contact-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .highlight-item,
+  .spec-card {
+    padding: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Header Section - Premium Design */
 .auth-header {
-  background: linear-gradient(135deg, #0b2f4a 0%, #123e63 50%, #1a4a6e 100%);
+  background: #0b2f4a;
   color: #ffffff;
-  padding: 100px 20px 80px;
+  padding: 5%;
   text-align: center;
   position: relative;
   overflow: hidden;

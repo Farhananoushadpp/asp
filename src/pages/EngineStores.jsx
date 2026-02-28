@@ -7,7 +7,7 @@
 
 import "../styles/pages/Products.css";
 import { useState } from "react";
-import { MessageCircle, Mail } from "lucide-react";
+import { MessageCircle, Mail, Phone } from "lucide-react";
 
 const EngineStores = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -443,6 +443,17 @@ const EngineStores = () => {
       product.description.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
+  // Group products into rows of 4
+  const chunkArray = (array, size) => {
+    const chunks = [];
+    for (let i = 0; i < array.length; i += size) {
+      chunks.push(array.slice(i, i + size));
+    }
+    return chunks;
+  };
+
+  const productRows = chunkArray(filteredProducts, 4);
+
   return (
     <div className="product-page">
       <div className="container">
@@ -453,48 +464,71 @@ const EngineStores = () => {
           </p>
         </div>
 
-        <section className="product-gallery">
-          <div className="search-bar-container">
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
-          </div>
-          <h2>Featured Engine Store Products</h2>
-          <div className="gallery-grid">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="gallery-item">
-                <div className="product-image">
-                  <img src={product.image} alt={product.name} loading="lazy" />
-                </div>
-                <div className="product-details">
-                  <h3 className="product-name">{product.name}</h3>
-                  <p className="product-desc">{product.description}</p>
-                  <div className="product-buttons">
-                    <a
-                      href={`https://wa.me/9715478137?text=${encodeURIComponent(product.whatsappMessage)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="whatsapp-btn"
-                      aria-label="WhatsApp"
-                    >
-                      <MessageCircle />
-                    </a>
-                    <a
-                      href={`mailto:sales@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage.split("\n")[0].replace("Subject: ", ""))}&body=${encodeURIComponent(product.emailMessage.split("\n").slice(2).join("\n").trim())}`}
-                      className="email-btn"
-                      aria-label="Email"
-                    >
-                      <Mail />
-                    </a>
+        {/* Product Grid Layout - 4 Products Per Row */}
+        <section className="product-grid-layout-four">
+          {productRows.map((row, rowIndex) => (
+            <div key={rowIndex} className="grid-row-four">
+              {row.map((product) => (
+                <div key={product.id} className="product-card-four">
+                  <div className="product-image-four">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.target.style.display = "none";
+                        e.target.parentElement.style.background =
+                          "linear-gradient(135deg, #f0f9ff, #e6f7f4)";
+                        e.target.parentElement.innerHTML =
+                          '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--primary-color); font-weight: 600; text-align: center; padding: 20px;">' +
+                          product.name +
+                          "</div>";
+                      }}
+                    />
+                  </div>
+                  <div className="product-info-four">
+                    <h3 className="product-name-four">{product.name}</h3>
+                    <p className="product-category-four">{product.category}</p>
+                    <p className="product-description-four">
+                      {product.description}
+                    </p>
+                    <div className="product-actions-four">
+                      <a
+                        href={`https://wa.me/971525478137?text=${encodeURIComponent(product.whatsappMessage)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="contact-btn-four whatsapp-btn-four"
+                        aria-label="WhatsApp"
+                      >
+                        <span className="contact-icon-four">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.709-.508-.173-.006-.371-.006-.57-.006-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.24 3.076c.173.198 2.445 3.732 5.927 5.236.828.357 1.476.57 1.979.73.828.262 1.582.225 2.178.136.664-.099 2.04-1.33 2.329-2.618.288-1.288.148-2.388.074-2.618-.074-.23-.27-.347-.567-.496z" />
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                              opacity=".3"
+                            />
+                          </svg>
+                        </span>
+                        WhatsApp
+                      </a>
+                      <a
+                        href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n")[0].replace("Subject: ", "") : "Inquiry about " + product.name)}&body=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n").slice(2).join("\n").trim() : "Dear ASP Global Marine Trading,\n\nI'm interested in " + product.name + ". Please provide more information and pricing.\n\nThank you.")}`}
+                        className="contact-btn-four email-btn-four"
+                        aria-label="Email"
+                      >
+                        <span className="contact-icon-four">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                          </svg>
+                        </span>
+                        Email
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ))}
         </section>
       </div>
     </div>

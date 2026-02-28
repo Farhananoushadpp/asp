@@ -1,177 +1,207 @@
 /**
  * ASP Global Marine Trading LLC - Pumps Marine & Industrial Page
  *
- * Comprehensive marine and industrial pumps and pumping systems
- * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ * Product Portfolio with Brand Logos and Manufacturer Tables
  */
 
 import "../styles/pages/Products.css";
-import { useState } from "react";
-import { MessageCircle, Mail } from "lucide-react";
 
 const PumpsMarineIndustrial = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const pumpProducts = [
+  const manufacturers = [
     {
-      id: 1,
-      name: "Centrifugal Pumps",
-      image: "/products/enginestores/Asset 33.webp",
-      category: "Centrifugal Pumps",
-      description:
-        "High-efficiency centrifugal pumps for marine and industrial applications. Reliable fluid transfer solutions.",
-      whatsappMessage:
-        "Hi, I'm interested in Centrifugal Pumps. Please provide more information and pricing.",
+      name: "DESMI",
+      models: ["", "", "", "", "", "", "", "", "", ""],
     },
     {
-      id: 2,
-      name: "Gear Pumps",
-      image: "/products/enginestores/NeEeih.webp",
-      category: "Gear Pumps",
-      description:
-        "Precision gear pumps for oil transfer, fuel delivery, and hydraulic systems.",
-      whatsappMessage:
-        "Hi, I'm interested in Gear Pumps. Please provide more information and pricing.",
+      name: "ALLWEILER",
+      models: ["", "", "", "", "", "", "", "", "", ""],
     },
     {
-      id: 3,
-      name: "Screw Pumps",
-      image: "/products/enginestores/Asset 34.webp",
-      category: "Screw Pumps",
-      description:
-        "Twin and triple screw pumps for high-viscosity fluids and oil transfer applications.",
-      whatsappMessage:
-        "Hi, I'm interested in Screw Pumps. Please provide more information and pricing.",
-    },
-    {
-      id: 4,
-      name: "Diaphragm Pumps",
-      image: "/products/enginestores/Asset 35.webp",
-      category: "Diaphragm Pumps",
-      description:
-        "Chemical-resistant diaphragm pumps for aggressive fluids and chemical transfer.",
-      whatsappMessage:
-        "Hi, I'm interested in Diaphragm Pumps. Please provide more information and pricing.",
-    },
-    {
-      id: 5,
-      name: "Submersible Pumps",
-      image: "/products/enginestores/Asset 36.webp",
-      category: "Submersible Pumps",
-      description:
-        "Marine-grade submersible pumps for bilge, ballast, and wastewater applications.",
-      whatsappMessage:
-        "Hi, I'm interested in Submersible Pumps. Please provide more information and pricing.",
-    },
-    {
-      id: 6,
-      name: "Fire Fighting Pumps",
-      image: "/products/enginestores/Asset 37.webp",
-      category: "Fire Pumps",
-      description:
-        "High-pressure fire fighting pumps compliant with SOLAS and classification society requirements.",
-      whatsappMessage:
-        "Hi, I'm interested in Fire Fighting Pumps. Please provide more information and pricing.",
-    },
-    {
-      id: 7,
-      name: "Hydraulic Pumps",
-      image: "/products/enginestores/Asset 38.webp",
-      category: "Hydraulic Pumps",
-      description:
-        "Hydraulic power units and pumps for steering gear, deck machinery, and cranes.",
-      whatsappMessage:
-        "Hi, I'm interested in Hydraulic Pumps. Please provide more information and pricing.",
-    },
-    {
-      id: 8,
-      name: "Pump Spare Parts",
-      image: "/products/enginestores/Asset 39.webp",
-      category: "Spare Parts",
-      description:
-        "Comprehensive pump spare parts including impellers, seals, bearings, and casings.",
-      whatsappMessage:
-        "Hi, I'm interested in Pump Spare Parts. Please provide more information and pricing.",
+      name: "GRUNDFOS",
+      models: ["", "", "", "", "", "", "", "", "", ""],
     },
   ];
-
-  const filteredProducts = pumpProducts.filter(
-    (product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
 
   return (
     <div className="product-page">
       <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">Pumps - Marine & Industrial</h1>
-          <p className="page-subtitle">
-            Complete Pump Solutions for Marine & Industrial Applications
-          </p>
+        {/* Page Header */}
+        <div className="portfolio-header">
+          <h1 className="portfolio-title">PUMPS - MARINE & INDUSTRIAL</h1>
         </div>
 
-        <section className="product-gallery">
-          <div className="search-bar-container">
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
+        {/* Supported Brands Section */}
+        <div className="brands-section">
+          <div className="supported-brands-label">
+            Supported Brands & Series
           </div>
-          <h2>Featured Pump Products</h2>
-          <div className="gallery-grid">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="gallery-item">
-                <div className="product-image">
-                  <img src={product.image} alt={product.name} loading="lazy" />
-                </div>
-                <div className="product-details">
-                  <h3 className="product-name">{product.name}</h3>
-                  <p className="product-desc">{product.description}</p>
-                  <div className="product-buttons">
-                    <a
-                      href={`https://wa.me/971505398975?text=${encodeURIComponent(
-                        product.whatsappMessage,
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="whatsapp-btn"
-                      aria-label="WhatsApp"
+          <div className="brand-logos">
+            <div className="brand-logo-item">
+              <img
+                src="/brands/desmi-logo.png"
+                alt="DESMI"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/allweiler-logo.png"
+                alt="ALLWEILER"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/grundfos-logo.png"
+                alt="GRUNDFOS"
+                className="brand-logo-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Manufacturer Table */}
+        <section className="manufacturer-table-section">
+          <table className="manufacturer-table">
+            <thead>
+              <tr>
+                <th className="col-manufacturer">Manufacturer</th>
+                <th className="col-type">Model</th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {manufacturers.map((manufacturer, index) => (
+                <tr key={index}>
+                  <td className="manufacturer-name">{manufacturer.name}</td>
+                  <td className="sub-type">-</td>
+                  {manufacturer.models.map((model, idx) => (
+                    <td
+                      key={idx}
+                      className={model ? "model-value" : "empty-model"}
                     >
-                      <MessageCircle />
-                    </a>
-                    <a
-                      href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(
-                        product.emailMessage
-                          ? product.emailMessage.split("\n")[0].replace(
-                              "Subject: ",
-                              "",
-                            )
-                          : "Inquiry about " + product.name,
-                      )}&body=${encodeURIComponent(
-                        product.emailMessage
-                          ? product.emailMessage
-                              .split("\n")
-                              .slice(2)
-                              .join("\n")
-                              .trim()
-                          : "Dear ASP Global Marine Trading,\n\nI'm interested in " +
-                              product.name +
-                              ". Please provide more information and pricing.\n\nThank you.",
-                      )}`}
-                      className="email-btn"
-                      aria-label="Email"
-                    >
-                      <Mail />
-                    </a>
-                  </div>
-                </div>
+                      {model}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        {/* Product Display Grid */}
+        <section className="product-display-grid">
+          <div className="product-display-row">
+            {/* Left Product */}
+            <div className="product-display-item">
+              <div className="blue-text-box">
+                <ul>
+                  <li>Bearing</li>
+                  <li>Shaft</li>
+                  <li>Impeller</li>
+                  <li>Mechanical Seal</li>
+                </ul>
               </div>
-            ))}
+              <div className="connector"></div>
+              <div className="product-image-container">
+                <img
+                  src="/products/pumps-bearing-shaft.webp"
+                  alt="Bearing, Shaft, Impeller, Mechanical Seal"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Right Product */}
+            <div className="product-display-item">
+              <div className="blue-text-box">
+                <ul>
+                  <li>Wear Ring</li>
+                  <li>Shaft Sleeve</li>
+                  <li>Coupling</li>
+                  <li>Gasket</li>
+                </ul>
+              </div>
+              <div className="connector"></div>
+              <div className="product-image-container">
+                <img
+                  src="/products/pumps-wear-ring.webp"
+                  alt="Wear Ring, Shaft Sleeve, Coupling, Gasket"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pump Models Table Section */}
+        <section className="pump-models-section">
+          <div className="pump-models-table-container">
+            <table className="pump-models-table">
+              <thead>
+                <tr>
+                  <th className="pump-col-manufacturer">Manufacturer</th>
+                  <th className="pump-col-model-header">Model</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="pump-model-row">
+                  <td className="pump-manufacturer-name">Desmi</td>
+                  <td className="pump-models-list">
+                    <span className="pump-model-badge">NSL 80</span>
+                    <span className="pump-model-badge">NSL 100</span>
+                    <span className="pump-model-badge">NSL 125</span>
+                    <span className="pump-model-badge">NSL 150</span>
+                    <span className="pump-model-badge">NSL 200</span>
+                    <span className="pump-model-badge">NSL 250</span>
+                    <span className="pump-model-badge">NSL 300</span>
+                    <span className="pump-model-badge">NSL 500</span>
+                  </td>
+                </tr>
+                <tr className="pump-model-row">
+                  <td className="pump-manufacturer-name">Allweiler</td>
+                  <td className="pump-models-list">
+                    <span className="pump-model-badge">NB25-200</span>
+                    <span className="pump-model-badge">NA65-300</span>
+                    <span className="pump-model-badge">
+                      NISM 50-120, 150-160, 50-200, 65-120
+                    </span>
+                    <span className="pump-model-badge">
+                      NISM 65-200, 80-90, 100-315, 125-250
+                    </span>
+                    <span className="pump-model-badge">
+                      SPF 20R-56, SPF 20R-96
+                    </span>
+                  </td>
+                </tr>
+                <tr className="pump-model-row">
+                  <td className="pump-manufacturer-name">Grundfos</td>
+                  <td className="pump-models-list">
+                    <span className="pump-model-badge">CR/CM Series</span>
+                    <span className="pump-model-badge">TP/NB & NK Series</span>
+                    <span className="pump-model-badge">VLS/VL Series</span>
+                    <span className="pump-model-badge">SEG/SEV/MTB Series</span>
+                  </td>
+                </tr>
+                <tr className="pump-model-row">
+                  <td className="pump-manufacturer-name">Jabsco</td>
+                  <td className="pump-models-list">
+                    <span className="pump-model-badge">VLS / PACO VLS</span>
+                    <span className="pump-model-badge">CR Series</span>
+                    <span className="pump-model-badge">NB / NK Series</span>
+                    <span className="pump-model-badge">TP Series</span>
+                    <span className="pump-model-badge">SEG / SEV / MTB</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </div>

@@ -1,158 +1,155 @@
 /**
  * ASP Global Marine Trading LLC - HVAC Compressors & Spares Page
  *
- * Comprehensive marine HVAC systems, compressors and spare parts
- * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ * Product Portfolio with Brand Logos and Manufacturer Tables
  */
 
 import "../styles/pages/Products.css";
-import { useState } from "react";
-import { MessageCircle, Mail } from "lucide-react";
 
 const HVACCompressors = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const hvacProducts = [
+  const manufacturers = [
     {
-      id: 1,
-      name: "Marine HVAC Compressors",
-      image: "/products/enginestores/Asset 25.webp",
-      category: "HVAC Compressors",
-      description:
-        "High-quality marine HVAC compressors for vessel climate control systems. Reliable cooling and heating solutions.",
-      whatsappMessage:
-        "Hi, I'm interested in Marine HVAC Compressors. Please provide more information and pricing.",
+      name: "Sabroe",
+      models: [
+        "CMO18",
+        "CMO24",
+        "CMO26",
+        "CMO36",
+        "SMC 104",
+        "SMC108",
+        "SMC112",
+        "",
+        "",
+        "",
+      ],
     },
     {
-      id: 2,
-      name: "Refrigeration Compressors",
-      image: "/products/enginestores/Asset 26.webp",
-      category: "Refrigeration",
-      description:
-        "Industrial refrigeration compressors for marine cold storage and freezer applications.",
-      whatsappMessage:
-        "Hi, I'm interested in Refrigeration Compressors. Please provide more information and pricing.",
+      name: "Bitzer",
+      models: ["2EES - 2Y TO 8FC-70.2Y...", "", "", "", "", "", "", "", "", ""],
     },
     {
-      id: 3,
-      name: "Air Conditioning Units",
-      image: "/products/enginestores/Asset 27.webp",
-      category: "Air Conditioning",
-      description:
-        "Complete marine air conditioning units for cabins, control rooms, and cargo areas.",
-      whatsappMessage:
-        "Hi, I'm interested in Air Conditioning Units. Please provide more information and pricing.",
-    },
-    {
-      id: 4,
-      name: "Ventilation Systems",
-      image: "/products/enginestores/Asset 28.webp",
-      category: "Ventilation",
-      description:
-        "Marine ventilation systems for engine rooms, cargo holds, and living quarters.",
-      whatsappMessage:
-        "Hi, I'm interested in Ventilation Systems. Please provide more information and pricing.",
-    },
-    {
-      id: 5,
-      name: "Heat Exchangers",
-      image: "/products/enginestores/Asset 29.webp",
-      category: "Heat Exchangers",
-      description:
-        "Efficient heat exchangers for HVAC systems, engine cooling, and process heating.",
-      whatsappMessage:
-        "Hi, I'm interested in Heat Exchangers. Please provide more information and pricing.",
-    },
-    {
-      id: 6,
-      name: "Condenser Units",
-      image: "/products/enginestores/Asset 30.webp",
-      category: "Condensers",
-      description:
-        "Marine-grade condenser units for air conditioning and refrigeration systems.",
-      whatsappMessage:
-        "Hi, I'm interested in Condenser Units. Please provide more information and pricing.",
-    },
-    {
-      id: 7,
-      name: "Evaporator Coils",
-      image: "/products/enginestores/Asset 31.webp",
-      category: "Evaporators",
-      description:
-        "High-efficiency evaporator coils for marine HVAC and refrigeration applications.",
-      whatsappMessage:
-        "Hi, I'm interested in Evaporator Coils. Please provide more information and pricing.",
-    },
-    {
-      id: 8,
-      name: "HVAC Controls & Thermostats",
-      image: "/products/enginestores/Asset 32.webp",
-      category: "Controls",
-      description:
-        "Advanced HVAC control systems and thermostats for marine climate management.",
-      whatsappMessage:
-        "Hi, I'm interested in HVAC Controls & Thermostats. Please provide more information and pricing.",
+      name: "Daikin",
+      models: ["ZESTIA", "LXE", "", "", "", "", "", "", "", ""],
     },
   ];
-
-  const filteredProducts = hvacProducts.filter(
-    (product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
 
   return (
     <div className="product-page">
       <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">HVAC Compressors & Spares</h1>
-          <p className="page-subtitle">
-            Marine HVAC Solutions & Climate Control Equipment
-          </p>
+        {/* Page Header */}
+        <div className="portfolio-header">
+          <h1 className="portfolio-title">HVAC COMPRESSORS & SPARES</h1>
         </div>
 
-        <section className="product-gallery">
-          <div className="search-bar-container">
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
+        {/* Supported Brands Section */}
+        <div className="brands-section">
+          <div className="supported-brands-label">
+            Supported Brands & Series
           </div>
-          <h2>Featured HVAC & Compressor Products</h2>
-          <div className="gallery-grid">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="gallery-item">
-                <div className="product-image">
-                  <img src={product.image} alt={product.name} loading="lazy" />
-                </div>
-                <div className="product-details">
-                  <h3 className="product-name">{product.name}</h3>
-                  <p className="product-desc">{product.description}</p>
-                  <div className="product-buttons">
-                    <a
-                      href={`https://wa.me/971505398975?text=${encodeURIComponent(product.whatsappMessage)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="whatsapp-btn"
-                      aria-label="WhatsApp"
+          <div className="brand-logos">
+            <div className="brand-logo-item">
+              <img
+                src="/brands/sabroe-logo.png"
+                alt="Sabroe"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/bitzer-logo.png"
+                alt="Bitzer"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/daikin-logo.png"
+                alt="Daikin"
+                className="brand-logo-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Manufacturer Table */}
+        <section className="manufacturer-table-section">
+          <table className="manufacturer-table">
+            <thead>
+              <tr>
+                <th className="col-manufacturer">Manufacturer</th>
+                <th className="col-type">Model</th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+                <th className="model-cell"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {manufacturers.map((manufacturer, index) => (
+                <tr key={index}>
+                  <td className="manufacturer-name">{manufacturer.name}</td>
+                  <td className="sub-type">-</td>
+                  {manufacturer.models.map((model, idx) => (
+                    <td
+                      key={idx}
+                      className={model ? "model-value" : "empty-model"}
                     >
-                      <MessageCircle />
-                    </a>
-                    <a
-                      href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n")[0].replace("Subject: ", "") : "Inquiry about " + product.name)}&body=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n").slice(2).join("\n").trim() : "Dear ASP Global Marine Trading,\n\nI'm interested in " + product.name + ". Please provide more information and pricing.\n\nThank you.")}`}
-                      className="email-btn"
-                      aria-label="Email"
-                    >
-                      <Mail />
-                    </a>
-                  </div>
-                </div>
+                      {model}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        {/* Product Display Grid */}
+        <section className="product-display-grid">
+          <div className="product-display-row">
+            {/* Left Product */}
+            <div className="product-display-item">
+              <div className="blue-text-box">
+                <ul>
+                  <li>Piston Cylinders</li>
+                  <li>Oil Rings</li>
+                  <li>Gaskets & Seals</li>
+                  <li>Valve & Bearings</li>
+                  <li>Filters</li>
+                </ul>
               </div>
-            ))}
+              <div className="connector"></div>
+              <div className="product-image-container">
+                <img
+                  src="/products/hvac-piston-cylinders.webp"
+                  alt="Piston Cylinders, Oil Rings, Gaskets & Seals, Valve & Bearings, Filters"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Right Product */}
+            <div className="product-display-item">
+              <div className="blue-text-box">
+                <ul>
+                  <li>Shaft Seal</li>
+                  <li>Crank Shaft</li>
+                  <li>Crank</li>
+                  <li>Liner</li>
+                </ul>
+              </div>
+              <div className="connector"></div>
+              <div className="product-image-container">
+                <img
+                  src="/products/hvac-shaft-seal.webp"
+                  alt="Shaft Seal, Crank Shaft, Crank, Liner"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </section>
       </div>

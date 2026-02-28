@@ -12,6 +12,7 @@ import {
   DollarSign,
   Handshake,
   CheckCircle,
+  ArrowRight,
 } from "lucide-react";
 import "../styles/pages/Authorization.css";
 
@@ -20,7 +21,7 @@ const Authorization = () => {
     {
       id: 1,
       name: "Guangzhou HG Marine Co. Ltd.",
-      logo: "/partners/hg-marine-logo.png",
+      logo: "/Authorisation/Guangzhou/logo.webp",
       description:
         "Founded in 2005, develops and manufactures innovative marine steering gear and rim thrusters, backed by over 100 patents in steering and electric propulsion technology.",
       mainProduct:
@@ -31,15 +32,15 @@ const Authorization = () => {
         "Less Resistance, Lighter Weight, No seal",
       ],
       productImages: [
-        "/products/partners/hg-marine-1.jpg",
-        "/products/partners/hg-marine-2.jpg",
-        "/products/partners/hg-marine-3.jpg",
+        "/Authorisation/Guangzhou/1.webp",
+        "/Authorisation/Guangzhou/2.webp",
+        "/Authorisation/Guangzhou/3.webp",
       ],
     },
     {
       id: 2,
       name: "Hg Machinery Group",
-      logo: "/partners/hg-machinery-logo.png",
+      logo: "/Authorisation/Hg/logo.webp",
       description:
         "A large professional manufacturer specializing in twin screw, three screw, gear, vacuum, centrifugal, and deep well cargo pumps, along with hydraulic, electric pumps, and various valves. The group is certified with CE, ISO9001, ISO14001, and OHSAS18001, and its marine products are approved by major classification societies including CCS, BV, KR, ABS, NK, RINA, and RMRS.",
       productsInclude: [
@@ -53,9 +54,9 @@ const Authorization = () => {
         "Vacuum Pump",
       ],
       productImages: [
-        "/products/partners/hg-machinery-1.jpg",
-        "/products/partners/hg-machinery-2.jpg",
-        "/products/partners/hg-machinery-3.jpg",
+        "/Authorisation/Hg/1.webp",
+        "/Authorisation/Hg/2.webp",
+        "/Authorisation/Hg/3.webp",
       ],
     },
     {
@@ -265,7 +266,15 @@ const Authorization = () => {
           </div>
           <div className="partners-grid-new">
             {partners.map((partner) => (
-              <div key={partner.id} className="partner-card-new">
+              <div
+                key={partner.id}
+                className={`partner-card-new ${partner.id === 1 ? "clickable" : ""}`}
+                onClick={
+                  partner.id === 1
+                    ? () => (window.location.href = "/guangzhou-hg-marine")
+                    : undefined
+                }
+              >
                 {/* Logo Header */}
                 <div className="partner-logo-header">
                   <div className="partner-logo-container">
@@ -376,6 +385,16 @@ const Authorization = () => {
                     </div>
                   ))}
                 </div>
+
+                {/* Learn More Button for Guangzhou HG Marine */}
+                {partner.id === 1 && (
+                  <div className="partner-learn-more">
+                    <button className="learn-more-button">
+                      <span>Learn More</span>
+                      <ArrowRight className="arrow-icon" />
+                    </button>
+                  </div>
+                )}
               </div>
             ))}
           </div>

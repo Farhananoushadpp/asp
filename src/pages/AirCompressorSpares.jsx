@@ -1,158 +1,152 @@
 /**
  * ASP Global Marine Trading LLC - Air Compressor Spares Page
  *
- * Comprehensive marine air compressors and spare parts solutions
- * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ * Product Portfolio with Brand Logos and Manufacturer Table
  */
 
 import "../styles/pages/Products.css";
-import { useState } from "react";
-import { MessageCircle, Mail } from "lucide-react";
 
 const AirCompressorSpares = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const compressorProducts = [
+  const manufacturers = [
     {
-      id: 1,
-      name: "Marine Air Compressors",
-      image: "/products/enginestores/Asset 40.webp",
-      category: "Air Compressors",
-      description:
-        "High-quality marine air compressors for starting engines, pneumatic tools, and general ship service.",
-      whatsappMessage:
-        "Hi, I'm interested in Marine Air Compressors. Please provide more information and pricing.",
+      name: "TANABE",
+      serial: "H Serial",
+      models: ["H63, H54, H64.H264.", "H73, H273, H373,"],
     },
     {
-      id: 2,
-      name: "Compressor Spare Parts",
-      image: "/products/enginestores/Asset 41.webp",
-      category: "Spare Parts",
-      description:
-        "Comprehensive air compressor spare parts including pistons, rings, valves, and gaskets.",
-      whatsappMessage:
-        "Hi, I'm interested in Compressor Spare Parts. Please provide more information and pricing.",
+      name: "JP SAUER & SOHN",
+      serial: "WP Serials",
+      models: ["WP15L. WP22L, WP33L", "WP-100, WP10IL.WP12IL"],
     },
     {
-      id: 3,
-      name: "Air Dryer Systems",
-      image: "/products/enginestores/Asset 42.webp",
-      category: "Air Dryers",
-      description:
-        "Refrigerated and desiccant air dryers for moisture-free compressed air systems.",
-      whatsappMessage:
-        "Hi, I'm interested in Air Dryer Systems. Please provide more information and pricing.",
+      name: "SPERRE",
+      serial: "HV.HL,xwSerial",
+      models: [
+        "HV1-56A,HV2-200.HV2, 210, HV2-240,HV2-270",
+        "HL2-70.HL2-90.HL2-10.HL2-140. HL2-160.HL2-170",
+      ],
     },
     {
-      id: 4,
-      name: "Air Receiver Tanks",
-      image: "/products/enginestores/Asset 43.webp",
-      category: "Receivers",
-      description:
-        "Marine-grade air receiver tanks with certification for compressed air storage.",
-      whatsappMessage:
-        "Hi, I'm interested in Air Receiver Tanks. Please provide more information and pricing.",
-    },
-    {
-      id: 5,
-      name: "Compressor Filters",
-      image: "/products/enginestores/Asset 44.webp",
-      category: "Filters",
-      description:
-        "Air intake filters, oil separators, and line filters for compressor systems.",
-      whatsappMessage:
-        "Hi, I'm interested in Compressor Filters. Please provide more information and pricing.",
-    },
-    {
-      id: 6,
-      name: "Pressure Switches & Controls",
-      image: "/products/enginestores/NeEeih.webp",
-      category: "Controls",
-      description:
-        "Pressure switches, regulators, and control systems for compressor automation.",
-      whatsappMessage:
-        "Hi, I'm interested in Pressure Switches & Controls. Please provide more information and pricing.",
-    },
-    {
-      id: 7,
-      name: "Compressor Lubricants",
-      image: "/products/enginestores/Asset 40.webp",
-      category: "Lubricants",
-      description:
-        "Specialized compressor oils and lubricants for various compressor types.",
-      whatsappMessage:
-        "Hi, I'm interested in Compressor Lubricants. Please provide more information and pricing.",
-    },
-    {
-      id: 8,
-      name: "Pneumatic Tools & Accessories",
-      image: "/products/enginestores/Asset 41.webp",
-      category: "Tools & Accessories",
-      description:
-        "Marine pneumatic tools, hoses, fittings, and accessories for compressed air systems.",
-      whatsappMessage:
-        "Hi, I'm interested in Pneumatic Tools & Accessories. Please provide more information and pricing.",
+      name: "HATLAPA",
+      serial: "W Serial",
+      models: ["W110, W140", "W220, W280"],
     },
   ];
-
-  const filteredProducts = compressorProducts.filter(
-    (product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
 
   return (
     <div className="product-page">
       <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">Air Compressor Spares</h1>
-          <p className="page-subtitle">
-            Marine Air Compressor Solutions & Spare Parts
-          </p>
+        {/* Page Header */}
+        <div className="portfolio-header">
+          <h1 className="portfolio-title">AIR COMPRESSOR SPARES</h1>
         </div>
 
-        <section className="product-gallery">
-          <div className="search-bar-container">
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
+        {/* Supported Brands Section */}
+        <div className="brands-section">
+          <div className="supported-brands-label">Brands Supported</div>
+          <div className="brand-logos">
+            <div className="brand-logo-item">
+              <img
+                src="/brands/tanabe-logo.png"
+                alt="TANABE COMPRESSORS"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/sauer-logo.png"
+                alt="Sauer Compressors"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/sperre-logo.png"
+                alt="SPERRE"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/hatlapa-logo.png"
+                alt="HATLAPA"
+                className="brand-logo-img"
+              />
+            </div>
           </div>
-          <h2>Featured Air Compressor Products</h2>
-          <div className="gallery-grid">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="gallery-item">
-                <div className="product-image">
-                  <img src={product.image} alt={product.name} loading="lazy" />
-                </div>
-                <div className="product-details">
-                  <h3 className="product-name">{product.name}</h3>
-                  <p className="product-desc">{product.description}</p>
-                  <div className="product-buttons">
-                    <a
-                      href={`https://wa.me/971505398975?text=${encodeURIComponent(product.whatsappMessage)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="whatsapp-btn"
-                      aria-label="WhatsApp"
-                    >
-                      <MessageCircle />
-                    </a>
-                    <a
-                      href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n")[0].replace("Subject: ", "") : "Inquiry about " + product.name)}&body=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n").slice(2).join("\n").trim() : "Dear ASP Global Marine Trading,\n\nI'm interested in " + product.name + ". Please provide more information and pricing.\n\nThank you.")}`}
-                      className="email-btn"
-                      aria-label="Email"
-                    >
-                      <Mail />
-                    </a>
-                  </div>
-                </div>
+        </div>
+
+        {/* Manufacturer Table */}
+        <section className="manufacturer-table-section">
+          <table className="manufacturer-table compressor-table">
+            <thead>
+              <tr>
+                <th className="col-manufacturer">Manufacturer</th>
+                <th className="col-serial">Serial</th>
+                <th className="col-models">Model</th>
+                <th className="col-models"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {manufacturers.map((manufacturer, index) => (
+                <tr key={index}>
+                  <td className="manufacturer-name">{manufacturer.name}</td>
+                  <td className="serial-type">{manufacturer.serial}</td>
+                  {manufacturer.models.map((model, idx) => (
+                    <td key={idx} className="model-value">
+                      {model}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        {/* Product Display Grid */}
+        <section className="product-display-grid">
+          <div className="product-display-row">
+            {/* Left Product - Piston Components */}
+            <div className="product-display-item">
+              <div className="blue-text-box">
+                <ul>
+                  <li>Piston Rings</li>
+                  <li>Piston & Gudgeon Pin</li>
+                  <li>Cylinder Liner</li>
+                  <li>Inlet/Exhaust Valve</li>
+                  <li>Connecting Rod Bearing</li>
+                </ul>
               </div>
-            ))}
+              <div className="connector"></div>
+              <div className="product-image-container">
+                <img
+                  src="/products/compressor-piston.webp"
+                  alt="Piston Rings, Piston & Gudgeon Pin, Cylinder Liner, Inlet/Exhaust Valve, Connecting Rod Bearing"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Right Product - Valve Components */}
+            <div className="product-display-item">
+              <div className="blue-text-box">
+                <ul>
+                  <li>LP/HP Valve</li>
+                  <li>NRV Valve</li>
+                  <li>Oil/Mechanical Seal</li>
+                  <li>Lube Oil Pump</li>
+                  <li>Unloader Valve</li>
+                </ul>
+              </div>
+              <div className="connector"></div>
+              <div className="product-image-container">
+                <img
+                  src="/products/compressor-valves.webp"
+                  alt="LP/HP Valve, NRV Valve, Oil/Mechanical Seal, Lube Oil Pump, Unloader Valve"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </section>
       </div>

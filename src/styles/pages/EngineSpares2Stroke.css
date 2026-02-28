@@ -27,9 +27,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><rect fill="%231a5f9e" width="1000" height="300"/><path d="M0,200 Q250,150 500,180 T1000,160 L1000,300 L0,300 Z" fill="%231e6ba8" opacity="0.5"/><path d="M0,220 Q300,180 600,200 T1000,190 L1000,300 L0,300 Z" fill="%232a7ab8" opacity="0.3"/></svg>'),
-    linear-gradient(180deg, rgba(26, 95, 158, 0.9) 0%, rgba(13, 58, 92, 0.95) 100%);
+    linear-gradient(
+      180deg,
+      rgba(26, 95, 158, 0.9) 0%,
+      rgba(13, 58, 92, 0.95) 100%
+    );
   background-size: cover;
 }
 

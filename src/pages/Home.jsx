@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <Hero />
-      
+
       {/* Who We Are Section */}
       <section className="who-we-are-section">
         <div className="container">
@@ -23,27 +23,29 @@ const Home = () => {
               Your trusted partner in marine and offshore solutions since 2005
             </p>
           </div>
-          
+
           <div className="content-with-icon">
             <div className="content-text">
               <p>
-                Founded in 2005 and part of Ocean Serenity Group, ASP Global
-                Marine Trading LLC has established itself as a leading supplier of
-                marine and offshore equipment. With strong sourcing networks
-                across Europe and Asia, we understand the critical importance of
-                quality, reliability, and timely delivery.
+                ASP Global Marine is a specialized marine and offshore product
+                solution provider delivering high-quality equipment, spare
+                parts, and consumbales to vessels and offshore installations
+                worldwide. With a strong focus on operational reliability and
+                compliance requirements of the maritime industry, ASP Global
+                offers product solutions for equipment/mechanical systems,
+                safety items, deck/engine stores and engine spares.
               </p>
               <p>
-                Our commitment to excellence has earned us the trust of ship
-                owners, operators, and offshore installations worldwide. We pride
-                ourselves on our technical expertise, competitive pricing, and
-                unwavering dedication to customer satisfaction.
+                This is backed by extensive sourcing capabilities and technical
+                product knowledge, which enables ASP Global marine to serve
+                shipowners, ship managers, operators, and marine service
+                companies throughout the maritime sector.
               </p>
             </div>
             <div className="content-icon">
-              <img 
-                src="/asplogo.svg" 
-                alt="ASP Global Marine Trading LLC" 
+              <img
+                src="/asplogo.svg"
+                alt="ASP Global Marine Trading LLC"
                 className="asp-global-icon"
               />
             </div>
