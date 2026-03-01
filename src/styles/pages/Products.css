@@ -1,110 +1,164 @@
 /**
  * ASP Global Marine Trading LLC - Products Page
  * 
- * Enhanced product pages with comprehensive styling
+ * Professional Product Catalog with Modern Design
  */
 
 .products-page {
   min-height: calc(100vh - 160px);
 }
 
-.page-header {
+/* Section Headers */
+.section-header {
   text-align: center;
-  padding: var(--spacing-4xl) 0;
-  background: var(--background-gradient);
-  margin-bottom: var(--spacing-4xl);
+  margin-bottom: 60px;
 }
 
-.page-title {
-  font-size: var(--font-size-6xl);
+.section-header h2 {
+  font-size: 2.5rem;
   color: var(--primary-color);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 16px;
   font-weight: 700;
 }
 
-.page-subtitle {
-  font-size: var(--font-size-xl);
+.section-header p {
+  font-size: 1.1rem;
   color: var(--secondary-color);
-  font-weight: 400;
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* Enhanced Product Introduction */
-.product-intro {
-  background: var(--white-color);
-  padding: var(--spacing-4xl);
-  border-radius: var(--radius-xl);
-  margin-bottom: var(--spacing-4xl);
+/* All Categories Section */
+.all-categories {
+  padding: 80px 0;
+  background: white;
 }
 
-.intro-content h2 {
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-2xl);
-  font-size: var(--font-size-3xl);
-}
-
-.intro-content p {
-  text-align: center;
-  font-size: var(--font-size-lg);
-  line-height: 1.8;
-  color: var(--text-color);
-  max-width: 800px;
-  margin: 0 auto var(--spacing-3xl);
-}
-
-.manufacturer-showcase h3 {
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-xl);
-  font-size: var(--font-size-2xl);
-}
-
-.manufacturer-grid {
+.categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--spacing-md);
-  max-width: 800px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
 }
 
-.manufacturer-card {
-  background: var(--background-color);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
+.category-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  padding: 40px 30px;
   text-align: center;
-  transition: all var(--transition-normal);
 }
 
-.manufacturer-card:hover {
-  transform: translateY(-2px);
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   border-color: var(--accent-color);
 }
 
-.manufacturer-name {
-  font-weight: 600;
-  color: var(--primary-color);
-  font-size: var(--font-size-sm);
-}
-
-/* Product Categories */
-.product-categories {
-  margin-bottom: var(--spacing-4xl);
-}
-
-.product-categories h2 {
+.category-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-3xl);
-  font-size: var(--font-size-3xl);
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-2xl);
+.category-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-content h3 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.category-content p {
+  color: var(--secondary-color);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.category-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid var(--accent-color);
+  background: transparent;
+}
+
+.category-link:hover {
+  color: white;
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-link svg {
+  transition: transform 0.3s ease;
+}
+
+.category-link:hover svg {
+  transform: translateX(3px);
+}
+
+.brand-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.brand-tag {
+  background: var(--accent-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .category-content h3 {
+    font-size: 1.1rem;
+  }
 }
 
 .category-card {
@@ -829,7 +883,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 60px;
+  margin: 80px 0 60px;
 }
 
 .grid-row-four {
@@ -1257,11 +1311,12 @@
 
 /* Manufacturer Table */
 .manufacturer-table-section {
-  background: var(--white-color);
+  background: #f8fafc;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   overflow: hidden;
   margin-bottom: var(--spacing-xl);
+  border: 1px solid #e2e8f0;
 }
 
 .manufacturer-table {
@@ -1302,11 +1357,15 @@
 }
 
 .manufacturer-table tbody tr {
-  border-bottom: 1px solid var(--light-gray);
+  background: var(--white-color);
+}
+
+.manufacturer-table tbody tr:nth-child(even) {
+  background: #f8fafc;
 }
 
 .manufacturer-table tbody tr:last-child {
-  border-bottom: none;
+  /* border-bottom removed */
 }
 
 .manufacturer-table td {
@@ -1688,11 +1747,11 @@
 }
 
 .pump-model-row {
-  border-bottom: 1px solid var(--light-gray);
+  /* border-bottom removed */
 }
 
 .pump-model-row:last-child {
-  border-bottom: none;
+  /* border-bottom removed */
 }
 
 .pump-manufacturer-name {
@@ -1743,3 +1802,96 @@
 .dark-header {
   background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
 }
+
+/* Product Cards Section - Engine Spares 2-Stroke */
+.product-cards-section {
+  margin: 40px 0;
+}
+
+.product-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.product-card-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 200px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.product-card-item.reverse {
+  direction: rtl;
+}
+
+.product-card-item.reverse > * {
+  direction: ltr;
+}
+
+.product-card-content {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue-card {
+  background: linear-gradient(135deg, #1e4a7c 0%, #2c5f8f 100%);
+  color: white;
+}
+
+.overlay-card {
+  background: linear-gradient(135deg, #1e4a7c 0%, #2c5f8f 100%);
+  color: white;
+  position: relative;
+}
+
+.product-card-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.product-card-image {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive for product cards */
+@media (max-width: 768px) {
+  .product-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-card-item {
+    grid-template-columns: 1fr;
+    min-height: 300px;
+  }
+  
+  .product-card-item.reverse {
+    direction: ltr;
+  }
+  
+  .product-card-content {
+    order: 1;
+  }
+  
+  .product-card-image {
+    order: 2;
+    min-height: 200px;
+  }
+}
+

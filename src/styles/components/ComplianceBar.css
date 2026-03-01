@@ -113,7 +113,6 @@
 .compliance-footer {
   text-align: center;
   padding-top: var(--spacing-4xl);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Design */

@@ -1,57 +1,83 @@
 /**
  * ASP Global Marine Trading LLC - CSS Variables
  * 
- * ASP PDF Design System - Strictly Followed
- * Theme: Deep Ocean Blue Maritime Corporate
+ * Deep Ocean Corporate Theme - Best for ASP
+ * Theme: Deep Ocean Corporate (Maritime Industrial)
  */
 
 :root {
-  /* ASP PDF Color Palette - Updated with Recommended Colors */
-  --primary-color: #0a1f44; /* Deep Navy */
-  --secondary-color: #0c4b65; /* Dark Teal */
-  --accent-color: #2abaa3; /* Sea Green */
-  --background-color: #f4f8fa; /* Soft Ice Grey */
-  --text-color: #333333; /* Charcoal Gray */
-  --navy-gray: #1a2a40; /* Navy Gray */
+  /* 🌊 Deep Ocean Corporate Color Palette */
+  --primary-color: #0C2D48; /* Deep Marine Navy - Ocean & Maritime */
+  --secondary-color: #154A74; /* Steel Ocean Blue - Engineering & Industrial */
+  --accent-color: #0E7490; /* Marine Teal - Modern Maritime */
+  --gold-accent: #C7A008; /* Safety Gold - Quality & Compliance (use sparingly) */
+  
+  /* Background Colors */
+  --background-color: #F3F4F6; /* Soft Industrial Grey */
+  --background-light: #FFFFFF; /* Pure White */
+  
+  /* Text Colors */
+  --text-color: #1E293B; /* Graphite - Dark text */
+  --text-muted: #64748B; /* Muted text */
+  --text-light: #94A3B8; /* Light text */
+  
+  /* Grey Scale */
   --white-color: #ffffff;
-  --light-gray: #e8edf0;
-  --medium-gray: #b8c5ce;
-  --dark-gray: #5a6b7a;
-
-  /* ASP PDF Gradients - Updated */
+  --light-gray: #E2E8F0;
+  --medium-gray: #94A3B8;
+  --dark-gray: #475569;
+  
+  /* 🔥 Gradients - Deep Ocean Corporate */
   --primary-gradient: linear-gradient(
     135deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 100%
+    #0C2D48 0%,
+    #154A74 50%,
+    #0E7490 100%
   );
+  
+  --secondary-gradient: linear-gradient(
+    135deg,
+    #154A74 0%,
+    #0C2D48 100%
+  );
+  
   --accent-gradient: linear-gradient(
     135deg,
-    var(--accent-color) 0%,
-    var(--secondary-color) 100%
+    #0E7490 0%,
+    #0C4A6E 100%
   );
-  --background-gradient: linear-gradient(
-    135deg,
-    var(--background-color) 0%,
-    var(--white-color) 100%
-  );
+  
   --hero-gradient: linear-gradient(
     135deg,
-    #0a1f44 0%,
-    #0c4b65 50%,
-    #2abaa3 100%
+    #0C2D48 0%,
+    #154A74 50%,
+    #1a3a52 100%
   );
+  
   --ocean-wave-gradient: linear-gradient(
     180deg,
-    rgba(10, 31, 68, 0.9) 0%,
-    rgba(12, 75, 101, 0.8) 50%,
-    rgba(42, 186, 163, 0.7) 100%
+    rgba(12, 45, 72, 0.95) 0%,
+    rgba(21, 74, 116, 0.9) 50%,
+    rgba(14, 116, 144, 0.85) 100%
   );
+  
+  /* 🎯 Table & Card Colors */
+  --table-header-bg: #154A74; /* Steel Blue for table headers */
+  --table-border: #E2E8F0; /* Light grey borders */
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 4px 6px -1px rgba(12, 45, 72, 0.1), 0 2px 4px -1px rgba(12, 45, 72, 0.06);
+  
+  /* 🎨 Hover States */
+  --hover-primary: #0A253D;
+  --hover-secondary: #123D61;
+  --hover-accent: #0A5A70;
+  --hover-bg: #F1F5F9;
 
-  /* Typography - Recommended Fonts */
+  /* Typography - Poppins Primary Font */
   --font-family:
-    "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    "Poppins", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-heading:
-    "Montserrat", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    "Poppins", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-accent:
     "Poppins", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-size-xs: 0.75rem;
@@ -85,12 +111,12 @@
   --radius-2xl: 24px;
   --radius-full: 50%;
 
-  /* Shadows - Subtle */
-  --shadow-sm: 0 1px 2px rgba(10, 31, 68, 0.05);
-  --shadow-md: 0 4px 6px rgba(10, 31, 68, 0.08);
-  --shadow-lg: 0 10px 15px rgba(10, 31, 68, 0.1);
-  --shadow-xl: 0 20px 25px rgba(10, 31, 68, 0.12);
-  --shadow-primary: 0 10px 25px rgba(10, 31, 68, 0.2);
+  /* Shadows - Updated with Deep Marine Navy tint */
+  --shadow-sm: 0 1px 2px rgba(12, 45, 72, 0.05);
+  --shadow-md: 0 4px 6px rgba(12, 45, 72, 0.08);
+  --shadow-lg: 0 10px 15px rgba(12, 45, 72, 0.1);
+  --shadow-xl: 0 20px 25px rgba(12, 45, 72, 0.12);
+  --shadow-primary: 0 10px 25px rgba(12, 45, 72, 0.2);
 
   /* Transitions - Smooth */
   --transition-fast: 0.2s ease;

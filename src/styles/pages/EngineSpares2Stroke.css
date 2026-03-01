@@ -310,7 +310,6 @@
 
 /* Table Body */
 .manufacturer-table tbody tr {
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .manufacturer-table tbody tr:nth-child(even) {

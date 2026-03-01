@@ -20,7 +20,7 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
-import Products from "./pages/Products.jsx";
+import ProductsPage from "./pages/Products.jsx";
 import Contact from "./pages/Contact.jsx";
 
 // Products Pages
@@ -41,6 +41,11 @@ import LSAFFA from "./pages/LSAFFA.jsx";
 // Authorizations Page
 import Authorization from "./pages/Authorization.jsx";
 import GuangzhouHGMarine from "./pages/GuangzhouHGMarine.jsx";
+import HGMachineryGroup from "./pages/HGMachineryGroup.jsx";
+import ZhejiangKintowe from "./pages/ZhejiangKintowe.jsx";
+import ZhejiangHuayi from "./pages/ZhejiangHuayi.jsx";
+import BeijingZhonghanghua from "./pages/BeijingZhonghanghua.jsx";
+import ChangzhouQianmai from "./pages/ChangzhouQianmai.jsx";
 
 import "./styles/main.css";
 
@@ -98,26 +103,26 @@ function App() {
       });
     });
 
-    // Navbar scroll effect
-    const handleNavbarScroll = () => {
-      const navbar = document.querySelector(".navbar");
-      if (navbar) {
-        if (window.scrollY > 50) {
-          navbar.style.background = "rgba(255, 255, 255, 0.98)";
-          navbar.style.boxShadow = "0 4px 30px rgba(46, 139, 139, 0.15)";
-        } else {
-          navbar.style.background = "rgba(255, 255, 255, 0.95)";
-          navbar.style.boxShadow = "0 2px 20px rgba(46, 139, 139, 0.1)";
-        }
-      }
-    };
+    // Navbar scroll effect - Removed to maintain blue background
+    // const handleNavbarScroll = () => {
+    //   const navbar = document.querySelector(".navbar");
+    //   if (navbar) {
+    //     if (window.scrollY > 50) {
+    //       navbar.style.background = "rgba(255, 255, 255, 0.98)";
+    //       navbar.style.boxShadow = "0 4px 30px rgba(46, 139, 139, 0.15)";
+    //     } else {
+    //       navbar.style.background = "rgba(255, 255, 255, 0.95)";
+    //       navbar.style.boxShadow = "0 2px 20px rgba(46, 139, 139, 0.1)";
+    //     }
+    //   }
+    // };
 
-    window.addEventListener("scroll", handleNavbarScroll);
+    // window.addEventListener("scroll", handleNavbarScroll);
 
     // Cleanup event listeners
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("scroll", handleNavbarScroll);
+      // window.removeEventListener("scroll", handleNavbarScroll);
     };
   }, []);
 
@@ -134,7 +139,7 @@ function App() {
             <Route path="/about" element={<About />} />
 
             {/* Products Routes - Main products page first */}
-            <Route path="/products" element={<Products />} />
+            <Route path="/products" element={<ProductsPage />} />
 
             {/* Specific Product Categories */}
             <Route path="/products/engine-stores" element={<EngineStores />} />
@@ -146,10 +151,10 @@ function App() {
               path="/products/engine-spares-2stroke"
               element={<EngineSpares2Stroke />}
             />
-            {/* <Route
+            <Route
               path="/products/engine-spares-4stroke"
               element={<EngineSpares4Stroke />}
-            /> */}
+            />
             <Route
               path="/products/turbochargers-auxiliary"
               element={<TurbochargersAuxiliary />}
@@ -162,28 +167,30 @@ function App() {
               path="/products/pumps-marine-industrial"
               element={<PumpsMarineIndustrial />}
             />
-            {/* <Route
+            <Route
               path="/products/boilers-incinerators-heat-exchangers"
               element={<BoilersIncineratorsHeatExchangers />}
-            /> */}
-            {/* <Route
+            />
+            <Route
               path="/products/air-compressor-spares"
               element={<AirCompressorSpares />}
-            /> */}
-            {/* <Route path="/products/purifiers" element={<Purifiers />} />
+            />
+            <Route path="/products/purifiers" element={<Purifiers />} />
             <Route
               path="/products/hydraulic-systems"
               element={<HydraulicSystems />}
-            /> */}
+            />
 
             <Route path="/products/lsa-ffa" element={<LSAFFA />} />
 
             {/* Authorizations Route */}
             <Route path="/authorizations" element={<Authorization />} />
-            <Route
-              path="/guangzhou-hg-marine"
-              element={<GuangzhouHGMarine />}
-            />
+            <Route path="/guangzhou-hg-marine" element={<GuangzhouHGMarine />} />
+            <Route path="/hg-machinery-group" element={<HGMachineryGroup />} />
+            <Route path="/zhejiang-kintowe" element={<ZhejiangKintowe />} />
+            <Route path="/zhejiang-huayi" element={<ZhejiangHuayi />} />
+            <Route path="/beijing-zhonghanghua" element={<BeijingZhonghanghua />} />
+            <Route path="/changzhou-qianmai" element={<ChangzhouQianmai />} />
 
             {/* Contact Route */}
             <Route path="/contact" element={<Contact />} />

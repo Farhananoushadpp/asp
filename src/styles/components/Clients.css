@@ -79,14 +79,13 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.client-testimonial {
-  font-size: var(--font-size-lg);
+.clients-note {
+  text-align: center;
   color: var(--dark-gray);
-  line-height: 1.6;
+  font-size: var(--font-size-base);
   font-style: italic;
   margin: 0;
   padding-top: var(--spacing-xl);
-  border-top: 1px solid var(--light-gray);
 }
 
 /* Responsive Design */

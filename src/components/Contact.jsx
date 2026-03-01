@@ -1,157 +1,234 @@
 /**
- * ASP Global Marine Trading LLC - Contact Section
+ * ASP Global Marine Trading LLC - Professional Contact Section
  *
- * Office info and Quick RFQ Form
- * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ * Modern contact section with NFC card view option
+ * Professional maritime corporate design
  */
 
 import { useState } from "react";
+import { Phone, Mail, MapPin, Clock, Globe, MessageCircle, CreditCard, X } from "lucide-react";
 import "../styles/components/Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    vesselName: "",
-    productRequirement: "",
+    company: "",
+    phone: "",
+    subject: "",
+    message: "",
     urgencyLevel: "normal",
-    attachment: null,
   });
+  const [showNFC, setShowNFC] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("RFQ Submitted:", formData);
-    alert("Thank you for your inquiry. We will contact you shortly.");
+    console.log("Contact Form Submitted:", formData);
+    alert("Thank you for your inquiry. We will contact you within 24 hours.");
     setFormData({
       name: "",
       email: "",
-      vesselName: "",
-      productRequirement: "",
+      company: "",
+      phone: "",
+      subject: "",
+      message: "",
       urgencyLevel: "normal",
-      attachment: null,
     });
   };
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "attachment" && files) {
-      setFormData({
-        ...formData,
-        [name]: files[0],
-      });
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const contactInfo = {
+    headquarters: {
+      title: "Headquarters",
+      address: "Xavier Business Center, Office Suite A5-18, Dubai, UAE",
+      phone: "+971 4 572 4542",
+      email: "info@aspglobalmarine.com"
+    },
+    support: {
+      title: "24/7 Support",
+      phone: "+971 52 547 8137",
+      email: "support@aspglobalmarine.com",
+      whatsapp: "+971 52 547 8137"
+    },
+    hours: {
+      title: "Business Hours",
+      weekdays: "Monday - Friday: 8:00 AM - 6:00 PM",
+      weekends: "Saturday: 9:00 AM - 2:00 PM",
+      emergency: "Emergency: 24/7 Available"
     }
+  };
+
+  const nfcCard = {
+    name: "ASP Global Marine Trading LLC",
+    title: "Marine Equipment Solutions",
+    phone: "+971 4 572 4542",
+    email: "info@aspglobalmarine.com",
+    website: "www.aspglobalmarine.com",
+    address: "Dubai, UAE"
   };
 
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <span className="section-label">GET IN TOUCH</span>
-        <h2 className="contact-headline">Contact Us</h2>
+        <div className="contact-header">
+          <span className="section-label">GET IN TOUCH</span>
+          <h2 className="contact-headline">Contact Our Marine Experts</h2>
+          <p className="contact-subtitle">
+            Connect with our professional team for comprehensive marine equipment solutions 
+            and exceptional customer service
+          </p>
+        </div>
 
         <div className="contact-grid">
-          {/* Office Info */}
-          <div className="contact-info">
-            <h3 className="info-title">Office Location</h3>
-            <div className="info-block">
-              <div className="info-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
+          {/* Contact Information Cards */}
+          <div className="contact-info-section">
+            <div className="contact-cards">
+              {/* Headquarters Card */}
+              <div className="contact-card">
+                <div className="card-icon">
+                  <MapPin size={24} />
+                </div>
+                <div className="card-content">
+                  <h3>{contactInfo.headquarters.title}</h3>
+                  <p className="card-detail">{contactInfo.headquarters.address}</p>
+                  <div className="card-contacts">
+                    <p><Phone size={16} /> {contactInfo.headquarters.phone}</p>
+                    <p><Mail size={16} /> {contactInfo.headquarters.email}</p>
+                  </div>
+                </div>
               </div>
-              <div className="info-content">
-                <p className="info-label">Address</p>
-                <p className="info-value">
-                  Xavier Business Center
-                  <br />
-                  Office Suite A5-18
-                  <br />
-                  Dubai, UAE
-                </p>
+
+              {/* Support Card */}
+              <div className="contact-card">
+                <div className="card-icon">
+                  <Phone size={24} />
+                </div>
+                <div className="card-content">
+                  <h3>{contactInfo.support.title}</h3>
+                  <div className="card-contacts">
+                    <p><Phone size={16} /> {contactInfo.support.phone}</p>
+                    <p><Mail size={16} /> {contactInfo.support.email}</p>
+                    <p><MessageCircle size={16} /> WhatsApp: {contactInfo.support.whatsapp}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Business Hours Card */}
+              <div className="contact-card">
+                <div className="card-icon">
+                  <Clock size={24} />
+                </div>
+                <div className="card-content">
+                  <h3>{contactInfo.hours.title}</h3>
+                  <div className="card-hours">
+                    <p>{contactInfo.hours.weekdays}</p>
+                    <p>{contactInfo.hours.weekends}</p>
+                    <p className="emergency">{contactInfo.hours.emergency}</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="info-block">
-              <div className="info-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-              </div>
-              <div className="info-content">
-                <p className="info-label">Phone</p>
-                <p className="info-value">
-                  +971 4 572 4542
-                  <br />
-                  +971 52 547 8137
-                </p>
-              </div>
-            </div>
-
-            <div className="info-block">
-              <div className="info-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </div>
-              <div className="info-content">
-                <p className="info-label">Email</p>
-                <p className="info-value">info@aspglobalmarine.com</p>
-              </div>
-            </div>
+            {/* NFC Card Button */}
+            <button 
+              className="nfc-toggle-btn"
+              onClick={() => setShowNFC(!showNFC)}
+            >
+              <CreditCard size={20} />
+              {showNFC ? 'Hide' : 'Show'} NFC Business Card
+            </button>
           </div>
 
-          {/* RFQ Form */}
-          <div className="contact-form">
-            <h3 className="form-title">Quick RFQ</h3>
-            <form onSubmit={handleSubmit}>
+          {/* Contact Form */}
+          <div className="contact-form-section">
+            <div className="form-header">
+              <h3>Send us a Message</h3>
+              <p>Fill out the form below and we&apos;ll respond within 24 hours</p>
+            </div>
+            
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="name">Full Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="company">Company Name</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="Your Company Ltd."
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+971 XX XXX XXXX"
+                  />
+                </div>
+              </div>
+
               <div className="form-group">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="subject">Subject *</label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
                   onChange={handleChange}
                   required
+                  placeholder="Marine Equipment Inquiry"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="vesselName">Vessel Name</label>
-                <input
-                  type="text"
-                  id="vesselName"
-                  name="vesselName"
-                  value={formData.vesselName}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="productRequirement">Product Requirement</label>
+                <label htmlFor="message">Message *</label>
                 <textarea
-                  id="productRequirement"
-                  name="productRequirement"
-                  rows="4"
-                  value={formData.productRequirement}
+                  id="message"
+                  name="message"
+                  rows="5"
+                  value={formData.message}
                   onChange={handleChange}
                   required
+                  placeholder="Please describe your requirements in detail..."
                 />
               </div>
 
@@ -163,45 +240,87 @@ const Contact = () => {
                   value={formData.urgencyLevel}
                   onChange={handleChange}
                 >
-                  <option value="normal">Normal</option>
-                  <option value="urgent">Urgent</option>
-                  <option value="critical">Critical</option>
+                  <option value="normal">Normal - Response within 24 hours</option>
+                  <option value="urgent">Urgent - Response within 6 hours</option>
+                  <option value="critical">Critical - Immediate response</option>
                 </select>
               </div>
 
-              <div className="form-group file-upload">
-                <label htmlFor="attachment">
-                  <span className="file-icon">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      width="20"
-                      height="20"
-                    >
-                      <path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z" />
-                    </svg>
-                  </span>
-                  Attach Technical Specification
-                </label>
-                <input
-                  type="file"
-                  id="attachment"
-                  name="attachment"
-                  onChange={handleChange}
-                  accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png"
-                  className="file-input"
-                />
-                {formData.attachment && (
-                  <p className="file-name">{formData.attachment.name}</p>
-                )}
-              </div>
-
               <button type="submit" className="submit-btn">
-                Submit Request
+                Send Message
+                <Mail size={18} />
               </button>
             </form>
           </div>
         </div>
+
+        {/* NFC Business Card Modal */}
+        {showNFC && (
+          <div className="nfc-modal-overlay" onClick={() => setShowNFC(false)}>
+            <div className="nfc-modal" onClick={(e) => e.stopPropagation()}>
+              <div className="nfc-modal-header">
+                <h3>Digital Business Card</h3>
+                <button 
+                  className="nfc-close-btn"
+                  onClick={() => setShowNFC(false)}
+                >
+                  <X size={20} />
+                </button>
+              </div>
+              
+              <div className="nfc-card">
+                <div className="nfc-card-header">
+                  <div className="nfc-logo">
+                    <img src="/logo.webp" alt="ASP Logo" />
+                  </div>
+                  <div className="nfc-company-info">
+                    <h4>{nfcCard.name}</h4>
+                    <p>{nfcCard.title}</p>
+                  </div>
+                </div>
+                
+                <div className="nfc-card-body">
+                  <div className="nfc-contact-item">
+                    <Phone size={16} />
+                    <span>{nfcCard.phone}</span>
+                  </div>
+                  <div className="nfc-contact-item">
+                    <Mail size={16} />
+                    <span>{nfcCard.email}</span>
+                  </div>
+                  <div className="nfc-contact-item">
+                    <Globe size={16} />
+                    <span>{nfcCard.website}</span>
+                  </div>
+                  <div className="nfc-contact-item">
+                    <MapPin size={16} />
+                    <span>{nfcCard.address}</span>
+                  </div>
+                </div>
+                
+                <div className="nfc-card-footer">
+                  <div className="nfc-chip">
+                    <div className="chip-lines"></div>
+                  </div>
+                  <div className="nfc-wifi-icon">
+                    <div className="wifi-signal"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="nfc-actions">
+                <button className="nfc-action-btn primary">
+                  <CreditCard size={16} />
+                  Add to Contacts
+                </button>
+                <button className="nfc-action-btn secondary">
+                  <Mail size={16} />
+                  Share via Email
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

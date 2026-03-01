@@ -1,71 +1,152 @@
 /**
  * ASP Global Marine Trading LLC - Engine Spares 4-Stroke Page
  *
- * Product Portfolio with Wartsila Brand and Technical Table
+ * Product Portfolio with Brand Logos and Product Cards
  */
 
+import { Settings, CheckCircle, Award } from "lucide-react";
+import PageHero from "../components/PageHero.jsx";
 import "../styles/pages/Products.css";
 
 const EngineSpares4Stroke = () => {
   const manufacturers = [
     {
-      name: "Wartsila",
-      models: [
-        "4L20",
-        "5L20",
-        "6L20",
-        "8L20",
-        "9L20",
-        "12V20",
-        "16V20",
-        "",
-        "",
-        "",
-      ],
+      name: "YANMAR",
+      models: ["EY18", "EY22", "EY26", "S165", "S185", "M2CO", "M220", "N18", "N2", "N165", "N260", "N300", "NY16", "T220", "T240", "T260"],
     },
     {
-      name: "Caterpillar",
-      models: ["M25C", "M26C", "M32C", "", "", "", "", "", "", ""],
+      name: "CAT",
+      models: ["C-1B", "C-32", "", "", "", "", "", "", "", ""],
     },
     {
-      name: "Cummins",
-      models: ["20V 175", "20V 200", "", "", "", "", "", "", "", ""],
+      name: "CUMMINS",
+      models: ["KTA-19-(D)M", "KTA-19M3", "KTA-38-(D)M", "KTA50-D(M)", "LTA A 89-92", "NTA 855-G(M)", "", "", "", ""],
     },
     {
-      name: "Yanmar",
-      models: ["V175", "V200", "", "", "", "", "", "", "", ""],
+      name: "DAIHATSU",
+      models: ["DC-17", "DK-20", "DK-26", "DK-28", "DE-18", "DE-23", "", "", "", ""],
     },
     {
-      name: "Daihatsu",
-      models: ["", "", "", "", "", "", "", "", "", ""],
-    },
-    {
-      name: "Weichai",
-      models: ["", "", "", "", "", "", "", "", "", ""],
+      name: "WEICHAI",
+      models: ["PROPULSION/AUXILLARY ENGINE", "VARIOUS MODELS", "", "", "", "", "", "", "", ""],
     },
   ];
 
   return (
     <div className="product-page">
+      {/* Hero Section - Using PageHero Component */}
+      <PageHero
+        title="ENGINE SPARES - 4 STROKE"
+        subtitle="Genuine OEM Parts"
+        icon={Settings}
+        badges={[
+          { icon: CheckCircle, text: "OEM Quality" },
+          { icon: Award, text: "Class Certified" }
+        ]}
+      />
+
       <div className="container">
-        {/* Page Header */}
-        <div className="portfolio-header dark-header">
-          <h1 className="portfolio-title">ENGINE SPARES (4 STROKE)</h1>
-        </div>
 
         {/* Supported Brands Section */}
         <div className="brands-section">
-          <div className="supported-brands-label">Brands Supported</div>
+          <div className="supported-brands-label">Supported Brands</div>
           <div className="brand-logos">
             <div className="brand-logo-item">
               <img
-                src="/brands/wartsila-logo.png"
-                alt="Wartsila"
+                src="/brands/yanmar-logo.png"
+                alt="YANMAR"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/cat-logo.png"
+                alt="CAT"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/cummins-logo.png"
+                alt="CUMMINS"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/daihatsu-logo.png"
+                alt="DAIHATSU"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/weichai-logo.png"
+                alt="WEICHAI"
                 className="brand-logo-img"
               />
             </div>
           </div>
         </div>
+
+        {/* Product Cards Section */}
+        <section className="product-cards-section">
+          <div className="product-cards-grid">
+            <div className="product-card-item">
+              <div className="product-card-content blue-card">
+                <h3>Cylinder Cover<br/>Piston crown<br/>Cooling Jacket</h3>
+              </div>
+              <div className="product-card-image">
+                <img src="/products/engine-spares-4stroke/cylinder-cover.webp" alt="Cylinder Cover, Piston crown, Cooling Jacket" />
+              </div>
+            </div>
+            
+            <div className="product-card-item reverse">
+              <div className="product-card-image">
+                <img src="/products/engine-spares-4stroke/air-starting-motor.webp" alt="Air Starting Motor, Piston Cleaning Ring, Fuel Transfer Pump" />
+              </div>
+              <div className="product-card-content blue-card">
+                <h3>Air Starting Motor<br/>Piston Cleaning Ring<br/>Fuel Transfer Pump</h3>
+              </div>
+            </div>
+            
+            <div className="product-card-item">
+              <div className="product-card-content blue-card">
+                <h3>Cam Shaft<br/>Sensors<br/>Inlet &amp; Exhaust Valve</h3>
+              </div>
+              <div className="product-card-image">
+                <img src="/products/engine-spares-4stroke/cam-shaft.webp" alt="Cam Shaft, Sensors, Inlet & Exhaust Valve" />
+              </div>
+            </div>
+            
+            <div className="product-card-item">
+              <div className="product-card-content blue-card">
+                <h3>Fuel Pump housing<br/>Roller Pump<br/>Fuel Pump for Roller Guide<br/>Filters (Air, Fuel, Lube)<br/>Fuel Nozzles</h3>
+              </div>
+              <div className="product-card-image">
+                <img src="/products/engine-spares-4stroke/fuel-pump.webp" alt="Fuel Pump housing, Roller Pump, Fuel Pump for Roller Guide, Filters, Fuel Nozzles" />
+              </div>
+            </div>
+            
+            <div className="product-card-item">
+              <div className="product-card-image">
+                <img src="/products/engine-spares-4stroke/main-engine.webp" alt="Main Engine/Generator" />
+              </div>
+              <div className="product-card-content overlay-card">
+                <h3>Main Engine/Generator</h3>
+              </div>
+            </div>
+            
+            <div className="product-card-item">
+              <div className="product-card-content blue-card">
+                <h3>Heat Exchangers<br/>Plate coolers<br/>Sea Water Pump<br/>Lube Oil Pump<br/>Head gasket kit</h3>
+              </div>
+              <div className="product-card-image">
+                <img src="/products/engine-spares-4stroke/heat-exchangers.webp" alt="Heat Exchangers, Plate coolers, Sea Water Pump, Lube Oil Pump, Head gasket kit" />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Manufacturer Table */}
         <section className="manufacturer-table-section">

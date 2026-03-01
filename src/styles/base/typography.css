@@ -5,8 +5,8 @@
  * Following recommended font and style guidelines
  */
 
-/* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@500;600&family=Oswald:wght@500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap");
+/* Import Google Fonts - Poppins Primary */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amsterdam+Signature&display=swap");
 
 /* Professional Heading Font - Oswald */
 /* Note: Oswald is a modern, professional sans-serif font perfect for corporate headings */
@@ -53,9 +53,9 @@
   }
 }
 
-/* Base typography settings */
+/* Base typography settings - Poppins throughout */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: var(--font-size-base);
   font-weight: 400;
   line-height: 1.6;
@@ -71,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: #0a1f44; /* Deep Navy */
@@ -94,17 +94,9 @@ h2 {
   position: relative;
 }
 
-/* All h2 underlines centered - universal fix */
+/* All h2 underlines removed */
 h2::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: var(--primary-gradient);
-  border-radius: var(--radius-full);
+  display: none;
 }
 
 h3 {
@@ -135,26 +127,18 @@ h6 {
   color: #0a1f44; /* Deep Navy */
 }
 
-/* Page title styles with centered underline */
+/* Page title styles with underline removed */
 .page-title {
   position: relative;
 }
 
 .page-title::after {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: var(--primary-gradient);
-  border-radius: var(--radius-full);
+  display: none;
 }
 
-/* Enhanced paragraph styling with Inter */
+/* Enhanced paragraph styling with Poppins */
 p {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   margin-bottom: var(--spacing-lg);
   line-height: 1.6;
@@ -163,9 +147,9 @@ p {
   font-size: 16px; /* Base font size */
 }
 
-/* Enhanced link styling */
+/* Enhanced link styling with Poppins */
 a {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #0a1f44; /* Navy Blue */
   text-decoration: none;
   font-weight: 500;
@@ -192,9 +176,9 @@ a:hover::after {
   width: 100%;
 }
 
-/* Button styling with Montserrat */
+/* Button styling with Poppins */
 .btn {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #ffffff;
   background-color: #2abaa3; /* Sea Green */
@@ -230,9 +214,9 @@ a:hover::after {
   color: var(--white-color);
 }
 
-/* Navigation styling */
+/* Navigation styling with Poppins */
 .nav-link {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #0a1f44; /* Navy Blue */
   transition: all var(--transition-normal);
@@ -243,7 +227,7 @@ a:hover::after {
 }
 
 .dropdown-item {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #333333; /* Charcoal Gray */
   transition: all var(--transition-normal);

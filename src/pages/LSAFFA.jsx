@@ -5,9 +5,10 @@
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-import "../styles/pages/Products.css";
 import { useState } from "react";
-import { MessageCircle, Mail, Phone } from "lucide-react";
+import { CheckCircle, Shield, LifeBuoy } from "lucide-react";
+import PageHero from "../components/PageHero.jsx";
+import "../styles/pages/Products.css";
 
 const LSAFFA = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -423,16 +424,18 @@ const LSAFFA = () => {
 
   return (
     <div className="product-page">
+      {/* Hero Section - Using PageHero Component */}
+      <PageHero
+        title="LSA & FFA Equipment"
+        subtitle="Life-Saving & Fire-Fighting"
+        icon={LifeBuoy}
+        badges={[
+          { icon: CheckCircle, text: "SOLAS Compliant" },
+          { icon: Shield, text: "IMO Certified" }
+        ]}
+      />
+
       <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">
-            LSA & FFA (Life-Saving & Fire-Fighting Equipment)
-          </h1>
-          <p className="page-subtitle">
-            Comprehensive Life-Saving Appliances and Fire-Fighting Equipment
-            Solutions
-          </p>
-        </div>
 
         {/* Product Grid Layout - 4 Products Per Row */}
         <section className="product-grid-layout-four">

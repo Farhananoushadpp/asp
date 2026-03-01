@@ -6,29 +6,25 @@
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
+import { Ship, Award, Users, Globe, Anchor } from "lucide-react";
+import PageHero from "../components/PageHero.jsx";
+import "../styles/pages/About.css";
+
 const About = () => {
   return (
     <div className="about-page">
-      {/* Hero Section */}
-      <section className="about-hero">
-        {/* Moving Ship */}
-        <div className="moving-ship-container">
-          <img src="/ship.png" alt="Marine Vessel" className="moving-ship" />
-          {/* Wake Trail */}
-          <div className="ship-wake">
-            <div className="wake-line wake-1"></div>
-            <div className="wake-line wake-2"></div>
-            <div className="wake-line wake-3"></div>
-          </div>
-        </div>
-
-        <div className="about-hero-content">
-          <h1 className="about-hero-title">About ASP Global Marine</h1>
-          <p className="about-hero-subtitle">
-            Your trusted partner in marine and offshore solutions since 2005
-          </p>
-        </div>
-      </section>
+      {/* Hero Section - Using PageHero Component */}
+      <PageHero
+        title="About ASP Global Marine"
+        subtitle="Company Overview"
+        icon={Ship}
+        badges={[
+          { icon: Award, text: "18+ Years Experience" },
+          { icon: Users, text: "500+ Global Clients" },
+          { icon: Globe, text: "50+ Countries Served" }
+        ]}
+        backgroundImage="/about.jpg"
+      />
 
       <div className="container">
         {/* Who We Are Section */}
@@ -93,7 +89,9 @@ const About = () => {
         >
           <div className="mission-vision-grid">
             <div className="mission-box">
-              <div className="box-icon">🚢</div>
+              <div className="box-icon">
+                <Ship size={48} />
+              </div>
               <h3>Our Mission</h3>
               <p>
                 To deliver accurate, reliable, and compliant marine solutions at
@@ -103,7 +101,9 @@ const About = () => {
               </p>
             </div>
             <div className="vision-box">
-              <div className="box-icon">⚓</div>
+              <div className="box-icon">
+                <Anchor size={48} />
+              </div>
               <h3>Our Vision</h3>
               <p>
                 To become a globally trusted marine supply partner known for

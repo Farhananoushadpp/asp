@@ -5,19 +5,23 @@
  * Technology: React functional component with JSX
  */
 
+import { Phone, Mail, MapPin } from "lucide-react";
+import PageHero from "../components/PageHero.jsx";
 import Contact from "../components/Contact.jsx";
 
 const ContactPage = () => {
   return (
     <div className="contact-page">
-      <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">Contact Us</h1>
-          <p className="page-subtitle">
-            Get in touch with ASP Global Marine Trading LLC
-          </p>
-        </div>
-      </div>
+      {/* Hero Section - Using PageHero Component */}
+      <PageHero
+        title="Contact Us"
+        subtitle="Get In Touch"
+        icon={Phone}
+        badges={[
+          { icon: Mail, text: "24/7 Email Support" },
+          { icon: MapPin, text: "Global Presence" }
+        ]}
+      />
 
       <Contact />
     </div>

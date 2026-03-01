@@ -27,7 +27,7 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
+/* Set core body defaults - No Top Spacing */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -35,6 +35,26 @@ body {
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* Ensure no spacing on root elements */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* Remove spacing from main content wrapper */
+main, #root, .app {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
 }
 
 /* A elements that don't have a class get default styles */

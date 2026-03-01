@@ -1,42 +1,51 @@
 /**
  * ASP Global Marine Trading LLC - Oil Purifiers & Filters Page
  *
- * Product Portfolio with Alfa Laval Brand and Product Sections
+ * Product Portfolio with GEA and Alfa Laval Brands
  */
 
+import { Settings, CheckCircle, Award } from "lucide-react";
+import PageHero from "../components/PageHero.jsx";
 import "../styles/pages/Products.css";
 
 const Purifiers = () => {
   const manufacturers = [
     {
+      name: "GEA WESFALIA",
+      models: ["OSE - 5-20 - SERIES", "", "", "", ""],
+    },
+    {
       name: "ALFA LAVAL",
-      models: [
-        "P150",
-        "P190",
-        "P210",
-        "P260",
-        "P300",
-        "P350",
-        "P400",
-        "P500",
-        "P600",
-        "P615",
-      ],
+      models: ["PI50 - P615 - SERIES", "8815 - S937- SERIES", "FOPX - SERIES", "MOPX -SERIES", ""],
     },
   ];
 
   return (
     <div className="product-page">
+      {/* Hero Section - Using PageHero Component */}
+      <PageHero
+        title="PURIFIERS"
+        subtitle="Oil Purifiers & Filters"
+        icon={Settings}
+        badges={[
+          { icon: CheckCircle, text: "OEM Quality" },
+          { icon: Award, text: "Class Certified" }
+        ]}
+      />
+
       <div className="container">
-        {/* Page Header */}
-        <div className="portfolio-header">
-          <h1 className="portfolio-title">OIL PURIFIERS & FILTERS</h1>
-        </div>
 
         {/* Supported Brands Section */}
         <div className="brands-section">
-          <div className="supported-brands-label">Supported Brands</div>
+          <div className="supported-brands-label">Brands Supported</div>
           <div className="brand-logos">
+            <div className="brand-logo-item">
+              <img
+                src="/brands/gea-logo.png"
+                alt="GEA"
+                className="brand-logo-img"
+              />
+            </div>
             <div className="brand-logo-item">
               <img
                 src="/brands/alfa-laval-logo.png"
@@ -54,10 +63,6 @@ const Purifiers = () => {
               <tr>
                 <th className="col-manufacturer">Manufacturer</th>
                 <th className="col-type">Model</th>
-                <th className="model-cell"></th>
-                <th className="model-cell"></th>
-                <th className="model-cell"></th>
-                <th className="model-cell"></th>
                 <th className="model-cell"></th>
                 <th className="model-cell"></th>
                 <th className="model-cell"></th>
@@ -84,45 +89,24 @@ const Purifiers = () => {
           </table>
         </section>
 
-        {/* Product Display Grid */}
-        <section className="product-display-grid">
-          <div className="product-display-row">
-            {/* Left Product - Centrifugal Purifier Spares */}
-            <div className="product-display-item">
-              <div className="blue-text-box">
-                <ul>
-                  <li>Centrifugal Purifier Spares</li>
-                  <li>Spare Parts For</li>
-                  <li>Self-jector M/P & A/P</li>
-                </ul>
+        {/* Product Cards Section */}
+        <section className="product-cards-section">
+          <div className="product-cards-grid">
+            <div className="product-card-item">
+              <div className="product-card-content blue-card">
+                <h3>Valve Block<br/>Pressure Transmitter<br/>Rectangular Ring<br/>Valve Plug<br/>Vibration Damper</h3>
               </div>
-              <div className="connector"></div>
-              <div className="product-image-container">
-                <img
-                  src="/products/centrifugal-purifier.webp"
-                  alt="Centrifugal Purifier Spares"
-                  loading="lazy"
-                />
+              <div className="product-card-image">
+                <img src="/products/purifiers/valve-block.webp" alt="Valve Block, Pressure Transmitter, Rectangular Ring, Valve Plug, Vibration Damper" />
               </div>
             </div>
-
-            {/* Right Product - Oil Treatment */}
-            <div className="product-display-item">
-              <div className="blue-text-box">
-                <ul>
-                  <li>Oil Treatment</li>
-                  <li>Duplex Oil Filters</li>
-                  <li>Back Flush Oil Filter</li>
-                  <li>Complete Oil Filter</li>
-                </ul>
+            
+            <div className="product-card-item reverse">
+              <div className="product-card-image">
+                <img src="/products/purifiers/o-ring.webp" alt="O Ring, Covering Washer, Spanner For Bowl, Compression Tool, Quick Coupling-NRV" />
               </div>
-              <div className="connector"></div>
-              <div className="product-image-container">
-                <img
-                  src="/products/oil-treatment.webp"
-                  alt="Oil Treatment, Duplex Oil Filters, Back Flush Oil Filter, Complete Oil Filter"
-                  loading="lazy"
-                />
+              <div className="product-card-content blue-card">
+                <h3>O Ring<br/>Covering Washer<br/>Spanner For Bowl<br/>Compression Tool<br/>Quick Coupling-NRV</h3>
               </div>
             </div>
           </div>

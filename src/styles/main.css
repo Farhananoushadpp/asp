@@ -27,6 +27,24 @@
 @import "./pages/Products.css";
 @import "./pages/Contact.css";
 
+/* App Layout - No Container Wrapper */
+.App {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: var(--background-color);
+  min-height: 100vh;
+}
+
+.main-content {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
 /* Enhanced SVG Icon System */
 .icon {
   display: inline-flex;

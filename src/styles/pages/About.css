@@ -884,6 +884,7 @@
   font-size: var(--font-size-4xl);
   font-weight: 700;
   color: var(--primary-color);
+  text-decoration: none;
   line-height: 1.2;
 }
 
@@ -960,6 +961,7 @@
   font-size: var(--font-size-2xl);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-md);
 }
 
@@ -1005,6 +1007,7 @@
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-xs);
 }
 
@@ -1041,6 +1044,7 @@
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -1064,6 +1068,7 @@
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-md);
   padding-bottom: var(--spacing-sm);
 }
@@ -1104,6 +1109,7 @@
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -1118,6 +1124,7 @@
 }
 
 .message-content {
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1196,6 +1203,7 @@
   font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-md);
   line-height: 1.3;
 }
@@ -1230,6 +1238,7 @@
   font-size: var(--font-size-3xl);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-3xl);
 }
 
@@ -1267,6 +1276,7 @@
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -1286,6 +1296,7 @@
   font-size: var(--font-size-3xl);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-3xl);
 }
 
@@ -1309,6 +1320,7 @@
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -1328,6 +1340,7 @@
   font-size: var(--font-size-3xl);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-3xl);
 }
 
@@ -1351,6 +1364,7 @@
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -1400,6 +1414,7 @@
   font-size: var(--font-size-2xl);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-md);
 }
 
@@ -1741,6 +1756,7 @@
   font-size: var(--font-size-2xl);
   font-weight: 600;
   color: #2abaa3;
+  text-decoration: none;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -1769,6 +1785,7 @@
   font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
   margin-bottom: var(--spacing-lg);
   text-align: center;
 }

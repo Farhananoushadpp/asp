@@ -1,17 +1,23 @@
 /**
- * ASP Global Marine Trading LLC - Contact Section Styles
- * 
- * Office info and Quick RFQ Form
- * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ * ASP Global Marine Trading LLC - Professional Contact Section Styles
+ *
+ * Modern contact section with NFC card view option
+ * Professional maritime corporate design
  */
 
 .contact {
   padding: var(--spacing-5xl) 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+/* Contact Header */
+.contact-header {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
 }
 
 .contact .section-label {
   display: block;
-  text-align: center;
   font-size: var(--font-size-xs);
   font-weight: 600;
   color: var(--accent-color);
@@ -21,81 +27,526 @@
 }
 
 .contact-headline {
-  text-align: center;
   font-size: var(--font-size-4xl);
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.2;
 }
 
+.contact-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Contact Grid */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-3xl);
-  max-width: 1000px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--spacing-4xl);
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Contact Info */
-.contact-info {
-  background: var(--white-color);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
-}
-
-.info-title {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-xl);
-}
-
-.info-block {
+/* Contact Information Section */
+.contact-info-section {
   display: flex;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
+  flex-direction: column;
+  gap: var(--spacing-xl);
 }
 
-.info-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--background-color);
-  border-radius: var(--radius-lg);
+/* Contact Cards */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.contact-card {
+  background: var(--white-color);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-lg);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(14, 116, 144, 0.15);
+  border-color: #0E7490;
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  color: white;
 }
 
-.info-icon svg {
-  width: 24px;
-  height: 24px;
-  color: var(--secondary-color);
-}
-
-.info-label {
-  font-size: var(--font-size-xs);
+.card-content h3 {
+  font-size: var(--font-size-lg);
   font-weight: 600;
-  color: var(--dark-gray);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-detail {
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+}
+
+.card-contacts p {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--primary-color);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
   margin-bottom: var(--spacing-xs);
 }
 
-.info-value {
-  font-size: var(--font-size-base);
-  color: var(--primary-color);
+.card-hours p {
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
   line-height: 1.5;
-  margin: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-hours .emergency {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* NFC Toggle Button */
+.nfc-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(14, 116, 144, 0.2);
+}
+
+.nfc-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(14, 116, 144, 0.35);
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background: var(--white-color);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: var(--spacing-2xl);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.form-header h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.form-header p {
+  color: var(--text-color);
+  font-size: var(--font-size-base);
 }
 
 /* Contact Form */
 .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: var(--spacing-md);
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: var(--font-size-sm);
+  transition: all 0.3s ease;
   background: var(--white-color);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-lg);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #0E7490;
+  box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(14, 116, 144, 0.2);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(14, 116, 144, 0.35);
+}
+
+/* NFC Modal */
+.nfc-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.nfc-modal {
+  background: var(--white-color);
+  border-radius: 20px;
   padding: var(--spacing-2xl);
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nfc-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.nfc-modal-header h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nfc-close-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.nfc-close-btn:hover {
+  background: #e2e8f0;
+  color: var(--primary-color);
+}
+
+/* NFC Business Card */
+.nfc-card {
+  background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+  border-radius: 16px;
+  padding: var(--spacing-xl);
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.nfc-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nfc-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.nfc-logo {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+}
+
+.nfc-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nfc-company-info h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.nfc-company-info p {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+}
+
+.nfc-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.nfc-contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.nfc-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-lg);
+}
+
+.nfc-chip {
+  width: 40px;
+  height: 30px;
+  background: #fbbf24;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chip-lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 2px;
+  background: #92400e;
+  box-shadow: 0 4px 0 #92400e, 0 8px 0 #92400e;
+}
+
+.nfc-wifi-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.wifi-signal {
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.wifi-signal::before,
+.wifi-signal::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.wifi-signal::before {
+  width: 12px;
+  height: 12px;
+}
+
+.wifi-signal::after {
+  width: 6px;
+  height: 6px;
+  background: white;
+}
+
+/* NFC Actions */
+.nfc-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.nfc-action-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.nfc-action-btn.primary {
+  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  color: white;
+}
+
+.nfc-action-btn.secondary {
+  background: #f1f5f9;
+  color: var(--primary-color);
+}
+
+.nfc-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3xl);
+  }
+  
+  .contact-info-section {
+    order: 2;
+  }
+  
+  .contact-form-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .contact-headline {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .contact-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nfc-modal {
+    padding: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-section {
+    padding: var(--spacing-lg);
+  }
+  
+  .nfc-actions {
+    flex-direction: column;
+  }
+  
+  .contact-card {
+    padding: var(--spacing-lg);
+  }
 }
 
 .form-title {

@@ -106,20 +106,18 @@ const Authorizations = () => {
     <div className="about-page">
       {/* Hero Section */}
       <section className="about-hero">
-        <div className="container">
-          <div className="about-hero-content">
-            <div className="about-hero-text">
-              <span className="section-label">Certifications & Compliance</span>
-              <h1 className="about-hero-title">Authorizations</h1>
-              <p className="about-hero-subtitle">
-                Our official authorizations and certifications demonstrate our
-                commitment to quality, compliance, and excellence in the
-                maritime industry.
-              </p>
-            </div>
-            <div className="about-hero-icon">
-              <Shield className="asp-global-icon" size={120} />
-            </div>
+        <div className="about-hero-content">
+          <div className="about-hero-text">
+            <span className="section-label">Certifications & Compliance</span>
+            <h1 className="about-hero-title">Authorizations</h1>
+            <p className="about-hero-subtitle">
+              Our official authorizations and certifications demonstrate our
+              commitment to quality, compliance, and excellence in the
+              maritime industry.
+            </p>
+          </div>
+          <div className="about-hero-icon">
+            <Shield className="asp-global-icon" size={120} />
           </div>
         </div>
       </section>

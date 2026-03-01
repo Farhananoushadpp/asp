@@ -72,6 +72,14 @@ const Navbar = () => {
               </button>
               <div className="dropdown-menu">
                 <Link
+                  to="/products"
+                  className="dropdown-item dropdown-main"
+                  onClick={closeMenu}
+                >
+                  View All Products
+                </Link>
+                <div className="dropdown-divider"></div>
+                <Link
                   to="/products/engine-stores"
                   className="dropdown-item"
                   onClick={closeMenu}
@@ -181,8 +189,8 @@ const Navbar = () => {
         </div>
 
         <div className="nav-actions">
-          <Link to="/contact" className="btn btn-primary btn-sm">
-            Request Quote
+          <Link to="/contact" className="btn-contact">
+            Get Quote
           </Link>
         </div>
 

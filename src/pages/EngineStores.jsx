@@ -7,7 +7,8 @@
 
 import "../styles/pages/Products.css";
 import { useState } from "react";
-import { MessageCircle, Mail, Phone } from "lucide-react";
+import { Wrench, CheckCircle, Shield } from "lucide-react";
+import PageHero from "../components/PageHero.jsx";
 
 const EngineStores = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -456,13 +457,18 @@ const EngineStores = () => {
 
   return (
     <div className="product-page">
+      {/* Hero Section - Using PageHero Component */}
+      <PageHero
+        title="Engine Stores"
+        subtitle="Comprehensive Engine Room Supplies"
+        icon={Wrench}
+        badges={[
+          { icon: CheckCircle, text: "High Quality Parts" },
+          { icon: Shield, text: "Marine Grade" }
+        ]}
+      />
+
       <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">Engine Stores</h1>
-          <p className="page-subtitle">
-            Comprehensive Engine Room Supplies and Equipment Solutions
-          </p>
-        </div>
 
         {/* Product Grid Layout - 4 Products Per Row */}
         <section className="product-grid-layout-four">

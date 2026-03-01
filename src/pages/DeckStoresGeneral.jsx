@@ -7,7 +7,8 @@
 
 import "../styles/pages/Products.css";
 import { useState } from "react";
-import { MessageCircle, Mail, Phone } from "lucide-react";
+import { Anchor, CheckCircle, Shield } from "lucide-react";
+import PageHero from "../components/PageHero.jsx";
 
 const DeckStoresGeneral = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -449,13 +450,18 @@ const DeckStoresGeneral = () => {
 
   return (
     <div className="product-page">
+      {/* Hero Section - Using PageHero Component */}
+      <PageHero
+        title="Deck Stores & General Marine Stores"
+        subtitle="Comprehensive Deck Equipment & Supplies"
+        icon={Anchor}
+        badges={[
+          { icon: CheckCircle, text: "Marine Grade" },
+          { icon: Shield, text: "Quality Assured" }
+        ]}
+      />
+
       <div className="container">
-        <div className="page-header">
-          <h1 className="page-title">Deck Stores & General Marine Stores</h1>
-          <p className="page-subtitle">
-            Comprehensive Deck Equipment and General Marine Supplies Solutions
-          </p>
-        </div>
 
         {/* Product Grid Layout - 4 Products Per Row */}
         <section className="product-grid-layout-four">
