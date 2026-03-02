@@ -15,11 +15,41 @@ const BeijingZhonghanghua = () => {
   }, []);
 
   const valves = [
-    { type: "Safety Valve", model: "BZA-10", size: "DN15-DN400", pressure: "0.1-32 MPa", temp: "-196°C to 550°C" },
-    { type: "Pilot Operated Valve", model: "BZA-P20", size: "DN50-DN600", pressure: "0.1-16 MPa", temp: "-196°C to 400°C" },
-    { type: "Pressure Relief Valve", model: "BZP-15", size: "DN25-DN300", pressure: "0.1-42 MPa", temp: "-60°C to 450°C" },
-    { type: "Change Over Valve", model: "BZC-25", size: "DN80-DN400", pressure: "0.1-10 MPa", temp: "-20°C to 350°C" },
-    { type: "Pressure Vacuum Valve", model: "BZV-30", size: "DN50-DN500", pressure: "-0.1 to 0.1 MPa", temp: "-40°C to 200°C" },
+    {
+      type: "Safety Valve",
+      model: "BZA-10",
+      size: "DN15-DN400",
+      pressure: "0.1-32 MPa",
+      temp: "-196°C to 550°C",
+    },
+    {
+      type: "Pilot Operated Valve",
+      model: "BZA-P20",
+      size: "DN50-DN600",
+      pressure: "0.1-16 MPa",
+      temp: "-196°C to 400°C",
+    },
+    {
+      type: "Pressure Relief Valve",
+      model: "BZP-15",
+      size: "DN25-DN300",
+      pressure: "0.1-42 MPa",
+      temp: "-60°C to 450°C",
+    },
+    {
+      type: "Change Over Valve",
+      model: "BZC-25",
+      size: "DN80-DN400",
+      pressure: "0.1-10 MPa",
+      temp: "-20°C to 350°C",
+    },
+    {
+      type: "Pressure Vacuum Valve",
+      model: "BZV-30",
+      size: "DN50-DN500",
+      pressure: "-0.1 to 0.1 MPa",
+      temp: "-40°C to 200°C",
+    },
   ];
 
   return (
@@ -35,24 +65,24 @@ const BeijingZhonghanghua = () => {
       {/* Header Section */}
       <section className="partner-header-section">
         <div className="partner-header-content">
-            <div className="partner-logo-section">
-              <img
-                src="/Authorisation/Beijing/EOPIaA.tif.webp"
-                alt="Beijing Zhonghanghua Logo"
-                className="partner-detail-logo"
-                onError={(e) => {
-                  e.target.src = "/logo.webp";
-                }}
-              />
-              <span className="partner-since">Est. 2002</span>
-            </div>
-            <div className="partner-title-section">
-              <h1>Beijing Zhonghanghua Safety Valve Sales Co., Ltd.</h1>
-              <p className="partner-location">
-                <MapPin size={18} /> Beijing, China
-              </p>
-              <p className="partner-category">Safety Valves</p>
-            </div>
+          <div className="partner-logo-section">
+            <img
+              src="/Authorisation/Beijing/EOPIaA.tif.webp"
+              alt="Beijing Zhonghanghua Logo"
+              className="partner-detail-logo"
+              onError={(e) => {
+                e.target.src = "/logo.webp";
+              }}
+            />
+            <span className="partner-since">Est. 2002</span>
+          </div>
+          <div className="partner-title-section">
+            <h1>Beijing Zhonghanghua Safety Valve Sales Co., Ltd.</h1>
+            <p className="partner-location">
+              <MapPin size={18} /> Beijing, China
+            </p>
+            <p className="partner-category">Safety Valves</p>
+          </div>
         </div>
       </section>
 
@@ -64,24 +94,37 @@ const BeijingZhonghanghua = () => {
             <div className="main-content">
               <h2>Company Overview</h2>
               <p>
-                Beijing Zhonghanghua Safety Valve Sales Co., Ltd. is the sales entity for safety 
-                valves and specialty valves designed and manufactured by Beijing Aerospace Propulsion 
-                Institute Pressure Relief Branch. Established in 2002, the company specializes in 
-                marine safety valves, pressure relief systems, and industrial valve solutions.
+                Beijing Zhonghanghua Safety Valve Sales Co., Ltd. is the sales
+                entity for safety valves and specialty valves designed and
+                manufactured by Beijing Aerospace Propulsion Institute Pressure
+                Relief Branch. Established in 2002, the company specializes in
+                marine safety valves, pressure relief systems, and industrial
+                valve solutions.
               </p>
               <p>
-                With expertise in precision engineering and safety compliance, Zhonghanghua provides 
-                pressure-tested, marine-certified valve solutions that meet the highest international 
-                safety standards for maritime applications.
+                With expertise in precision engineering and safety compliance,
+                Zhonghanghua provides pressure-tested, marine-certified valve
+                solutions that meet the highest international safety standards
+                for maritime applications.
               </p>
 
               <h3>Key Strengths</h3>
               <ul className="strengths-list">
-                <li><CheckCircle size={16} /> Pressure Tested Products</li>
-                <li><CheckCircle size={16} /> Marine Certification Standards</li>
-                <li><CheckCircle size={16} /> Precision Engineering</li>
-                <li><CheckCircle size={16} /> Safety Compliant Design</li>
-                <li><CheckCircle size={16} /> Aerospace Technology Heritage</li>
+                <li>
+                  <CheckCircle size={16} /> Pressure Tested Products
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Marine Certification Standards
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Precision Engineering
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Safety Compliant Design
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Aerospace Technology Heritage
+                </li>
               </ul>
 
               <h3>Product Range</h3>
@@ -127,13 +170,6 @@ const BeijingZhonghanghua = () => {
 
             {/* Sidebar */}
             <aside className="partner-sidebar">
-              <div className="contact-card">
-                <h3>Contact Information</h3>
-                <p><MapPin size={16} /> Beijing, China</p>
-                <p><Phone size={16} /> +86-10-XXXX-XXXX</p>
-                <p><Mail size={16} /> sales@zhonghanghua.com</p>
-              </div>
-
               <div className="certifications-card">
                 <h3>Certifications</h3>
                 <ul>

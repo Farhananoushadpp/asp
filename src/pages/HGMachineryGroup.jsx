@@ -15,11 +15,41 @@ const HGMachineryGroup = () => {
   }, []);
 
   const products = [
-    { name: "Twin Screw Pump", model: "TSP-150", flow: "150 m³/h", pressure: "1.0 MPa", application: "Cargo Oil" },
-    { name: "Three Screw Pump", model: "THSP-80", flow: "80 m³/h", pressure: "1.5 MPa", application: "Lube Oil" },
-    { name: "Gear Pump", model: "GP-60", flow: "60 m³/h", pressure: "2.5 MPa", application: "Fuel Oil" },
-    { name: "Deep Well Pump", model: "DWP-200", flow: "200 m³/h", pressure: "0.6 MPa", application: "Ballast" },
-    { name: "Vacuum Pump", model: "VP-40", flow: "40 m³/h", pressure: "0.08 MPa", application: "Bilge" },
+    {
+      name: "Twin Screw Pump",
+      model: "TSP-150",
+      flow: "150 m³/h",
+      pressure: "1.0 MPa",
+      application: "Cargo Oil",
+    },
+    {
+      name: "Three Screw Pump",
+      model: "THSP-80",
+      flow: "80 m³/h",
+      pressure: "1.5 MPa",
+      application: "Lube Oil",
+    },
+    {
+      name: "Gear Pump",
+      model: "GP-60",
+      flow: "60 m³/h",
+      pressure: "2.5 MPa",
+      application: "Fuel Oil",
+    },
+    {
+      name: "Deep Well Pump",
+      model: "DWP-200",
+      flow: "200 m³/h",
+      pressure: "0.6 MPa",
+      application: "Ballast",
+    },
+    {
+      name: "Vacuum Pump",
+      model: "VP-40",
+      flow: "40 m³/h",
+      pressure: "0.08 MPa",
+      application: "Bilge",
+    },
   ];
 
   return (
@@ -64,23 +94,37 @@ const HGMachineryGroup = () => {
             <div className="main-content">
               <h2>Company Overview</h2>
               <p>
-                HG Machinery Group is a premier supplier of marine engine components, turbochargers, 
-                and auxiliary machinery. Established in 2005, the group has become a leading manufacturer 
-                specializing in twin screw, three screw, gear, vacuum, centrifugal, and deep well cargo pumps, 
-                along with hydraulic and electric pumps and various valves.
+                HG Machinery Group is a premier supplier of marine engine
+                components, turbochargers, and auxiliary machinery. Established
+                in 2005, the group has become a leading manufacturer
+                specializing in twin screw, three screw, gear, vacuum,
+                centrifugal, and deep well cargo pumps, along with hydraulic and
+                electric pumps and various valves.
               </p>
               <p>
-                The group is certified with CE, ISO9001, ISO14001, and OHSAS18001, and its marine products 
-                are approved by major classification societies including CCS, BV, KR, ABS, NK, RINA, and RMRS.
+                The group is certified with CE, ISO9001, ISO14001, and
+                OHSAS18001, and its marine products are approved by major
+                classification societies including CCS, BV, KR, ABS, NK, RINA,
+                and RMRS.
               </p>
 
               <h3>Key Strengths</h3>
               <ul className="strengths-list">
-                <li><CheckCircle size={16} /> OEM Quality Parts Manufacturing</li>
-                <li><CheckCircle size={16} /> Complete Engine Overhaul Services</li>
-                <li><CheckCircle size={16} /> Extensive Spare Parts Inventory</li>
-                <li><CheckCircle size={16} /> Technical Documentation Support</li>
-                <li><CheckCircle size={16} /> Global After-Sales Network</li>
+                <li>
+                  <CheckCircle size={16} /> OEM Quality Parts Manufacturing
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Complete Engine Overhaul Services
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Extensive Spare Parts Inventory
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Technical Documentation Support
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Global After-Sales Network
+                </li>
               </ul>
 
               <h3>Product Range</h3>
@@ -119,13 +163,6 @@ const HGMachineryGroup = () => {
 
             {/* Sidebar */}
             <aside className="partner-sidebar">
-              <div className="contact-card">
-                <h3>Contact Information</h3>
-                <p><MapPin size={16} /> Shanghai, China</p>
-                <p><Phone size={16} /> +86-21-XXXX-XXXX</p>
-                <p><Mail size={16} /> info@hgmachinery.com</p>
-              </div>
-
               <div className="certifications-card">
                 <h3>Certifications</h3>
                 <ul>

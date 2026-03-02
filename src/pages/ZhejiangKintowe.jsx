@@ -15,11 +15,41 @@ const ZhejiangKintowe = () => {
   }, []);
 
   const products = [
-    { name: "Mechanical Seal", model: "KS-100", pressure: "2.5 MPa", temp: "-40°C to 200°C", material: "Carbon/SiC" },
-    { name: "Gland Packing", model: "KP-200", pressure: "1.5 MPa", temp: "-50°C to 280°C", material: "PTFE/Graphite" },
-    { name: "O-Ring", model: "KO-300", pressure: "20 MPa", temp: "-60°C to 230°C", material: "FKM/NBR" },
-    { name: "Bearing Bushing", model: "KB-150", pressure: "5.0 MPa", temp: "-30°C to 150°C", material: "PFC Composite" },
-    { name: "Gasket Sheet", model: "KG-400", pressure: "10 MPa", temp: "-100°C to 450°C", material: "Graphite/Metal" },
+    {
+      name: "Mechanical Seal",
+      model: "KS-100",
+      pressure: "2.5 MPa",
+      temp: "-40°C to 200°C",
+      material: "Carbon/SiC",
+    },
+    {
+      name: "Gland Packing",
+      model: "KP-200",
+      pressure: "1.5 MPa",
+      temp: "-50°C to 280°C",
+      material: "PTFE/Graphite",
+    },
+    {
+      name: "O-Ring",
+      model: "KO-300",
+      pressure: "20 MPa",
+      temp: "-60°C to 230°C",
+      material: "FKM/NBR",
+    },
+    {
+      name: "Bearing Bushing",
+      model: "KB-150",
+      pressure: "5.0 MPa",
+      temp: "-30°C to 150°C",
+      material: "PFC Composite",
+    },
+    {
+      name: "Gasket Sheet",
+      model: "KG-400",
+      pressure: "10 MPa",
+      temp: "-100°C to 450°C",
+      material: "Graphite/Metal",
+    },
   ];
 
   return (
@@ -35,24 +65,24 @@ const ZhejiangKintowe = () => {
       {/* Header Section */}
       <section className="partner-header-section">
         <div className="partner-header-content">
-            <div className="partner-logo-section">
-              <img
-                src="/Authorisation/Kintowe/logo.webp"
-                alt="Kintowe Sealing Technology Logo"
-                className="partner-detail-logo"
-                onError={(e) => {
-                  e.target.src = "/logo.webp";
-                }}
-              />
-              <span className="partner-since">Est. 2003</span>
-            </div>
-            <div className="partner-title-section">
-              <h1>Zhejiang Kintowe Sealing Technology Co.</h1>
-              <p className="partner-location">
-                <MapPin size={18} /> Ningbo, China
-              </p>
-              <p className="partner-category">Sealing Solutions</p>
-            </div>
+          <div className="partner-logo-section">
+            <img
+              src="/Authorisation/Kintowe/logo.webp"
+              alt="Kintowe Sealing Technology Logo"
+              className="partner-detail-logo"
+              onError={(e) => {
+                e.target.src = "/logo.webp";
+              }}
+            />
+            <span className="partner-since">Est. 2003</span>
+          </div>
+          <div className="partner-title-section">
+            <h1>Zhejiang Kintowe Sealing Technology Co.</h1>
+            <p className="partner-location">
+              <MapPin size={18} /> Ningbo, China
+            </p>
+            <p className="partner-category">Sealing Solutions</p>
+          </div>
         </div>
       </section>
 
@@ -64,38 +94,61 @@ const ZhejiangKintowe = () => {
             <div className="main-content">
               <h2>Company Overview</h2>
               <p>
-                Zhejiang Kintowe Sealing Technology Co. is a specialized manufacturer of high-performance 
-                sealing solutions. Founded in 2003, the company provides mechanical seals, gland packing, 
-                O-rings, and composite bearing solutions for marine and industrial applications.
+                Zhejiang Kintowe Sealing Technology Co. is a specialized
+                manufacturer of high-performance sealing solutions. Founded in
+                2003, the company provides mechanical seals, gland packing,
+                O-rings, and composite bearing solutions for marine and
+                industrial applications.
               </p>
               <p>
-                The company is known for its advanced composite materials including PFC-6 and PFC-22 
-                phenolic-based composite water-lubricated bearings, as well as polyurethane water-lubricated 
-                bearings that provide exceptional performance in harsh marine environments.
+                The company is known for its advanced composite materials
+                including PFC-6 and PFC-22 phenolic-based composite
+                water-lubricated bearings, as well as polyurethane
+                water-lubricated bearings that provide exceptional performance
+                in harsh marine environments.
               </p>
 
               <h3>Key Strengths</h3>
               <ul className="strengths-list">
-                <li><CheckCircle size={16} /> Marine-Grade Material Technology</li>
-                <li><CheckCircle size={16} /> Custom Seal Design Services</li>
-                <li><CheckCircle size={16} /> Pressure-Rated Products</li>
-                <li><CheckCircle size={16} /> Corrosion Resistant Materials</li>
-                <li><CheckCircle size={16} /> Self-Lubricating Properties</li>
+                <li>
+                  <CheckCircle size={16} /> Marine-Grade Material Technology
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Custom Seal Design Services
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Pressure-Rated Products
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Corrosion Resistant Materials
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Self-Lubricating Properties
+                </li>
               </ul>
 
               <h3>Product Categories</h3>
               <div className="product-categories">
                 <div className="category-item">
                   <h4>Water Lubricated Stern Tube Bearings</h4>
-                  <p>Eco-friendly bearings designed for efficient stern tube and rudder applications with superior wear resistance.</p>
+                  <p>
+                    Eco-friendly bearings designed for efficient stern tube and
+                    rudder applications with superior wear resistance.
+                  </p>
                 </div>
                 <div className="category-item">
                   <h4>Marine Bearing Series</h4>
-                  <p>Composite Rudder Bearings with self-lubricating properties ensuring long service life in marine conditions.</p>
+                  <p>
+                    Composite Rudder Bearings with self-lubricating properties
+                    ensuring long service life in marine conditions.
+                  </p>
                 </div>
                 <div className="category-item">
                   <h4>Rudder Pintle Bushes</h4>
-                  <p>Durable composite bushes with smooth performance, specifically built for harsh marine conditions.</p>
+                  <p>
+                    Durable composite bushes with smooth performance,
+                    specifically built for harsh marine conditions.
+                  </p>
                 </div>
               </div>
 
@@ -128,13 +181,6 @@ const ZhejiangKintowe = () => {
 
             {/* Sidebar */}
             <aside className="partner-sidebar">
-              <div className="contact-card">
-                <h3>Contact Information</h3>
-                <p><MapPin size={16} /> Ningbo, Zhejiang, China</p>
-                <p><Phone size={16} /> +86-574-XXXX-XXXX</p>
-                <p><Mail size={16} /> sales@kintowe.com</p>
-              </div>
-
               <div className="certifications-card">
                 <h3>Certifications</h3>
                 <ul>

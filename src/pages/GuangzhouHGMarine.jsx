@@ -15,11 +15,41 @@ const GuangzhouHGMarine = () => {
   }, []);
 
   const products = [
-    { name: "Rim Thruster RT-100", model: "RT-100", power: "100 kW", thrust: "15 kN", application: "Vessel Propulsion" },
-    { name: "Rim Thruster RT-150", model: "RT-150", power: "150 kW", thrust: "22 kN", application: "Vessel Propulsion" },
-    { name: "Rim Thruster RT-200", model: "RT-200", power: "200 kW", thrust: "30 kN", application: "Vessel Propulsion" },
-    { name: "Steering Gear SG-50", model: "SG-50", torque: "50 kNm", pressure: "25 MPa", application: "Vessel Steering" },
-    { name: "Steering Gear SG-100", model: "SG-100", torque: "100 kNm", pressure: "35 MPa", application: "Vessel Steering" },
+    {
+      name: "Rim Thruster RT-100",
+      model: "RT-100",
+      power: "100 kW",
+      thrust: "15 kN",
+      application: "Vessel Propulsion",
+    },
+    {
+      name: "Rim Thruster RT-150",
+      model: "RT-150",
+      power: "150 kW",
+      thrust: "22 kN",
+      application: "Vessel Propulsion",
+    },
+    {
+      name: "Rim Thruster RT-200",
+      model: "RT-200",
+      power: "200 kW",
+      thrust: "30 kN",
+      application: "Vessel Propulsion",
+    },
+    {
+      name: "Steering Gear SG-50",
+      model: "SG-50",
+      torque: "50 kNm",
+      pressure: "25 MPa",
+      application: "Vessel Steering",
+    },
+    {
+      name: "Steering Gear SG-100",
+      model: "SG-100",
+      torque: "100 kNm",
+      pressure: "35 MPa",
+      application: "Vessel Steering",
+    },
   ];
 
   return (
@@ -35,24 +65,24 @@ const GuangzhouHGMarine = () => {
       {/* Header Section */}
       <section className="partner-header-section">
         <div className="partner-header-content">
-            <div className="partner-logo-section">
-              <img
-                src="/Authorisation/Guangzhou/logo.webp"
-                alt="Guangzhou HG Marine Co., Ltd. Logo"
-                className="partner-detail-logo"
-                onError={(e) => {
-                  e.target.src = "/logo.webp";
-                }}
-              />
-              <span className="partner-since">Est. 1998</span>
-            </div>
-            <div className="partner-title-section">
-              <h1>Guangzhou HG Marine Co., Ltd.</h1>
-              <p className="partner-location">
-                <MapPin size={18} /> Guangzhou, China
-              </p>
-              <p className="partner-category">Marine Pumps & Equipment</p>
-            </div>
+          <div className="partner-logo-section">
+            <img
+              src="/Authorisation/Guangzhou/logo.webp"
+              alt="Guangzhou HG Marine Co., Ltd. Logo"
+              className="partner-detail-logo"
+              onError={(e) => {
+                e.target.src = "/logo.webp";
+              }}
+            />
+            <span className="partner-since">Est. 1998</span>
+          </div>
+          <div className="partner-title-section">
+            <h1>Guangzhou HG Marine Co., Ltd.</h1>
+            <p className="partner-location">
+              <MapPin size={18} /> Guangzhou, China
+            </p>
+            <p className="partner-category">Marine Pumps & Equipment</p>
+          </div>
         </div>
       </section>
 
@@ -64,32 +94,54 @@ const GuangzhouHGMarine = () => {
             <div className="main-content">
               <h2>Company Overview</h2>
               <p>
-                Guangzhou HG Marine Co., Ltd. is a leading manufacturer of marine pumps, valves, 
-                and shipboard equipment for the global shipping industry. Established in 1998, 
-                the company has developed innovative marine steering gear and rim thrusters, 
-                backed by over 100 patents in steering and electric propulsion technology.
+                Guangzhou HG Marine Co., Ltd. is a leading manufacturer of
+                marine pumps, valves, and shipboard equipment for the global
+                shipping industry. Established in 1998, the company has
+                developed innovative marine steering gear and rim thrusters,
+                backed by over 100 patents in steering and electric propulsion
+                technology.
               </p>
               <p>
-                The company specializes in advanced propulsion systems including rim thrusters, 
-                steering gear systems, marine pumps, and hydraulic equipment. With nearly two 
-                decades of experience, Guangzhou HG Marine has established itself as a pioneer 
-                in electric propulsion technology.
+                The company specializes in advanced propulsion systems including
+                rim thrusters, steering gear systems, marine pumps, and
+                hydraulic equipment. With nearly two decades of experience,
+                Guangzhou HG Marine has established itself as a pioneer in
+                electric propulsion technology.
               </p>
 
               <h3>Key Strengths</h3>
               <ul className="strengths-list">
-                <li><CheckCircle size={16} /> 100+ Patents in Marine Technology</li>
-                <li><CheckCircle size={16} /> ISO 9001:2015 Certified</li>
-                <li><CheckCircle size={16} /> Class Approved Products</li>
-                <li><CheckCircle size={16} /> Advanced R&D Capabilities</li>
-                <li><CheckCircle size={16} /> Global Distribution Network</li>
+                <li>
+                  <CheckCircle size={16} /> 100+ Patents in Marine Technology
+                </li>
+                <li>
+                  <CheckCircle size={16} /> ISO 9001:2015 Certified
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Class Approved Products
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Advanced R&D Capabilities
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Global Distribution Network
+                </li>
               </ul>
 
               <h3>Product Range</h3>
               <div className="product-images-grid">
-                <img src="/Authorisation/Guangzhou/1.webp" alt="Guangzhou HG Product 1" />
-                <img src="/Authorisation/Guangzhou/2.webp" alt="Guangzhou HG Product 2" />
-                <img src="/Authorisation/Guangzhou/3.webp" alt="Guangzhou HG Product 3" />
+                <img
+                  src="/Authorisation/Guangzhou/1.webp"
+                  alt="Guangzhou HG Product 1"
+                />
+                <img
+                  src="/Authorisation/Guangzhou/2.webp"
+                  alt="Guangzhou HG Product 2"
+                />
+                <img
+                  src="/Authorisation/Guangzhou/3.webp"
+                  alt="Guangzhou HG Product 3"
+                />
               </div>
 
               <h3>Product Specifications</h3>
@@ -121,13 +173,6 @@ const GuangzhouHGMarine = () => {
 
             {/* Sidebar */}
             <aside className="partner-sidebar">
-              <div className="contact-card">
-                <h3>Contact Information</h3>
-                <p><MapPin size={16} /> Guangzhou, China</p>
-                <p><Phone size={16} /> +86-20-XXXX-XXXX</p>
-                <p><Mail size={16} /> info@gzhgmarine.com</p>
-              </div>
-
               <div className="certifications-card">
                 <h3>Certifications</h3>
                 <ul>

@@ -431,12 +431,11 @@ const LSAFFA = () => {
         icon={LifeBuoy}
         badges={[
           { icon: CheckCircle, text: "SOLAS Compliant" },
-          { icon: Shield, text: "IMO Certified" }
+          { icon: Shield, text: "IMO Certified" },
         ]}
       />
 
       <div className="container">
-
         {/* Product Grid Layout - 4 Products Per Row */}
         <section className="product-grid-layout-four">
           {productRows.map((row, rowIndex) => (

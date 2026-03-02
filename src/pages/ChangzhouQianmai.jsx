@@ -11,15 +11,46 @@ import "../styles/pages/PartnerDetail.css";
 const ChangzhouQianmai = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Changzhou Qianmai Mechanical Equipment | ASP Global Marine";
+    document.title =
+      "Changzhou Qianmai Mechanical Equipment | ASP Global Marine";
   }, []);
 
   const separators = [
-    { model: "QM-50", bowl: "200 mm", capacity: "1,000 L/h", motor: "2.2 kW", weight: "180 kg" },
-    { model: "QM-100", bowl: "300 mm", capacity: "3,000 L/h", motor: "4.0 kW", weight: "320 kg" },
-    { model: "QM-200", bowl: "400 mm", capacity: "6,000 L/h", motor: "7.5 kW", weight: "580 kg" },
-    { model: "QM-300", bowl: "500 mm", capacity: "10,000 L/h", motor: "11 kW", weight: "850 kg" },
-    { model: "QM-500", bowl: "600 mm", capacity: "15,000 L/h", motor: "15 kW", weight: "1,200 kg" },
+    {
+      model: "QM-50",
+      bowl: "200 mm",
+      capacity: "1,000 L/h",
+      motor: "2.2 kW",
+      weight: "180 kg",
+    },
+    {
+      model: "QM-100",
+      bowl: "300 mm",
+      capacity: "3,000 L/h",
+      motor: "4.0 kW",
+      weight: "320 kg",
+    },
+    {
+      model: "QM-200",
+      bowl: "400 mm",
+      capacity: "6,000 L/h",
+      motor: "7.5 kW",
+      weight: "580 kg",
+    },
+    {
+      model: "QM-300",
+      bowl: "500 mm",
+      capacity: "10,000 L/h",
+      motor: "11 kW",
+      weight: "850 kg",
+    },
+    {
+      model: "QM-500",
+      bowl: "600 mm",
+      capacity: "15,000 L/h",
+      motor: "15 kW",
+      weight: "1,200 kg",
+    },
   ];
 
   return (
@@ -35,24 +66,24 @@ const ChangzhouQianmai = () => {
       {/* Header Section */}
       <section className="partner-header-section">
         <div className="partner-header-content">
-            <div className="partner-logo-section">
-              <img
-                src="/Authorisation/Changzhou/Asset 22.webp"
-                alt="Changzhou Qianmai Logo"
-                className="partner-detail-logo"
-                onError={(e) => {
-                  e.target.src = "/logo.webp";
-                }}
-              />
-              <span className="partner-since">Est. 2008</span>
-            </div>
-            <div className="partner-title-section">
-              <h1>Changzhou Qianmai Mechanical Eqpt. Tech. Co., Ltd.</h1>
-              <p className="partner-location">
-                <MapPin size={18} /> Changzhou, China
-              </p>
-              <p className="partner-category">Mechanical Equipment</p>
-            </div>
+          <div className="partner-logo-section">
+            <img
+              src="/Authorisation/Changzhou/Asset 22.webp"
+              alt="Changzhou Qianmai Logo"
+              className="partner-detail-logo"
+              onError={(e) => {
+                e.target.src = "/logo.webp";
+              }}
+            />
+            <span className="partner-since">Est. 2008</span>
+          </div>
+          <div className="partner-title-section">
+            <h1>Changzhou Qianmai Mechanical Eqpt. Tech. Co., Ltd.</h1>
+            <p className="partner-location">
+              <MapPin size={18} /> Changzhou, China
+            </p>
+            <p className="partner-category">Mechanical Equipment</p>
+          </div>
         </div>
       </section>
 
@@ -64,25 +95,39 @@ const ChangzhouQianmai = () => {
             <div className="main-content">
               <h2>Company Overview</h2>
               <p>
-                Changzhou Qianmai Mechanical Equipment Technology Co., Ltd. is a professional company 
-                dedicated to the research and development, production, sales, and after-sales of disc 
-                separators. Founded in 2008, the company accurately serves industries such as equipment 
-                manufacturing, industrial environmental protection, oils, chemicals, pharmaceuticals, 
-                food, beverages, biopharmaceuticals, and shipbuilding.
+                Changzhou Qianmai Mechanical Equipment Technology Co., Ltd. is a
+                professional company dedicated to the research and development,
+                production, sales, and after-sales of disc separators. Founded
+                in 2008, the company accurately serves industries such as
+                equipment manufacturing, industrial environmental protection,
+                oils, chemicals, pharmaceuticals, food, beverages,
+                biopharmaceuticals, and shipbuilding.
               </p>
               <p>
-                The company specializes in high-efficiency, compact design thermal equipment including 
-                heat exchangers, HVAC systems, and cooling equipment for marine and industrial applications. 
-                All products feature stainless steel construction with comprehensive maintenance support.
+                The company specializes in high-efficiency, compact design
+                thermal equipment including heat exchangers, HVAC systems, and
+                cooling equipment for marine and industrial applications. All
+                products feature stainless steel construction with comprehensive
+                maintenance support.
               </p>
 
               <h3>Key Strengths</h3>
               <ul className="strengths-list">
-                <li><CheckCircle size={16} /> High Efficiency Design</li>
-                <li><CheckCircle size={16} /> Compact Space-Saving Solutions</li>
-                <li><CheckCircle size={16} /> Stainless Steel Construction</li>
-                <li><CheckCircle size={16} /> Comprehensive Maintenance Support</li>
-                <li><CheckCircle size={16} /> R&D Focus on Innovation</li>
+                <li>
+                  <CheckCircle size={16} /> High Efficiency Design
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Compact Space-Saving Solutions
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Stainless Steel Construction
+                </li>
+                <li>
+                  <CheckCircle size={16} /> Comprehensive Maintenance Support
+                </li>
+                <li>
+                  <CheckCircle size={16} /> R&D Focus on Innovation
+                </li>
               </ul>
 
               <h3>Product Range</h3>
@@ -100,9 +145,18 @@ const ChangzhouQianmai = () => {
 
               <h3>Product Images</h3>
               <div className="product-images-grid">
-                <img src="/Authorisation/Changzhou/Asset 24.webp" alt="Qianmai Product 1" />
-                <img src="/Authorisation/Changzhou/CJOMV0.webp" alt="Qianmai Product 2" />
-                <img src="/Authorisation/Changzhou/qfNd7i.tif.webp" alt="Qianmai Product 3" />
+                <img
+                  src="/Authorisation/Changzhou/Asset 24.webp"
+                  alt="Qianmai Product 1"
+                />
+                <img
+                  src="/Authorisation/Changzhou/CJOMV0.webp"
+                  alt="Qianmai Product 2"
+                />
+                <img
+                  src="/Authorisation/Changzhou/qfNd7i.tif.webp"
+                  alt="Qianmai Product 3"
+                />
               </div>
 
               <h3>Disc Separator Specifications</h3>
@@ -134,13 +188,6 @@ const ChangzhouQianmai = () => {
 
             {/* Sidebar */}
             <aside className="partner-sidebar">
-              <div className="contact-card">
-                <h3>Contact Information</h3>
-                <p><MapPin size={16} /> Changzhou, Jiangsu, China</p>
-                <p><Phone size={16} /> +86-519-XXXX-XXXX</p>
-                <p><Mail size={16} /> info@qianmai-tech.com</p>
-              </div>
-
               <div className="certifications-card">
                 <h3>Industries Served</h3>
                 <ul>
