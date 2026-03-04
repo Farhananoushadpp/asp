@@ -5,6 +5,15 @@
  * Fonts: Amsterdam Signature for tagline, Poppins for everything else
  */
 
+/* Custom Font - Amsterdam Signature Italic */
+@font-face {
+  font-family: "Amsterdam Signature";
+  src: url("./amsterdam-signature.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
 /* Footer Container */
 .footer {
   background: linear-gradient(135deg, #0a1f44 0%, #0d3a5c 50%, #0c4b65 100%);
@@ -116,6 +125,13 @@
   text-shadow: 0 2px 8px rgba(42, 186, 163, 0.3);
   position: relative;
   padding-left: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show footer headline when font is loaded */
+.footer-headline.font-loaded {
+  opacity: 1;
 }
 
 .footer-headline::before {

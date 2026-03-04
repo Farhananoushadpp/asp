@@ -128,11 +128,9 @@ const HGMachineryGroup = () => {
               </ul>
 
               <h3>Product Range</h3>
-              <div className="product-images-grid">
-                <img src="/Authorisation/Hg/1.webp" alt="HG Product 1" />
-                <img src="/Authorisation/Hg/2.webp" alt="HG Product 2" />
-                <img src="/Authorisation/Hg/3.webp" alt="HG Product 3" />
-              </div>
+              <img src="/Authorisation/Hg/1.webp" alt="HG Product 1" style={{width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '20px'}} />
+              <img src="/Authorisation/Hg/2.webp" alt="HG Product 2" style={{width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '20px'}} />
+              <img src="/Authorisation/Hg/3.webp" alt="HG Product 3" style={{width: '100%', maxWidth: '300px', height: 'auto'}} />
 
               <h3>Product Specifications</h3>
               <div className="table-container">

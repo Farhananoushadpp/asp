@@ -144,20 +144,21 @@ const ChangzhouQianmai = () => {
               </div>
 
               <h3>Product Images</h3>
-              <div className="product-images-grid">
-                <img
-                  src="/Authorisation/Changzhou/Asset 24.webp"
-                  alt="Qianmai Product 1"
-                />
-                <img
-                  src="/Authorisation/Changzhou/CJOMV0.webp"
-                  alt="Qianmai Product 2"
-                />
-                <img
-                  src="/Authorisation/Changzhou/qfNd7i.tif.webp"
-                  alt="Qianmai Product 3"
-                />
-              </div>
+              <img
+                src="/Authorisation/Changzhou/Asset 24.webp"
+                alt="Qianmai Product 1"
+                style={{width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '20px'}}
+              />
+              <img
+                src="/Authorisation/Changzhou/CJOMV0.webp"
+                alt="Qianmai Product 2"
+                style={{width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '20px'}}
+              />
+              <img
+                src="/Authorisation/Changzhou/qfNd7i.tif.webp"
+                alt="Qianmai Product 3"
+                style={{width: '100%', maxWidth: '300px', height: 'auto'}}
+              />
 
               <h3>Disc Separator Specifications</h3>
               <div className="table-container">

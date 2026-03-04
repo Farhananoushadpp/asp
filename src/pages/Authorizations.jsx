@@ -172,17 +172,15 @@ const Authorizations = () => {
             </div>
             <div className="guangzhou-products">
               <h4>Product Range</h4>
-              <div className="guangzhou-product-grid">
-                {guangzhouProducts.map((product) => (
-                  <div key={product.id} className="guangzhou-product-item">
-                    <img
-                      src={product.src}
-                      alt={product.alt}
-                      className="guangzhou-product-image"
-                    />
-                  </div>
-                ))}
-              </div>
+              {guangzhouProducts.map((product) => (
+                <img
+                  key={product.id}
+                  src={product.src}
+                  alt={product.alt}
+                  className="guangzhou-product-image"
+                  style={{width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '20px', display: 'block'}}
+                />
+              ))}
             </div>
           </div>
         </section>

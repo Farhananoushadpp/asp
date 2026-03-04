@@ -9,10 +9,10 @@
 /* Custom Font - Amsterdam Signature Italic */
 @font-face {
   font-family: "Amsterdam Signature";
-  src: url("../Amsterdam%20Signature%20Italic.otf") format("opentype");
+  src: url("./amsterdam-signature.otf") format("opentype");
   font-weight: normal;
   font-style: italic;
-  font-display: swap;
+  font-display: block;
 }
 
 /* Hero Section Container - Full Width Edge-to-Edge - No Top Spacing - Break Out of Container */
@@ -122,8 +122,13 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.02em;
   text-transform: none;
-  animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show headline when font is loaded */
+.hero-headline.font-loaded {
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 /* Value Proposition - Use Oswald to exclude from Poppins */

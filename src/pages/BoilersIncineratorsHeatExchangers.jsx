@@ -8,7 +8,7 @@ import "../styles/pages/Products.css";
 
 const BoilersIncineratorsHeatExchangers = () => {
   return (
-    <div className="product-page">
+    <div className="product-page" style={{ paddingBottom: '60px' }}>
       <div className="container">
         {/* Page Header */}
         <div className="portfolio-header">

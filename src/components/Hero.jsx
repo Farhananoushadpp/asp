@@ -15,6 +15,31 @@ const Hero = () => {
 
   useEffect(() => {
     setIsVisible(true);
+    
+    // Use Font Loading API for better font loading detection
+    const loadFont = async () => {
+      try {
+        const font = new FontFace('Amsterdam Signature', 'url(./amsterdam-signature.otf)');
+        await font.load();
+        document.fonts.add(font);
+        
+        // Add font-loaded class to headline
+        const headline = document.querySelector('.hero-headline');
+        if (headline) {
+          headline.classList.add('font-loaded');
+        }
+      } catch (error) {
+        console.log('Font loading failed, using fallback');
+        // Still show the headline with fallback font
+        const headline = document.querySelector('.hero-headline');
+        if (headline) {
+          headline.classList.add('font-loaded');
+        }
+      }
+    };
+    
+    // Start font loading
+    loadFont();
   }, []);
 
   return (
@@ -31,7 +56,7 @@ const Hero = () => {
         <div className={`hero-content ${isVisible ? "visible" : ""}`}>
           {/* Tagline - Preserved as requested */}
           <h1 className="hero-headline">
-            "Driven by Quality. Propelled by Trust. "
+            &quot;Driven by Quality. Propelled by Trust.&quot;
           </h1>
 
           {/* Modern Subtitle with accent line */}

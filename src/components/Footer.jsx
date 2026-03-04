@@ -5,9 +5,36 @@
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
+import { useEffect } from "react";
 import "../styles/components/Footer.css";
 
 const Footer = () => {
+  useEffect(() => {
+    // Use Font Loading API for better font loading detection
+    const loadFont = async () => {
+      try {
+        const font = new FontFace('Amsterdam Signature', 'url(./amsterdam-signature.otf)');
+        await font.load();
+        document.fonts.add(font);
+        
+        // Add font-loaded class to headline
+        const headline = document.querySelector('.footer-headline');
+        if (headline) {
+          headline.classList.add('font-loaded');
+        }
+      } catch (error) {
+        console.log('Font loading failed, using fallback');
+        // Still show the headline with fallback font
+        const headline = document.querySelector('.footer-headline');
+        if (headline) {
+          headline.classList.add('font-loaded');
+        }
+      }
+    };
+    
+    // Start font loading
+    loadFont();
+  }, []);
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -27,7 +54,7 @@ const Footer = () => {
               delivering high-quality equipment and spare parts worldwide.
             </p>
             <p className="footer-headline">
-              "Driven by Quality. Propelled by Trust."
+              &quot;Driven by Quality. Propelled by Trust.&quot;
             </p>
             <div className="footer-social">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
