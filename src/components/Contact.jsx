@@ -6,7 +6,16 @@
  */
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Globe, MessageCircle, CreditCard, X } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Globe,
+  MessageCircle,
+  CreditCard,
+  X,
+} from "lucide-react";
 import "../styles/components/Contact.css";
 
 const Contact = () => {
@@ -20,6 +29,7 @@ const Contact = () => {
     urgencyLevel: "normal",
   });
   const [showNFC, setShowNFC] = useState(false);
+  const [selectedPerson, setSelectedPerson] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,45 +54,73 @@ const Contact = () => {
     });
   };
 
+  const showPersonNFC = (person) => {
+    setSelectedPerson(person);
+    setShowNFC(true);
+  };
+
+  const closeNFC = () => {
+    setShowNFC(false);
+    setSelectedPerson(null);
+  };
+
   const contactInfo = {
     headquarters: {
       title: "Headquarters",
       address: "Xavier Business Center, Office Suite A5-18, Dubai, UAE",
       phone: "+971 4 572 4542",
-      email: "info@aspglobalmarine.com"
+      email: "info@aspglobalmarine.com",
     },
     support: {
       title: "24/7 Support",
       phone: "+971 52 547 8137",
       email: "support@aspglobalmarine.com",
-      whatsapp: "+971 52 547 8137"
+      whatsapp: "+971 52 547 8137",
     },
     hours: {
       title: "Business Hours",
       weekdays: "Monday - Friday: 8:00 AM - 6:00 PM",
       weekends: "Saturday: 9:00 AM - 2:00 PM",
-      emergency: "Emergency: 24/7 Available"
-    }
+      emergency: "Emergency: 24/7 Available",
+    },
   };
 
   const nfcCard = {
-    name: "ASP Global Marine Trading LLC",
-    title: "Marine Equipment Solutions",
-    phone: "+971 4 572 4542",
-    email: "info@aspglobalmarine.com",
-    website: "www.aspglobalmarine.com",
-    address: "Dubai, UAE"
+    company: {
+      name: "ASP Global Marine Trading LLC",
+      title: "Marine Equipment Solutions",
+      phone: "+971 4 572 4542",
+      email: "info@aspglobalmarine.com",
+      website: "www.aspglobalmarine.com",
+      address: "Dubai, UAE",
+    },
+    arun: {
+      name: "Arun V.V",
+      title: "Senior Marine Consultant",
+      phone: "+971 XX XXX XXXX",
+      email: "arun@aspglobalmarine.com",
+      website: "www.aspglobalmarine.com",
+      address: "Dubai, UAE",
+    },
+    yoosaf: {
+      name: "Yoosaf N",
+      title: "Marine Equipment Specialist",
+      phone: "+971 XX XXX XXXX",
+      email: "yoosaf@aspglobalmarine.com",
+      website: "www.aspglobalmarine.com",
+      address: "Dubai, UAE",
+    },
   };
 
   return (
     <section id="contact" className="contact">
       <div className="container">
         <div className="contact-header">
-          <span className="section-label">GET IN TOUCH</span>
+          {/* <span className="section-label">GET IN TOUCH</span> */}
           <h2 className="contact-headline">Contact Our Marine Experts</h2>
           <p className="contact-subtitle">
-            Connect with our professional team for comprehensive marine equipment solutions 
-            and exceptional customer service
+            Connect with our professional team for comprehensive marine
+            equipment solutions and exceptional customer service
           </p>
         </div>
 
@@ -97,10 +135,16 @@ const Contact = () => {
                 </div>
                 <div className="card-content">
                   <h3>{contactInfo.headquarters.title}</h3>
-                  <p className="card-detail">{contactInfo.headquarters.address}</p>
+                  <p className="card-detail">
+                    {contactInfo.headquarters.address}
+                  </p>
                   <div className="card-contacts">
-                    <p><Phone size={16} /> {contactInfo.headquarters.phone}</p>
-                    <p><Mail size={16} /> {contactInfo.headquarters.email}</p>
+                    <p>
+                      <Phone size={16} /> {contactInfo.headquarters.phone}
+                    </p>
+                    <p>
+                      <Mail size={16} /> {contactInfo.headquarters.email}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -113,9 +157,16 @@ const Contact = () => {
                 <div className="card-content">
                   <h3>{contactInfo.support.title}</h3>
                   <div className="card-contacts">
-                    <p><Phone size={16} /> {contactInfo.support.phone}</p>
-                    <p><Mail size={16} /> {contactInfo.support.email}</p>
-                    <p><MessageCircle size={16} /> WhatsApp: {contactInfo.support.whatsapp}</p>
+                    <p>
+                      <Phone size={16} /> {contactInfo.support.phone}
+                    </p>
+                    <p>
+                      <Mail size={16} /> {contactInfo.support.email}
+                    </p>
+                    <p>
+                      <MessageCircle size={16} /> WhatsApp:{" "}
+                      {contactInfo.support.whatsapp}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -134,25 +185,95 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Arun V.V NFC Card */}
+              {/* <div className="contact-card">
+                <div className="card-icon">
+                  <CreditCard size={24} />
+                </div>
+                <div className="card-content">
+                  <h3>Arun V.V</h3>
+                  <p className="card-detail">Senior Marine Consultant</p>
+                  <div className="card-contacts">
+                    <p>
+                      <Phone size={16} /> +971 XX XXX XXXX
+                    </p>
+                    <p>
+                      <Mail size={16} /> arun@aspglobalmarine.com
+                    </p>
+                    <button
+                      className="nfc-card-btn"
+                      onClick={() => showPersonNFC("arun")}
+                    >
+                      <CreditCard size={16} /> View NFC Card
+                    </button>
+                  </div>
+                </div>
+              </div> */}
+
+              {/* Yoosaf N NFC Card */}
+              {/* <div className="contact-card">
+                <div className="card-icon">
+                  <CreditCard size={24} />
+                </div>
+                <div className="card-content">
+                  <h3>Yoosaf N</h3>
+                  <p className="card-detail">Marine Equipment Specialist</p>
+                  <div className="card-contacts">
+                    <p>
+                      <Phone size={16} /> +971 XX XXX XXXX
+                    </p>
+                    <p>
+                      <Mail size={16} /> yoosaf@aspglobalmarine.com
+                    </p>
+                    <button
+                      className="nfc-card-btn"
+                      onClick={() => showPersonNFC("yoosaf")}
+                    >
+                      <CreditCard size={16} /> View NFC Card
+                    </button>
+                  </div>
+                </div>
+              </div> */}
             </div>
 
             {/* NFC Card Button */}
-            <button 
+            {/* <button
               className="nfc-toggle-btn"
-              onClick={() => setShowNFC(!showNFC)}
+              onClick={() => showPersonNFC("company")}
             >
               <CreditCard size={20} />
-              {showNFC ? 'Hide' : 'Show'} NFC Business Card
-            </button>
+              {showNFC ? "Hide" : "Show"} NFC Business Card
+            </button> */}
+
+            {/* Individual NFC Card Buttons */}
+            <div className="individual-nfc-buttons">
+              <button
+                className="nfc-person-btn arun-btn"
+                onClick={() => showPersonNFC("arun")}
+              >
+                <CreditCard size={18} />
+                Arun V.V - NFC Card
+              </button>
+              <button
+                className="nfc-person-btn yoosaf-btn"
+                onClick={() => showPersonNFC("yoosaf")}
+              >
+                <CreditCard size={18} />
+                Yoosaf N - NFC Card
+              </button>
+            </div>
           </div>
 
           {/* Contact Form */}
           <div className="contact-form-section">
             <div className="form-header">
               <h3>Send us a Message</h3>
-              <p>Fill out the form below and we&apos;ll respond within 24 hours</p>
+              <p>
+                Fill out the form below and we&apos;ll respond within 24 hours
+              </p>
             </div>
-            
+
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-row">
                 <div className="form-group">
@@ -240,9 +361,15 @@ const Contact = () => {
                   value={formData.urgencyLevel}
                   onChange={handleChange}
                 >
-                  <option value="normal">Normal - Response within 24 hours</option>
-                  <option value="urgent">Urgent - Response within 6 hours</option>
-                  <option value="critical">Critical - Immediate response</option>
+                  <option value="normal">
+                    Normal - Response within 24 hours
+                  </option>
+                  <option value="urgent">
+                    Urgent - Response within 6 hours
+                  </option>
+                  <option value="critical">
+                    Critical - Immediate response
+                  </option>
                 </select>
               </div>
 
@@ -256,48 +383,45 @@ const Contact = () => {
 
         {/* NFC Business Card Modal */}
         {showNFC && (
-          <div className="nfc-modal-overlay" onClick={() => setShowNFC(false)}>
+          <div className="nfc-modal-overlay" onClick={closeNFC}>
             <div className="nfc-modal" onClick={(e) => e.stopPropagation()}>
               <div className="nfc-modal-header">
                 <h3>Digital Business Card</h3>
-                <button 
-                  className="nfc-close-btn"
-                  onClick={() => setShowNFC(false)}
-                >
+                <button className="nfc-close-btn" onClick={closeNFC}>
                   <X size={20} />
                 </button>
               </div>
-              
+
               <div className="nfc-card">
                 <div className="nfc-card-header">
                   <div className="nfc-logo">
                     <img src="/logo.webp" alt="ASP Logo" />
                   </div>
                   <div className="nfc-company-info">
-                    <h4>{nfcCard.name}</h4>
-                    <p>{nfcCard.title}</p>
+                    <h4>{nfcCard[selectedPerson].name}</h4>
+                    <p>{nfcCard[selectedPerson].title}</p>
                   </div>
                 </div>
-                
+
                 <div className="nfc-card-body">
                   <div className="nfc-contact-item">
                     <Phone size={16} />
-                    <span>{nfcCard.phone}</span>
+                    <span>{nfcCard[selectedPerson].phone}</span>
                   </div>
                   <div className="nfc-contact-item">
                     <Mail size={16} />
-                    <span>{nfcCard.email}</span>
+                    <span>{nfcCard[selectedPerson].email}</span>
                   </div>
                   <div className="nfc-contact-item">
                     <Globe size={16} />
-                    <span>{nfcCard.website}</span>
+                    <span>{nfcCard[selectedPerson].website}</span>
                   </div>
                   <div className="nfc-contact-item">
                     <MapPin size={16} />
-                    <span>{nfcCard.address}</span>
+                    <span>{nfcCard[selectedPerson].address}</span>
                   </div>
                 </div>
-                
+
                 <div className="nfc-card-footer">
                   <div className="nfc-chip">
                     <div className="chip-lines"></div>
@@ -307,7 +431,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="nfc-actions">
                 <button className="nfc-action-btn primary">
                   <CreditCard size={16} />

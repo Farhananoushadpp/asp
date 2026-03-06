@@ -85,7 +85,7 @@
 }
 
 .asp-global-icon {
-  width: 120px;
+  width: 180px;
   height: auto;
   opacity: 0.8;
   transition: all var(--transition-normal);
@@ -162,7 +162,12 @@
     grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-lg);
   }
-  
+
+  .asp-global-icon {
+    width: 160px;
+    margin: 0 auto;
+  }
+
   .section-title {
     font-size: var(--font-size-3xl);
   }
@@ -172,17 +177,17 @@
   .who-we-are-section {
     padding: var(--spacing-4xl) 0;
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
   }
-  
+
   .asp-global-icon {
-    width: 100px;
+    width: 140px;
     margin: 0 auto;
   }
-  
+
   .section-title {
     font-size: var(--font-size-2xl);
   }
@@ -193,15 +198,15 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
-  
+
   .asp-global-icon {
-    width: 80px;
+    width: 120px;
   }
-  
+
   .section-title {
     font-size: var(--font-size-xl);
   }
-  
+
   .container {
     padding: 0 var(--spacing-md);
   }

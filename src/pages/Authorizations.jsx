@@ -112,8 +112,8 @@ const Authorizations = () => {
             <h1 className="about-hero-title">Authorizations</h1>
             <p className="about-hero-subtitle">
               Our official authorizations and certifications demonstrate our
-              commitment to quality, compliance, and excellence in the
-              maritime industry.
+              commitment to quality, compliance, and excellence in the maritime
+              industry.
             </p>
           </div>
           <div className="about-hero-icon">
@@ -122,14 +122,14 @@ const Authorizations = () => {
         </div>
       </section>
 
-      <div className="container">
+      <div className="container-full">
         {/* Authorizations Grid */}
         <section className="about-section">
           <div className="section-header">
             <span className="section-label">Our Credentials</span>
             <h2>Certifications & Authorizations</h2>
           </div>
-          <div className="authorizations-grid">
+          <div className="grid-responsive-3">
             {authorizations.map((auth, index) => (
               <div key={index} className="auth-card">
                 <div className="auth-icon">
@@ -178,7 +178,13 @@ const Authorizations = () => {
                   src={product.src}
                   alt={product.alt}
                   className="guangzhou-product-image"
-                  style={{width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '20px', display: 'block'}}
+                  style={{
+                    width: "100%",
+                    maxWidth: "300px",
+                    height: "auto",
+                    marginBottom: "20px",
+                    display: "block",
+                  }}
                 />
               ))}
             </div>

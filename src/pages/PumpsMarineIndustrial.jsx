@@ -23,8 +23,8 @@ const PumpsMarineIndustrial = () => {
   ];
 
   return (
-    <div className="product-page" style={{ paddingBottom: '60px' }}>
-      <div className="container">
+    <div className="product-page" style={{ paddingBottom: "60px" }}>
+      <div className="container-full">
         {/* Page Header */}
         <div className="portfolio-header">
           <h1 className="portfolio-title">PUMPS - MARINE & INDUSTRIAL</h1>

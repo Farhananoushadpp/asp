@@ -16,7 +16,13 @@ const Purifiers = () => {
     },
     {
       name: "ALFA LAVAL",
-      models: ["PI50 - P615 - SERIES", "8815 - S937- SERIES", "FOPX - SERIES", "MOPX -SERIES", ""],
+      models: [
+        "PI50 - P615 - SERIES",
+        "8815 - S937- SERIES",
+        "FOPX - SERIES",
+        "MOPX -SERIES",
+        "",
+      ],
     },
   ];
 
@@ -29,12 +35,11 @@ const Purifiers = () => {
         icon={Settings}
         badges={[
           { icon: CheckCircle, text: "OEM Quality" },
-          { icon: Award, text: "Class Certified" }
+          { icon: Award, text: "Class Certified" },
         ]}
       />
 
-      <div className="container">
-
+      <div className="container-full">
         {/* Supported Brands Section */}
         <div className="brands-section">
           <div className="supported-brands-label">Brands Supported</div>
@@ -94,19 +99,45 @@ const Purifiers = () => {
           <div className="product-cards-grid">
             <div className="product-card-item">
               <div className="product-card-content blue-card">
-                <h3>Valve Block<br/>Pressure Transmitter<br/>Rectangular Ring<br/>Valve Plug<br/>Vibration Damper</h3>
+                <h3>
+                  Valve Block
+                  <br />
+                  Pressure Transmitter
+                  <br />
+                  Rectangular Ring
+                  <br />
+                  Valve Plug
+                  <br />
+                  Vibration Damper
+                </h3>
               </div>
               <div className="product-card-image">
-                <img src="/products/purifiers/valve-block.webp" alt="Valve Block, Pressure Transmitter, Rectangular Ring, Valve Plug, Vibration Damper" />
+                <img
+                  src="/products/purifiers/valve-block.webp"
+                  alt="Valve Block, Pressure Transmitter, Rectangular Ring, Valve Plug, Vibration Damper"
+                />
               </div>
             </div>
-            
+
             <div className="product-card-item reverse">
               <div className="product-card-image">
-                <img src="/products/purifiers/o-ring.webp" alt="O Ring, Covering Washer, Spanner For Bowl, Compression Tool, Quick Coupling-NRV" />
+                <img
+                  src="/products/purifiers/o-ring.webp"
+                  alt="O Ring, Covering Washer, Spanner For Bowl, Compression Tool, Quick Coupling-NRV"
+                />
               </div>
               <div className="product-card-content blue-card">
-                <h3>O Ring<br/>Covering Washer<br/>Spanner For Bowl<br/>Compression Tool<br/>Quick Coupling-NRV</h3>
+                <h3>
+                  O Ring
+                  <br />
+                  Covering Washer
+                  <br />
+                  Spanner For Bowl
+                  <br />
+                  Compression Tool
+                  <br />
+                  Quick Coupling-NRV
+                </h3>
               </div>
             </div>
           </div>

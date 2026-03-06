@@ -26,15 +26,21 @@ const Authorization = () => {
       founded: "1998",
       logo: "/Authorisation/Guangzhou/logo.webp",
       category: "Marine Pumps & Equipment",
-      shortDescription: "Leading manufacturer of marine pumps, valves, and shipboard equipment for global shipping industry.",
-      specialties: ["Marine Pumps", "Hydraulic Systems", "Ship Valves", "Deck Machinery"],
+      shortDescription:
+        "Leading manufacturer of marine pumps, valves, and shipboard equipment for global shipping industry.",
+      specialties: [
+        "Marine Pumps",
+        "Hydraulic Systems",
+        "Ship Valves",
+        "Deck Machinery",
+      ],
       features: [
         "ISO 9001 Certified",
         "Class Approved Products",
         "Global Distribution Network",
-        "24/7 Technical Support"
+        "24/7 Technical Support",
       ],
-      link: "/guangzhou-hg-marine"
+      link: "/guangzhou-hg-marine",
     },
     {
       id: "hg-machinery-group",
@@ -43,15 +49,21 @@ const Authorization = () => {
       founded: "2005",
       logo: "/Authorisation/Hg/logo.webp",
       category: "Marine Engines & Spares",
-      shortDescription: "Premier supplier of marine engine components, turbochargers, and auxiliary machinery for vessels worldwide.",
-      specialties: ["Engine Spares", "Turbochargers", "Fuel Systems", "Cooling Systems"],
+      shortDescription:
+        "Premier supplier of marine engine components, turbochargers, and auxiliary machinery for vessels worldwide.",
+      specialties: [
+        "Engine Spares",
+        "Turbochargers",
+        "Fuel Systems",
+        "Cooling Systems",
+      ],
       features: [
         "OEM Quality Parts",
         "Engine Overhaul Services",
         "Technical Documentation",
-        "Spare Parts Inventory"
+        "Spare Parts Inventory",
       ],
-      link: "/hg-machinery-group"
+      link: "/hg-machinery-group",
     },
     {
       id: "zhejiang-kintowe",
@@ -60,15 +72,21 @@ const Authorization = () => {
       founded: "2003",
       logo: "/Authorisation/Kintowe/logo.webp",
       category: "Sealing Solutions",
-      shortDescription: "Specialized in high-performance sealing solutions including mechanical seals, gland packing, and O-rings for marine applications.",
-      specialties: ["Mechanical Seals", "Gland Packing", "O-Rings", "Gasket Materials"],
+      shortDescription:
+        "Specialized in high-performance sealing solutions including mechanical seals, gland packing, and O-rings for marine applications.",
+      specialties: [
+        "Mechanical Seals",
+        "Gland Packing",
+        "O-Rings",
+        "Gasket Materials",
+      ],
       features: [
         "Marine-Grade Materials",
         "Custom Seal Design",
         "Pressure Rated Products",
-        "Corrosion Resistant"
+        "Corrosion Resistant",
       ],
-      link: "/zhejiang-kintowe"
+      link: "/zhejiang-kintowe",
     },
     {
       id: "zhejiang-huayi",
@@ -77,15 +95,21 @@ const Authorization = () => {
       founded: "1995",
       logo: "/Authorisation/Zhejiang/logo.webp",
       category: "Ship Equipment",
-      shortDescription: "Comprehensive manufacturer of marine deck equipment, safety systems, and navigation instruments.",
-      specialties: ["Deck Equipment", "Safety Systems", "Navigation", "Communication"],
+      shortDescription:
+        "Comprehensive manufacturer of marine deck equipment, safety systems, and navigation instruments.",
+      specialties: [
+        "Deck Equipment",
+        "Safety Systems",
+        "Navigation",
+        "Communication",
+      ],
       features: [
         "SOLAS Compliant",
         "IMO Approved",
         "RINA Certified",
-        "Custom Solutions"
+        "Custom Solutions",
       ],
-      link: "/zhejiang-huayi"
+      link: "/zhejiang-huayi",
     },
     {
       id: "beijing-zhonghanghua",
@@ -94,15 +118,21 @@ const Authorization = () => {
       founded: "2002",
       logo: "/Authorisation/Beijing/logo.webp",
       category: "Safety Valves",
-      shortDescription: "Expert manufacturer of marine safety valves, pressure relief systems, and industrial valve solutions.",
-      specialties: ["Safety Valves", "Relief Valves", "Control Valves", "Pressure Gauges"],
+      shortDescription:
+        "Expert manufacturer of marine safety valves, pressure relief systems, and industrial valve solutions.",
+      specialties: [
+        "Safety Valves",
+        "Relief Valves",
+        "Control Valves",
+        "Pressure Gauges",
+      ],
       features: [
         "Pressure Tested",
         "Marine Certification",
         "Precision Engineering",
-        "Safety Compliant"
+        "Safety Compliant",
       ],
-      link: "/beijing-zhonghanghua"
+      link: "/beijing-zhonghanghua",
     },
     {
       id: "changzhou-qianmai",
@@ -111,16 +141,22 @@ const Authorization = () => {
       founded: "2008",
       logo: "/Authorisation/Changzhou/logo.webp",
       category: "Mechanical Equipment",
-      shortDescription: "Advanced manufacturer of heat exchangers, HVAC systems, and thermal equipment for marine and industrial use.",
-      specialties: ["Heat Exchangers", "HVAC Systems", "Cooling Equipment", "Thermal Solutions"],
+      shortDescription:
+        "Advanced manufacturer of heat exchangers, HVAC systems, and thermal equipment for marine and industrial use.",
+      specialties: [
+        "Heat Exchangers",
+        "HVAC Systems",
+        "Cooling Equipment",
+        "Thermal Solutions",
+      ],
       features: [
         "High Efficiency",
         "Compact Design",
         "Stainless Steel",
-        "Maintenance Support"
+        "Maintenance Support",
       ],
-      link: "/changzhou-qianmai"
-    }
+      link: "/changzhou-qianmai",
+    },
   ];
 
   return (
@@ -133,21 +169,22 @@ const Authorization = () => {
         badges={[
           { icon: CheckCircle, text: "ISO 9001" },
           { icon: CheckCircle, text: "SOLAS Compliant" },
-          { icon: CheckCircle, text: "Class Approved" }
+          { icon: CheckCircle, text: "Class Approved" },
         ]}
       />
 
       {/* Partners Grid Section */}
       <section className="partners-section">
-        <div className="container">
+        <div className="container-full">
           <div className="section-header">
             <h2>Our Manufacturing Partners</h2>
             <p className="section-subtitle">
-              Industry-leading manufacturers providing certified marine equipment and spare parts
+              Industry-leading manufacturers providing certified marine
+              equipment and spare parts
             </p>
           </div>
 
-          <div className="partners-grid">
+          <div className="grid-responsive-partners">
             {partners.map((partner) => (
               <div key={partner.id} className="partner-card">
                 {/* Card Header */}
@@ -164,14 +201,18 @@ const Authorization = () => {
                   </div>
                   <div className="partner-meta">
                     <span className="partner-category">{partner.category}</span>
-                    <span className="partner-founded">Est. {partner.founded}</span>
+                    <span className="partner-founded">
+                      Est. {partner.founded}
+                    </span>
                   </div>
                 </div>
 
                 {/* Card Content */}
                 <div className="partner-card-content">
                   <h3 className="partner-name">{partner.name}</h3>
-                  <p className="partner-description">{partner.shortDescription}</p>
+                  <p className="partner-description">
+                    {partner.shortDescription}
+                  </p>
 
                   {/* Specialties */}
                   <div className="partner-specialties">
@@ -202,14 +243,20 @@ const Authorization = () => {
           <div className="cta-text">
             <h2>Ready to Partner With Us?</h2>
             <p>
-              Contact our team to learn more about our authorized products and partnership opportunities.
+              Contact our team to learn more about our authorized products and
+              partnership opportunities.
             </p>
           </div>
           <div className="cta-actions">
             <Link to="/contact" className="cta-button primary">
               Contact Us
             </Link>
-            <a href="https://wa.me/971505398975" className="cta-button secondary" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/971505398975"
+              className="cta-button secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               WhatsApp Inquiry
             </a>
           </div>

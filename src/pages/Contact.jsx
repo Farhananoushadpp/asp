@@ -11,7 +11,7 @@ import Contact from "../components/Contact.jsx";
 
 const ContactPage = () => {
   return (
-    <div className="contact-page">
+    <div className="container-full contact-page">
       {/* Hero Section - Using PageHero Component */}
       <PageHero
         title="Contact Us"
@@ -19,7 +19,7 @@ const ContactPage = () => {
         icon={Phone}
         badges={[
           { icon: Mail, text: "24/7 Email Support" },
-          { icon: MapPin, text: "Global Presence" }
+          { icon: MapPin, text: "Global Presence" },
         ]}
       />
 

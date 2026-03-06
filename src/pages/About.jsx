@@ -7,30 +7,135 @@
  */
 
 import { Ship, Award, Users, Globe, Anchor } from "lucide-react";
-import PageHero from "../components/PageHero.jsx";
+import { useState, useEffect } from "react";
 import "../styles/pages/About.css";
 
 const About = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // 5 background images with headings and descriptions for slideshow
+  const backgroundImages = [
+    {
+      image: "/about.jpg",
+      heading: "Marine Excellence Since 2006",
+      description:
+        "18+ years of delivering quality marine equipment and offshore solutions worldwide",
+    },
+    {
+      image: "/home.jpg",
+      heading: "Global Maritime Partner",
+      description:
+        "Serving 500+ clients across 50+ countries with comprehensive marine solutions",
+    },
+    {
+      image: "/Authorisation/Hg/1.jpg",
+      heading: "Authorized Marine Solutions",
+      description:
+        "Certified provider of marine equipment with full regulatory compliance",
+    },
+    {
+      image: "/Authorisation/Beijing/1.jpg",
+      heading: "Quality Marine Equipment",
+      description:
+        "Premium spare parts and equipment for vessels and offshore installations",
+    },
+    {
+      image: "/Authorisation/Changzhou/1.jpg",
+      heading: "Reliable Offshore Support",
+      description:
+        "Comprehensive safety solutions and operational excellence for maritime industry",
+    },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
+
   return (
     <div className="about-page">
-      {/* Hero Section - Using PageHero Component */}
-      <PageHero
-        title="About ASP Global Marine"
-        subtitle="Company Overview"
-        icon={Ship}
-        badges={[
-          { icon: Award, text: "18+ Years Experience" },
-          { icon: Users, text: "500+ Global Clients" },
-          { icon: Globe, text: "50+ Countries Served" }
-        ]}
-        backgroundImage="/about.jpg"
-      />
+      {/* Hero Section with Slideshow Background */}
+      <section className="about-hero-slideshow">
+        <div className="slideshow-container">
+          {backgroundImages.map((slide, index) => (
+            <div
+              key={index}
+              className={`slide ${index === currentSlide ? "active" : ""}`}
+              style={{
+                backgroundImage: `linear-gradient(rgba(12, 45, 72, 0.7), rgba(12, 45, 72, 0.7)), url(${slide.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              {/* Slide Content */}
+              <div className="slide-content">
+                <h3 className="slide-heading">{slide.heading}</h3>
+                <p className="slide-description">{slide.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-      <div className="container">
+        {/* Hero Content */}
+        <div className="hero-content">
+          <div className="hero-icon">
+            <Ship size={48} />
+          </div>
+          <h1 className="hero-title">About ASP Global Marine</h1>
+          <h2 className="hero-heading">
+            Your Trusted Marine & Offshore Solutions Partner
+          </h2>
+          <p className="hero-description">
+            Leading the maritime industry with comprehensive marine equipment,
+            spare parts, and safety solutions since 2006. We serve vessels and
+            offshore installations worldwide with unmatched expertise, quality
+            products, and reliable service that ensures operational excellence
+            and regulatory compliance.
+          </p>
+          <p className="hero-subtitle">Company Overview</p>
+
+          {/* Badges */}
+          <div className="hero-badges">
+            <div className="hero-badge">
+              <Award size={20} />
+              <span>18+ Years Experience</span>
+            </div>
+            <div className="hero-badge">
+              <Users size={20} />
+              <span>500+ Global Clients</span>
+            </div>
+            <div className="hero-badge">
+              <Globe size={20} />
+              <span>50+ Countries Served</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="slide-indicators">
+          {backgroundImages.map((_, index) => (
+            <button
+              key={index}
+              className={`indicator ${index === currentSlide ? "active" : ""}`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </section>
+
+      <div
+        className="container-full"
+        style={{ maxWidth: "1200px", margin: "0 auto" }}
+      >
         {/* Who We Are Section */}
         <section className="about-section" id="who-we-are">
           <div className="section-header">
-            <span className="section-label">Company Overview</span>
+            {/* <span className="section-label">Company Overview</span> */}
             <h2>Who We Are</h2>
           </div>
           <div className="section-content">
@@ -54,7 +159,7 @@ const About = () => {
               </div>
               <div className="content-icon">
                 <img
-                  src="/asplogo.svg"
+                  src="/logo.svg"
                   alt="ASP Global Marine Trading LLC"
                   className="asp-global-icon"
                 />
@@ -64,11 +169,11 @@ const About = () => {
 
           <div className="stats-grid">
             <div className="stat-item">
-              <div className="stat-number">18+</div>
+              <div className="stat-number">8+</div>
               <div className="stat-label">Years Experience</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">500+</div>
+              <div className="stat-number">200+</div>
               <div className="stat-label">Global Clients</div>
             </div>
             <div className="stat-item">
@@ -118,7 +223,7 @@ const About = () => {
         {/* Certifications Section */}
         <section className="about-section" id="certifications">
           <div className="section-header">
-            <span className="section-label">Quality & Standards</span>
+            {/* <span className="section-label">Quality & Standards</span> */}
             <h2>Our Certifications</h2>
           </div>
           <div className="certifications-grid">
@@ -148,7 +253,7 @@ const About = () => {
         {/* Quality Policy Section */}
         <section className="about-section" id="quality-policy">
           <div className="section-header">
-            <span className="section-label">Our Commitment</span>
+            {/* <span className="section-label">Our Commitment</span> */}
             <h2>Quality Policy</h2>
           </div>
           <div className="quality-content">
@@ -183,7 +288,7 @@ const About = () => {
         {/* Clients Section */}
         <section className="about-section" id="clients">
           <div className="section-header">
-            <span className="section-label">Our Network</span>
+            {/* <span className="section-label">Our Network</span> */}
             <h2>Clients We Serve</h2>
           </div>
           <div className="clients-grid">
@@ -224,161 +329,44 @@ const About = () => {
         </section>
 
         {/* Client Logos Slider Section */}
-        <section
-          className="about-section client-logos-section"
-          id="client-logos"
-        >
+        <section id="client-logos">
           <div className="section-header">
-            <span className="section-label">Trusted Partners</span>
+            {/* <span className="section-label">Trusted Partners</span> */}
             <h2>Our Valued Clients</h2>
           </div>
           <div className="client-logos-slider">
             <div className="client-logos-track">
-              {/* First set of logos */}
+              {/* Generate all numbered client logos dynamically */}
+              {Array.from({ length: 47 }, (_, i) => i + 1).map((num) => (
+                <div key={num} className="client-logo-item">
+                  <img
+                    src={`/Client%20Logo/Asset%20${num}.webp`}
+                    alt={`Client Logo ${num}`}
+                  />
+                </div>
+              ))}
+              {/* Add the special logo */}
               <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%202.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%203.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%204.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%205.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%206.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%207.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%208.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%209.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2010.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2011.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2012.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2013.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2014.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2015.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2016.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2017.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2018.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2019.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2020.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2021.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2022.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2023.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2024.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2025.webp" alt="Client Logo" />
+                <img
+                  src="/Client%20Logo/TovXkH.webp"
+                  alt="Client Logo Special"
+                />
               </div>
               {/* Duplicate set for seamless loop */}
+              {Array.from({ length: 47 }, (_, i) => i + 1).map((num) => (
+                <div key={`duplicate-${num}`} className="client-logo-item">
+                  <img
+                    src={`/Client%20Logo/Asset%20${num}.webp`}
+                    alt={`Client Logo ${num}`}
+                  />
+                </div>
+              ))}
+              {/* Duplicate the special logo */}
               <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%202.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%203.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%204.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%205.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%206.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%207.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%208.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%209.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2010.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2011.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2012.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2013.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2014.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2015.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2016.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2017.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2018.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2019.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2020.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2021.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2022.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2023.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2024.webp" alt="Client Logo" />
-              </div>
-              <div className="client-logo-item">
-                <img src="/Client%20Logo/Asset%2025.webp" alt="Client Logo" />
+                <img
+                  src="/Client%20Logo/TovXkH.webp"
+                  alt="Client Logo Special"
+                />
               </div>
             </div>
           </div>
@@ -387,7 +375,7 @@ const About = () => {
         {/* Message Section */}
         <section className="about-section message-section" id="message">
           <div className="section-header">
-            <span className="section-label">Leadership</span>
+            {/* <span className="section-label">Leadership</span> */}
             <h2>Message from Management</h2>
           </div>
           <div className="message-content">

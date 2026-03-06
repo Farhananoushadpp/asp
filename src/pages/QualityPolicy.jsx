@@ -1,43 +1,49 @@
 /**
  * ASP Global Marine Trading LLC - Quality Policy Page
- * 
+ *
  * Company quality policy and standards
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-import '../styles/pages/About.css';
+import "../styles/pages/About.css";
 
 const QualityPolicy = () => {
   const qualityPrinciples = [
     {
       title: "Customer Focus",
-      description: "Understanding and exceeding customer expectations through quality products and services"
+      description:
+        "Understanding and exceeding customer expectations through quality products and services",
     },
     {
       title: "Continuous Improvement",
-      description: "Regular review and enhancement of processes to achieve operational excellence"
+      description:
+        "Regular review and enhancement of processes to achieve operational excellence",
     },
     {
       title: "Compliance Excellence",
-      description: "Strict adherence to international maritime standards and regulations"
+      description:
+        "Strict adherence to international maritime standards and regulations",
     },
     {
       title: "Supplier Partnership",
-      description: "Working with certified suppliers to ensure consistent quality"
+      description:
+        "Working with certified suppliers to ensure consistent quality",
     },
     {
       title: "Technical Expertise",
-      description: "Maintaining deep knowledge of marine equipment and industry requirements"
+      description:
+        "Maintaining deep knowledge of marine equipment and industry requirements",
     },
     {
       title: "Reliability Assurance",
-      description: "Delivering products that meet or exceed specified performance standards"
-    }
+      description:
+        "Delivering products that meet or exceed specified performance standards",
+    },
   ];
 
   return (
     <div className="about-page">
-      <div className="container">
+      <div className="container-full">
         <div className="page-header">
           <h1 className="page-title">Quality Policy</h1>
           <p className="page-subtitle">
@@ -49,13 +55,15 @@ const QualityPolicy = () => {
           <div className="policy-content">
             <h2>Our Quality Commitment</h2>
             <p>
-              ASP Global Marine Trading LLC is committed to delivering accurate, reliable, and compliant marine 
-              solutions at the right time, every time. We focus on operational reliability, technical compliance, 
+              ASP Global Marine Trading LLC is committed to delivering accurate,
+              reliable, and compliant marine solutions at the right time, every
+              time. We focus on operational reliability, technical compliance,
               maritime industry standards, and long-term client partnerships.
             </p>
             <p>
-              Our quality management system is designed to ensure that all products and services meet the 
-              highest standards of safety, reliability, and performance expected by the maritime industry.
+              Our quality management system is designed to ensure that all
+              products and services meet the highest standards of safety,
+              reliability, and performance expected by the maritime industry.
             </p>
           </div>
         </section>
@@ -65,19 +73,29 @@ const QualityPolicy = () => {
           <div className="objectives-list">
             <div className="objective-item">
               <h3>Maintain 100% Compliance</h3>
-              <p>Ensure all products meet SOLAS, IMO, and classification society requirements</p>
+              <p>
+                Ensure all products meet SOLAS, IMO, and classification society
+                requirements
+              </p>
             </div>
             <div className="objective-item">
               <h3>Zero Defect Delivery</h3>
-              <p>Implement rigorous quality control to eliminate product defects</p>
+              <p>
+                Implement rigorous quality control to eliminate product defects
+              </p>
             </div>
             <div className="objective-item">
               <h3>On-Time Delivery</h3>
-              <p>Achieve 98%+ on-time delivery performance for all customer orders</p>
+              <p>
+                Achieve 98%+ on-time delivery performance for all customer
+                orders
+              </p>
             </div>
             <div className="objective-item">
               <h3>Customer Satisfaction</h3>
-              <p>Maintain 95%+ customer satisfaction through exceptional service</p>
+              <p>
+                Maintain 95%+ customer satisfaction through exceptional service
+              </p>
             </div>
           </div>
         </section>

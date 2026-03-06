@@ -7,9 +7,9 @@
 
 /* Authorization Page */
 .authorization-page {
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1E293B;
+  color: #1e293b;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -58,7 +58,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -100,14 +100,14 @@
 
 .overview-text h2 {
   font-size: 2.5rem;
-  color: #0C2D48;
+  color: #0c2d48;
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
 .overview-text p {
   font-size: 1.1rem;
-  color: #64748B;
+  color: #64748b;
   margin-bottom: 2rem;
   line-height: 1.8;
 }
@@ -123,28 +123,28 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  background: #F8FAFC;
+  background: #f8fafc;
   border-radius: 0.75rem;
-  border-left: 4px solid #0E7490;
+  border-left: 4px solid #0e7490;
 }
 
 .highlight-icon {
   width: 48px;
   height: 48px;
-  color: #0E7490;
+  color: #0e7490;
   flex-shrink: 0;
 }
 
 .highlight-item h4 {
   font-size: 1.1rem;
-  color: #0C2D48;
+  color: #0c2d48;
   margin-bottom: 0.25rem;
   font-weight: 600;
 }
 
 .highlight-item p {
   font-size: 0.9rem;
-  color: #64748B;
+  color: #64748b;
   margin: 0;
 }
 
@@ -167,7 +167,7 @@
   justify-content: center;
   width: 300px;
   height: 200px;
-  background: #F3F4F6;
+  background: #f3f4f6;
   border-radius: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -178,7 +178,7 @@
 /* Main Product Section */
 .main-product-section {
   padding: 4rem 0;
-  background: #F8FAFC;
+  background: #f8fafc;
 }
 
 .product-showcase {
@@ -190,7 +190,7 @@
 
 .product-description h3 {
   font-size: 1.8rem;
-  color: #0C2D48;
+  color: #0c2d48;
   margin-bottom: 1.5rem;
   font-weight: 600;
 }
@@ -204,7 +204,7 @@
 
 .product-features h4 {
   font-size: 1.2rem;
-  color: #0C2D48;
+  color: #0c2d48;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -226,7 +226,7 @@
 .feature-icon {
   width: 20px;
   height: 20px;
-  color: #0E7490;
+  color: #0e7490;
   flex-shrink: 0;
 }
 
@@ -262,7 +262,7 @@
 
 .spec-card {
   padding: 2rem;
-  background: #F8FAFC;
+  background: #f8fafc;
   border-radius: 1rem;
   text-align: center;
   transition: all 0.3s ease;
@@ -272,19 +272,19 @@
 .spec-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  border-color: #0E7490;
+  border-color: #0e7490;
 }
 
 .spec-icon {
   width: 64px;
   height: 64px;
-  color: #0E7490;
+  color: #0e7490;
   margin: 0 auto 1.5rem;
 }
 
 .spec-card h3 {
   font-size: 1.3rem;
-  color: #0C2D48;
+  color: #0c2d48;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -298,7 +298,7 @@
 /* Contact Section */
 .contact-section {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #0C2D48 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0c2d48 0%, #154a74 100%);
   color: white;
 }
 
@@ -341,7 +341,7 @@
 .contact-icon {
   width: 24px;
   height: 24px;
-  color: #0E7490;
+  color: #0e7490;
   flex-shrink: 0;
 }
 
@@ -382,7 +382,7 @@
 }
 
 .cta-button.primary {
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   color: white;
 }
 
@@ -411,7 +411,7 @@
 /* Back Navigation */
 .back-navigation {
   padding: 2rem 0;
-  background: #F8FAFC;
+  background: #f8fafc;
   text-align: center;
 }
 
@@ -431,9 +431,9 @@
 }
 
 .back-button:hover {
-  background: #F3F4F6;
-  border-color: #0E7490;
-  color: #0E7490;
+  background: #f3f4f6;
+  border-color: #0e7490;
+  color: #0e7490;
 }
 
 .back-icon {
@@ -492,7 +492,7 @@
 
 /* Header Section - Premium Design */
 .auth-header {
-  background: #0C2D48;
+  background: #0c2d48;
   color: #ffffff;
   padding: 5%;
   text-align: center;
@@ -636,13 +636,13 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #0C2D48, #154A74);
+  background: linear-gradient(90deg, #0c2d48, #154a74);
   border-radius: 2px;
 }
 
 .section-header h2 {
   font-size: 42px;
-  color: #0C2D48;
+  color: #0c2d48;
   margin-bottom: 16px;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -705,7 +705,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #0C2D48, #154A74, #1e5a8a);
+  background: linear-gradient(90deg, #0c2d48, #154a74, #1e5a8a);
   transform: scaleX(0);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -725,7 +725,7 @@
   height: 56px;
   margin-bottom: 24px;
   display: block;
-  color: #0C2D48;
+  color: #0c2d48;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
   transition:
     transform 0.4s ease,
@@ -734,11 +734,11 @@
 
 .benefit-card:hover .benefit-icon {
   transform: scale(1.1) rotate(-5deg);
-  color: #154A74;
+  color: #154a74;
 }
 
 .benefit-card h3 {
-  color: #0C2D48;
+  color: #0c2d48;
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 16px 0;
@@ -817,7 +817,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #0C2D48, #154A74, #1e5a8a);
+  background: linear-gradient(90deg, #0c2d48, #154a74, #1e5a8a);
 }
 
 .partner-card::after {
@@ -915,7 +915,7 @@
 }
 
 .partner-name {
-  color: #0C2D48;
+  color: #0c2d48;
   margin: 0 0 14px 0;
   font-size: 24px;
   font-weight: 800;
@@ -952,19 +952,19 @@
 }
 
 .partner-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #0C2D48 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0c2d48 0%, #154a74 100%);
   border-radius: 3px;
 }
 
 .partner-content::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #154A74 0%, #1e5a8a 100%);
+  background: linear-gradient(135deg, #154a74 0%, #1e5a8a 100%);
 }
 
 .content-section {
-  background: linear-gradient(135deg, #F8FAFC 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
   padding: 28px;
   border-radius: 16px;
-  border-left: 4px solid #0C2D48;
+  border-left: 4px solid #0c2d48;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
 }
@@ -977,7 +977,7 @@
 }
 
 .content-section h4 {
-  color: #0C2D48;
+  color: #0c2d48;
   margin: 0 0 20px 0;
   font-size: 17px;
   font-weight: 700;
@@ -991,7 +991,7 @@
 .section-icon {
   width: 22px;
   height: 22px;
-  color: #0C2D48;
+  color: #0c2d48;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
   margin-right: 8px;
   flex-shrink: 0;
@@ -1017,7 +1017,7 @@
 }
 
 .feature-bullet {
-  color: #0C2D48;
+  color: #0c2d48;
   font-weight: 900;
   font-size: 20px;
   line-height: 1;
@@ -1040,7 +1040,7 @@
   color: #334155;
   font-size: 14px;
   line-height: 1.6;
-  border-left: 4px solid #0E7490;
+  border-left: 4px solid #0e7490;
 }
 
 /* Product Categories */
@@ -1051,7 +1051,7 @@
 }
 
 .product-category h5 {
-  color: #154A74;
+  color: #154a74;
   font-size: 16px;
   font-weight: 600;
   margin: 0 0 12px 0;
@@ -1068,7 +1068,7 @@
 /* Product Tags - Premium */
 .product-tag {
   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  color: #0C2D48;
+  color: #0c2d48;
   padding: 8px 16px;
   border-radius: 25px;
   font-size: 12px;
@@ -1081,11 +1081,11 @@
 }
 
 .product-tag:hover {
-  background: linear-gradient(135deg, #0C2D48 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0c2d48 0%, #154a74 100%);
   color: #ffffff;
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 12px rgba(12, 45, 72, 0.25);
-  border-color: #0C2D48;
+  border-color: #0c2d48;
 }
 
 /* Series List */
@@ -1108,7 +1108,7 @@
 }
 
 .series-item h5 {
-  color: #0C2D48;
+  color: #0c2d48;
   margin: 0 0 12px 0;
   font-size: 16px;
   font-weight: 600;
@@ -1122,7 +1122,7 @@
 
 .feature-tag {
   background: #f0f4f8;
-  color: #154A74;
+  color: #154a74;
   padding: 4px 10px;
   border-radius: 12px;
   font-size: 11px;
@@ -1142,9 +1142,9 @@
   align-items: center;
   gap: 15px;
   padding: 12px;
-  background: #F8FAFC;
+  background: #f8fafc;
   border-radius: 8px;
-  border-left: 3px solid #0C2D48;
+  border-left: 3px solid #0c2d48;
 }
 
 .material-number {
@@ -1153,7 +1153,7 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  background: #0C2D48;
+  background: #0c2d48;
   color: #ffffff;
   border-radius: 50%;
   font-size: 12px;
@@ -1175,8 +1175,8 @@
 }
 
 .industry-item {
-  background: #F8FAFC;
-  color: #0C2D48;
+  background: #f8fafc;
+  color: #0c2d48;
   padding: 12px 16px;
   border-radius: 8px;
   text-align: center;
@@ -1187,7 +1187,7 @@
 }
 
 .industry-item:hover {
-  background: #0C2D48;
+  background: #0c2d48;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -1200,8 +1200,8 @@
 }
 
 .feature-card {
-  background: #F8FAFC;
-  color: #0C2D48;
+  background: #f8fafc;
+  color: #0c2d48;
   padding: 16px;
   border-radius: 8px;
   text-align: center;
@@ -1212,14 +1212,14 @@
 }
 
 .feature-card:hover {
-  background: #0C2D48;
+  background: #0c2d48;
   color: #ffffff;
   transform: translateY(-2px);
 }
 
 /* CTA Section - Premium Design */
 .cta-section {
-  background: linear-gradient(135deg, #0C2D48 0%, #154A74 50%, #1a3a52 100%);
+  background: linear-gradient(135deg, #0c2d48 0%, #154a74 50%, #1a3a52 100%);
   color: #ffffff;
   padding: 120px 20px;
   text-align: center;
@@ -1319,7 +1319,7 @@
 
 .cta-button.primary {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  color: #0C2D48;
+  color: #0c2d48;
 }
 
 .cta-button.primary:hover {
@@ -1647,7 +1647,7 @@ html {
 /* Selection Color */
 ::selection {
   background: rgba(12, 45, 72, 0.2);
-  color: #0C2D48;
+  color: #0c2d48;
 }
 
 /* Focus Styles */
@@ -1708,7 +1708,7 @@ html {
 
 .partners-section-new .section-header h2 {
   font-size: 42px;
-  color: #0C2D48;
+  color: #0c2d48;
   font-weight: 800;
   margin-bottom: 16px;
 }
@@ -1763,7 +1763,7 @@ html {
 }
 
 .partner-logo-fallback {
-  color: #0C2D48;
+  color: #0c2d48;
   font-weight: 700;
   font-size: 16px;
   display: flex;
@@ -2059,7 +2059,7 @@ html {
 }
 
 .partner-category {
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   color: white;
   padding: 6px 14px;
   border-radius: 20px;
@@ -2070,7 +2070,7 @@ html {
 }
 
 .partner-founded {
-  color: #64748B;
+  color: #64748b;
   font-size: 13px;
   font-weight: 500;
 }
@@ -2084,7 +2084,7 @@ html {
 }
 
 .partner-card-content .partner-name {
-  color: #0C2D48;
+  color: #0c2d48;
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 10px 0;
@@ -2092,7 +2092,7 @@ html {
 }
 
 .partner-card-content .partner-description {
-  color: #64748B;
+  color: #64748b;
   font-size: 14px;
   line-height: 1.5;
   margin: 0 0 15px 0;
@@ -2107,7 +2107,7 @@ html {
 }
 
 .specialty-tag {
-  background: #F1F5F9;
+  background: #f1f5f9;
   color: #475569;
   padding: 5px 12px;
   border-radius: 15px;
@@ -2117,7 +2117,7 @@ html {
 }
 
 .specialty-tag:last-child {
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   color: white;
   border-color: transparent;
 }
@@ -2125,7 +2125,7 @@ html {
 /* Partner Card Footer */
 .partner-card-footer {
   padding: 15px 25px;
-  background: #F8FAFC;
+  background: #f8fafc;
 }
 
 /* Go to the Page Button */
@@ -2136,7 +2136,7 @@ html {
   gap: 8px;
   width: 100%;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   color: white;
   text-decoration: none;
   border-radius: 10px;
@@ -2151,7 +2151,7 @@ html {
 .go-to-page-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(14, 116, 144, 0.35);
-  background: linear-gradient(135deg, #154A74 0%, #0E7490 100%);
+  background: linear-gradient(135deg, #154a74 0%, #0e7490 100%);
 }
 
 .go-to-page-btn .arrow-icon {
@@ -2169,20 +2169,20 @@ html {
     text-align: center;
     gap: 15px;
   }
-  
+
   .partner-logo-container img {
     width: 110px;
     height: 110px;
   }
-  
+
   .partner-card-content {
     padding: 15px 20px;
   }
-  
+
   .partner-card-content .partner-name {
     font-size: 16px;
   }
-  
+
   .partner-card-footer {
     padding: 12px 20px;
   }
@@ -2192,16 +2192,16 @@ html {
   .partner-card-header {
     padding: 15px 20px;
   }
-  
+
   .partner-logo-container img {
     width: 100px;
     height: 100px;
   }
-  
+
   .partner-card-content {
     padding: 12px 18px;
   }
-  
+
   .go-to-page-btn {
     font-size: 13px;
     padding: 10px 16px;

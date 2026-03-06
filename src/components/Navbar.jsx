@@ -26,13 +26,23 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="logo-link">
-          <img
-            src="/asplogo.svg"
-            alt="ASP Global Marine Trading LLC"
-            className="logo-image"
-          />
-        </Link>
+        <div className="logo-container">
+          {/* <Link to="/" className="logo-link">
+            <img
+              src="/logo.svg"
+              alt="ASP Global Marine Trading LLC"
+              className="logo-image logo-first"
+            />
+          </Link> */}
+          <Link to="/" className="logo-link">
+            <img
+              src="/asplogo.svg"
+              alt="ASP Global Marine Trading LLC"
+              className="logo-image logo-second"
+            />
+          </Link>
+        </div>
+        {/* <img src="/asplogo.svg" alt="ASP Global Marine Trading LLC" /> */}
         {/* <div className="nav-branding">
           <h1 className="nav-company-name">ASP GLOBAL MARINE TRADING LLC</h1>
           <p className="nav-group-name">Part of Ocean Serenity Group</p>
@@ -189,9 +199,9 @@ const Navbar = () => {
         </div>
 
         <div className="nav-actions">
-          <Link to="/contact" className="btn-contact">
+          <a href="mailto:info@aspglobalmarine.com" className="btn-contact">
             Get Quote
-          </Link>
+          </a>
         </div>
 
         <div

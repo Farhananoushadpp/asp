@@ -88,7 +88,7 @@ const HGMachineryGroup = () => {
 
       {/* Content Section */}
       <section className="partner-content-section">
-        <div className="container">
+        <div className="container-full">
           <div className="content-grid">
             {/* Main Content */}
             <div className="main-content">
@@ -128,9 +128,11 @@ const HGMachineryGroup = () => {
               </ul>
 
               <h3>Product Range</h3>
-              <img src="/Authorisation/Hg/1.webp" alt="HG Product 1" style={{width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '20px'}} />
-              <img src="/Authorisation/Hg/2.webp" alt="HG Product 2" style={{width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '20px'}} />
-              <img src="/Authorisation/Hg/3.webp" alt="HG Product 3" style={{width: '100%', maxWidth: '300px', height: 'auto'}} />
+              <div className="product-images-grid">
+                <img src="/Authorisation/Hg/1.jpg " alt="HG Product 1" />
+                <img src="/Authorisation/Hg/2.webp" alt="HG Product 2" />
+                <img src="/Authorisation/Hg/3.webp" alt="HG Product 3" />
+              </div>
 
               <h3>Product Specifications</h3>
               <div className="table-container">

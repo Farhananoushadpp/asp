@@ -79,13 +79,13 @@
 .contact-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(14, 116, 144, 0.15);
-  border-color: #0E7490;
+  border-color: #0e7490;
 }
 
 .card-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -136,7 +136,7 @@
   align-items: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-md) var(--spacing-lg);
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   color: white;
   border: none;
   border-radius: 12px;
@@ -218,7 +218,7 @@
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #0E7490;
+  border-color: #0e7490;
   box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.1);
 }
 
@@ -233,7 +233,7 @@
   justify-content: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-md) var(--spacing-xl);
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   color: white;
   border: none;
   border-radius: 12px;
@@ -329,19 +329,27 @@
 }
 
 .nfc-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   right: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
   animation: shimmer 3s infinite;
 }
 
 @keyframes shimmer {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .nfc-card-header {
@@ -417,7 +425,9 @@
   width: 30px;
   height: 2px;
   background: #92400e;
-  box-shadow: 0 4px 0 #92400e, 0 8px 0 #92400e;
+  box-shadow:
+    0 4px 0 #92400e,
+    0 8px 0 #92400e;
 }
 
 .nfc-wifi-icon {
@@ -436,7 +446,7 @@
 
 .wifi-signal::before,
 .wifi-signal::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -478,7 +488,7 @@
 }
 
 .nfc-action-btn.primary {
-  background: linear-gradient(135deg, #0E7490 0%, #154A74 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
   color: white;
 }
 
@@ -498,11 +508,11 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-3xl);
   }
-  
+
   .contact-info-section {
     order: 2;
   }
-  
+
   .contact-form-section {
     order: 1;
   }
@@ -512,24 +522,24 @@
   .contact {
     padding: var(--spacing-3xl) 0;
   }
-  
+
   .contact-headline {
     font-size: var(--font-size-3xl);
   }
-  
+
   .contact-subtitle {
     font-size: var(--font-size-base);
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-card {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .nfc-modal {
     padding: var(--spacing-xl);
   }
@@ -539,11 +549,11 @@
   .contact-form-section {
     padding: var(--spacing-lg);
   }
-  
+
   .nfc-actions {
     flex-direction: column;
   }
-  
+
   .contact-card {
     padding: var(--spacing-lg);
   }
@@ -661,5 +671,71 @@
   .contact-info,
   .contact-form {
     padding: var(--spacing-lg);
+  }
+}
+
+/* Individual NFC Card Buttons */
+.individual-nfc-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.nfc-person-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: var(--white-color);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  flex: 1;
+  min-width: 150px;
+  justify-content: center;
+}
+
+.nfc-person-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--primary-color)
+  );
+}
+
+.arun-btn {
+  background: linear-gradient(135deg, #2e8b8b, #20b2aa);
+}
+
+.arun-btn:hover {
+  background: linear-gradient(135deg, #20b2aa, #2e8b8b);
+}
+
+.yoosaf-btn {
+  background: linear-gradient(135deg, #4682b4, #5f9ea0);
+}
+
+.yoosaf-btn:hover {
+  background: linear-gradient(135deg, #5f9ea0, #4682b4);
+}
+
+@media (max-width: 768px) {
+  .individual-nfc-buttons {
+    flex-direction: column;
+  }
+
+  .nfc-person-btn {
+    min-width: auto;
   }
 }

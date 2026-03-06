@@ -17,390 +17,364 @@ const LSAFFA = () => {
     {
       id: 1,
       name: "Sea Sickness Tablet",
-      image: "/products/lsa&ffa/Asset 45.webp",
+      image: "/products/lsa&ffa/Asset%2045.webp",
       category: "Sea Sickness Tablet",
-      description: "Sea Sickness Tablet",
+      description: "Medication for preventing motion sickness",
       whatsappMessage:
         "Hi, I'm interested in Sea Sickness Tablet. Please provide more information and pricing.",
     },
     {
       id: 2,
       name: "Ration",
-      image: "/products/lsa&ffa/Asset 46.webp",
+      image: "/products/lsa&ffa/Asset%2046.webp",
       category: "Ration",
-      description: "Ration",
+      description: "Emergency compressed food for lifeboats",
       whatsappMessage:
         "Hi, I'm interested in Ration. Please provide more information and pricing.",
     },
     {
       id: 3,
       name: "Fire Coupling Seal",
-      image: "/products/lsa&ffa/Asset 47.webp",
+      image: "/products/lsa&ffa/Asset%2047.webp",
       category: "Fire Coupling Seal",
-      description: "Fire Coupling Seal",
+      description: "Gasket for watertight hose connections",
       whatsappMessage:
         "Hi, I'm interested in Fire Coupling Seal. Please provide more information and pricing.",
     },
     {
       id: 4,
       name: "Oil Absorbent Boom",
-      image: "/products/lsa&ffa/Asset 48.webp",
+      image: "/products/lsa&ffa/Asset%2048.webp",
       category: "Oil Absorbent Boom",
-      description: "Oil Absorbent Boom",
+      description: "Floating barriers for oil containment",
       whatsappMessage:
         "Hi, I'm interested in Oil Absorbent Boom. Please provide more information and pricing.",
     },
     {
       id: 5,
       name: "Oil Absorbent Spill Kit",
-      image: "/products/lsa&ffa/Asset 49.webp",
+      image: "/products/lsa&ffa/Asset%2049.webp",
       category: "Oil Absorbent Spill Kit",
-      description: "Oil Absorbent Spill Kit",
+      description: "Materials for containing and cleaning oil spills",
       whatsappMessage:
         "Hi, I'm interested in Oil Absorbent Spill Kit. Please provide more information and pricing.",
     },
     {
       id: 6,
       name: "Line Throwing Apparatus",
-      image: "/products/lsa&ffa/Asset 50.webp",
+      image: "/products/lsa&ffa/Asset%2050.webp",
       category: "Line Throwing Apparatus",
-      description: "Line Throwing Apparatus",
+      description: "Device for shooting line between vessels",
       whatsappMessage:
         "Hi, I'm interested in Line Throwing Apparatus.information and pricing.",
     },
     {
       id: 7,
       name: "MOB",
-      image: "/products/lsa&ffa/Asset 51.webp",
+      image: "/products/lsa&ffa/Asset%2051.webp",
       category: "MOB",
-      description: "MOB",
+      description: "Man overboard recovery equipment",
       whatsappMessage:
         "Hi, I'm interested in MOB.Please provide more information and pricing.",
     },
     {
       id: 8,
       name: "Scramble Net",
-      image: "/products/lsa&ffa/Asset 52.webp",
+      image: "/products/lsa&ffa/Asset%2052.webp",
       category: "Scramble Net",
-      description: "Scramble Net",
+      description: "Rope net for emergency evacuation/boarding",
       whatsappMessage:
         "Hi, I'm interested in Scramble Net.Please provide more information and pricing.",
     },
     {
       id: 9,
       name: "Aluminum Gangway",
-      image: "/products/lsa&ffa/Asset 53.webp",
+      image: "/products/lsa&ffa/Asset%2053.webp",
       category: "Aluminum Gangway",
-      description: "Aluminum Gangway.",
+      description: "Portable bridge for ship-to-shore transfer",
       whatsappMessage:
         "Hi, I'm interested in Aluminum Gangway. Please provide more information and pricing.",
     },
     {
       id: 10,
       name: "Pilot Ladder",
-      image: "/products/lsa&ffa/Asset 54.webp",
+      image: "/products/lsa&ffa/Asset%2054.webp",
       category: "Pilot Ladder",
-      description: "Pilot Ladder",
+      description: "Rope ladder for pilot boarding operations",
       whatsappMessage:
         "Hi, I'm interested in Pilot Ladder. Please provide more information and pricing.",
     },
     {
       id: 11,
       name: "Breathing Apparatus",
-      image: "/products/lsa&ffa/Asset 55.webp",
+      image: "/products/lsa&ffa/Asset%2055.webp",
       category: "Safety Equipment",
-      description: "Breathing Apparatus",
+      description: "Respiratory protection equipment",
       whatsappMessage:
         "Hi, I'm interested in Breathing Apparatus. Please provide more information and pricing.",
     },
     {
       id: 12,
       name: "Oxygen Resuscitator",
-      image: "/products/lsa&ffa/Asset 56.webp",
+      image: "/products/lsa&ffa/Asset%2056.webp",
       category: "Fire Safety",
-      description: "Oxygen Resuscitator.",
+      description: "Portable oxygen unit for breathing difficulties",
       whatsappMessage:
         "Hi, I'm interested in Oxygen Resuscitator. Please provide more information and pricing.",
     },
     {
       id: 13,
-      name: "Marine Escape Systems",
-      image: "/products/lsa&ffa/Asset 58.webp",
-      category: "Evacuation",
-      description:
-        "Advanced marine escape and evacuation systems. Comprehensive solutions for safe vessel abandonment.",
+      name: "Water Proof Torch",
+      image: "/products/lsa&ffa/Asset%2058.webp",
+      category: "Water Proof Torch",
+      description: "Sealed flashlight for wet/marine environments",
       whatsappMessage:
-        "Hi, I'm interested in Marine Escape Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Water Proof Torch. Please provide more information and pricing.",
     },
     {
       id: 14,
-      name: "Fire Alarm Systems",
-      image: "/products/lsa&ffa/Asset 59.webp",
-      category: "Fire Detection",
-      description:
-        "Marine fire alarm and notification systems. Audible and visual alarms for emergency situations.",
+      name: "Binoculars",
+      image: "/products/lsa&ffa/Asset%2059.webp",
+      category: "Binoculars",
+      description: "7x50 marine optics for navigation and lookout",
       whatsappMessage:
-        "Hi, I'm interested in Fire Alarm Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Binoculars. Please provide more information and pricing.",
     },
     {
       id: 15,
-      name: "Rescue Boat Equipment",
-      image: "/products/lsa&ffa/Asset 61.webp",
-      category: "Rescue Operations",
-      description:
-        "Complete rescue boat equipment packages. Navigation, communication, and safety gear for rescue operations.",
+      name: "Fire Axe",
+      image: "/products/lsa&ffa/Asset%2061.webp",
+      category: "Fire Axe",
+      description: "Insulated emergency tool for forcible entry",
       whatsappMessage:
-        "Hi, I'm interested in Rescue Boat Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Fire Axe. Please provide more information and pricing.",
     },
     {
       id: 16,
-      name: "Breathing Apparatus Sets",
-      image: "/products/lsa&ffa/Asset 62.webp",
-      category: "Breathing Protection",
-      description:
-        "Self-contained breathing apparatus sets. Professional-grade respiratory protection for hazardous environments.",
+      name: "Safety Helmet",
+      image: "/products/lsa&ffa/Asset%2062.webp",
+      category: "Safety Helmet",
+      description: "Impact-resistant head protection for workers",
       whatsappMessage:
-        "Hi, I'm interested in Breathing Apparatus Sets. Please provide more information and pricing.",
+        "Hi, I'm interested in Safety Helmet. Please provide more information and pricing.",
     },
     {
       id: 17,
-      name: "Fire Hose & Nozzle Systems",
-      image: "/products/lsa&ffa/Asset 63.webp",
-      category: "Fire-Fighting",
-      description:
-        "Marine fire hoses and nozzle systems. High-pressure delivery systems for effective fire fighting.",
+      name: "Towing Stretcher",
+      image: "/products/lsa&ffa/Asset%2063.webp",
+      category: "Towing Stretcher",
+      description: "Collapsible rescue stretcher for casualty transfer",
       whatsappMessage:
-        "Hi, I'm interested in Fire Hose & Nozzle Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Towing Stretcher. Please provide more information and pricing.",
     },
     {
       id: 18,
-      name: "Emergency Signal Devices",
-      image: "/products/lsa&ffa/Asset 64.webp",
-      category: "Signaling",
-      description:
-        "Emergency signaling and communication devices. Flares, smoke signals, and EPIRBs for distress signaling.",
+      name: "Pyrotechnics",
+      image: "/products/lsa&ffa/Asset%2064.webp",
+      category: "Pyrotechnics",
+      description: "Visual distress signals (flares, smoke signals)",
       whatsappMessage:
-        "Hi, I'm interested in Emergency Signal Devices. Please provide more information and pricing.",
+        "Hi, I'm interested in Pyrotechnics. Please provide more information and pricing.",
     },
     {
       id: 19,
-      name: "Fire Control Panels",
-      image: "/products/lsa&ffa/Asset 65.webp",
-      category: "Fire Control",
-      description:
-        "Advanced fire control and monitoring panels. Integrated systems for fire management and control.",
+      name: "HRU",
+      image: "/products/lsa&ffa/Asset%2065.webp",
+      category: "HRU",
+      description: "Hydrostatic device for automatic life raft release",
       whatsappMessage:
-        "Hi, I'm interested in Fire Control Panels. Please provide more information and pricing.",
+        "Hi, I'm interested in HRU. Please provide more information and pricing.",
     },
     {
       id: 20,
-      name: "Survival Equipment Packages",
-      image: "/products/lsa&ffa/Asset 66.webp",
-      category: "Life-Saving",
-      description:
-        "Complete survival equipment packages. All-inclusive kits for emergency situations and survival.",
+      name: "Fire Extinguisher",
+      image: "/products/lsa&ffa/Asset%2066.webp",
+      category: "Fire Extinguisher",
+      description: "Portable fire suppression unit (CO2/Foam/Powder)",
       whatsappMessage:
-        "Hi, I'm interested in Survival Equipment Packages. Please provide more information and pricing.",
+        "Hi, I'm interested in Fire Extinguisher.  Please provide more information and pricing.",
     },
     {
       id: 21,
-      name: "Marine Safety Helmets",
-      image: "/products/lsa&ffa/Asset 67.webp",
-      category: "Personal Protection",
-      description:
-        "Marine safety helmets and head protection. Impact-resistant helmets for crew safety.",
+      name: "PPE Kit",
+      image: "/products/lsa&ffa/Asset%2067.webp",
+      category: "PPE Kit",
+      description: "Personal protective equipment set for shipboard work",
       whatsappMessage:
-        "Hi, I'm interested in Marine Safety Helmets. Please provide more information and pricing.",
+        "Hi, I'm interested in PPE Kit. Please provide more information and pricing.",
     },
     {
       id: 22,
-      name: "Fire Suppression Systems",
-      image: "/products/lsa&ffa/Asset 68.webp",
-      category: "Fire Suppression",
-      description:
-        "Advanced fire suppression systems. CO2, foam, and clean agent systems for specialized applications.",
+      name: "IMO Stickers",
+      image: "/products/lsa&ffa/Asset%2068.webp",
+      category: "IMO Stickers",
+      description: "Mandatory safety signage per maritime regulations",
       whatsappMessage:
-        "Hi, I'm interested in Fire Suppression Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in IMO Stickers.provide more information and pricing.",
     },
     {
       id: 23,
-      name: "Emergency Evacuation Systems",
-      image: "/products/lsa&ffa/Asset 69.webp",
-      category: "Evacuation",
-      description:
-        "Marine emergency evacuation systems. Chutes, slides, and evacuation equipment for rapid deployment.",
+      name: "Nozzles",
+      image: "/products/lsa&ffa/Asset%2069.webp",
+      category: "Nozzles",
+      description: "Adjustable spray/jet attachments for fire hoses",
       whatsappMessage:
-        "Hi, I'm interested in Emergency Evacuation Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Nozzles. Please provide more information and pricing.",
     },
     {
       id: 24,
-      name: "Fire Safety Equipment",
-      image: "/products/lsa&ffa/Asset 70.webp",
+      name: "Fire Hose Box",
+      image: "/products/lsa&ffa/Asset%2070.webp",
       category: "Fire Safety",
-      description:
-        "Comprehensive fire safety equipment packages. Complete solutions for vessel fire protection.",
+      description: "Weather-resistant storage cabinet for fire hoses",
       whatsappMessage:
-        "Hi, I'm interested in Fire Safety Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Fire Hose Box. Please provide more information and pricing.",
     },
     {
       id: 25,
-      name: "Lifeboat Launching Systems",
-      image: "/products/lsa&ffa/Asset 71.webp",
-      category: "Life-Saving",
-      description:
-        "Lifeboat launching and recovery systems. Davits and launching mechanisms for safe deployment.",
+      name: "Lifebuoy Light",
+      image: "/products/lsa&ffa/Asset%2071.webp",
+      category: "Lifebuoy Light",
+      description: "Self-igniting floating light for lifebuoys",
       whatsappMessage:
-        "Hi, I'm interested in Lifeboat Launching Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Lifebuoy Light. Please provide more information and pricing.",
     },
     {
       id: 26,
-      name: "Marine Fire Extinguishers",
-      image: "/products/lsa&ffa/Asset 72.webp",
-      category: "Fire-Fighting",
-      description:
-        "Specialized marine fire extinguishers. Type-specific extinguishers for different fire classifications.",
+      name: "Work West",
+      image: "/products/lsa&ffa/Asset%2072.webp",
+      category: "Work West",
+      description: "Lightweight buoyancy aid for deck work",
       whatsappMessage:
-        "Hi, I'm interested in Marine Fire Extinguishers. Please provide more information and pricing.",
+        "Hi, I'm interested in Work West. Please provide more information and pricing.",
     },
     {
       id: 27,
-      name: "Emergency Communication Systems",
-      image: "/products/lsa&ffa/Asset 73.webp",
-      category: "Communication",
-      description:
-        "Emergency communication and notification systems. Reliable communication for emergency situations.",
+      name: "CO2  Cartridge",
+      image: "/products/lsa&ffa/Asset%2073.webp",
+      category: "CO2  Cartridge",
+      description: "Compressed gas cylinder for inflating safety equipment",
       whatsappMessage:
-        "Hi, I'm interested in Emergency Communication Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in CO2  Cartridge. Please provide more information and pricing.",
     },
     {
       id: 28,
-      name: "Fire Fighting Equipment",
-      image: "/products/lsa&ffa/Asset 75.webp",
-      category: "Fire-Fighting",
-      description:
-        "Professional fire fighting equipment and tools. Comprehensive gear for marine fire fighting teams.",
+      name: "Life Jacket Light",
+      image: "/products/lsa&ffa/Asset%2075.webp",
+      category: "Life Jacket Light",
+      description: "Water-activated light attached to life jackets",
       whatsappMessage:
-        "Hi, I'm interested in Fire Fighting Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Life Jacket Light. Please provide more information and pricing.",
     },
     {
       id: 29,
-      name: "Life-Saving Appliances",
-      image: "/products/lsa&ffa/Asset 76.webp",
-      category: "Life-Saving",
-      description:
-        "Complete range of life-saving appliances. SOLAS compliant equipment for maritime safety.",
+      name: "Inflatable Life Jacket",
+      image: "/products/lsa&ffa/Asset%2076.webp",
+      category: "Inflatable Life Jacket",
+      description: "Auto-inflating personal flotation device",
       whatsappMessage:
-        "Hi, I'm interested in Life-Saving Appliances. Please provide more information and pricing.",
+        "Hi, I'm interested in Inflatable Life Jacket. Please provide more information and pricing.",
     },
     {
       id: 30,
-      name: "Marine Safety Equipment",
-      image: "/products/lsa&ffa/Asset 78.webp",
-      category: "Safety Equipment",
-      description:
-        "Comprehensive marine safety equipment. All essential safety gear for vessel operations.",
+      name: "Lockout Tag Kit",
+      image: "/products/lsa&ffa/Asset%2078.webp",
+      category: "Lockout Tag Kit",
+      description: "Safety system for isolating energy during maintenance",
       whatsappMessage:
-        "Hi, I'm interested in Marine Safety Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Lockout Tag Kit. Please provide more information and pricing.",
     },
     {
       id: 31,
-      name: "Advanced Fire Systems",
-      image: "/products/lsa&ffa/Asset 79.webp",
-      category: "Fire Systems",
-      description:
-        "Advanced fire detection and suppression systems. Integrated solutions for comprehensive fire protection.",
+      name: " Fire Hose Adapters Male/Female",
+      image: "/products/lsa&ffa/Asset%2079.webp",
+      category: "Fire Hose Adapters Male/Female",
+      description: "Gender changers for hose connections",
       whatsappMessage:
-        "Hi, I'm interested in Advanced Fire Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Fire Hose Adapters Male/Female. Please provide more information and pricing.",
     },
     {
       id: 32,
-      name: "Emergency Response Equipment",
-      image: "/products/lsa&ffa/Asset 80.webp",
-      category: "Emergency Response",
-      description:
-        "Emergency response and rescue equipment. Professional gear for emergency situations.",
+      name: "Fire Hose Cupplings",
+      image: "/products/lsa&ffa/Asset%2080.webp",
+      category: "Fire Hose Cupplings",
+      description: "Quick-connect fittings for joining fire hose sections",
       whatsappMessage:
-        "Hi, I'm interested in Emergency Response Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Fire Hose Cupplings. Please provide more information and pricing.",
     },
     {
       id: 33,
-      name: "Marine Survival Systems",
-      image: "/products/lsa&ffa/Asset 81.webp",
-      category: "Survival Systems",
+      name: "Lifebuoy 2.5Kg & 4.5Kg",
+      image: "/products/lsa&ffa/Asset%2081.webp",
+      category: "Lifebuoy 2.5Kg & 4.5Kg",
       description:
-        "Complete marine survival systems. Integrated solutions for emergency situations.",
+        "Ring-shaped flotation device for throwing to persons overboard",
       whatsappMessage:
-        "Hi, I'm interested in Marine Survival Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Lifebuoy 2.5Kg & 4.5Kg. Please provide more information and pricing.",
     },
     {
       id: 34,
-      name: "Fire Detection Equipment",
-      image: "/products/lsa&ffa/Asset 82.webp",
-      category: "Fire Detection",
+      name: "SCBA",
+      image: "/products/lsa&ffa/Asset%2082.webp",
+      category: "SCBA",
       description:
-        "Advanced fire detection equipment. Heat, smoke, and flame detectors for early warning.",
+        "Self-contained breathing apparatus with compressed air cylinder",
       whatsappMessage:
-        "Hi, I'm interested in Fire Detection Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in SCBA. Please provide more information and pricing.",
     },
     {
       id: 35,
-      name: "Lifeboat Safety Equipment",
-      image: "/products/lsa&ffa/Asset 83.webp",
-      category: "Life-Saving",
-      description:
-        "Lifeboat safety and operational equipment. Complete gear for lifeboat operations and maintenance.",
+      name: "EEBD",
+      image: "/products/lsa&ffa/Asset%2083.webp",
+      category: "EEBD",
+      description: "10-15 min emergency breathing device for escape",
       whatsappMessage:
-        "Hi, I'm interested in Lifeboat Safety Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in EEBD. Please provide more information and pricing.",
     },
     {
       id: 36,
-      name: "Marine Fire Protection",
-      image: "/products/lsa&ffa/Asset 84.webp",
-      category: "Fire Protection",
-      description:
-        "Comprehensive marine fire protection systems. Complete solutions for vessel fire safety.",
+      name: "Immersion Suits",
+      image: "/products/lsa&ffa/Asset%2084.webp",
+      category: "Immersion Suits",
+      description: "Insulated waterproof suits for cold water survival",
       whatsappMessage:
-        "Hi, I'm interested in Marine Fire Protection. Please provide more information and pricing.",
+        "Hi, I'm interested in Immersion Suits. Please provide more information and pricing.",
     },
     {
       id: 37,
-      name: "Emergency Safety Systems",
-      image: "/products/lsa&ffa/Asset 85.webp",
-      category: "Safety Systems",
-      description:
-        "Integrated emergency safety systems. Complete solutions for vessel emergency management.",
+      name: "Fireman Suits",
+      image: "/products/lsa&ffa/Asset%2085.webp",
+      category: "Fireman Suits",
+      description: "Fire-resistant protective clothing for firefighters",
       whatsappMessage:
-        "Hi, I'm interested in Emergency Safety Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Fireman Suits. Please provide more information and pricing.",
     },
     {
       id: 38,
-      name: "Fire Safety Systems",
-      image: "/products/lsa&ffa/Asset 86.webp",
-      category: "Fire Safety",
-      description:
-        "Advanced fire safety and prevention systems. Comprehensive solutions for fire risk management.",
+      name: "Chemical Suits",
+      image: "/products/lsa&ffa/Asset%2086.webp",
+      category: "Chemical Suits",
+      description: "Impermeable protection against hazardous chemicals",
       whatsappMessage:
-        "Hi, I'm interested in Fire Safety Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Chemical Suits. Please provide more information and pricing.",
     },
     {
       id: 39,
-      name: "Marine Emergency Equipment",
-      image: "/products/lsa&ffa/Asset 87.webp",
-      category: "Emergency Equipment",
-      description:
-        "Complete marine emergency equipment packages. All essential gear for emergency situations.",
+      name: "Hydrant Valves",
+      image: "/products/lsa&ffa/Asset%2087.webp",
+      category: "Hydrant Valves",
+      description: "Valves controlling water flow from fire main to hoses",
       whatsappMessage:
-        "Hi, I'm interested in Marine Emergency Equipment. Please provide more information and pricing.",
+        "Hi, I'm interested in Hydrant Valves. Please provide more information and pricing.",
     },
     {
       id: 40,
-      name: "Professional Fire Systems",
-      image: "/products/lsa&ffa/Asset 88.webp",
-      category: "Fire Systems",
-      description:
-        "Professional fire protection and suppression systems. Industrial-grade solutions for maritime applications.",
+      name: "Life Raft",
+      image: "/products/lsa&ffa/Asset%2088.webp",
+      category: "Life Raft",
+      description: "Inflatable emergency craft for abandoning ship",
       whatsappMessage:
-        "Hi, I'm interested in Professional Fire Systems. Please provide more information and pricing.",
+        "Hi, I'm interested in Life Raft. Please provide more information and pricing.",
     },
   ];
 
@@ -435,72 +409,57 @@ const LSAFFA = () => {
         ]}
       />
 
-      <div className="container">
-        {/* Product Grid Layout - 4 Products Per Row */}
-        <section className="product-grid-layout-four">
-          {productRows.map((row, rowIndex) => (
-            <div key={rowIndex} className="grid-row-four">
-              {row.map((product) => (
-                <div key={product.id} className="product-card-four">
-                  <div className="product-image-four">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      loading="lazy"
-                      onError={(e) => {
-                        e.target.style.display = "none";
-                        e.target.parentElement.style.background =
-                          "linear-gradient(135deg, #f0f9ff, #e6f7f4)";
-                        e.target.parentElement.innerHTML =
-                          '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--primary-color); font-weight: 600; text-align: center; padding: 20px;">' +
-                          product.name +
-                          "</div>";
-                      }}
-                    />
-                  </div>
-                  <div className="product-info-four">
-                    <h3 className="product-name-four">{product.name}</h3>
-                    <p className="product-category-four">{product.category}</p>
-                    <p className="product-description-four">
-                      {product.description}
-                    </p>
-                    <div className="product-actions-four">
-                      <a
-                        href={`https://wa.me/971525478137?text=${encodeURIComponent(product.whatsappMessage)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="contact-btn-four whatsapp-btn-four"
-                        aria-label="WhatsApp"
+      <div className="container-full">
+        {/* Product Grid Layout - Using Global Grid */}
+        <section className="product-gallery section-spacing-top section-spacing-bottom">
+          <div className="grid-responsive-5">
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="gallery-item">
+                <div className="product-image">
+                  <img src={product.image} alt={product.name} loading="lazy" />
+                </div>
+                <div className="product-details">
+                  <span className="product-category">{product.category}</span>
+                  <h3 className="product-name">{product.name}</h3>
+                  <p className="product-desc">{product.description}</p>
+                  <div className="product-buttons">
+                    <a
+                      href={`https://wa.me/971505357966?text=${encodeURIComponent(
+                        product.whatsappMessage,
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-btn"
+                      title="Contact on WhatsApp"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
                       >
-                        <span className="contact-icon-four">
-                          <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.709-.508-.173-.006-.371-.006-.57-.006-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.24 3.076c.173.198 2.445 3.732 5.927 5.236.828.357 1.476.57 1.979.73.828.262 1.582.225 2.178.136.664-.099 2.04-1.33 2.329-2.618.288-1.288.148-2.388.074-2.618-.074-.23-.27-.347-.567-.496z" />
-                            <path
-                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                              opacity=".3"
-                            />
-                          </svg>
-                        </span>
-                        WhatsApp
-                      </a>
-                      <a
-                        href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n")[0].replace("Subject: ", "") : "Inquiry about " + product.name)}&body=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n").slice(2).join("\n").trim() : "Dear ASP Global Marine Trading,\n\nI'm interested in " + product.name + ". Please provide more information and pricing.\n\nThank you.")}`}
-                        className="contact-btn-four email-btn-four"
-                        aria-label="Email"
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                      </svg>
+                    </a>
+                    <a
+                      href="mailto:info@aspglobalmarine.com"
+                      className="email-btn"
+                      title="Contact via Email"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
                       >
-                        <span className="contact-icon-four">
-                          <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                          </svg>
-                        </span>
-                        Email
-                      </a>
-                    </div>
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
-              ))}
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>

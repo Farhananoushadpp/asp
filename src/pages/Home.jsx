@@ -17,7 +17,7 @@ const Home = () => {
       <section className="who-we-are-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-label">COMPANY OVERVIEW</span>
+            {/* <span className="section-label">COMPANY OVERVIEW</span> */}
             <h2 className="section-title">Who We Are</h2>
             <p className="section-subtitle">
               Your trusted partner in marine and offshore solutions since 2005
@@ -44,7 +44,7 @@ const Home = () => {
             </div>
             <div className="content-icon">
               <img
-                src="/asplogo.svg"
+                src="/logo.svg"
                 alt="ASP Global Marine Trading LLC"
                 className="asp-global-icon"
               />

@@ -31,9 +31,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(14, 116, 144, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(42, 186, 163, 0.08) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(14, 116, 144, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(42, 186, 163, 0.08) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -290,7 +298,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
 }
 
 .footer-bottom-content {
@@ -367,7 +380,7 @@
   .footer-content {
     padding: 0 40px;
   }
-  
+
   .footer-main {
     gap: 50px;
   }
@@ -379,12 +392,12 @@
     gap: 50px;
     padding: 50px 0 40px;
   }
-  
+
   .footer-links-section {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
-  
+
   .footer-headline {
     font-size: 1.4rem;
   }
@@ -394,28 +407,28 @@
   .footer-content {
     padding: 0 24px;
   }
-  
+
   .footer-main {
     padding: 40px 0 30px;
     gap: 40px;
   }
-  
+
   .footer-links-section {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .footer-headline {
     font-size: 1.3rem;
     padding-left: 16px;
   }
-  
+
   .footer-bottom-content {
     flex-direction: column;
     gap: 15px;
     text-align: center;
   }
-  
+
   .footer-company-name {
     font-size: 1.3rem;
   }
@@ -425,23 +438,23 @@
   .footer-content {
     padding: 0 20px;
   }
-  
+
   .footer-logo-image {
     height: 45px;
   }
-  
+
   .footer-company-name {
     font-size: 1.2rem;
   }
-  
+
   .footer-headline {
     font-size: 1.2rem;
   }
-  
+
   .footer-links-title {
     font-size: 0.85rem;
   }
-  
+
   .footer-link,
   .footer-companies span,
   .footer-contact-info address,

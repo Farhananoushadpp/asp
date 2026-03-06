@@ -12,7 +12,18 @@ const EngineSpares2Stroke = () => {
   const manufacturers = [
     {
       name: "YANMAR",
-      models: ["N18", "EY18", "N21", "EY26", "N260", "N280", "M200", "N330", "EY22", "S185L-HN"],
+      models: [
+        "N18",
+        "EY18",
+        "N21",
+        "EY26",
+        "N260",
+        "N280",
+        "M200",
+        "N330",
+        "EY22",
+        "S185L-HN",
+      ],
     },
     {
       name: "HIMSEN",
@@ -24,7 +35,18 @@ const EngineSpares2Stroke = () => {
     },
     {
       name: "CUMMINS",
-      models: ["N855DM", "K19-DM", "6BT9.5-D(M)", "6CTA8.3", "", "", "", "", "", ""],
+      models: [
+        "N855DM",
+        "K19-DM",
+        "6BT9.5-D(M)",
+        "6CTA8.3",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+      ],
     },
     {
       name: "MAN",
@@ -40,7 +62,18 @@ const EngineSpares2Stroke = () => {
     },
     {
       name: "MITSUBISHI-UEC 33/35LSE",
-      models: ["37LA", "45", "50LA/LS/LSE", "52", "60LA/LS", "68LSE", "85LS", "", "", ""],
+      models: [
+        "37LA",
+        "45",
+        "50LA/LS/LSE",
+        "52",
+        "60LA/LS",
+        "68LSE",
+        "85LS",
+        "",
+        "",
+        "",
+      ],
     },
   ];
 
@@ -53,12 +86,11 @@ const EngineSpares2Stroke = () => {
         icon={Settings}
         badges={[
           { icon: CheckCircle, text: "OEM Quality" },
-          { icon: Award, text: "Class Certified" }
+          { icon: Award, text: "Class Certified" },
         ]}
       />
 
-      <div className="container">
-
+      <div className="container-full">
         {/* Supported Brands Section */}
         <div className="brands-section">
           <div className="supported-brands-label">Supported Brands</div>
@@ -105,6 +137,20 @@ const EngineSpares2Stroke = () => {
                 className="brand-logo-img"
               />
             </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/yanmar-logo.png"
+                alt="YANMAR"
+                className="brand-logo-img"
+              />
+            </div>
+            <div className="brand-logo-item">
+              <img
+                src="/brands/cummins-logo.png"
+                alt="CUMMINS"
+                className="brand-logo-img"
+              />
+            </div>
           </div>
         </div>
 
@@ -116,49 +162,67 @@ const EngineSpares2Stroke = () => {
                 <h3>Pistons, piston crowns & piston rings</h3>
               </div>
               <div className="product-card-image">
-                <img src="/products/engine-spares-2stroke/pistons.webp" alt="Pistons, piston crowns & piston rings" />
+                <img
+                  src="/products/engine-spares-2stroke/pistons.webp"
+                  alt="Pistons, piston crowns & piston rings"
+                />
               </div>
             </div>
-            
+
             <div className="product-card-item reverse">
               <div className="product-card-image">
-                <img src="/products/engine-spares-2stroke/cylinder-liners.webp" alt="Cylinder liners & cylinder covers" />
+                <img
+                  src="/products/engine-spares-2stroke/cylinder-liners.webp"
+                  alt="Cylinder liners & cylinder covers"
+                />
               </div>
               <div className="product-card-content blue-card">
                 <h3>Cylinder liners & cylinder covers</h3>
               </div>
             </div>
-            
+
             <div className="product-card-item">
               <div className="product-card-content blue-card">
                 <h3>Fuel pumps, injection nozzles & valves</h3>
               </div>
               <div className="product-card-image">
-                <img src="/products/engine-spares-2stroke/fuel-pumps.webp" alt="Fuel pumps, injection nozzles & valves" />
+                <img
+                  src="/products/engine-spares-2stroke/fuel-pumps.webp"
+                  alt="Fuel pumps, injection nozzles & valves"
+                />
               </div>
             </div>
-            
+
             <div className="product-card-item">
               <div className="product-card-content blue-card">
                 <h3>Oil pumps, camshafts & stuffing boxes</h3>
               </div>
               <div className="product-card-image">
-                <img src="/products/engine-spares-2stroke/oil-pumps.webp" alt="Oil pumps, camshafts & stuffing boxes" />
+                <img
+                  src="/products/engine-spares-2stroke/oil-pumps.webp"
+                  alt="Oil pumps, camshafts & stuffing boxes"
+                />
               </div>
             </div>
-            
+
             <div className="product-card-item">
               <div className="product-card-image">
-                <img src="/products/engine-spares-2stroke/sensors.webp" alt="Sensors & auxiliary engine parts" />
+                <img
+                  src="/products/engine-spares-2stroke/sensors.webp"
+                  alt="Sensors & auxiliary engine parts"
+                />
               </div>
               <div className="product-card-content overlay-card">
                 <h3>Sensors & auxiliary engine parts</h3>
               </div>
             </div>
-            
+
             <div className="product-card-item">
               <div className="product-card-image">
-                <img src="/products/engine-spares-2stroke/stuffing-boxes.webp" alt="Oil pumps, camshafts & stuffing boxes" />
+                <img
+                  src="/products/engine-spares-2stroke/stuffing-boxes.webp"
+                  alt="Oil pumps, camshafts & stuffing boxes"
+                />
               </div>
               <div className="product-card-content overlay-card">
                 <h3>Oil pumps, camshafts & stuffing boxes</h3>

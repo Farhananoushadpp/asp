@@ -1,11 +1,11 @@
 /**
  * ASP Global Marine Trading LLC - Clients Page
- * 
+ *
  * Our valued clients and partnerships
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-import '../styles/pages/About.css';
+import "../styles/pages/About.css";
 
 const Clients = () => {
   const clientCategories = [
@@ -16,8 +16,8 @@ const Clients = () => {
         "Bulk Carrier Operators",
         "Container Shipping Lines",
         "Tanker Operators",
-        "Ro-Ro Vessel Owners"
-      ]
+        "Ro-Ro Vessel Owners",
+      ],
     },
     {
       category: "Ship Managers",
@@ -25,8 +25,8 @@ const Clients = () => {
       clients: [
         "Third-Party Ship Managers",
         "Fleet Management Companies",
-        "Technical Service Providers"
-      ]
+        "Technical Service Providers",
+      ],
     },
     {
       category: "Marine Service Companies",
@@ -34,8 +34,8 @@ const Clients = () => {
       clients: [
         "Marine Engineering Firms",
         "Repair & Maintenance Companies",
-        "Survey & Inspection Services"
-      ]
+        "Survey & Inspection Services",
+      ],
     },
     {
       category: "Offshore Operators",
@@ -44,14 +44,14 @@ const Clients = () => {
         "Offshore Platform Operators",
         "Drilling Companies",
         "FPSO Operators",
-        "Support Vessel Companies"
-      ]
-    }
+        "Support Vessel Companies",
+      ],
+    },
   ];
 
   return (
     <div className="about-page">
-      <div className="container">
+      <div className="container-full">
         <div className="page-header">
           <h1 className="page-title">Our Clients</h1>
           <p className="page-subtitle">
@@ -61,9 +61,10 @@ const Clients = () => {
 
         <section className="clients-intro">
           <p>
-            ASP Global Marine Trading LLC serves a diverse portfolio of clients across the maritime industry. 
-            Our reputation for quality, reliability, and exceptional service has earned us the trust of 
-            ship owners, operators, and service companies globally.
+            ASP Global Marine Trading LLC serves a diverse portfolio of clients
+            across the maritime industry. Our reputation for quality,
+            reliability, and exceptional service has earned us the trust of ship
+            owners, operators, and service companies globally.
           </p>
         </section>
 
@@ -77,7 +78,7 @@ const Clients = () => {
                   <div key={clientIndex} className="client-item">
                     <div className="client-icon">
                       <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                       </svg>
                     </div>
                     <span>{client}</span>
@@ -94,8 +95,9 @@ const Clients = () => {
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <p>
-                  &ldquo;ASP Global Marine has been our trusted supplier for over 10 years. Their quality 
-                  products and exceptional service have consistently exceeded our expectations.&rdquo;
+                  &ldquo;ASP Global Marine has been our trusted supplier for
+                  over 10 years. Their quality products and exceptional service
+                  have consistently exceeded our expectations.&rdquo;
                 </p>
               </div>
               <div className="testimonial-author">
@@ -103,12 +105,13 @@ const Clients = () => {
                 <p>Leading Container Shipping Line</p>
               </div>
             </div>
-            
+
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <p>
-                  &ldquo;The technical expertise and prompt delivery from ASP Global Marine have been 
-                  crucial for our offshore operations. They understand our requirements perfectly.&rdquo;
+                  &ldquo;The technical expertise and prompt delivery from ASP
+                  Global Marine have been crucial for our offshore operations.
+                  They understand our requirements perfectly.&rdquo;
                 </p>
               </div>
               <div className="testimonial-author">
@@ -116,12 +119,13 @@ const Clients = () => {
                 <p>Offshore Platform Operator</p>
               </div>
             </div>
-            
+
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <p>
-                  &ldquo;We rely on ASP Global Marine for critical marine spares. Their compliance 
-                  documentation and quality assurance give us complete confidence in their products.&rdquo;
+                  &ldquo;We rely on ASP Global Marine for critical marine
+                  spares. Their compliance documentation and quality assurance
+                  give us complete confidence in their products.&rdquo;
                 </p>
               </div>
               <div className="testimonial-author">
@@ -137,19 +141,31 @@ const Clients = () => {
           <div className="approach-points">
             <div className="approach-item">
               <h3>Understanding Needs</h3>
-              <p>We take time to understand each client&apos;s specific requirements and operational context</p>
+              <p>
+                We take time to understand each client&apos;s specific
+                requirements and operational context
+              </p>
             </div>
             <div className="approach-item">
               <h3>Quality Assurance</h3>
-              <p>Every product is thoroughly inspected and documented before delivery</p>
+              <p>
+                Every product is thoroughly inspected and documented before
+                delivery
+              </p>
             </div>
             <div className="approach-item">
               <h3>Technical Support</h3>
-              <p>Our expert team provides guidance and support throughout the procurement process</p>
+              <p>
+                Our expert team provides guidance and support throughout the
+                procurement process
+              </p>
             </div>
             <div className="approach-item">
               <h3>Long-term Relationships</h3>
-              <p>We build lasting partnerships based on trust, reliability, and mutual success</p>
+              <p>
+                We build lasting partnerships based on trust, reliability, and
+                mutual success
+              </p>
             </div>
           </div>
         </section>

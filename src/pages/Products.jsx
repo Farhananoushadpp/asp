@@ -120,19 +120,19 @@ const ProductsPage = () => {
         icon={Package}
         badges={[
           { icon: Award, text: "ISO 9001:2015" },
-          { icon: Users, text: "Global Network" }
+          { icon: Users, text: "Global Network" },
         ]}
       />
 
       {/* All Categories */}
-      <section className="all-categories">
-        <div className="container">
+      <section className="all-categories section-spacing-top">
+        <div className="container-full">
           <div className="section-header">
             <h2>Product Categories</h2>
             <p>Complete range of marine equipment and solutions</p>
           </div>
-          
-          <div className="categories-grid">
+
+          <div className="grid-responsive-5">
             {productCategories.map((category) => (
               <div key={category.id} className="category-card">
                 <div className="category-content">
@@ -143,13 +143,27 @@ const ProductsPage = () => {
                   <p>{category.description}</p>
                   <div className="brand-tags">
                     {category.brands.map((brand, index) => (
-                      <span key={index} className="brand-tag">{brand}</span>
+                      <span key={index} className="brand-tag">
+                        {brand}
+                      </span>
                     ))}
                   </div>
-                  <Link to={`/products/${category.id}`} className="category-link">
+                  <Link
+                    to={`/products/${category.id}`}
+                    className="category-link"
+                  >
                     View Products
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </Link>
                 </div>

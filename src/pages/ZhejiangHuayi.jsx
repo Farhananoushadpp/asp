@@ -88,7 +88,7 @@ const ZhejiangHuayi = () => {
 
       {/* Content Section */}
       <section className="partner-content-section">
-        <div className="container">
+        <div className="container-full">
           <div className="content-grid">
             {/* Main Content */}
             <div className="main-content">

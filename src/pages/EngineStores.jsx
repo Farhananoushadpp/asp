@@ -7,7 +7,7 @@
 
 import "../styles/pages/Products.css";
 import { useState } from "react";
-import { Wrench, CheckCircle, Shield } from "lucide-react";
+import { Wrench, CheckCircle, Shield, Truck, Globe } from "lucide-react";
 import PageHero from "../components/PageHero.jsx";
 
 const EngineStores = () => {
@@ -17,9 +17,9 @@ const EngineStores = () => {
     {
       id: 1,
       name: "High Temp. Gaskets",
-      image: "/products/enginestores/Asset 1.webp",
+      image: "/products/enginestores/Asset%201.webp",
       category: "High Temp. Gaskets",
-      description: "High Temp. Gaskets",
+      description: "Heat-resistant seals for exhaust and high-pressure joints",
       whatsappMessage:
         "Hi, I'm interested in High Temp. Gaskets. Please provide more information and pricing.",
       emailMessage:
@@ -28,9 +28,9 @@ const EngineStores = () => {
     {
       id: 2,
       name: "Pipe Bender",
-      image: "/products/enginestores/Asset 2.webp",
+      image: "/products/enginestores/Asset%202.webp",
       category: "Pipe Bender",
-      description: "Pipe Bender",
+      description: "Tool for bending pipes to required angles",
       whatsappMessage:
         "Hi, I'm interested in Pipe Bender. Please provide more information and pricing.",
       emailMessage:
@@ -39,9 +39,9 @@ const EngineStores = () => {
     {
       id: 3,
       name: "Cargo Sling Bag",
-      image: "/products/enginestores/Asset 3.webp",
+      image: "/products/enginestores/Asset%203.webp",
       category: "Cargo Sling Bag",
-      description: "Cargo Sling Bag",
+      description: "Heavy-duty lifting bag for cargo operations",
       whatsappMessage:
         "Hi, I'm interested in Cargo Sling Bag. Please provide more information and pricing.",
       emailMessage:
@@ -50,10 +50,9 @@ const EngineStores = () => {
     {
       id: 4,
       name: "Submersible Pumps",
-      image: "/products/enginestores/Asset 4.webp",
+      image: "/products/enginestores/Asset%204.webp",
       category: "Submersible Pumps",
-      description:
-        "High-quality marine engine components for various engine types. Reliable parts for optimal engine performance.",
+      description: "Pumps designed for underwater liquid transfer",
       whatsappMessage:
         "Hi, I'm interested in Submersible Pumps. Please provide more information and pricing.",
       emailMessage:
@@ -62,9 +61,9 @@ const EngineStores = () => {
     {
       id: 5,
       name: "Red Silicon",
-      image: "/products/enginestores/Asset 5.webp",
+      image: "/products/enginestores/Asset%205.webp",
       category: "Red Silicon",
-      description: "Red Silicon",
+      description: "High-temperature red silicone sealant",
       whatsappMessage:
         "Hi, I'm interested in Red Silicon. Please provide more information and pricing.",
       emailMessage:
@@ -73,9 +72,10 @@ const EngineStores = () => {
     {
       id: 6,
       name: "Rust Removers",
-      image: "/products/enginestores/Asset 6.webp",
+      image: "/products/enginestores/Asset%206.webp",
       category: "Rust Removers",
-      description: "Rust Removers",
+      description:
+        "Chemical solutions for removing corrosion from metal surfaces",
       whatsappMessage:
         "Hi, I'm interested in Rust Removers. Please provide more information and pricing.",
       emailMessage:
@@ -84,9 +84,9 @@ const EngineStores = () => {
     {
       id: 7,
       name: "Insulation Test Kit",
-      image: "/products/enginestores/Asset 7.webp",
+      image: "/products/enginestores/Asset%207.webp",
       category: "Insulation Test Kit",
-      description: "Insulation Test Kit",
+      description: "Megger for testing electrical insulation resistance",
       whatsappMessage:
         "Hi, I'm interested in Insulation Test Kit. Please provide more information and pricing.",
       emailMessage:
@@ -95,9 +95,9 @@ const EngineStores = () => {
     {
       id: 8,
       name: "Clamp Meter",
-      image: "/products/enginestores/Asset 8.webp",
+      image: "/products/enginestores/Asset%208.webp",
       category: "Clamp Meter",
-      description: "Clamp Meter",
+      description: "Electrical tester for measuring current without contact",
       whatsappMessage:
         "Hi, I'm interested in Clamp Meter. Please provide more information and pricing.",
       emailMessage:
@@ -106,9 +106,9 @@ const EngineStores = () => {
     {
       id: 9,
       name: "Gas/Smoke Detectors",
-      image: "/products/enginestores/Asset 9.webp",
+      image: "/products/enginestores/Asset%209.webp",
       category: "Gas/Smoke Detectors",
-      description: "Gas/Smoke Detectors",
+      description: "Sensors for detecting hazardous gases and smoke",
       whatsappMessage:
         "Hi, I'm interested in Gas/Smoke Detectors. Please provide more information and pricing.",
       emailMessage:
@@ -117,9 +117,9 @@ const EngineStores = () => {
     {
       id: 10,
       name: "Magnetic Drilling Machine",
-      image: "/products/enginestores/Asset 10.webp",
+      image: "/products/enginestores/Asset%2010.webp",
       category: "Drilling Machine",
-      description: "Magnetic Drilling Machine",
+      description: "Portable drill with magnetic base for steel surfaces",
       whatsappMessage:
         "Hi, I'm interested in Magnetic Drilling Machine. Please provide more information and pricing.",
       emailMessage:
@@ -128,9 +128,10 @@ const EngineStores = () => {
     {
       id: 11,
       name: "Adhesives",
-      image: "/products/enginestores/Asset 11.webp",
+      image: "/products/enginestores/Asset%2011.webp",
       category: "Adhesives",
-      description: "Adhesives",
+      description:
+        "Bonding agents for sealing, repairing, and joining materials",
       whatsappMessage:
         "Hi, I'm interested in Adhesives. Please provide more information and pricing.",
       emailMessage:
@@ -139,9 +140,9 @@ const EngineStores = () => {
     {
       id: 12,
       name: "CRC",
-      image: "/products/enginestores/Asset 12.webp",
+      image: "/products/enginestores/Asset%2012.webp",
       category: "CRC",
-      description: "CRC",
+      description: "Multi-purpose lubricant and corrosion inhibitor spray",
       whatsappMessage:
         "Hi, I'm interested in CRC. Please provide more information and pricing.",
       emailMessage:
@@ -150,9 +151,9 @@ const EngineStores = () => {
     {
       id: 13,
       name: "Explossion Proof Hand Lamp",
-      image: "/products/enginestores/Asset 13.webp",
+      image: "/products/enginestores/Asset%2013.webp",
       category: "Explossion Proof Hand Lamp",
-      description: "Explossion Proof Hand Lamp",
+      description: "Intrinsically safe portable light for hazardous areas",
       whatsappMessage:
         "Hi, I'm interested in Explossion Proof Hand Lamp. Please provide more information and pricing.",
       emailMessage:
@@ -161,9 +162,9 @@ const EngineStores = () => {
     {
       id: 14,
       name: "Bearing Puller",
-      image: "/products/enginestores/Asset 14.webp",
+      image: "/products/enginestores/Asset%2014.webp",
       category: "Bearing Puller",
-      description: "Bearing Puller",
+      description: "Tool for removing bearings from shafts and housings",
       whatsappMessage:
         "Hi, I'm interested in Bearing Puller. Please provide more information and pricing.",
       emailMessage:
@@ -172,9 +173,9 @@ const EngineStores = () => {
     {
       id: 15,
       name: "Emery Tape",
-      image: "/products/enginestores/Asset 15.webp",
+      image: "/products/enginestores/Asset%2015.webp",
       category: "Emery Tape",
-      description: "Emery Tape",
+      description: "Abrasive cloth for cleaning and polishing metal surfaces",
       whatsappMessage:
         "Hi, I'm interested in Emery Tape. Please provide more information and pricing.",
       emailMessage:
@@ -183,9 +184,9 @@ const EngineStores = () => {
     {
       id: 16,
       name: "Diaphragm Pump",
-      image: "/products/enginestores/Asset 16.webp",
+      image: "/products/enginestores/Asset%2016.webp",
       category: "Diaphragm Pump",
-      description: "Diaphragm Pump",
+      description: "Positive displacement pump for chemicals and fluids",
       whatsappMessage:
         "Hi, I'm interested in Diaphragm Pump. Please provide more information and pricing.",
       emailMessage:
@@ -194,9 +195,9 @@ const EngineStores = () => {
     {
       id: 17,
       name: "Mechanical Seal",
-      image: "/products/enginestores/Asset 17.webp",
+      image: "/products/enginestores/Asset%2017.webp",
       category: "Mechanical Seal",
-      description: "Mechanical Seal",
+      description: "Shaft sealing device for pumps and rotating equipment",
       whatsappMessage:
         "Hi, I'm interested in Mechanical Seal. Please provide more information and pricing.",
       emailMessage:
@@ -205,9 +206,9 @@ const EngineStores = () => {
     {
       id: 18,
       name: "O Rings",
-      image: "/products/enginestores/Asset 18.webp",
+      image: "/products/enginestores/Asset%2018.webp",
       category: "O Rings",
-      description: "O Rings",
+      description: "Circular rubber seals for preventing leaks in joints",
       whatsappMessage:
         "Hi, I'm interested in O Rings. Please provide more information and pricing.",
       emailMessage:
@@ -216,9 +217,9 @@ const EngineStores = () => {
     {
       id: 19,
       name: "Gland Packing",
-      image: "/products/enginestores/Asset 19.webp",
+      image: "/products/enginestores/Asset%2019.webp",
       category: "Gland Packing",
-      description: "Gland Packing.",
+      description: "Sealing material for pump and valve shafts",
       whatsappMessage:
         "Hi, I'm interested in Gland Packing. Please provide more information and pricing.",
       emailMessage:
@@ -227,9 +228,9 @@ const EngineStores = () => {
     {
       id: 20,
       name: "Chain Block",
-      image: "/products/enginestores/Asset 20.webp",
+      image: "/products/enginestores/Asset%2020.webp",
       category: "Chain Block",
-      description: "Chain Block.",
+      description: "Manual lifting device with chain for heavy loads",
       whatsappMessage:
         "Hi, I'm interested in Chain Block. Please provide more information and pricing.",
       emailMessage:
@@ -238,9 +239,9 @@ const EngineStores = () => {
     {
       id: 21,
       name: "Vacuum Pump",
-      image: "/products/enginestores/Asset 21.webp",
+      image: "/products/enginestores/Asset%2021.webp",
       category: "Vacuum Pump",
-      description: "Vacuum Pump",
+      description: "Pump for creating vacuum in systems or evacuating air",
       whatsappMessage:
         "Hi, I'm interested in Vacuum Pump. Please provide more information and pricing.",
       emailMessage:
@@ -249,9 +250,9 @@ const EngineStores = () => {
     {
       id: 22,
       name: "RHIB-Boat Repair Kit",
-      image: "/products/enginestores/Asset 22.webp",
+      image: "/products/enginestores/Asset%2022.webp",
       category: "RHIB-Boat Repair Kit",
-      description: "RHIB-Boat Repair Kit",
+      description: "Puncture repair materials for rigid inflatable boats",
       whatsappMessage:
         "Hi, I'm interested in RHIB-Boat Repair Kit. Please provide more information and pricing.",
       emailMessage:
@@ -260,10 +261,10 @@ const EngineStores = () => {
     {
       id: 23,
       name: "Bearings",
-      image: "/products/enginestores/Asset 23.webp",
+      image: "/products/enginestores/Asset%2023.webp",
       category: "Bearings",
       description:
-        "Engine gauges and monitoring instruments. Pressure, temperature, and RPM monitoring devices.",
+        "Components supporting rotating shafts and reducing friction",
       whatsappMessage:
         "Hi, I'm interested in Bearings. Please provide more information and pricing.",
       emailMessage:
@@ -272,9 +273,9 @@ const EngineStores = () => {
     {
       id: 24,
       name: "A/C Split & Tower",
-      image: "/products/enginestores/Asset 24.webp",
+      image: "/products/enginestores/Asset%2024.webp",
       category: "A/C Split & Tower",
-      description: "A/C Split & Tower",
+      description: "Air conditioning units for cooling accommodation spaces",
       whatsappMessage:
         "Hi, I'm interested in A/C Split & Tower. Please provide more information and pricing.",
       emailMessage:
@@ -283,9 +284,9 @@ const EngineStores = () => {
     {
       id: 25,
       name: "Water Filters",
-      image: "/products/enginestores/Asset 25.webp",
+      image: "/products/enginestores/Asset%2025.webp",
       category: "Water Filters",
-      description: "Water Filters",
+      description: "Cartridges/systems for purifying cooling and feed water",
       whatsappMessage:
         "Hi, I'm interested in Water Filters. Please provide more information and pricing.",
       emailMessage:
@@ -294,9 +295,9 @@ const EngineStores = () => {
     {
       id: 26,
       name: "Switches",
-      image: "/products/enginestores/Asset 26.webp",
+      image: "/products/enginestores/Asset%2026.webp",
       category: "Switches",
-      description: "Switches",
+      description: "Electrical devices for opening/closing circuits",
       whatsappMessage:
         "Hi, I'm interested in Switches. Please provide more information and pricing.",
       emailMessage:
@@ -305,9 +306,9 @@ const EngineStores = () => {
     {
       id: 27,
       name: "Thermo Meters",
-      image: "/products/enginestores/Asset 27.webp",
+      image: "/products/enginestores/Asset%2027.webp",
       category: "Thermo Meters",
-      description: "Thermo Meters",
+      description: "Temperature measuring instruments for monitoring",
       whatsappMessage:
         "Hi, I'm interested in Thermo Meters. Please provide more information and pricing.",
       emailMessage:
@@ -316,9 +317,9 @@ const EngineStores = () => {
     {
       id: 28,
       name: "Coolants",
-      image: "/products/enginestores/Asset 28.webp",
+      image: "/products/enginestores/Asset%2028.webp",
       category: "Coolants",
-      description: "Coolants",
+      description: "Heat transfer fluids for engine cooling systems",
       whatsappMessage:
         "Hi, I'm interested in Coolants. Please provide more information and pricing.",
       emailMessage:
@@ -327,9 +328,10 @@ const EngineStores = () => {
     {
       id: 29,
       name: "Battery/Charger",
-      image: "/products/enginestores/Asset 29.webp",
+      image: "/products/enginestores/Asset%2029.webp",
       category: "Battery/Charger",
-      description: "Battery/Charger",
+      description:
+        "Power storage and charging units for emergency/starting systems",
       whatsappMessage:
         "Hi, I'm interested in Battery/Charger. Please provide more information and pricing.",
       emailMessage:
@@ -338,9 +340,9 @@ const EngineStores = () => {
     {
       id: 30,
       name: "Transformers",
-      image: "/products/enginestores/Asset 30.webp",
+      image: "/products/enginestores/Asset%2030.webp",
       category: "Transformers",
-      description: "Transformers",
+      description: "Devices for voltage conversion and electrical isolation",
       whatsappMessage:
         "Hi, I'm interested in Transformers. Please provide more information and pricing.",
       emailMessage:
@@ -349,9 +351,9 @@ const EngineStores = () => {
     {
       id: 31,
       name: "Flood / Tube Lights",
-      image: "/products/enginestores/Asset 31.webp",
+      image: "/products/enginestores/Asset%2031.webp",
       category: "Flood / Tube Lights",
-      description: "Flood / Tube Lights",
+      description: "High-output lighting for engine room illumination",
       whatsappMessage:
         "Hi, I'm interested in Flood / Tube Lights. Please provide more information and pricing.",
       emailMessage:
@@ -360,9 +362,9 @@ const EngineStores = () => {
     {
       id: 32,
       name: "Junction Box",
-      image: "/products/enginestores/Asset 32.webp",
+      image: "/products/enginestores/Asset%2032.webp",
       category: "Junction Box",
-      description: "Junction Box",
+      description: "Enclosure for connecting and protecting electrical wires",
       whatsappMessage:
         "Hi, I'm interested in Junction Box. Please provide more information and pricing.",
       emailMessage:
@@ -373,7 +375,7 @@ const EngineStores = () => {
       name: "Carbon Brushes",
       image: "/products/enginestores/NeEeih.webp",
       category: "Carbon Brushes",
-      description: "Carbon Brushes",
+      description: "Conductive components for electric motor commutators",
       whatsappMessage:
         "Hi, I'm interested in Carbon Brushes. Please provide more information and pricing.",
       emailMessage:
@@ -382,9 +384,9 @@ const EngineStores = () => {
     {
       id: 34,
       name: "Relays",
-      image: "/products/enginestores/Asset 34.webp",
+      image: "/products/enginestores/Asset%2034.webp",
       category: "Relays",
-      description: "Relays",
+      description: "Electromagnetic switches for control circuit automation",
       whatsappMessage:
         "Hi, I'm interested in Relays. Please provide more information and pricing.",
       emailMessage:
@@ -393,9 +395,9 @@ const EngineStores = () => {
     {
       id: 35,
       name: "Blower",
-      image: "/products/enginestores/Asset 35.webp",
+      image: "/products/enginestores/Asset%2035.webp",
       category: "Blower",
-      description: "Blower",
+      description: "Fan unit for ventilation and cooling in engine spaces",
       whatsappMessage:
         "Hi, I'm interested in Blower. Please provide more information and pricing.",
       emailMessage:
@@ -404,10 +406,10 @@ const EngineStores = () => {
     {
       id: 36,
       name: "Engine Log Book",
-      image: "/products/enginestores/Asset 36.webp",
+      image: "/products/enginestores/Asset%2036.webp",
       category: "Log Book",
       description:
-        "Engine room log book. Record-keeping and documentation for engine operations.",
+        "Record book for documenting engine parameters and maintenance",
       whatsappMessage:
         "Hi, I'm interested in Engine Log Book. Please provide more information and pricing.",
       emailMessage:
@@ -416,9 +418,10 @@ const EngineStores = () => {
     {
       id: 37,
       name: "Refregerant",
-      image: "/products/enginestores/Asset 37.webp",
+      image: "/products/enginestores/Asset%2037.webp",
       category: "Refregerant",
-      description: "Refregerant",
+      description:
+        "Cooling medium for air conditioning and refrigeration systems",
       whatsappMessage:
         "Hi, I'm interested in Refregerant. Please provide more information and pricing.",
       emailMessage:
@@ -427,9 +430,9 @@ const EngineStores = () => {
     {
       id: 38,
       name: "Welding Consumables",
-      image: "/products/enginestores/Asset 38.webp",
+      image: "/products/enginestores/Asset%2038.webp",
       category: "Welding Consumables",
-      description: "Welding Consumables",
+      description: "Electrodes, wires, and gases for repair welding",
       whatsappMessage:
         "Hi, I'm interested in Welding Consumables. Please provide more information and pricing.",
       emailMessage:
@@ -464,77 +467,79 @@ const EngineStores = () => {
         icon={Wrench}
         badges={[
           { icon: CheckCircle, text: "High Quality Parts" },
-          { icon: Shield, text: "Marine Grade" }
+          { icon: Truck, text: "Fast Delivery" },
+          { icon: Globe, text: "Global Shipping" },
         ]}
       />
-
-      <div className="container">
-
-        {/* Product Grid Layout - 4 Products Per Row */}
-        <section className="product-grid-layout-four">
-          {productRows.map((row, rowIndex) => (
-            <div key={rowIndex} className="grid-row-four">
-              {row.map((product) => (
-                <div key={product.id} className="product-card-four">
-                  <div className="product-image-four">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      loading="lazy"
-                      onError={(e) => {
-                        e.target.style.display = "none";
-                        e.target.parentElement.style.background =
-                          "linear-gradient(135deg, #f0f9ff, #e6f7f4)";
-                        e.target.parentElement.innerHTML =
-                          '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--primary-color); font-weight: 600; text-align: center; padding: 20px;">' +
-                          product.name +
-                          "</div>";
-                      }}
-                    />
-                  </div>
-                  <div className="product-info-four">
-                    <h3 className="product-name-four">{product.name}</h3>
-                    <p className="product-category-four">{product.category}</p>
-                    <p className="product-description-four">
-                      {product.description}
-                    </p>
-                    <div className="product-actions-four">
-                      <a
-                        href={`https://wa.me/971525478137?text=${encodeURIComponent(product.whatsappMessage)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="contact-btn-four whatsapp-btn-four"
-                        aria-label="WhatsApp"
+      <div className="container-full">
+        {/* Product Grid Layout - 5 Products Per Row */}
+        <section className="product-grid-layout-six section-spacing-top section-spacing-bottom">
+          <div className="grid-responsive-5">
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="product-card-six">
+                <div className="product-image-six">
+                  <img src={product.image} alt={product.name} loading="lazy" />
+                </div>
+                <div className="product-info-six">
+                  <h3 className="product-name-six">{product.name}</h3>
+                  <p className="product-category-six">{product.category}</p>
+                  <p className="product-description-six">
+                    {product.description}
+                  </p>
+                  <div className="product-actions-six">
+                    <a
+                      href={`https://wa.me/971505357966?text=${encodeURIComponent(
+                        product.whatsappMessage,
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-btn"
+                      title="Contact on WhatsApp"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
                       >
-                        <span className="contact-icon-four">
-                          <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.709-.508-.173-.006-.371-.006-.57-.006-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.24 3.076c.173.198 2.445 3.732 5.927 5.236.828.357 1.476.57 1.979.73.828.262 1.582.225 2.178.136.664-.099 2.04-1.33 2.329-2.618.288-1.288.148-2.388.074-2.618-.074-.23-.27-.347-.567-.496z" />
-                            <path
-                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                              opacity=".3"
-                            />
-                          </svg>
-                        </span>
-                        WhatsApp
-                      </a>
-                      <a
-                        href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n")[0].replace("Subject: ", "") : "Inquiry about " + product.name)}&body=${encodeURIComponent(product.emailMessage ? product.emailMessage.split("\n").slice(2).join("\n").trim() : "Dear ASP Global Marine Trading,\n\nI'm interested in " + product.name + ". Please provide more information and pricing.\n\nThank you.")}`}
-                        className="contact-btn-four email-btn-four"
-                        aria-label="Email"
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                      </svg>
+                    </a>
+                    <a
+                      href={`mailto:info@aspglobalmarine.com?subject=${encodeURIComponent(
+                        product.emailMessage
+                          ? product.emailMessage
+                              .split("\n")[0]
+                              .replace("Subject: ", "")
+                          : "Inquiry about " + product.name,
+                      )}&body=${encodeURIComponent(
+                        product.emailMessage
+                          ? product.emailMessage
+                              .split("\n")
+                              .slice(2)
+                              .join("\n")
+                              .trim()
+                          : "Dear ASP Global Marine Trading,\n\nI'm interested in " +
+                              product.name +
+                              ". Please provide more information and pricing.\n\nThank you.",
+                      )}`}
+                      className="email-btn"
+                      title="Contact via Email"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
                       >
-                        <span className="contact-icon-four">
-                          <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                          </svg>
-                        </span>
-                        Email
-                      </a>
-                    </div>
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
-              ))}
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>
