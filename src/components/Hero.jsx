@@ -44,10 +44,19 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      {/* Image Background */}
+      {/* Video Background */}
       <div className="hero-video-background">
-        <img src="/home.jpg" alt="ASP Global Marine Trading" className="hero-video" />
-        {/* Image Overlay for content readability */}
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="hero-video"
+        >
+          <source src="/homebanner.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Video Overlay for content readability */}
         <div className="video-overlay"></div>
       </div>
 

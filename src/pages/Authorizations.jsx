@@ -122,7 +122,7 @@ const Authorizations = () => {
         </div>
       </section>
 
-      <div className="container-full">
+      <div className="container">
         {/* Authorizations Grid */}
         <section className="about-section">
           <div className="section-header">

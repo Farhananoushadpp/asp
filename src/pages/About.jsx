@@ -19,31 +19,31 @@ const About = () => {
       image: "/about.jpg",
       heading: "Marine Excellence Since 2006",
       description:
-        "18+ years of delivering quality marine equipment and offshore solutions worldwide",
+        "18+ years of delivering quality marine equipment and offshore solutions worldwide with unmatched expertise",
     },
     {
-      image: "/home.jpg",
+      image: "/Authorisation/Guangzhou/1.webp",
       heading: "Global Maritime Partner",
       description:
-        "Serving 500+ clients across 50+ countries with comprehensive marine solutions",
+        "Serving 500+ clients across 50+ countries with comprehensive marine solutions and regulatory compliance",
+    },
+    {
+      image: "/Authorisation/Beijing/1.webp",
+      heading: "Authorized Marine Equipment",
+      description:
+        "Certified provider of marine equipment with full regulatory compliance and industry standards",
+    },
+    {
+      image: "/Authorisation/Zhejiang/1.webp",
+      heading: "Premium Quality Products",
+      description:
+        "Premium spare parts and equipment for vessels and offshore installations ensuring operational excellence",
     },
     {
       image: "/Authorisation/Hg/1.jpg",
-      heading: "Authorized Marine Solutions",
-      description:
-        "Certified provider of marine equipment with full regulatory compliance",
-    },
-    {
-      image: "/Authorisation/Beijing/1.jpg",
-      heading: "Quality Marine Equipment",
-      description:
-        "Premium spare parts and equipment for vessels and offshore installations",
-    },
-    {
-      image: "/Authorisation/Changzhou/1.jpg",
       heading: "Reliable Offshore Support",
       description:
-        "Comprehensive safety solutions and operational excellence for maritime industry",
+        "Comprehensive safety solutions and operational support for maritime industry worldwide",
     },
   ];
 
@@ -77,6 +77,22 @@ const About = () => {
                 <p className="slide-description">{slide.description}</p>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Slide Counter */}
+        <div className="slide-counter">
+          <span>{currentSlide + 1}</span> / {backgroundImages.length}
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="slide-indicators">
+          {backgroundImages.map((_, index) => (
+            <div
+              key={index}
+              className={`slide-indicator ${index === currentSlide ? "active" : ""}`}
+              onClick={() => setCurrentSlide(index)}
+            />
           ))}
         </div>
 

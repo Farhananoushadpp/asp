@@ -27,13 +27,13 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="logo-container">
-          {/* <Link to="/" className="logo-link">
+          <Link to="/" className="logo-link">
             <img
               src="/logo.svg"
               alt="ASP Global Marine Trading LLC"
               className="logo-image logo-first"
             />
-          </Link> */}
+          </Link>
           <Link to="/" className="logo-link">
             <img
               src="/asplogo.svg"
@@ -57,7 +57,6 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 <span className="nav-text">Home</span>
-                <span className="nav-indicator"></span>
               </Link>
             </li>
             <li>
@@ -67,7 +66,6 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 <span className="nav-text">About Us</span>
-                <span className="nav-indicator"></span>
               </Link>
             </li>
             <li
@@ -78,7 +76,6 @@ const Navbar = () => {
                 onClick={toggleProductsDropdown}
               >
                 <span className="nav-text">Products</span>
-                <span className="nav-indicator"></span>
               </button>
               <div className="dropdown-menu">
                 <Link
@@ -182,7 +179,6 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 <span className="nav-text">Authorizations</span>
-                <span className="nav-indicator"></span>
               </Link>
             </li>
             <li>
@@ -192,7 +188,6 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 <span className="nav-text">Contact Us</span>
-                <span className="nav-indicator"></span>
               </Link>
             </li>
           </ul>

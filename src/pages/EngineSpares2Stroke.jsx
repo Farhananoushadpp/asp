@@ -90,7 +90,7 @@ const EngineSpares2Stroke = () => {
         ]}
       />
 
-      <div className="container-full">
+      <div className="container">
         {/* Supported Brands Section */}
         <div className="brands-section">
           <div className="supported-brands-label">Supported Brands</div>

@@ -409,7 +409,7 @@ const LSAFFA = () => {
         ]}
       />
 
-      <div className="container-full">
+      <div className="container">
         {/* Product Grid Layout - Using Global Grid */}
         <section className="product-gallery section-spacing-top section-spacing-bottom">
           <div className="grid-responsive-5">

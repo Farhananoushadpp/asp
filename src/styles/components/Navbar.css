@@ -39,6 +39,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  justify-content: flex-start; /* Ensure left alignment */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 /* Logo Styling */
@@ -61,6 +63,7 @@
   object-fit: contain;
   transition: transform 0.3s ease;
   filter: brightness(1.1); /* Make logo pop on dark background */
+  transform: scale(1.05); /* Permanent hover size */
 }
 
 .logo-first {
@@ -72,13 +75,15 @@
 }
 
 .logo-link:hover .logo-image {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Maintain same size on hover */
 }
 
 /* Navigation Menu */
 .nav-menu {
   display: flex;
   align-items: center;
+  justify-content: flex-end; /* Ensure right alignment */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .nav-list {
@@ -92,7 +97,7 @@
 .nav-link {
   color: #ffffff; /* White text for dark background */
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400; /* Changed from 600 to 400 (normal) */
   font-size: 15px;
   position: relative;
   transition: all 0.3s ease;
@@ -110,18 +115,67 @@
   z-index: 2;
 }
 
-/* Modern Underline Indicator */
+/* Modern Underline Indicator - Removed */
 .nav-indicator {
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #0e7490, #14b8a6);
-  border-radius: 2px;
-  transition: transform 0.3s ease;
-  z-index: 1;
+  display: none;
+}
+
+/* Override global link styles for navbar */
+.nav-link {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.nav-link::after {
+  display: none !important;
+}
+
+.nav-link:hover {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: #ffffff !important;
+}
+
+.nav-link:hover::after {
+  display: none !important;
+}
+
+/* Add permanent color for active/selected pages */
+.nav-link.active {
+  color: #14b8a6 !important;
+}
+
+.nav-link.active .nav-text {
+  color: #14b8a6 !important;
+}
+
+/* Add hover effect for active/selected pages only */
+.nav-link.active:hover {
+  color: #14b8a6 !important;
+  transform: translateY(-1px);
+}
+
+.nav-link.active:hover .nav-text {
+  color: #14b8a6 !important;
+}
+
+/* Override global link styles for logo */
+.logo-link {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.logo-link::after {
+  display: none !important;
+}
+
+.logo-link:hover {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.logo-link:hover::after {
+  display: none !important;
 }
 
 .nav-link:focus,
@@ -131,11 +185,28 @@
   box-shadow: none;
   background: none;
   border: none;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
-.nav-link:hover .nav-indicator,
+.nav-link:hover .nav-indicator {
+  display: none;
+}
+
 .nav-link.active .nav-indicator {
-  transform: translateX(-50%) scaleX(1);
+  display: none;
+}
+
+.nav-link {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.nav-link:focus,
+.nav-link:active,
+.nav-link:hover {
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 /* Dropdown Menu Styles - Modern */
@@ -149,8 +220,9 @@
   cursor: pointer;
   padding: 8px 0;
   color: #ffffff; /* White text for dropdown heading */
-  text-decoration: none;
-  font-weight: 600;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  font-weight: 400; /* Changed from 600 to 400 (normal) */
   font-size: 15px;
   position: relative;
   transition: all 0.3s ease;
@@ -159,8 +231,7 @@
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  outline: none; /* Remove focus outline */
-  box-shadow: none; /* Remove any box shadow */
+  text-shadow: none;
 }
 
 .dropdown-toggle:focus,
@@ -255,34 +326,35 @@
 }
 
 .btn-contact {
-  padding: 10px 24px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  padding: 12px 28px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0e7490 0%, #154a74 100%);
+  background: linear-gradient(135deg, #4291AB 0%, #307087 100%);
   color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 15px rgba(14, 116, 144, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(66, 145, 171, 0.25);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .btn-contact:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #14b8a6 0%, #0e7490 100%);
-  box-shadow: 0 6px 20px rgba(14, 116, 144, 0.5);
-  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #307087 0%, #2A303C 100%);
+  box-shadow: 0 4px 12px rgba(66, 145, 171, 0.35);
+  border-color: rgba(255, 255, 255, 0.3);
   color: #ffffff;
 }
 
-.btn-contact:hover::before {
+.btn-contact::before {
   content: "";
   position: absolute;
   top: 0;
@@ -292,10 +364,10 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1),
     transparent
   );
-  transition: left 0.5s;
+  transition: left 0.6s ease;
 }
 
 .btn-contact:hover::before {
@@ -387,7 +459,7 @@
 
   .nav-link {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400; /* Changed from 600 to 400 (normal) */
     padding: 16px 0;
     width: 100%;
     color: #ffffff; /* White text for mobile navigation */
@@ -401,15 +473,60 @@
   }
 
   .nav-indicator {
-    bottom: 8px;
-    height: 2px;
-    background: #0e7490;
-    transform: translateX(-50%) scaleX(0);
+    display: none;
   }
 
-  .nav-link:hover .nav-indicator,
+  .nav-link:hover .nav-indicator {
+    display: none;
+  }
+
   .nav-link.active .nav-indicator {
-    transform: translateX(-50%) scaleX(1);
+    display: none;
+  }
+
+  .nav-link {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+
+  .nav-link::after {
+    display: none !important;
+  }
+
+  .nav-link:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: #ffffff !important;
+  }
+
+  .nav-link:hover::after {
+    display: none !important;
+  }
+
+  /* Add permanent color for active/selected pages - mobile */
+  .nav-link.active {
+    color: #14b8a6 !important;
+  }
+
+  .nav-link.active .nav-text {
+    color: #14b8a6 !important;
+  }
+
+  /* Add hover effect for active/selected pages only - mobile */
+  .nav-link.active:hover {
+    color: #14b8a6 !important;
+    transform: translateY(-1px);
+  }
+
+  .nav-link.active:hover .nav-text {
+    color: #14b8a6 !important;
+  }
+
+  .nav-link:focus,
+  .nav-link:active,
+  .nav-link:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
   }
 
   /* Mobile Dropdown */

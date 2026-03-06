@@ -471,7 +471,7 @@ const EngineStores = () => {
           { icon: Globe, text: "Global Shipping" },
         ]}
       />
-      <div className="container-full">
+      <div className="container">
         {/* Product Grid Layout - 5 Products Per Row */}
         <section className="product-grid-layout-six section-spacing-top section-spacing-bottom">
           <div className="grid-responsive-5">

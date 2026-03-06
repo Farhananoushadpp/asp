@@ -35,7 +35,7 @@ const AirCompressorSpares = () => {
 
   return (
     <div className="product-page" style={{ paddingBottom: "60px" }}>
-      <div className="container-full">
+      <div className="container">
         {/* Page Header */}
         <div className="portfolio-header">
           <h1 className="portfolio-title">AIR COMPRESSOR SPARES</h1>

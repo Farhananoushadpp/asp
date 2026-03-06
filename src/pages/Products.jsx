@@ -16,7 +16,7 @@ const ProductsPage = () => {
       id: "engine-spares-2stroke",
       title: "Engine Spares - 2 Stroke",
       description:
-        "Complete range of 2-stroke engine spare parts for major marine engine manufacturers including pistons, cylinder liners, fuel pumps, and more.",
+        "Complete range of 2-stroke engine spare parts for marine applications including pistons, liners, and fuel pumps.",
       image: "/products/categories/engine-2stroke.jpg",
       brands: ["YANMAR", "HIMSEN", "WARTSILA", "MAN", "SULZER", "WINGD"],
       featured: true,
@@ -25,7 +25,7 @@ const ProductsPage = () => {
       id: "engine-spares-4stroke",
       title: "Engine Spares - 4 Stroke",
       description:
-        "Comprehensive 4-stroke engine components and spare parts for marine applications including valves, bearings, and gasket sets.",
+        "Comprehensive 4-stroke engine components and spare parts for marine vessels including valves and bearings.",
       image: "/products/categories/engine-4stroke.jpg",
       brands: ["YANMAR", "WARTSILA", "MAN", "CUMMINS", "CATERPILLAR"],
     },
@@ -33,7 +33,7 @@ const ProductsPage = () => {
       id: "turbochargers-auxiliary",
       title: "Turbochargers & Auxiliary",
       description:
-        "High-performance turbochargers, superchargers, and auxiliary engine systems for enhanced vessel efficiency.",
+        "High-performance turbochargers, superchargers, and auxiliary engine systems for enhanced vessel operations.",
       image: "/products/categories/turbocharger.jpg",
       brands: ["ABB", "MAN", "IHI", "MHI", "KBB"],
     },
@@ -105,7 +105,7 @@ const ProductsPage = () => {
       id: "lsa-ffa",
       title: "LSA & FFA Equipment",
       description:
-        "Life-saving appliances and firefighting equipment meeting SOLAS and international maritime safety standards.",
+        "Life-saving appliances and firefighting equipment meeting SOLAS and international maritime standards.",
       image: "/products/categories/safety.jpg",
       brands: ["VIKING", "SURVITEC", "HONEYWELL", "KIDDE"],
     },
@@ -126,7 +126,7 @@ const ProductsPage = () => {
 
       {/* All Categories */}
       <section className="all-categories section-spacing-top">
-        <div className="container-full">
+        <div className="container">
           <div className="section-header">
             <h2>Product Categories</h2>
             <p>Complete range of marine equipment and solutions</p>
@@ -136,18 +136,8 @@ const ProductsPage = () => {
             {productCategories.map((category) => (
               <div key={category.id} className="category-card">
                 <div className="category-content">
-                  <div className="category-icon">
-                    <Package size={32} />
-                  </div>
                   <h3>{category.title}</h3>
                   <p>{category.description}</p>
-                  <div className="brand-tags">
-                    {category.brands.map((brand, index) => (
-                      <span key={index} className="brand-tag">
-                        {brand}
-                      </span>
-                    ))}
-                  </div>
                   <Link
                     to={`/products/${category.id}`}
                     className="category-link"

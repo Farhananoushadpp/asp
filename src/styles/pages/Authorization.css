@@ -795,19 +795,18 @@
   }
 }
 
-/* Partner Cards - Premium Design */
+/* Partner Cards - Redesigned Professional Layout */
 .partner-card {
   background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(11, 47, 74, 0.08);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(66, 145, 171, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(66, 145, 171, 0.15);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: auto;
-  max-height: 800px;
+  height: 100%;
 }
 
 .partner-card::before {
@@ -816,29 +815,144 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #0c2d48, #154a74, #1e5a8a);
+  height: 4px;
+  background: linear-gradient(90deg, #4291AB, #307087);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
 }
 
-.partner-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(11, 47, 74, 0.02) 0%,
-    transparent 50%
-  );
-  pointer-events: none;
+.partner-card:hover::before {
+  transform: scaleX(1);
 }
 
 .partner-card:hover {
-  transform: translateY(-12px) scale(1.01);
-  box-shadow: 0 24px 64px rgba(11, 47, 74, 0.15);
-  border-color: rgba(11, 47, 74, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(66, 145, 171, 0.2);
+  border-color: rgba(66, 145, 171, 0.3);
+}
+
+/* Partner Card Heading */
+.partner-card-heading {
+  padding: 1rem 1rem 0.75rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border-bottom: 1px solid rgba(66, 145, 171, 0.1);
+}
+
+.partner-card-heading .partner-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0c2d48;
+  margin: 0;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Partner Image Container */
+.partner-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.partner-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(66, 145, 171, 0.15));
+}
+
+/* Partner Category Section */
+.partner-category-section {
+  padding: 0 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.partner-category {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #4291AB 0%, #307087 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(66, 145, 171, 0.3);
+}
+
+.partner-location {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Partner Description Section */
+.partner-description-section {
+  padding: 0 1rem 0.75rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.partner-description {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #475569;
+  margin: 0;
+  text-align: left;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Partner Card Footer */
+.partner-card-footer {
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border-top: 1px solid rgba(66, 145, 171, 0.1);
+  margin-top: auto;
+}
+
+.go-to-page-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #4291AB 0%, #307087 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(66, 145, 171, 0.3);
+}
+
+.go-to-page-btn:hover {
+  background: linear-gradient(135deg, #307087 0%, #2A303C 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(66, 145, 171, 0.4);
+}
+
+.go-to-page-btn .arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.go-to-page-btn:hover .arrow-icon {
+  transform: translateX(4px);
 }
 
 /* Partner Header - Enhanced */

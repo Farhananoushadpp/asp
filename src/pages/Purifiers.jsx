@@ -39,7 +39,7 @@ const Purifiers = () => {
         ]}
       />
 
-      <div className="container-full">
+      <div className="container">
         {/* Supported Brands Section */}
         <div className="brands-section">
           <div className="supported-brands-label">Brands Supported</div>

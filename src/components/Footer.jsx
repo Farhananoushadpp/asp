@@ -44,9 +44,14 @@ const Footer = () => {
           <div className="footer-brand">
             <div className="footer-logo">
               <img
+                src="/logo.svg"
+                alt="ASP Global Marine Trading LLC"
+                className="footer-logo-image footer-logo-first"
+              />
+              <img
                 src="/asplogo.svg"
                 alt="ASP Global Marine Trading LLC"
-                className="footer-logo-image"
+                className="footer-logo-image footer-logo-second"
               />
             </div>
             <p className="footer-description">

@@ -88,7 +88,7 @@ const HGMachineryGroup = () => {
 
       {/* Content Section */}
       <section className="partner-content-section">
-        <div className="container-full">
+        <div className="container">
           <div className="content-grid">
             {/* Main Content */}
             <div className="main-content">

@@ -35,7 +35,7 @@ const HVACCompressors = () => {
 
   return (
     <div className="product-page" style={{ paddingBottom: "60px" }}>
-      <div className="container-full">
+      <div className="container">
         {/* Page Header */}
         <div className="portfolio-header">
           <h1 className="portfolio-title">HVAC COMPRESSORS & SPARES</h1>
