@@ -6,7 +6,16 @@
  */
 
 import Hero from "../components/Hero.jsx";
-import { Ship, Shield, Globe, Award, Anchor, Package, Users, CheckCircle } from "lucide-react";
+import {
+  Ship,
+  Shield,
+  Globe,
+  Award,
+  Anchor,
+  Package,
+  Users,
+  CheckCircle,
+} from "lucide-react";
 import "../styles/pages/Home.css";
 
 const Home = () => {
@@ -45,7 +54,7 @@ const Home = () => {
             </div>
             <div className="content-icon">
               <img
-                src="/logo.svg"
+                src="/logo.webp"
                 alt="ASP Global Marine Trading LLC"
                 className="asp-global-icon"
               />
@@ -83,44 +92,48 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="services-grid">
-            <div className="service-item">
-              <div className="service-icon">
-                <Ship size={40} />
+          <div className="services-grid-classic">
+            <div className="service-item-classic">
+              <div className="service-icon-classic">
+                <Ship size={48} />
               </div>
               <h3 className="service-title">Marine Equipment</h3>
               <p className="service-description">
-                High-quality marine equipment and machinery for vessels of all types, ensuring operational excellence and reliability.
+                High-quality marine equipment and machinery for vessels of all
+                types, ensuring operational excellence and reliability.
               </p>
             </div>
 
-            <div className="service-item">
-              <div className="service-icon">
-                <Package size={40} />
+            <div className="service-item-classic">
+              <div className="service-icon-classic">
+                <Package size={48} />
               </div>
               <h3 className="service-title">Spare Parts Supply</h3>
               <p className="service-description">
-                Genuine spare parts and consumables for marine engines, deck equipment, and mechanical systems with fast delivery.
+                Genuine spare parts and consumables for marine engines, deck
+                equipment, and mechanical systems with fast delivery.
               </p>
             </div>
 
-            <div className="service-item">
-              <div className="service-icon">
-                <Shield size={40} />
+            <div className="service-item-classic">
+              <div className="service-icon-classic">
+                <Shield size={48} />
               </div>
               <h3 className="service-title">Safety Solutions</h3>
               <p className="service-description">
-                Comprehensive safety equipment and solutions meeting international maritime safety standards and regulations.
+                Comprehensive safety equipment and solutions meeting
+                international maritime safety standards and regulations.
               </p>
             </div>
 
-            <div className="service-item">
-              <div className="service-icon">
-                <Anchor size={40} />
+            <div className="service-item-classic">
+              <div className="service-icon-classic">
+                <Anchor size={48} />
               </div>
               <h3 className="service-title">Offshore Support</h3>
               <p className="service-description">
-                Specialized offshore installation support with technical expertise and logistics solutions for remote operations.
+                Specialized offshore installation support with technical
+                expertise and logistics solutions for remote operations.
               </p>
             </div>
           </div>
@@ -137,118 +150,166 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="why-choose-content">
-            <div className="why-choose-image">
-              <img src="/about.jpg" alt="ASP Global Marine Excellence" />
+          <div className="why-choose-modern">
+            <div className="why-choose-visual">
+              <div className="why-stats-grid">
+                <div className="stat-card">
+                  <div className="stat-number">18+</div>
+                  <div className="stat-label">Years of Excellence</div>
+                </div>
+                <div className="stat-card">
+                  <div className="stat-number">500+</div>
+                  <div className="stat-label">Global Clients</div>
+                </div>
+                <div className="stat-card">
+                  <div className="stat-number">50+</div>
+                  <div className="stat-label">Countries Served</div>
+                </div>
+                <div className="stat-card">
+                  <div className="stat-number">24/7</div>
+                  <div className="stat-label">Support Available</div>
+                </div>
+              </div>
+              <div className="why-choose-image-top">
+                <img src="/4.webp" alt="ASP Global Marine Operations" />
+                <div className="image-overlay">
+                  <div className="overlay-text">
+                    <h3>Global Operations</h3>
+                    <p>Worldwide marine equipment supply chain</p>
+                  </div>
+                </div>
+              </div>
+              <div className="why-choose-image-modern">
+                <img src="/about.jpg" alt="ASP Global Marine Excellence" />
+                <div className="image-overlay">
+                  <div className="overlay-text">
+                    <h3>Maritime Excellence Since 2006</h3>
+                    <p>Delivering quality marine solutions worldwide</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="why-choose-list">
-              <div className="why-item">
-                <div className="why-icon">
-                  <CheckCircle size={24} />
+            <div className="why-choose-benefits">
+              <div className="benefit-item-modern">
+                <div className="benefit-icon-wrapper">
+                  <div className="benefit-icon">
+                    <Award size={28} />
+                  </div>
+                  <div className="benefit-number">01</div>
                 </div>
-                <div className="why-text">
+                <div className="benefit-content">
                   <h4>Quality Assurance</h4>
-                  <p>Certified products meeting international maritime standards with full compliance documentation.</p>
+                  <p>
+                    Certified products meeting international maritime standards
+                    with full compliance documentation and rigorous testing.
+                  </p>
+                  <div class="benefit-features">
+                    <span class="benefit-tag">ISO Certified</span>
+                    <span class="benefit-tag">SOLAS Compliant</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="why-item">
-                <div className="why-icon">
-                  <CheckCircle size={24} />
+              <div className="benefit-item-modern">
+                <div className="benefit-icon-wrapper">
+                  <div className="benefit-icon">
+                    <Globe size={28} />
+                  </div>
+                  <div className="benefit-number">02</div>
                 </div>
-                <div className="why-text">
+                <div className="benefit-content">
                   <h4>Global Network</h4>
-                  <p>Extensive sourcing capabilities and partnerships with leading manufacturers worldwide.</p>
+                  <p>
+                    Extensive sourcing capabilities and partnerships with
+                    leading manufacturers worldwide for comprehensive coverage.
+                  </p>
+                  <div class="benefit-features">
+                    <span class="benefit-tag">Worldwide Sourcing</span>
+                    <span class="benefit-tag">Premium Partners</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="why-item">
-                <div className="why-icon">
-                  <CheckCircle size={24} />
+              <div className="benefit-item-modern">
+                <div className="benefit-icon-wrapper">
+                  <div className="benefit-icon">
+                    <Users size={28} />
+                  </div>
+                  <div className="benefit-number">03</div>
                 </div>
-                <div className="why-text">
+                <div className="benefit-content">
                   <h4>Technical Expertise</h4>
-                  <p>Experienced team with deep product knowledge and maritime industry understanding.</p>
+                  <p>
+                    Experienced team with deep product knowledge and maritime
+                    industry understanding for optimal solutions.
+                  </p>
+                  <div class="benefit-features">
+                    <span class="benefit-tag">Expert Team</span>
+                    <span class="benefit-tag">Industry Knowledge</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="why-item">
-                <div className="why-icon">
-                  <CheckCircle size={24} />
+              <div className="benefit-item-modern">
+                <div className="benefit-icon-wrapper">
+                  <div className="benefit-icon">
+                    <Ship size={28} />
+                  </div>
+                  <div className="benefit-number">04</div>
                 </div>
-                <div className="why-text">
+                <div className="benefit-content">
                   <h4>Fast Delivery</h4>
-                  <p>Efficient logistics and supply chain management ensuring timely product delivery.</p>
+                  <p>
+                    Efficient logistics and supply chain management ensuring
+                    timely product delivery to any location worldwide.
+                  </p>
+                  <div class="benefit-features">
+                    <span class="benefit-tag">Quick Dispatch</span>
+                    <span class="benefit-tag">Global Logistics</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="why-item">
-                <div className="why-icon">
-                  <CheckCircle size={24} />
+              <div className="benefit-item-modern">
+                <div className="benefit-icon-wrapper">
+                  <div className="benefit-icon">
+                    <Anchor size={28} />
+                  </div>
+                  <div className="benefit-number">05</div>
                 </div>
-                <div className="why-text">
+                <div className="benefit-content">
                   <h4>Competitive Pricing</h4>
-                  <p>Cost-effective solutions without compromising on quality or service excellence.</p>
+                  <p>
+                    Cost-effective solutions without compromising on quality or
+                    service excellence for maximum value.
+                  </p>
+                  <div class="benefit-features">
+                    <span class="benefit-tag">Best Value</span>
+                    <span class="benefit-tag">Quality Assured</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="why-item">
-                <div className="why-icon">
-                  <CheckCircle size={24} />
+              {/* <div className="benefit-item-modern">
+                <div className="benefit-icon-wrapper">
+                  <div className="benefit-icon">
+                    <Shield size={28} />
+                  </div>
+                  <div className="benefit-number">06</div>
                 </div>
-                <div className="why-text">
+                <div className="benefit-content">
                   <h4>24/7 Support</h4>
-                  <p>Round-the-clock customer support for urgent requirements and technical assistance.</p>
+                  <p>
+                    Round-the-clock customer support for urgent requirements and
+                    technical assistance whenever you need us.
+                  </p>
+                  <div class="benefit-features">
+                    <span class="benefit-tag">Always Available</span>
+                    <span class="benefit-tag">Emergency Support</span>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Global Reach Section */}
-      <section className="global-reach-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Global Reach</h2>
-            <p className="section-subtitle">
-              Serving the maritime industry across continents and oceans
-            </p>
-          </div>
-
-          <div className="global-reach-content">
-            <div className="reach-stats">
-              <div className="reach-stat-item">
-                <Globe size={48} />
-                <div className="reach-stat-number">50+</div>
-                <div className="reach-stat-label">Countries Worldwide</div>
-              </div>
-
-              <div className="reach-stat-item">
-                <Users size={48} />
-                <div className="reach-stat-number">500+</div>
-                <div className="reach-stat-label">Satisfied Clients</div>
-              </div>
-
-              <div className="reach-stat-item">
-                <Award size={48} />
-                <div className="reach-stat-number">18+</div>
-                <div className="reach-stat-label">Years of Excellence</div>
-              </div>
-            </div>
-
-            <div className="reach-description">
-              <p>
-                ASP Global Marine Trading LLC has established a strong presence in the international maritime industry, 
-                serving clients across major shipping routes and offshore installations worldwide. Our global network 
-                enables us to provide seamless service delivery, regardless of location or time zone.
-              </p>
-              <p>
-                From the Middle East to Asia-Pacific, Europe to the Americas, we ensure that quality marine equipment 
-                and spare parts reach our clients efficiently. Our commitment to excellence and customer satisfaction 
-                has made us a preferred partner for shipowners, operators, and marine service companies globally.
-              </p>
+              </div> */}
             </div>
           </div>
         </div>

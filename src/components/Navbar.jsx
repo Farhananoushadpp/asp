@@ -29,14 +29,14 @@ const Navbar = () => {
         <div className="logo-container">
           <Link to="/" className="logo-link">
             <img
-              src="/logo.svg"
+              src="/logo.webp"
               alt="ASP Global Marine Trading LLC"
               className="logo-image logo-first"
             />
           </Link>
           <Link to="/" className="logo-link">
             <img
-              src="/asplogo.svg"
+              src="/asp.webp"
               alt="ASP Global Marine Trading LLC"
               className="logo-image logo-second"
             />

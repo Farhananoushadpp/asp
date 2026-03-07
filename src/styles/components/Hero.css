@@ -118,12 +118,14 @@
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.1;
   margin: 0 0 var(--spacing-lg);
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.02em;
   text-transform: none;
   opacity: 0;
   transition: opacity 0.3s ease;
+  white-space: nowrap;
+  text-align: center;
 }
 
 /* Show headline when font is loaded */
@@ -136,7 +138,7 @@
   font-family: "Oswald", sans-serif;
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 500;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   margin: 0;
   animation: fadeInUp 1s ease-out 0.2s forwards;
   opacity: 0;
@@ -156,7 +158,12 @@
 .accent-line {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
 }
 
 /* Professional Description Card */
@@ -172,11 +179,14 @@
 
 /* Brief Description - Use system font to exclude from Poppins */
 .hero-description {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   line-height: 1.6;
   margin: 0;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 /* Call to Action Buttons */
@@ -251,13 +261,18 @@
 }
 
 .btn-glow::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -340,7 +355,9 @@
 
 @media (max-width: 480px) {
   .hero-headline {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    white-space: nowrap;
+    text-align: center;
   }
 
   .hero-subtitle {
@@ -350,7 +367,7 @@
   .hero-description {
     font-size: clamp(1rem, 3vw, 1.2rem);
   }
-  
+
   .hero {
     width: 100vw;
     margin-left: calc(-50vw + 50%);

@@ -67,12 +67,9 @@ const BeijingZhonghanghua = () => {
         <div className="partner-header-content">
           <div className="partner-logo-section">
             <img
-              src="/Authorisation/Beijing/EOPIaA.tif.webp"
+              src="/authorisation/beijing/logo.webp"
               alt="Beijing Zhonghanghua Logo"
               className="partner-detail-logo"
-              onError={(e) => {
-                e.target.src = "/logo.webp";
-              }}
             />
             <span className="partner-since">Est. 2002</span>
           </div>

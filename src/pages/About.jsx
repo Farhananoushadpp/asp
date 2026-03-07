@@ -16,32 +16,38 @@ const About = () => {
   // 5 background images with headings and descriptions for slideshow
   const backgroundImages = [
     {
-      image: "/about.jpg",
+      image: "/1.webp",
       heading: "Marine Excellence Since 2006",
       description:
         "18+ years of delivering quality marine equipment and offshore solutions worldwide with unmatched expertise",
     },
     {
-      image: "/Authorisation/Guangzhou/1.webp",
+      image: "/2.webp",
       heading: "Global Maritime Partner",
       description:
         "Serving 500+ clients across 50+ countries with comprehensive marine solutions and regulatory compliance",
     },
     {
-      image: "/Authorisation/Beijing/1.webp",
+      image: "/3.webp",
       heading: "Authorized Marine Equipment",
       description:
         "Certified provider of marine equipment with full regulatory compliance and industry standards",
     },
     {
-      image: "/Authorisation/Zhejiang/1.webp",
+      image: "/4.webp",
       heading: "Premium Quality Products",
       description:
         "Premium spare parts and equipment for vessels and offshore installations ensuring operational excellence",
     },
     {
-      image: "/Authorisation/Hg/1.jpg",
+      image: "/5.webp",
       heading: "Reliable Offshore Support",
+      description:
+        "Comprehensive safety solutions and operational support for maritime industry worldwide",
+    },
+    {
+      image: "/6.webp",
+      heading: "eliable Offshore Support",
       description:
         "Comprehensive safety solutions and operational support for maritime industry worldwide",
     },
@@ -83,17 +89,6 @@ const About = () => {
         {/* Slide Counter */}
         <div className="slide-counter">
           <span>{currentSlide + 1}</span> / {backgroundImages.length}
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="slide-indicators">
-          {backgroundImages.map((_, index) => (
-            <div
-              key={index}
-              className={`slide-indicator ${index === currentSlide ? "active" : ""}`}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
         </div>
 
         {/* Hero Content */}

@@ -10,6 +10,23 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #1e293b;
   line-height: 1.6;
+  padding: 0;
+}
+
+/* Container for sections */
+.partner-detail-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Padding */
+.partner-header-section {
+  padding: 40px 0;
+}
+
+.partner-content-section {
+  padding: 40px 0;
 }
 
 /* Breadcrumb Navigation */
@@ -638,5 +655,19 @@
   .partner-since {
     font-size: 10px;
     padding: 6px 12px;
+  }
+
+  /* Responsive Section Padding */
+  .partner-header-section {
+    padding: 20px 0;
+  }
+
+  .partner-content-section {
+    padding: 20px 0;
+  }
+
+  /* Responsive Container Padding */
+  .partner-detail-page .container {
+    padding: 0 15px;
   }
 }

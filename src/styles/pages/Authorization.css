@@ -157,8 +157,8 @@
 .company-logo-large {
   max-width: 300px;
   height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .logo-fallback {
@@ -239,13 +239,8 @@
 .image-gallery img {
   width: 100%;
   height: auto;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.image-gallery img:hover {
-  transform: scale(1.02);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Technical Specifications */
@@ -816,7 +811,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #4291AB, #307087);
+  background: linear-gradient(90deg, #4291ab, #307087);
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
@@ -876,7 +871,7 @@
 .partner-category {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #4291AB 0%, #307087 100%);
+  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
   color: #ffffff;
   border-radius: 20px;
   font-size: 0.875rem;
@@ -928,7 +923,7 @@
   gap: 0.5rem;
   width: 100%;
   padding: 0.875rem 1.5rem;
-  background: linear-gradient(135deg, #4291AB 0%, #307087 100%);
+  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -942,7 +937,7 @@
 }
 
 .go-to-page-btn:hover {
-  background: linear-gradient(135deg, #307087 0%, #2A303C 100%);
+  background: linear-gradient(135deg, #307087 0%, #2a303c 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(66, 145, 171, 0.4);
 }
@@ -972,16 +967,15 @@
 .partner-image {
   width: 130px;
   height: 130px;
-  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(11, 47, 74, 0.15);
-  border: 3px solid #ffffff;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
-.partner-card:hover .partner-image {
-  transform: scale(1.08) rotate(2deg);
-  box-shadow: 0 12px 40px rgba(11, 47, 74, 0.25);
+.partner-card .partner-image {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partner-overlay {
@@ -1406,7 +1400,7 @@
   opacity: 1;
   max-width: 550px;
   line-height: 1.7;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .cta-actions {
@@ -2068,26 +2062,14 @@ html {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.product-image-container {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
 .product-image-container img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.product-image-container:hover img {
-  transform: scale(1.05);
+  background: transparent;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Responsive Design for New Cards */

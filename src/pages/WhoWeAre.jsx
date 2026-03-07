@@ -19,21 +19,30 @@ const WhoWeAre = () => {
         </div>
 
         <section className="company-intro">
-          <div className="intro-content">
-            <h2>ASP Global Marine Trading LLC</h2>
-            <p>
-              Founded in 2005 and part of Ocean Serenity Group, ASP Global
-              Marine Trading LLC has established itself as a leading supplier of
-              marine and offshore equipment. With strong sourcing networks
-              across Europe and Asia, we understand the critical importance of
-              quality, reliability, and timely delivery.
-            </p>
-            <p>
-              Our commitment to excellence has earned us the trust of ship
-              owners, operators, and offshore installations worldwide. We pride
-              ourselves on our technical expertise, competitive pricing, and
-              unwavering dedication to customer satisfaction.
-            </p>
+          <div className="content-with-icon">
+            <div className="intro-content">
+              <h2>ASP Global Marine Trading LLC</h2>
+              <p>
+                Founded in 2005 and part of Ocean Serenity Group, ASP Global
+                Marine Trading LLC has established itself as a leading supplier
+                of marine and offshore equipment. With strong sourcing networks
+                across Europe and Asia, we understand the critical importance of
+                quality, reliability, and timely delivery.
+              </p>
+              <p>
+                Our commitment to excellence has earned us the trust of ship
+                owners, operators, and offshore installations worldwide. We
+                pride ourselves on our technical expertise, competitive pricing,
+                and unwavering dedication to customer satisfaction.
+              </p>
+            </div>
+            <div className="content-icon">
+              <img
+                src="/logo.svg"
+                alt="ASP Global Marine Trading LLC"
+                className="asp-global-icon"
+              />
+            </div>
           </div>
         </section>
 
