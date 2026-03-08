@@ -5,19 +5,789 @@
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-/* Hero Section Slideshow */
-.about-hero-slideshow {
-  position: relative;
-  min-height: 85vh;
+/* ============================================
+   SIMPLE HERO SECTION - Clean Design
+   ============================================ */
+
+.about-hero-simple {
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  background: linear-gradient(135deg, #0d2c4a 0%, #1a3a52 50%, #0d2c4a 100%);
+  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  padding: 4rem 2rem;
 }
 
-/* Slideshow Container */
-.slideshow-container {
+.simple-hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.simple-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.simple-hero-desc {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero-simple {
+    padding: 3rem 1.5rem;
+  }
+
+  .simple-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .simple-hero-desc {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .simple-hero-desc {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   CARD CAROUSEL STYLES (from Home page)
+   ============================================ */
+
+/* Content with Icon Layout */
+.content-with-icon {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.content-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.content-text p {
+  margin-bottom: 1.5rem;
+}
+
+.content-text p:last-child {
+  margin-bottom: 0;
+}
+
+.content-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+}
+
+/* Card Carousel Styles */
+.card-carousel {
+  position: relative;
+  width: 260px;
+  height: 340px;
+  cursor: pointer;
+  user-select: none;
+  perspective: 1000px;
+}
+
+.cards-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  transform-style: preserve-3d;
+}
+
+.carousel-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(66, 145, 171, 0.2);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 2px solid rgba(66, 145, 171, 0.15);
+  opacity: 0;
+  transform: translateX(100px) scale(0.8) rotateY(-15deg);
+  pointer-events: none;
+}
+
+.carousel-card.active {
+  opacity: 1;
+  transform: translateX(0) scale(1) rotateY(0deg);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.carousel-card.exit {
+  opacity: 0;
+  transform: translateX(-100px) scale(0.8) rotateY(15deg);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.carousel-card:hover .card-image {
+  transform: scale(1.08);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  text-align: center;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Card Indicators */
+.card-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(66, 145, 171, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.indicator:hover {
+  background: rgba(66, 145, 171, 0.6);
+  transform: scale(1.2);
+}
+
+.indicator.active {
+  background: #4291ab;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(66, 145, 171, 0.3);
+  transform: scale(1.2);
+}
+
+/* Touch Hint */
+.touch-hint {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: #4291ab;
+  opacity: 0.7;
+  text-align: center;
+  white-space: nowrap;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+.card-carousel:hover .touch-hint {
+  opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .content-with-icon {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-carousel {
+    width: 240px;
+    height: 300px;
+  }
+
+  .cards-container {
+    height: 240px;
+  }
+
+  .card-image-wrapper {
+    height: 180px;
+  }
+}
+
+/* ============================================
+   STANDARD PROFESSIONAL SECTIONS
+   ============================================ */
+
+.std-section {
+  padding: 5rem 2rem;
+}
+
+.std-section.alt-bg {
+  background: #f8fafc;
+}
+
+.std-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title-center {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title-center svg {
+  color: #0d3a5c;
+  margin-bottom: 1rem;
+}
+
+.section-title-center h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d3a5c;
+}
+
+/* Mission & Vision */
+.mission-vision-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mv-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #e8f4f8;
+}
+
+.mv-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mv-header svg {
+  color: #4291ab;
+}
+
+.mv-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d3a5c;
+}
+
+.mv-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Certifications */
+.cert-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e8f4f8;
+}
+
+.cert-icon-std {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.cert-info strong {
+  display: block;
+  color: #0d3a5c;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.cert-info span {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Quality Policy */
+.quality-main {
+  text-align: center;
+}
+
+.quality-lead {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.q-item {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e8f4f8;
+  text-align: center;
+}
+
+.q-item svg {
+  color: #4291ab;
+  margin-bottom: 1rem;
+}
+
+.q-item h4 {
+  color: #0d3a5c;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.q-item p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Clients */
+.clients-grid-std {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.client-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e8f4f8;
+  text-align: center;
+}
+
+.client-box svg {
+  color: #4291ab;
+  margin-bottom: 1rem;
+}
+
+.client-box h4 {
+  color: #0d3a5c;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.client-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.client-box li {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.client-box li:last-child {
+  border-bottom: none;
+}
+
+/* Message from Management */
+.message-card {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e8f4f8;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 5rem;
+  color: #4291ab;
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: -2rem;
+}
+
+.message-body {
+  margin-bottom: 2rem;
+}
+
+.message-body p {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.message-body p:last-child {
+  margin-bottom: 0;
+}
+
+.message-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8f4f8;
+}
+
+.signature-line {
+  width: 60px;
+  height: 2px;
+  background: #4291ab;
+  margin: 0 auto 1rem;
+}
+
+.message-footer strong {
+  display: block;
+  color: #0d3a5c;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.message-footer span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cert-row,
+  .quality-grid,
+  .clients-grid-std {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .message-card {
+    padding: 2rem;
+  }
+  
+  .quote-icon {
+    font-size: 3rem;
+  }
+  
+  .message-body p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision-row,
+  .cert-row,
+  .quality-grid,
+  .clients-grid-std {
+    grid-template-columns: 1fr;
+  }
+  
+  .std-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* ============================================
+   OLD STYLES (Hidden)
+   ============================================ */
+
+.simple-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header-simple {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header-simple h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d3a5c;
+}
+
+/* Mission & Vision - Simple Cards */
+.simple-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.simple-card {
+  padding: 2.5rem;
+  border-radius: 16px;
+  color: white;
+  text-align: center;
+}
+
+.simple-card.blue {
+  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+}
+
+.simple-card.teal {
+  background: linear-gradient(135deg, #2abaa3 0%, #4291ab 100%);
+}
+
+.simple-icon {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.simple-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.simple-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Certifications - Horizontal Strip */
+.cert-strip {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border: 2px solid #e8f4f8;
+}
+
+.cert-check {
+  width: 24px;
+  height: 24px;
+  background: #2abaa3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cert-name {
+  font-weight: 600;
+  color: #0d3a5c;
+  font-size: 0.95rem;
+}
+
+/* Quality Policy - Statement + Pillars */
+.quality-statement-box {
+  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.quality-statement-box h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.quality-statement-box p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.quality-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.pillar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border: 1px solid #e8f4f8;
+}
+
+.pillar strong {
+  display: block;
+  color: #0d3a5c;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pillar span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Clients - Tag Cloud */
+.clients-cloud {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.client-group h4 {
+  color: #0d3a5c;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2abaa3;
+}
+
+.client-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.client-tags span {
+  background: #e8f4f8;
+  color: #0d3a5c;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .quality-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .clients-cloud {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .simple-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .simple-two-col {
+    grid-template-columns: 1fr;
+  }
+  
+  .quality-pillars {
+    grid-template-columns: 1fr;
+  }
+  
+  .clients-cloud {
+    grid-template-columns: 1fr;
+  }
+  
+  .cert-strip {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quality-statement-box {
+    padding: 2rem;
+  }
+}
+
+/* ============================================
+   OLD STYLES (Hidden)
+   ============================================ */
+
+.about-section.mission-vision-section,
+.about-section#certifications,
+.about-section#quality-policy,
+.about-section#clients {
+  display: none;
+}
+
+/* Background Slideshow */
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,99 +796,317 @@
   z-index: 1;
 }
 
-/* Individual Slides */
-.slide {
+.hero-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position: center;
   opacity: 0;
-  transform: scale(1.05);
-  transition:
-    opacity 1.5s ease-in-out,
-    transform 6s ease-out;
+  transform: scale(1.1);
+  transition: opacity 1.2s ease-in-out, transform 8s ease-out;
 }
 
-.slide.active {
+.hero-slide.active {
   opacity: 1;
   transform: scale(1);
 }
 
-/* Slide Content - Centered Design */
-.slide-content {
+.hero-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  z-index: 5;
-  max-width: 900px;
-  padding: 2rem 3rem;
-  opacity: 0;
-  transition: all 0.8s ease-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 31, 68, 0.85) 0%,
+    rgba(13, 58, 92, 0.75) 50%,
+    rgba(12, 75, 101, 0.85) 100%
+  );
+  z-index: 2;
 }
 
-.slide.active .slide-content {
-  opacity: 1;
-}
-
-/* Slide Heading - Enhanced Typography */
-.slide-heading {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  color: #ffffff;
+/* Content Grid Layout */
+.hero-content-grid {
   position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.slide-heading::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #4291ab, #307087);
-  border-radius: 2px;
+/* Left: Main Content */
+.hero-main-content {
+  color: white;
 }
 
-/* Slide Description - White for Visibility */
-.slide-description {
+.hero-badge-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(66, 145, 171, 0.3);
+}
+
+.hero-main-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-main-desc {
   font-size: 1.25rem;
   line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+/* Stats Row */
+.hero-stats-row {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2abaa3;
+  line-height: 1;
+}
+
+.stat-txt {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.25rem;
+}
+
+/* Right: Dynamic Slide Cards */
+.hero-slide-info {
+  position: relative;
+  height: 320px;
+}
+
+.slide-info-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.slide-info-card.active {
   opacity: 1;
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  color: #ffffff;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.slide-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.3px;
+  margin-bottom: 1rem;
+}
+
+.slide-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.slide-desc {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.slide-progress {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #2abaa3 0%, #4291ab 100%);
+  transition: width 4s linear;
+}
+
+/* Bottom Progress Strip */
+.hero-progress-strip {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.strip-item {
+  width: 60px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.strip-item.active {
+  background: linear-gradient(90deg, #2abaa3 0%, #4291ab 100%);
+  height: 4px;
+}
+
+.strip-item:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-main-content {
+    order: 1;
+  }
+
+  .hero-slide-info {
+    order: 2;
+    height: 280px;
+  }
+
+  .hero-main-title {
+    font-size: 3rem;
+  }
+
+  .hero-stats-row {
+    justify-content: center;
+  }
+
+  .hero-stat {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content-grid {
+    padding: 0 1.5rem;
+  }
+
+  .hero-main-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-main-desc {
+    font-size: 1.1rem;
+  }
+
+  .slide-title {
+    font-size: 1.5rem;
+  }
+
+  .slide-desc {
+    font-size: 1rem;
+  }
+
+  .hero-slide-info {
+    height: 260px;
+  }
+
+  .slide-info-card {
+    padding: 1.5rem;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+  }
+
+  .strip-item {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-main-title {
+    font-size: 2rem;
+  }
+
+  .hero-badge-main {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .hero-stats-row {
+    gap: 1.5rem;
+  }
+
+  .stat-num {
+    font-size: 1.75rem;
+  }
+
+  .hero-progress-strip {
+    bottom: 1.5rem;
+  }
+
+  .strip-item {
+    width: 30px;
+    height: 3px;
+  }
+}
+
+/* ============================================
+   OLD HERO SECTION (DEPRECATED)
+   ============================================ */
+
+/* Hero Section Slideshow */
+.about-hero-slideshow {
+  display: none;
 }
 
 /* Slide Counter */
 .slide-counter {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  z-index: 10;
-  background: rgba(13, 44, 74, 0.8);
-  backdrop-filter: blur(8px);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-.slide-counter span {
-  color: #4291ab;
-  font-weight: 700;
-  font-size: 1rem;
+  display: none;
 }
 
 /* Ken Burns Effect for Active Slide */
@@ -221,34 +1209,13 @@
   transform: translateY(-2px);
 }
 
-/* Slide Indicators */
+/* Slide Indicators - Hidden in new design */
 .slide-indicators {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.75rem;
-  z-index: 10;
+  display: none;
 }
 
 .indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.indicator:hover {
-  border-color: rgba(255, 255, 255, 0.8);
-}
-
-.indicator.active {
-  background: white;
-  border-color: white;
+  display: none;
 }
 
 /* Responsive Design */

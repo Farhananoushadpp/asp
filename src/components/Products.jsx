@@ -1,245 +1,133 @@
 /**
- * ASP Global Marine Trading LLC - Product Solutions Section
- *
- * Expandable accordion structure for 9 product categories
- * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ * ASP Global Marine Trading LLC - Product Gallery
+ * Clean product cards with image, name, description, and contact icons
  */
 
-import { useState } from "react";
+import { MessageCircle, Mail } from "lucide-react";
 import "../styles/components/Products.css";
 
 const Products = () => {
-  const [activeAccordion, setActiveAccordion] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setActiveAccordion(activeAccordion === index ? null : index);
-  };
-
-  const productCategories = [
+  const products = [
     {
-      id: "engine-stores",
-      number: "01",
-      title: "Engine Stores",
-      manufacturers: ["YANMAR", "WARTSILA", "MAN", "CUMMINS", "SULZER", "WINGD", "MITSUBISHI UEC"],
-      products: [
-        "Engine Spares",
-        "Filters",
-        "Bearings",
-        "Gaskets",
-        "Seals",
-        "Pistons",
-        "Cylinder Liners",
-        "Valves",
-        "Fuel Pumps",
-        "Injection Systems"
-      ],
+      id: 1,
+      name: "Engine Stores",
+      description: "Seals & Gaskets (High Temp, O-rings, Mechanical Seals, Gland Packing), Pumps (Submersible, Diaphragm, Vacuum), Tools (Pipe Bender, Bearing Puller, Magnetic Drill, Chain Block), Testing Equipment (Megger, Clamp Meter, Thermometers), Safety Gear (Gas Detectors, Explosion Proof Lamps), Electrical (Batteries, Transformers, Relays, Carbon Brushes), HVAC (A/C Units, Blowers, Refrigerant), and Maintenance Supplies (Rust Removers, Adhesives, CRC, Welding, Emery Tape).",
+      image: "/products/enginestores/1.webp",
     },
     {
-      id: "deck-stores",
-      number: "02",
-      title: "Deck Stores & General Marine Stores",
-      manufacturers: [],
-      products: [
-        "Ropes",
-        "Shackles",
-        "Fenders",
-        "Navigation Lights",
-        "Flags",
-        "Tarpaulin",
-        "Gaskets",
-        "Bearings",
-        "Hoses",
-        "Relays",
-        "Transformers",
-        "Carbon Brushes",
-        "Safety Equipment",
-        "Tools",
-        "Paints",
-        "Cleaning Supplies"
-      ],
+      id: 2,
+      name: "Deck Equipment",
+      description: "Navigation & Lighting (Navigation Lights, Search Lights, Waterproof Flashlights), Ropes & Chains (PP Rope, Wire Rope, Chain, Shackles, Fenders), Deck Tools (Needle Gun, Chipping Hammer, Wire Cup Brush, Angle/Paint Brushes, High Pressure Washer), Safety & Protection (Scupper Plugs, Tarpaulin, Grease Tape, Cotton Gloves), Communication (Walkie Talkies, Marine Communication Equipment, Explosion Proof Mobiles), Maintenance (Rust Removers, Paint, Cotton Rags, Dusting Mops), Operations (Charts, Gauging Tapes, Oil/Water Level Paste, Garbage Bins, Incinerators), and Environmental Systems.",
+      image: "/products/deck/Asset 49.webp",
     },
     {
-      id: "engine-2stroke",
-      number: "03",
-      title: "Engine Spares – 2 Stroke",
-      manufacturers: [
-        "YANMAR",
-        "WARTSILA",
-        "MAN",
-        "CUMMINS",
-        "SULZER",
-        "WINGD",
-        "MITSUBISHI UEC",
-      ],
-      products: [
-        "Pistons",
-        "Cylinder Liners",
-        "Fuel Pumps",
-        "Injection Nozzles",
-        "Camshafts",
-        "Oil Pumps",
-        "Sensors",
-        "Valves",
-      ],
+      id: 3,
+      name: "2-Stroke Engine Parts",
+      description: "Pistons, Piston Rings, Cylinder Liners, Fuel Pumps, Injection Nozzles, Camshafts, Crankshafts, Oil Pumps, Exhaust Valves, Turbocharger Components, and Control Systems for YANMAR, WARTSILA, MAN B&W, SULZER, WINGD, and MITSUBISHI UEC engines.",
+      image: "/1.webp",
     },
     {
-      id: "engine-4stroke",
-      number: "04",
-      title: "Engine Spares – 4 Stroke",
-      manufacturers: [],
-      products: [
-        "Cylinder Cover",
-        "Piston Crown",
-        "Cooling Jacket",
-        "Fuel Pump Housing",
-        "Air Starting Motor",
-        "Heat Exchangers",
-        "Plate Coolers",
-        "Sea Water Pump",
-      ],
+      id: 4,
+      name: "4-Stroke Engine Parts",
+      description: "Cylinder Covers, Piston Crowns, Cooling Jackets, Fuel Pump Housings, Air Starting Motors, Heat Exchangers, Plate Coolers, Sea Water Pumps, Turbocharger Spares, Fuel Injection Systems, and Governor Components for auxiliary and main engines.",
+      image: "/2.webp",
     },
     {
-      id: "turbo-hvac",
-      number: "05",
-      title: "Turbochargers & HVAC",
-      manufacturers: ["ABB", "KBB", "Mitsubishi", "Sabroe", "Bitzer", "Daikin"],
-      products: [
-        "Bearings",
-        "Impellers",
-        "Seal Plates",
-        "Repair Kits",
-        "Shafts",
-        "Gaskets",
-      ],
+      id: 5,
+      name: "Turbochargers & HVAC",
+      description: "Turbocharger Components (Bearings, Impellers, Seal Plates, Repair Kits, Shafts, Gaskets) for ABB, KBB, Mitsubishi. HVAC Systems (Compressors, Condensers, Evaporators, Refrigerant, Controls) from Sabroe, Bitzer, Daikin for accommodation and cargo spaces.",
+      image: "/3.webp",
     },
     {
-      id: "pumps",
-      number: "06",
-      title: "Pumps – Marine & Industrial",
-      manufacturers: ["Desmi", "Allweiler", "Grundfos", "Jabsco"],
-      products: [
-        "Deep Well Pump",
-        "Twin Screw Pump",
-        "Centrifugal Pump",
-        "Vacuum Pump",
-        "Emergency Fire Pump",
-      ],
+      id: 6,
+      name: "Marine Pumps",
+      description: "Deep Well Pumps, Twin Screw Pumps, Centrifugal Pumps, Vacuum Pumps, Emergency Fire Pumps, Ballast Pumps, Bilge Pumps, Fuel Transfer Pumps, and Pump Spares (Impellers, Seals, Bearings) from Desmi, Allweiler, Grundfos, Jabsco.",
+      image: "/4.webp",
     },
     {
-      id: "boilers",
-      number: "07",
-      title: "Boilers & Air Compressors",
-      manufacturers: ["Tanabe", "JP Sauer & Sohn", "Sperre", "Hatlapa"],
-      products: [
-        "Piston Rings",
-        "Cylinder Liners",
-        "LP/HP Valves",
-        "Burner Nozzles",
-        "Control PCB",
-        "Temperature Sensors",
-      ],
+      id: 7,
+      name: "Boilers & Compressors",
+      description: "Boiler Components (Burner Nozzles, Control PCBs, Temperature Sensors, Safety Valves, Flame Detectors) and Air Compressor Spares (Piston Rings, Cylinder Liners, LP/HP Valves, Intercoolers, Air Filters) for Tanabe, JP Sauer & Sohn, Sperre, Hatlapa.",
+      image: "/5.webp",
     },
     {
-      id: "hydraulic",
-      number: "08",
-      title: "Hydraulic Systems",
-      manufacturers: [],
-      products: [
-        "Hatch Cover Systems",
-        "Steering Gear Pumps",
-        "Hydraulic Motors",
-        "Control Blocks",
-        "Gearboxes",
-        "Power Packs",
-      ],
+      id: 8,
+      name: "Hydraulic Systems",
+      description: "Hatch Cover Systems, Steering Gear Pumps, Hydraulic Motors, Control Blocks, Gearboxes, Power Packs, Hydraulic Cylinders, Valves, Hoses, Fittings, and Hydraulic Oil Filtration Systems for deck machinery and cargo operations.",
+      image: "/6.webp",
     },
     {
-      id: "purifiers",
-      number: "09",
-      title: "Purifiers & Separators",
-      manufacturers: ["GEA Westfalia", "Alfa Laval"],
-      products: [
-        "Oil Separators",
-        "Disc Separators",
-        "Separator Modules",
-        "Gravity Ring Systems",
-      ],
+      id: 9,
+      name: "Purifiers & Separators",
+      description: "Oil Separators, Fuel Oil Purifiers, Lube Oil Purifiers, Disc Separators, Separator Modules, Gravity Ring Systems, Bowl Assemblies, Sealing Rings, and Control Units for GEA Westfalia and Alfa Laval systems.",
+      image: "/products/lsa&ffa/1.webp",
     },
     {
-      id: "safety",
-      number: "10",
-      title: "LSA & FFA Equipment",
-      manufacturers: [],
-      products: [
-        "Life Rafts",
-        "Fire Hoses",
-        "SCBA",
-        "EEBD",
-        "Immersion Suits",
-        "Fire Extinguishers",
-        "Gas Detectors",
-      ],
-      note: "All safety equipment supplied in compliance with international maritime regulations.",
+      id: 10,
+      name: "LSA & FFA Equipment",
+      description: "Life-Saving Appliances (Life Rafts, Life Buoys, Life Jackets, Immersion Suits, Rescue Boats), Fire-Fighting Apparatus (Fire Hoses, Fire Extinguishers, Fire Suits, SCBA, EEBD, Fire Blankets), Emergency Equipment (Emergency Lights, Pyrotechnics, Line Throwing Apparatus), and Safety Gear (Gas Detectors, Safety Helmets, Safety Harnesses) - All SOLAS and IMO compliant.",
+      image: "/products/lsa&ffa/1.webp",
+    },
+    {
+      id: 11,
+      name: "Navigation Equipment",
+      description: "Radar Systems, GPS/GNSS, ECDIS, AIS, VHF/UHF Radios, GMDSS Equipment, Gyro Compasses, Magnetic Compasses, Echo Sounders, Speed Logs, Autopilot Systems, and Navigation Charts for safe vessel operations.",
+      image: "/1.webp",
+    },
+    {
+      id: 12,
+      name: "Electrical Components",
+      description: "Relays, Transformers, Carbon Brushes, Contactors, Circuit Breakers, Fuses, Terminal Blocks, Cable Glands, Switches, Indicators, Motor Starters, Control Panels, and Electrical Cables for marine power distribution and control systems.",
+      image: "/2.webp",
     },
   ];
 
+  const handleWhatsApp = (productName) => {
+    const message = `Hi, I'm interested in ${productName}. Can you provide more information?`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank");
+  };
+
+  const handleEmail = (productName) => {
+    const subject = `Inquiry about ${productName}`;
+    const body = `Hi,\n\nI'm interested in ${productName}. Please provide more details.\n\nThank you.`;
+    window.open(`mailto:sales@aspglobalmarine.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank");
+  };
+
   return (
-    <section id="products" className="products">
+    <section id="products" className="products-gallery">
       <div className="container">
-        <span className="section-label">PRODUCT PORTFOLIO</span>
-        <h2 className="products-headline">Product Solutions Overview</h2>
-        <p className="products-subtext">
-          Comprehensive range of marine equipment and spare parts for all vessel
-          types
-        </p>
+        <div className="section-header-gallery">
+          <span className="section-label">OUR PRODUCTS</span>
+          <h2>Product Solutions</h2>
+          <p>Comprehensive range of marine equipment and spare parts for all vessel types</p>
+        </div>
 
-        <div className="accordion">
-          {productCategories.map((category, index) => (
-            <div
-              key={category.id}
-              className={`accordion-item ${activeAccordion === index ? "active" : ""}`}
-            >
-              <button
-                className="accordion-header"
-                onClick={() => toggleAccordion(index)}
-                aria-expanded={activeAccordion === index}
-              >
-                <span className="accordion-number">{category.number}</span>
-                <span className="accordion-title">{category.title}</span>
-                <span className="accordion-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7 10l5 5 5-5z" />
-                  </svg>
-                </span>
-              </button>
-
-              <div className="accordion-content">
-                <div className="accordion-inner">
-                  {category.manufacturers.length > 0 && (
-                    <div className="manufacturers">
-                      <span className="label">Supported Manufacturers:</span>
-                      <div className="tags">
-                        {category.manufacturers.map((mfg, i) => (
-                          <span key={i} className="tag">
-                            {mfg}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="products-list">
-                    <span className="label">Products:</span>
-                    <div className="product-tags">
-                      {category.products.map((product, i) => (
-                        <span key={i} className="product-tag">
-                          {product}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {category.note && <p className="note">{category.note}</p>}
+        <div className="products-grid">
+          {products.map((product) => (
+            <div key={product.id} className="product-card">
+              <div className="product-image-wrapper">
+                <img src={product.image} alt={product.name} className="product-image" />
+              </div>
+              <div className="product-content">
+                <h3 className="product-name">{product.name}</h3>
+                <p className="product-description">{product.description}</p>
+                <div className="product-actions">
+                  <button
+                    className="contact-btn whatsapp"
+                    onClick={() => handleWhatsApp(product.name)}
+                    aria-label="Contact via WhatsApp"
+                  >
+                    <MessageCircle size={18} />
+                    <span>WhatsApp</span>
+                  </button>
+                  <button
+                    className="contact-btn email"
+                    onClick={() => handleEmail(product.name)}
+                    aria-label="Contact via Email"
+                  >
+                    <Mail size={18} />
+                    <span>Email</span>
+                  </button>
                 </div>
               </div>
             </div>

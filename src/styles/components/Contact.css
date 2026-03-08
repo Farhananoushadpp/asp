@@ -1,13 +1,476 @@
 /**
- * ASP Global Marine Trading LLC - Professional Contact Section Styles
- *
- * Modern contact section with NFC card view option
- * Professional maritime corporate design
+ * ASP Global Marine Trading LLC - Contact Section Styles
+ * Standard professional design
  */
 
-.contact {
-  padding: var(--spacing-5xl) 0;
+.contact-std {
+  padding: 5rem 2rem;
+  background: #f8fafc;
+}
+
+.std-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.section-title-center {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title-center svg {
+  color: #0d3a5c;
+  margin-bottom: 1rem;
+}
+
+.section-title-center h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d3a5c;
+  margin-bottom: 0.75rem;
+}
+
+.section-title-center p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Contact Layout */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+/* Info Cards */
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e8f4f8;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.info-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d3a5c;
+  margin-bottom: 0.5rem;
+}
+
+.info-content p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.info-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* NFC Section */
+.nfc-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e8f4f8;
+  margin-top: 0.5rem;
+}
+
+.nfc-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d3a5c;
+  margin-bottom: 1rem;
+}
+
+.nfc-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nfc-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: #f0f9ff;
+  color: #0d3a5c;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nfc-btn:hover {
+  background: #0d3a5c;
+  color: white;
+  border-color: #0d3a5c;
+}
+
+/* Form Card */
+.form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e8f4f8;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-header svg {
+  color: #0d3a5c;
+  margin-bottom: 0.75rem;
+}
+
+.form-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0d3a5c;
+  margin-bottom: 0.25rem;
+}
+
+.form-header p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Contact Form */
+.contact-form-std {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row-std {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group-std {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-group-std label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.form-group-std label svg {
+  color: #4291ab;
+}
+
+.form-group-std input,
+.form-group-std textarea,
+.form-group-std select {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.form-group-std input:focus,
+.form-group-std textarea:focus,
+.form-group-std select:focus {
+  outline: none;
+  border-color: #4291ab;
+  box-shadow: 0 0 0 3px rgba(66, 145, 171, 0.1);
+}
+
+.form-group-std textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn-std {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submit-btn-std:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 58, 92, 0.3);
+}
+
+/* NFC Modal */
+.nfc-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.nfc-modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.nfc-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  color: white;
+}
+
+.nfc-modal-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.nfc-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.nfc-close-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.nfc-card {
+  padding: 1.5rem;
   background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.nfc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.nfc-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.nfc-company-info h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0d3a5c;
+  margin-bottom: 0.25rem;
+}
+
+.nfc-company-info p {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.nfc-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.nfc-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.nfc-contact-item svg {
+  color: #4291ab;
+  width: 18px;
+  height: 18px;
+}
+
+.nfc-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e8f4f8;
+}
+
+.nfc-chip {
+  width: 50px;
+  height: 40px;
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chip-lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 20px;
+  border: 2px solid rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+.nfc-wifi-icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.wifi-signal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border: 3px solid #4291ab;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.nfc-actions {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: #f8fafc;
+}
+
+.nfc-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.nfc-action-btn.primary {
+  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  color: white;
+}
+
+.nfc-action-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 58, 92, 0.3);
+}
+
+.nfc-action-btn.secondary {
+  background: white;
+  color: #0d3a5c;
+  border: 1px solid #e8f4f8;
+}
+
+.nfc-action-btn.secondary:hover {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row-std {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-std {
+    padding: 3rem 1rem;
+  }
+  
+  .section-title-center h2 {
+    font-size: 1.75rem;
+  }
+  
+  .nfc-buttons {
+    flex-direction: column;
+  }
+  
+  .nfc-actions {
+    flex-direction: column;
+  }
 }
 
 /* Contact Header */

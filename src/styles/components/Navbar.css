@@ -28,7 +28,7 @@
 .nav-container {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 12px var(--container-padding);
+  padding: 8px var(--container-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +38,7 @@
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   justify-content: flex-start; /* Ensure left alignment */
   flex-shrink: 0; /* Prevent shrinking */
 }
@@ -58,7 +58,7 @@
 }
 
 .logo-image {
-  height: 55px;
+  height: 65px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -67,11 +67,11 @@
 }
 
 .logo-first {
-  max-width: 75px;
+  max-width: 180px;
 }
 
 .logo-second {
-  max-width: 100px;
+  max-width: 140px;
 }
 
 .logo-link:hover .logo-image {
@@ -97,6 +97,7 @@
 .nav-link {
   color: #ffffff; /* White text for dark background */
   text-decoration: none;
+  font-family: 'Arial', sans-serif;
   font-weight: 400; /* Changed from 600 to 400 (normal) */
   font-size: 15px;
   position: relative;

@@ -1,8 +1,6 @@
 /**
- * ASP Global Marine Trading LLC - Professional Contact Section
- *
- * Modern contact section with NFC card view option
- * Professional maritime corporate design
+ * ASP Global Marine Trading LLC - Contact Section
+ * Standard professional design with clean layout
  */
 
 import { useState } from "react";
@@ -12,9 +10,13 @@ import {
   MapPin,
   Clock,
   Globe,
-  MessageCircle,
+  Send,
   CreditCard,
   X,
+  User,
+  Building,
+  MessageSquare,
+  AlertCircle,
 } from "lucide-react";
 import "../styles/components/Contact.css";
 
@@ -64,26 +66,35 @@ const Contact = () => {
     setSelectedPerson(null);
   };
 
-  const contactInfo = {
-    headquarters: {
+  const contactInfo = [
+    {
+      icon: MapPin,
       title: "Headquarters",
-      address: "Xavier Business Center, Office Suite A5-18, Dubai, UAE",
-      phone: "+971 4 572 4542",
-      email: "info@aspglobalmarine.com",
+      details: [
+        "Xavier Business Center, Office Suite A5-18",
+        "Dubai, United Arab Emirates",
+      ],
     },
-    support: {
-      title: "24/7 Support",
-      phone: "+971 52 547 8137",
-      email: "support@aspglobalmarine.com",
-      whatsapp: "+971 52 547 8137",
+    {
+      icon: Phone,
+      title: "Phone",
+      details: ["+971 4 572 4542", "+971 52 547 8137"],
     },
-    hours: {
+    {
+      icon: Mail,
+      title: "Email",
+      details: ["info@aspglobalmarine.com", "support@aspglobalmarine.com"],
+    },
+    {
+      icon: Clock,
       title: "Business Hours",
-      weekdays: "Monday - Friday: 8:00 AM - 6:00 PM",
-      weekends: "Saturday: 9:00 AM - 2:00 PM",
-      emergency: "Emergency: 24/7 Available",
+      details: [
+        "Monday - Friday: 8:00 AM - 6:00 PM",
+        "Saturday: 9:00 AM - 2:00 PM",
+        "Emergency: 24/7 Available",
+      ],
     },
-  };
+  ];
 
   const nfcCard = {
     company: {
@@ -113,212 +124,111 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact">
-      <div className="container">
-        <div className="contact-header">
-          {/* <span className="section-label">GET IN TOUCH</span> */}
-          <h2 className="contact-headline">Contact Our Marine Experts</h2>
-          <p className="contact-subtitle">
-            Connect with our professional team for comprehensive marine
-            equipment solutions and exceptional customer service
-          </p>
+    <section id="contact" className="contact-std">
+      <div className="std-container">
+        {/* Section Header */}
+        <div className="section-title-center">
+          <MessageSquare size={32} />
+          <h2>Contact Our Marine Experts</h2>
+          <p>Connect with our team for comprehensive marine equipment solutions</p>
         </div>
 
-        <div className="contact-grid">
-          {/* Contact Information Cards */}
-          <div className="contact-info-section">
-            <div className="contact-cards">
-              {/* Headquarters Card */}
-              <div className="contact-card">
-                <div className="card-icon">
-                  <MapPin size={24} />
+        <div className="contact-layout">
+          {/* Contact Info Cards */}
+          <div className="info-cards">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="info-card">
+                <div className="info-icon">
+                  <info.icon size={24} />
                 </div>
-                <div className="card-content">
-                  <h3>{contactInfo.headquarters.title}</h3>
-                  <p className="card-detail">
-                    {contactInfo.headquarters.address}
-                  </p>
-                  <div className="card-contacts">
-                    <p>
-                      <Phone size={16} /> {contactInfo.headquarters.phone}
-                    </p>
-                    <p>
-                      <Mail size={16} /> {contactInfo.headquarters.email}
-                    </p>
-                  </div>
+                <div className="info-content">
+                  <h4>{info.title}</h4>
+                  {info.details.map((detail, i) => (
+                    <p key={i}>{detail}</p>
+                  ))}
                 </div>
               </div>
+            ))}
 
-              {/* Support Card */}
-              <div className="contact-card">
-                <div className="card-icon">
-                  <Phone size={24} />
-                </div>
-                <div className="card-content">
-                  <h3>{contactInfo.support.title}</h3>
-                  <div className="card-contacts">
-                    <p>
-                      <Phone size={16} /> {contactInfo.support.phone}
-                    </p>
-                    <p>
-                      <Mail size={16} /> {contactInfo.support.email}
-                    </p>
-                    <p>
-                      <MessageCircle size={16} /> WhatsApp:{" "}
-                      {contactInfo.support.whatsapp}
-                    </p>
-                  </div>
-                </div>
+            {/* NFC Card Buttons */}
+            <div className="nfc-section">
+              <h4>Digital Business Cards</h4>
+              <div className="nfc-buttons">
+                <button
+                  className="nfc-btn"
+                  onClick={() => showPersonNFC("arun")}
+                >
+                  <CreditCard size={16} />
+                  Arun V.V
+                </button>
+                <button
+                  className="nfc-btn"
+                  onClick={() => showPersonNFC("yoosaf")}
+                >
+                  <CreditCard size={16} />
+                  Yoosaf N
+                </button>
               </div>
-
-              {/* Business Hours Card */}
-              <div className="contact-card">
-                <div className="card-icon">
-                  <Clock size={24} />
-                </div>
-                <div className="card-content">
-                  <h3>{contactInfo.hours.title}</h3>
-                  <div className="card-hours">
-                    <p>{contactInfo.hours.weekdays}</p>
-                    <p>{contactInfo.hours.weekends}</p>
-                    <p className="emergency">{contactInfo.hours.emergency}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Arun V.V NFC Card */}
-              {/* <div className="contact-card">
-                <div className="card-icon">
-                  <CreditCard size={24} />
-                </div>
-                <div className="card-content">
-                  <h3>Arun V.V</h3>
-                  <p className="card-detail">Senior Marine Consultant</p>
-                  <div className="card-contacts">
-                    <p>
-                      <Phone size={16} /> +971 XX XXX XXXX
-                    </p>
-                    <p>
-                      <Mail size={16} /> arun@aspglobalmarine.com
-                    </p>
-                    <button
-                      className="nfc-card-btn"
-                      onClick={() => showPersonNFC("arun")}
-                    >
-                      <CreditCard size={16} /> View NFC Card
-                    </button>
-                  </div>
-                </div>
-              </div> */}
-
-              {/* Yoosaf N NFC Card */}
-              {/* <div className="contact-card">
-                <div className="card-icon">
-                  <CreditCard size={24} />
-                </div>
-                <div className="card-content">
-                  <h3>Yoosaf N</h3>
-                  <p className="card-detail">Marine Equipment Specialist</p>
-                  <div className="card-contacts">
-                    <p>
-                      <Phone size={16} /> +971 XX XXX XXXX
-                    </p>
-                    <p>
-                      <Mail size={16} /> yoosaf@aspglobalmarine.com
-                    </p>
-                    <button
-                      className="nfc-card-btn"
-                      onClick={() => showPersonNFC("yoosaf")}
-                    >
-                      <CreditCard size={16} /> View NFC Card
-                    </button>
-                  </div>
-                </div>
-              </div> */}
-            </div>
-
-            {/* NFC Card Button */}
-            {/* <button
-              className="nfc-toggle-btn"
-              onClick={() => showPersonNFC("company")}
-            >
-              <CreditCard size={20} />
-              {showNFC ? "Hide" : "Show"} NFC Business Card
-            </button> */}
-
-            {/* Individual NFC Card Buttons */}
-            <div className="individual-nfc-buttons">
-              <button
-                className="nfc-person-btn arun-btn"
-                onClick={() => showPersonNFC("arun")}
-              >
-                <CreditCard size={18} />
-                Arun V.V - NFC Card
-              </button>
-              <button
-                className="nfc-person-btn yoosaf-btn"
-                onClick={() => showPersonNFC("yoosaf")}
-              >
-                <CreditCard size={18} />
-                Yoosaf N - NFC Card
-              </button>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="contact-form-section">
+          <div className="form-card">
             <div className="form-header">
+              <Send size={24} />
               <h3>Send us a Message</h3>
-              <p>
-                Fill out the form below and we&apos;ll respond within 24 hours
-              </p>
+              <p>We&apos;ll respond within 24 hours</p>
             </div>
 
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name">Full Name *</label>
+            <form onSubmit={handleSubmit} className="contact-form-std">
+              <div className="form-row-std">
+                <div className="form-group-std">
+                  <label>
+                    <User size={16} /> Full Name *
+                  </label>
                   <input
                     type="text"
-                    id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="John Doe"
+                    placeholder="Your name"
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email Address *</label>
+                <div className="form-group-std">
+                  <label>
+                    <Mail size={16} /> Email *
+                  </label>
                   <input
                     type="email"
-                    id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="john@example.com"
+                    placeholder="your@email.com"
                   />
                 </div>
               </div>
 
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="company">Company Name</label>
+              <div className="form-row-std">
+                <div className="form-group-std">
+                  <label>
+                    <Building size={16} /> Company
+                  </label>
                   <input
                     type="text"
-                    id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    placeholder="Your Company Ltd."
+                    placeholder="Company name"
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="phone">Phone Number</label>
+                <div className="form-group-std">
+                  <label>
+                    <Phone size={16} /> Phone
+                  </label>
                   <input
                     type="tel"
-                    id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -327,11 +237,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="subject">Subject *</label>
+              <div className="form-group-std">
+                <label>Subject *</label>
                 <input
                   type="text"
-                  id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
@@ -340,48 +249,42 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="form-group">
-                <label htmlFor="message">Message *</label>
+              <div className="form-group-std">
+                <label>Message *</label>
                 <textarea
-                  id="message"
                   name="message"
-                  rows="5"
+                  rows="4"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  placeholder="Please describe your requirements in detail..."
+                  placeholder="Describe your requirements..."
                 />
               </div>
 
-              <div className="form-group">
-                <label htmlFor="urgencyLevel">Urgency Level</label>
+              <div className="form-group-std">
+                <label>
+                  <AlertCircle size={16} /> Urgency Level
+                </label>
                 <select
-                  id="urgencyLevel"
                   name="urgencyLevel"
                   value={formData.urgencyLevel}
                   onChange={handleChange}
                 >
-                  <option value="normal">
-                    Normal - Response within 24 hours
-                  </option>
-                  <option value="urgent">
-                    Urgent - Response within 6 hours
-                  </option>
-                  <option value="critical">
-                    Critical - Immediate response
-                  </option>
+                  <option value="normal">Normal - 24 hours response</option>
+                  <option value="urgent">Urgent - 6 hours response</option>
+                  <option value="critical">Critical - Immediate response</option>
                 </select>
               </div>
 
-              <button type="submit" className="submit-btn">
+              <button type="submit" className="submit-btn-std">
+                <Send size={18} />
                 Send Message
-                <Mail size={18} />
               </button>
             </form>
           </div>
         </div>
 
-        {/* NFC Business Card Modal */}
+        {/* NFC Modal */}
         {showNFC && (
           <div className="nfc-modal-overlay" onClick={closeNFC}>
             <div className="nfc-modal" onClick={(e) => e.stopPropagation()}>
