@@ -161,7 +161,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  
+
   .section-header-gallery h2 {
     font-size: 2rem;
   }
@@ -171,15 +171,15 @@
   .products-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .products-gallery {
     padding: 3rem 1rem;
   }
-  
+
   .section-header-gallery h2 {
     font-size: 1.75rem;
   }
-  
+
   .product-image-wrapper {
     height: 180px;
   }

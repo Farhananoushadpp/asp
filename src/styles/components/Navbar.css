@@ -49,11 +49,9 @@
   align-items: center;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s ease;
 }
 
 .logo-link:hover {
-  transform: translateY(-2px);
   text-decoration: none;
 }
 
@@ -61,9 +59,7 @@
   height: 65px;
   width: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
   filter: brightness(1.1); /* Make logo pop on dark background */
-  transform: scale(1.05); /* Permanent hover size */
 }
 
 .logo-first {
@@ -72,10 +68,6 @@
 
 .logo-second {
   max-width: 140px;
-}
-
-.logo-link:hover .logo-image {
-  transform: scale(1.05); /* Maintain same size on hover */
 }
 
 /* Navigation Menu */
@@ -97,7 +89,7 @@
 .nav-link {
   color: #ffffff; /* White text for dark background */
   text-decoration: none;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 400; /* Changed from 600 to 400 (normal) */
   font-size: 15px;
   position: relative;

@@ -6,74 +6,67 @@
  */
 
 :root {
-  /* 🌊 Ocean Blue Color Palette - From iColorpalette */
-  --primary-color: #1b5f9c; /* Deep Ocean Blue */
-  --secondary-color: #2b6fa6; /* Medium Ocean Blue */
-  --accent-color: #3b7eb7; /* Light Ocean Blue */
-  --light-blue: #84a9d9; /* Soft Ocean Blue */
-  --lighter-blue: #5c8cca; /* Sky Ocean Blue */
-  --gold-accent: #C7A008; /* Safety Gold - Quality & Compliance (use sparingly) */
-  
+  /* 🌊 Ocean Waves Color Palette - From New Image */
+  --primary-color: #0b1b2b; /* Deepest ocean navy */
+  --secondary-color: #0f4b6b; /* Deep ocean blue */
+  --accent-color: #1a9bc0; /* Bright ocean blue */
+  --light-blue: #7ec8e3; /* Light aqua blue */
+  --lighter-blue: #e8f4f8; /* Very light ocean blue */
+  --gold-accent: #c7a008; /* Safety Gold - Quality & Compliance (use sparingly) */
+
   /* Background Colors */
-  --background-color: #F3F4F6; /* Soft Industrial Grey */
-  --background-light: #FFFFFF; /* Pure White */
-  
+  --background-color: #f3f4f6; /* Soft Industrial Grey */
+  --background-light: #ffffff; /* Pure White */
+
   /* Text Colors */
-  --text-color: #1E293B; /* Graphite - Dark text */
-  --text-muted: #64748B; /* Muted text */
-  --text-light: #94A3B8; /* Light text */
-  
+  --text-color: #1e293b; /* Graphite - Dark text */
+  --text-muted: #64748b; /* Muted text */
+  --text-light: #94a3b8; /* Light text */
+
   /* Grey Scale */
   --white-color: #ffffff;
-  --light-gray: #E2E8F0;
-  --medium-gray: #94A3B8;
+  --light-gray: #e2e8f0;
+  --medium-gray: #94a3b8;
   --dark-gray: #475569;
-  
-  /* 🔥 Gradients - Ocean Blue Theme */
+
+  /* 🔥 Gradients - Ocean Waves Theme */
   --primary-gradient: linear-gradient(
     135deg,
-    #1b5f9c 0%,
-    #2b6fa6 50%,
-    #3b7eb7 100%
+    #0b1b2b 0%,
+    #0f4b6b 50%,
+    #1a9bc0 100%
   );
-  
-  --secondary-gradient: linear-gradient(
-    135deg,
-    #2b6fa6 0%,
-    #1b5f9c 100%
-  );
-  
-  --accent-gradient: linear-gradient(
-    135deg,
-    #3b7eb7 0%,
-    #2b6fa6 100%
-  );
-  
+
+  --secondary-gradient: linear-gradient(135deg, #0f4b6b 0%, #0b1b2b 100%);
+
+  --accent-gradient: linear-gradient(135deg, #1a9bc0 0%, #0f4b6b 100%);
+
   --hero-gradient: linear-gradient(
     135deg,
-    #1b5f9c 0%,
-    #2b6fa6 50%,
-    #3b7eb7 100%
+    #0b1b2b 0%,
+    #0f4b6b 50%,
+    #1a9bc0 100%
   );
-  
+
   --ocean-wave-gradient: linear-gradient(
     180deg,
-    rgba(27, 95, 156, 0.95) 0%,
-    rgba(43, 111, 166, 0.9) 50%,
-    rgba(59, 126, 183, 0.85) 100%
+    rgba(11, 27, 43, 0.95) 0%,
+    rgba(15, 75, 107, 0.9) 50%,
+    rgba(26, 155, 192, 0.85) 100%
   );
-  
+
   /* 🎯 Table & Card Colors */
-  --table-header-bg: #2b6fa6; /* Ocean Blue for table headers */
-  --table-border: #E2E8F0; /* Light grey borders */
-  --card-bg: #FFFFFF;
-  --card-shadow: 0 4px 6px -1px rgba(27, 95, 156, 0.1), 0 2px 4px -1px rgba(27, 95, 156, 0.06);
-  
+  --table-header-bg: #0f4b6b; /* Deep ocean blue for table headers */
+  --table-border: #e2e8f0; /* Light grey borders */
+  --card-bg: #ffffff;
+  --card-shadow:
+    0 4px 6px -1px rgba(11, 27, 43, 0.1), 0 2px 4px -1px rgba(11, 27, 43, 0.06);
+
   /* 🎨 Hover States */
-  --hover-primary: #154d82;
-  --hover-secondary: #235d8f;
-  --hover-accent: #2f6ca0;
-  --hover-bg: #F1F5F9;
+  --hover-primary: #081521;
+  --hover-secondary: #0c3a54;
+  --hover-accent: #1589aa;
+  --hover-bg: #f1f5f9;
 
   /* Typography - Poppins Primary Font */
   --font-family:
@@ -113,12 +106,12 @@
   --radius-2xl: 24px;
   --radius-full: 50%;
 
-  /* Shadows - Updated with Ocean Blue tint */
-  --shadow-sm: 0 1px 2px rgba(27, 95, 156, 0.05);
-  --shadow-md: 0 4px 6px rgba(27, 95, 156, 0.08);
-  --shadow-lg: 0 10px 15px rgba(27, 95, 156, 0.1);
-  --shadow-xl: 0 20px 25px rgba(27, 95, 156, 0.12);
-  --shadow-primary: 0 10px 25px rgba(27, 95, 156, 0.2);
+  /* Shadows - Updated with Ocean Waves tint */
+  --shadow-sm: 0 1px 2px rgba(11, 27, 43, 0.05);
+  --shadow-md: 0 4px 6px rgba(11, 27, 43, 0.08);
+  --shadow-lg: 0 10px 15px rgba(11, 27, 43, 0.1);
+  --shadow-xl: 0 20px 25px rgba(11, 27, 43, 0.12);
+  --shadow-primary: 0 10px 25px rgba(11, 27, 43, 0.2);
 
   /* Transitions - Smooth */
   --transition-fast: 0.2s ease;

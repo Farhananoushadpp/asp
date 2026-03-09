@@ -38,7 +38,7 @@ const Home = () => {
   // Auto-rotate cards every 3 seconds when not hovered
   useEffect(() => {
     if (isHovered) return;
-    
+
     const interval = setInterval(() => {
       setActiveCard((prev) => (prev + 1) % cardImages.length);
     }, 3000);
@@ -57,20 +57,21 @@ const Home = () => {
       {/* Who We Are Section */}
       <section className="who-we-are-section">
         <div className="container">
-          <div className="section-header">
-            {/* <span className="section-label">COMPANY OVERVIEW</span> */}
+          <div className="who-we-header">
+            <span className="section-label">About Us</span>
+
             <h2 className="section-title">Who We Are</h2>
             <p className="section-subtitle">
               Your trusted partner in marine and offshore solutions since 2005
             </p>
           </div>
 
-          <div className="content-with-icon">
-            <div className="content-text">
+          <div className="who-we-content">
+            <div className="who-we-text">
               <p>
                 ASP Global Marine is a specialized marine and offshore product
                 solution provider delivering high-quality equipment, spare
-                parts, and consumbales to vessels and offshore installations
+                parts, and consumables to vessels and offshore installations
                 worldwide. With a strong focus on operational reliability and
                 compliance requirements of the maritime industry, ASP Global
                 offers product solutions for equipment/mechanical systems,
@@ -83,9 +84,9 @@ const Home = () => {
                 companies throughout the maritime sector.
               </p>
             </div>
-            <div className="content-icon">
-              {/* Interactive Card Carousel */}
-              <div 
+            <div className="who-we-visual">
+              {/* Interactive Card Carousel - DO NOT CHANGE */}
+              <div
                 className="card-carousel"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -98,7 +99,8 @@ const Home = () => {
                       className={`carousel-card ${
                         index === activeCard ? "active" : ""
                       } ${
-                        index === (activeCard - 1 + cardImages.length) % cardImages.length
+                        index ===
+                        (activeCard - 1 + cardImages.length) % cardImages.length
                           ? "exit"
                           : ""
                       }`}
@@ -134,30 +136,7 @@ const Home = () => {
                     />
                   ))}
                 </div>
-                {/* Touch instruction */}
-                <div className="touch-hint">
-                  <span>Click or hover to view next</span>
-                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number">18+</div>
-              <div className="stat-label">Years Experience</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">500+</div>
-              <div className="stat-label">Global Clients</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">50+</div>
-              <div className="stat-label">Countries Served</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">9500+</div>
-              <div className="stat-label">Products</div>
             </div>
           </div>
         </div>
@@ -166,53 +145,54 @@ const Home = () => {
       {/* Our Services Section */}
       <section className="services-section">
         <div className="container">
-          <div className="section-header">
+          <div className="services-header">
+            <span className="section-label">What We Offer</span>
             <h2 className="section-title">Our Services</h2>
             <p className="section-subtitle">
               Comprehensive marine solutions tailored to your operational needs
             </p>
           </div>
 
-          <div className="services-grid-classic">
-            <div className="service-item-classic">
-              <div className="service-icon-classic">
-                <Ship size={48} />
+          <div className="services-grid">
+            <div className="service-card">
+              <div className="service-icon">
+                <Ship size={40} />
               </div>
-              <h3 className="service-title">Marine Equipment</h3>
-              <p className="service-description">
+              <h3>Marine Equipment</h3>
+              <p>
                 High-quality marine equipment and machinery for vessels of all
                 types, ensuring operational excellence and reliability.
               </p>
             </div>
 
-            <div className="service-item-classic">
-              <div className="service-icon-classic">
-                <Package size={48} />
+            <div className="service-card">
+              <div className="service-icon">
+                <Package size={40} />
               </div>
-              <h3 className="service-title">Spare Parts Supply</h3>
-              <p className="service-description">
+              <h3>Spare Parts Supply</h3>
+              <p>
                 Genuine spare parts and consumables for marine engines, deck
                 equipment, and mechanical systems with fast delivery.
               </p>
             </div>
 
-            <div className="service-item-classic">
-              <div className="service-icon-classic">
-                <Shield size={48} />
+            <div className="service-card">
+              <div className="service-icon">
+                <Shield size={40} />
               </div>
-              <h3 className="service-title">Safety Solutions</h3>
-              <p className="service-description">
+              <h3>Safety Solutions</h3>
+              <p>
                 Comprehensive safety equipment and solutions meeting
                 international maritime safety standards and regulations.
               </p>
             </div>
 
-            <div className="service-item-classic">
-              <div className="service-icon-classic">
-                <Anchor size={48} />
+            <div className="service-card">
+              <div className="service-icon">
+                <Anchor size={40} />
               </div>
-              <h3 className="service-title">Offshore Support</h3>
-              <p className="service-description">
+              <h3>Offshore Support</h3>
+              <p>
                 Specialized offshore installation support with technical
                 expertise and logistics solutions for remote operations.
               </p>
@@ -221,94 +201,106 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section - Simplified & Unique Design */}
-      <section className="why-choose-simple">
+      {/* Why Choose Us Section */}
+      <section className="why-choose-section">
         <div className="container">
-          <div className="why-header">
-            <h2 className="why-title">Why Choose Us</h2>
-            <p className="why-subtitle">
+          <div className="why-choose-header">
+            <span className="section-label">Our Advantages</span>
+            <h2 className="section-title">Why Choose Us</h2>
+            <p className="section-subtitle">
               Five reasons why marine professionals trust ASP Global Marine
             </p>
           </div>
 
-          <div className="why-cards-row">
-            {/* Card 1 - Quality */}
+          <div className="why-grid">
             <div className="why-card">
-              <div className="why-card-icon">
-                <Award size={32} />
+              <div className="why-icon">
+                <Award size={36} />
               </div>
-              <h3 className="why-card-title">Quality Assured</h3>
-              <p className="why-card-text">
+              <h3>Quality Assured</h3>
+              <p>
                 ISO certified products meeting international maritime standards
               </p>
             </div>
-
-            {/* Card 2 - Global */}
             <div className="why-card">
-              <div className="why-card-icon">
-                <Globe size={32} />
+              <div className="why-icon">
+                <Globe size={36} />
               </div>
-              <h3 className="why-card-title">Global Network</h3>
-              <p className="why-card-text">
-                Sourcing from leading manufacturers across 50+ countries
+              <h3>Global Network</h3>
+              <p>Sourcing from leading manufacturers across 50+ countries</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">
+                <Users size={36} />
+              </div>
+              <h3>Expert Team</h3>
+              <p>
+                18+ years of maritime industry experience and technical
+                knowledge
               </p>
             </div>
-
-            {/* Card 3 - Expertise */}
             <div className="why-card">
-              <div className="why-card-icon">
-                <Users size={32} />
+              <div className="why-icon">
+                <Ship size={36} />
               </div>
-              <h3 className="why-card-title">Expert Team</h3>
-              <p className="why-card-text">
-                18+ years of maritime industry experience and technical knowledge
-              </p>
+              <h3>Fast Delivery</h3>
+              <p>Efficient logistics ensuring timely delivery worldwide</p>
             </div>
-
-            {/* Card 4 - Delivery */}
             <div className="why-card">
-              <div className="why-card-icon">
-                <Ship size={32} />
+              <div className="why-icon">
+                <Anchor size={36} />
               </div>
-              <h3 className="why-card-title">Fast Delivery</h3>
-              <p className="why-card-text">
-                Efficient logistics ensuring timely delivery worldwide
-              </p>
-            </div>
-
-            {/* Card 5 - Value */}
-            <div className="why-card">
-              <div className="why-card-icon">
-                <Anchor size={32} />
-              </div>
-              <h3 className="why-card-title">Best Value</h3>
-              <p className="why-card-text">
-                Competitive pricing without compromising on quality
-              </p>
+              <h3>Best Value</h3>
+              <p>Competitive pricing without compromising on quality</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Simple Stats Bar */}
-          <div className="why-stats-bar">
-            <div className="why-stat">
-              <span className="why-stat-number">18+</span>
-              <span className="why-stat-label">Years</span>
+      {/* Authorizations Section */}
+      <section className="authorizations-section">
+        <div className="container">
+          <div className="authorizations-header">
+            <span className="section-label">Certifications</span>
+            <h2 className="section-title">Our Authorizations</h2>
+            <p className="section-subtitle">
+              Official partnerships and certifications with leading marine
+              equipment manufacturers
+            </p>
+          </div>
+          <div className="authorizations-grid">
+            <div className="authorization-card">
+              <div className="authorization-icon">
+                <Shield size={36} />
+              </div>
+              <h3>Authorized Distributor</h3>
+              <p>
+                Official distributor for leading marine equipment manufacturers
+              </p>
             </div>
-            <div className="why-stat-divider"></div>
-            <div className="why-stat">
-              <span className="why-stat-number">500+</span>
-              <span className="why-stat-label">Clients</span>
+            <div className="authorization-card">
+              <div className="authorization-icon">
+                <Award size={36} />
+              </div>
+              <h3>Service Partner</h3>
+              <p>
+                Authorized service provider for marine equipment maintenance
+              </p>
             </div>
-            <div className="why-stat-divider"></div>
-            <div className="why-stat">
-              <span className="why-stat-number">50+</span>
-              <span className="why-stat-label">Countries</span>
+            <div className="authorization-card">
+              <div className="authorization-icon">
+                <CheckCircle size={36} />
+              </div>
+              <h3>Technical Support</h3>
+              <p>Authorized technical support and installation partner</p>
             </div>
-            <div className="why-stat-divider"></div>
-            <div className="why-stat">
-              <span className="why-stat-number">24/7</span>
-              <span className="why-stat-label">Support</span>
-            </div>
+            {/* <div className="authorization-card">
+              <div className="authorization-icon">
+                <Globe size={36} />
+              </div>
+              <h3>Global Reach</h3>
+              <p>International network serving maritime clients worldwide</p>
+            </div> */}
           </div>
         </div>
       </section>

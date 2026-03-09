@@ -116,7 +116,7 @@ const Authorization = () => {
       name: "Beijing Zhonghanghua Safety Valve Sales Co., Ltd.",
       location: "Beijing, China",
       founded: "2002",
-      logo: "/Authorisation/Beijing/logo.webp",
+      logo: "/Authorisation/Beijing/logo.svg",
       category: "Safety Valves",
       shortDescription:
         "Expert manufacturer of marine safety valves, pressure relief systems, and industrial valve solutions.",
