@@ -6,9 +6,9 @@
 /* Partner Detail Page Base */
 .partner-detail-page {
   min-height: 100vh;
-  background-color: #f3f4f6;
+  background-color: #0f4c75;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1e293b;
+  color: #eaf6fb;
   line-height: 1.6;
   padding: 0;
 }
@@ -31,7 +31,7 @@
 
 /* Breadcrumb Navigation */
 .breadcrumb {
-  background: linear-gradient(135deg, #0c2d48 0%, #154a74 100%);
+  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
   padding: 15px 20px;
 }
 
@@ -53,8 +53,8 @@
 
 /* Partner Header Section */
 .partner-header-section {
-  background: linear-gradient(135deg, #0c2d48 0%, #154a74 50%, #1e5a8a 100%);
-  color: #ffffff;
+  background: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
+  color: #eaf6fb;
   padding: 60px 20px 40px;
   position: relative;
   overflow: hidden;

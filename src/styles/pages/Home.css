@@ -17,7 +17,7 @@
 
 .who-we-are-section {
   padding: 5rem 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .who-we-header {
@@ -29,25 +29,25 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: #0b3c5d;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
-  background: rgba(13, 58, 92, 0.1);
+  background: rgba(11, 60, 93, 0.1);
   border-radius: 50px;
 }
 
 .who-we-header .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0a1f44;
+  color: #0b3c5d;
   margin-bottom: 0.75rem;
 }
 
 .who-we-header .section-subtitle {
   font-size: 1.125rem;
-  color: #64748b;
+  color: #0f4c75;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -64,7 +64,7 @@
 .who-we-text {
   font-size: 1rem;
   line-height: 1.8;
-  color: #334155;
+  color: #0f4c75;
 }
 
 .who-we-text p {

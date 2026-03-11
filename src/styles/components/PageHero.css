@@ -11,11 +11,11 @@
   min-height: 280px;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #0c2d48 0%, #154a74 50%, #0e7490 100%);
+  background: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: #eaf6fb;
   padding: 60px 0 100px 0;
   overflow: hidden;
   margin: 0;

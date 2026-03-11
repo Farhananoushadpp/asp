@@ -7,7 +7,7 @@
 
 .engine-spares-page {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: #87c7e0;
 }
 
 /* ============================================
@@ -17,7 +17,7 @@
 .portfolio-header {
   position: relative;
   height: 280px;
-  background: linear-gradient(135deg, #1a5f9e 0%, #0d3a5c 50%, #0a2e4a 100%);
+  background: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
   overflow: hidden;
 }
 

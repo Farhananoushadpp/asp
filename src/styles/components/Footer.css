@@ -16,8 +16,8 @@
 
 /* Footer Container */
 .footer {
-  background: linear-gradient(135deg, #0a1f44 0%, #0d3a5c 50%, #0c4b65 100%);
-  color: #ffffff;
+  background: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
+  color: #eaf6fb;
   position: relative;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
@@ -84,12 +84,12 @@
 }
 
 .footer-logo-image.footer-logo-first {
-  max-width: 220px;
+  max-width: 120px;
 }
 
 .footer-logo-image.footer-logo-second {
-  max-width: 120px;
-  height: 50px;
+  max-width: 180px;
+  height: 30px;
 }
 
 .footer-logo-image:hover {

@@ -7,9 +7,9 @@
 
 /* Authorization Page */
 .authorization-page {
-  background-color: #f3f4f6;
+  background-color: #87c7e0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1e293b;
+  color: #0b3c5d;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -35,8 +35,8 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(14, 116, 144, 0.05) 0%,
-    rgba(21, 74, 116, 0.05) 100%
+    rgba(12, 74, 110, 0.05) 0%,
+    rgba(20, 184, 166, 0.05) 100%
   );
   border-radius: inherit;
   opacity: 0;
@@ -824,11 +824,11 @@
 
 /* Partner Cards - Redesigned Professional Layout */
 .partner-card {
-  background: #ffffff;
+  background: #0c2d48;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(66, 145, 171, 0.1);
+  box-shadow: 0 4px 20px rgba(11, 60, 93, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(66, 145, 171, 0.15);
+  border: 1px solid rgba(31, 111, 139, 0.2);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -843,7 +843,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #4291ab, #307087);
+  background: linear-gradient(90deg, #0b3c5d, #1f6f8b);
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
@@ -854,21 +854,21 @@
 
 .partner-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(66, 145, 171, 0.2);
-  border-color: rgba(66, 145, 171, 0.3);
+  box-shadow: 0 12px 40px rgba(11, 60, 93, 0.2);
+  border-color: rgba(31, 111, 139, 0.3);
 }
 
 /* Partner Card Heading */
 .partner-card-heading {
   padding: 1rem 1rem 0.75rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border-bottom: 1px solid rgba(66, 145, 171, 0.1);
+  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
+  border-bottom: 1px solid rgba(234, 246, 251, 0.2);
 }
 
 .partner-card-heading .partner-name {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0c2d48;
+  color: #eaf6fb;
   margin: 0;
   line-height: 1.3;
   text-align: center;
@@ -903,19 +903,19 @@
 .partner-category {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #1f6f8b 0%, #4fa3c7 100%);
+  color: #eaf6fb;
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(66, 145, 171, 0.3);
+  box-shadow: 0 2px 8px rgba(79, 163, 199, 0.3);
 }
 
 .partner-location {
   font-size: 0.875rem;
-  color: #64748b;
+  color: #87c7e0;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -933,7 +933,7 @@
 .partner-description {
   font-size: 0.9375rem;
   line-height: 1.5;
-  color: #475569;
+  color: #eaf6fb;
   margin: 0;
   text-align: left;
   word-wrap: break-word;
@@ -943,8 +943,8 @@
 /* Partner Card Footer */
 .partner-card-footer {
   padding: 1rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border-top: 1px solid rgba(66, 145, 171, 0.1);
+  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
+  border-top: 1px solid rgba(234, 246, 251, 0.2);
   margin-top: auto;
 }
 
@@ -955,8 +955,8 @@
   gap: 0.5rem;
   width: 100%;
   padding: 0.875rem 1.5rem;
-  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #1f6f8b 0%, #4fa3c7 100%);
+  color: #eaf6fb;
   border: none;
   border-radius: 8px;
   font-size: 0.9375rem;
@@ -965,13 +965,13 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(66, 145, 171, 0.3);
+  box-shadow: 0 4px 12px rgba(79, 163, 199, 0.3);
 }
 
 .go-to-page-btn:hover {
-  background: linear-gradient(135deg, #307087 0%, #2a303c 100%);
+  background: linear-gradient(135deg, #4fa3c7 0%, #87c7e0 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(66, 145, 171, 0.4);
+  box-shadow: 0 6px 20px rgba(79, 163, 199, 0.4);
 }
 
 .go-to-page-btn .arrow-icon {
@@ -2333,5 +2333,454 @@ html {
   .go-to-page-btn {
     font-size: 13px;
     padding: 10px 16px;
+  }
+}
+
+/* ============================================
+   3D PARTNER CARDS - PREMIUM DESIGN
+   ============================================ */
+
+/* 3D Card Wrapper with Perspective */
+.partner-card-3d-wrapper {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* 3D Card Base */
+.partner-card-3d {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 4px 6px rgba(11, 47, 74, 0.05),
+    0 10px 20px rgba(11, 47, 74, 0.08),
+    0 20px 40px rgba(11, 47, 74, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(66, 145, 171, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+}
+
+/* 3D Depth Layer - Bottom Shadow */
+.partner-card-3d::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 5%;
+  right: 5%;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(11, 47, 74, 0.2), transparent);
+  border-radius: 50%;
+  filter: blur(15px);
+  opacity: 0.6;
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+/* Top Highlight Edge */
+.partner-card-3d::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4291ab, #307087, #4291ab);
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+/* Shine/Gloss Effect Layer */
+.card-3d-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Hover Effects - 3D Transform */
+.partner-card-3d-wrapper:hover .partner-card-3d {
+  transform: translateY(-15px) translateZ(30px) rotateX(5deg);
+  box-shadow:
+    0 20px 40px rgba(11, 47, 74, 0.15),
+    0 40px 80px rgba(11, 47, 74, 0.2),
+    0 60px 120px rgba(11, 47, 74, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+  border-color: rgba(66, 145, 171, 0.4);
+}
+
+.partner-card-3d-wrapper:hover .partner-card-3d::after {
+  transform: scaleX(1);
+}
+
+.partner-card-3d-wrapper:hover .card-3d-shine {
+  left: 150%;
+}
+
+.partner-card-3d-wrapper:hover .partner-card-3d::before {
+  bottom: -20px;
+  opacity: 0.8;
+  filter: blur(20px);
+}
+
+/* 3D Floating Animation */
+@keyframes float-3d {
+  0%,
+  100% {
+    transform: translateY(0) translateZ(0);
+  }
+  50% {
+    transform: translateY(-8px) translateZ(10px);
+  }
+}
+
+.partner-card-3d-wrapper {
+  animation: float-3d 4s ease-in-out infinite;
+}
+
+.partner-card-3d-wrapper:nth-child(1) {
+  animation-delay: 0s;
+}
+.partner-card-3d-wrapper:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.partner-card-3d-wrapper:nth-child(3) {
+  animation-delay: 1s;
+}
+.partner-card-3d-wrapper:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.partner-card-3d-wrapper:nth-child(5) {
+  animation-delay: 2s;
+}
+.partner-card-3d-wrapper:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+/* Pause animation on hover */
+.partner-card-3d-wrapper:hover {
+  animation-play-state: paused;
+}
+
+/* 3D Card Internal Elements */
+.partner-card-3d .partner-card-heading {
+  transform: translateZ(20px);
+  transition: transform 0.4s ease;
+  padding: 1.25rem 1.25rem 0.75rem;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.9) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  border-bottom: 1px solid rgba(66, 145, 171, 0.12);
+  border-radius: 20px 20px 0 0;
+}
+
+.partner-card-3d-wrapper:hover .partner-card-3d .partner-card-heading {
+  transform: translateZ(40px);
+}
+
+.partner-card-3d .partner-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0c2d48;
+  margin: 0;
+  line-height: 1.3;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.partner-card-3d .partner-image-container {
+  transform: translateZ(15px);
+  transition: transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+.partner-card-3d-wrapper:hover .partner-card-3d .partner-image-container {
+  transform: translateZ(35px) scale(1.05);
+}
+
+.partner-card-3d .partner-image {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(66, 145, 171, 0.25));
+  transition: all 0.4s ease;
+}
+
+.partner-card-3d .partner-category-section {
+  transform: translateZ(25px);
+  transition: transform 0.4s ease;
+  padding: 0 1.25rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.partner-card-3d-wrapper:hover .partner-card-3d .partner-category-section {
+  transform: translateZ(45px);
+}
+
+.partner-card-3d .partner-category {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  color: #ffffff;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow:
+    0 4px 12px rgba(66, 145, 171, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateZ(10px);
+}
+
+.partner-card-3d .partner-location {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.partner-card-3d .partner-description-section {
+  transform: translateZ(20px);
+  transition: transform 0.4s ease;
+  padding: 0 1.25rem 0.75rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.partner-card-3d-wrapper:hover .partner-card-3d .partner-description-section {
+  transform: translateZ(40px);
+}
+
+.partner-card-3d .partner-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.partner-card-3d .partner-card-footer {
+  transform: translateZ(30px);
+  transition: transform 0.4s ease;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.9) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  border-top: 1px solid rgba(66, 145, 171, 0.12);
+  border-radius: 0 0 20px 20px;
+  margin-top: auto;
+}
+
+.partner-card-3d-wrapper:hover .partner-card-3d .partner-card-footer {
+  transform: translateZ(50px);
+}
+
+/* 3D Button */
+.go-to-page-btn-3d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(145deg, #4291ab 0%, #307087 50%, #2a5f75 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 6px 15px rgba(66, 145, 171, 0.4),
+    0 3px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  transform: translateZ(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.go-to-page-btn-3d::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.go-to-page-btn-3d:hover {
+  background: linear-gradient(145deg, #307087 0%, #2a5f75 50%, #245a70 100%);
+  transform: translateY(-3px) translateZ(20px) scale(1.02);
+  box-shadow:
+    0 10px 25px rgba(66, 145, 171, 0.5),
+    0 5px 10px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.go-to-page-btn-3d:hover::before {
+  left: 100%;
+}
+
+.go-to-page-btn-3d:active {
+  transform: translateY(-1px) translateZ(15px) scale(0.98);
+  box-shadow:
+    0 4px 12px rgba(66, 145, 171, 0.35),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.go-to-page-btn-3d .arrow-icon {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.go-to-page-btn-3d:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+/* Staggered Entry Animation */
+.partner-card-3d-wrapper {
+  opacity: 0;
+  animation:
+    fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+    float-3d 4s ease-in-out infinite;
+}
+
+.partner-card-3d-wrapper:nth-child(1) {
+  animation-delay: 0.1s, 0s;
+}
+.partner-card-3d-wrapper:nth-child(2) {
+  animation-delay: 0.25s, 0.5s;
+}
+.partner-card-3d-wrapper:nth-child(3) {
+  animation-delay: 0.4s, 1s;
+}
+.partner-card-3d-wrapper:nth-child(4) {
+  animation-delay: 0.55s, 1.5s;
+}
+.partner-card-3d-wrapper:nth-child(5) {
+  animation-delay: 0.7s, 2s;
+}
+.partner-card-3d-wrapper:nth-child(6) {
+  animation-delay: 0.85s, 2.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Design for 3D Cards */
+@media (max-width: 1200px) {
+  .partner-card-3d-wrapper:hover .partner-card-3d {
+    transform: translateY(-10px) translateZ(20px) rotateX(3deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-card-3d-wrapper {
+    perspective: none;
+    animation: none;
+    opacity: 1;
+  }
+
+  .partner-card-3d {
+    transform: none !important;
+    box-shadow:
+      0 4px 6px rgba(11, 47, 74, 0.1),
+      0 10px 20px rgba(11, 47, 74, 0.15);
+  }
+
+  .partner-card-3d-wrapper:hover .partner-card-3d {
+    transform: translateY(-5px) !important;
+    box-shadow:
+      0 8px 20px rgba(11, 47, 74, 0.15),
+      0 15px 30px rgba(11, 47, 74, 0.2);
+  }
+
+  .partner-card-3d::before,
+  .partner-card-3d::after,
+  .card-3d-shine {
+    display: none;
+  }
+
+  .partner-card-3d .partner-card-heading,
+  .partner-card-3d .partner-image-container,
+  .partner-card-3d .partner-category-section,
+  .partner-card-3d .partner-description-section,
+  .partner-card-3d .partner-card-footer {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-card-3d {
+    border-radius: 16px;
+  }
+
+  .partner-card-3d .partner-name {
+    font-size: 1.05rem;
+  }
+
+  .partner-card-3d .partner-image {
+    max-width: 180px;
+  }
+
+  .go-to-page-btn-3d {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
   }
 }

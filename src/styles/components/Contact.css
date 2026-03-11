@@ -5,7 +5,7 @@
 
 .contact-std {
   padding: 5rem 2rem;
-  background: #f8fafc;
+  background: transparent;
 }
 
 .std-container {
@@ -20,19 +20,19 @@
 }
 
 .section-title-center svg {
-  color: #0d3a5c;
+  color: #0b3c5d;
   margin-bottom: 1rem;
 }
 
 .section-title-center h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #0d3a5c;
+  color: #0b3c5d;
   margin-bottom: 0.75rem;
 }
 
 .section-title-center p {
-  color: #666;
+  color: #0f4c75;
   font-size: 1.1rem;
 }
 
@@ -54,8 +54,8 @@
   background: white;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid #e8f4f8;
+  box-shadow: 0 2px 12px rgba(11, 60, 93, 0.06);
+  border: 1px solid rgba(31, 111, 139, 0.2);
   display: flex;
   gap: 1rem;
   transition: all 0.3s ease;
@@ -69,19 +69,19 @@
 .info-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #eaf6fb;
   flex-shrink: 0;
 }
 
 .info-content h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: #0b3c5d;
   margin-bottom: 0.5rem;
 }
 

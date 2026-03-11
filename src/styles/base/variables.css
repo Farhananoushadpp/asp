@@ -6,67 +6,74 @@
  */
 
 :root {
-  /* 🌊 Ocean Waves Color Palette - From New Image */
-  --primary-color: #0b1b2b; /* Deepest ocean navy */
-  --secondary-color: #0f4b6b; /* Deep ocean blue */
-  --accent-color: #1a9bc0; /* Bright ocean blue */
-  --light-blue: #7ec8e3; /* Light aqua blue */
-  --lighter-blue: #e8f4f8; /* Very light ocean blue */
-  --gold-accent: #c7a008; /* Safety Gold - Quality & Compliance (use sparingly) */
+  /* 🌊 Oceanic Deep Blue Theme */
+  /* Primary Colors */
+  --primary-color: #0b3c5d; /* Deep Ocean Blue */
+  --primary-dark: #082d47;
+  --primary-light: #0d4a73;
 
-  /* Background Colors */
-  --background-color: #f3f4f6; /* Soft Industrial Grey */
-  --background-light: #ffffff; /* Pure White */
+  /* Secondary Colors */
+  --secondary-color: #0f4c75; /* Navy Blue */
+  --secondary-dark: #0c3d5e;
+  --secondary-light: #12608f;
+
+  /* Accent Colors */
+  --accent-color: #1f6f8b; /* Ocean Blue */
+  --accent-dark: #195a72;
+  --accent-light: #2582a0;
+
+  /* Interactive States */
+  --hover-color: #4fa3c7; /* Sea Blue */
+  --hover-dark: #3d8fb3;
+  --hover-light: #61b7d4;
+
+  /* Light / Background Colors */
+  --light-bg: #87c7e0; /* Soft Sky Blue */
+  --light-bg-dark: #6ebad6;
+  --light-bg-light: #9ed4e9;
 
   /* Text Colors */
-  --text-color: #1e293b; /* Graphite - Dark text */
-  --text-muted: #64748b; /* Muted text */
-  --text-light: #94a3b8; /* Light text */
+  --text-light: #eaf6fb; /* Mist White */
+  --text-dark: #0b3c5d; /* Deep Ocean for light backgrounds */
 
-  /* Grey Scale */
+  /* Background Colors */
+  --background-dark: #0f4c75;
+  --background-light: #87c7e0;
   --white-color: #ffffff;
-  --light-gray: #e2e8f0;
-  --medium-gray: #94a3b8;
-  --dark-gray: #475569;
 
-  /* 🔥 Gradients - Ocean Waves Theme */
+  /* 🔥 Oceanic Gradients */
+  --ocean-gradient: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
+  --ocean-gradient-reverse: linear-gradient(180deg, #87c7e0, #1f6f8b, #0b3c5d);
   --primary-gradient: linear-gradient(
     135deg,
-    #0b1b2b 0%,
-    #0f4b6b 50%,
-    #1a9bc0 100%
+    #0b3c5d 0%,
+    #0f4c75 50%,
+    #1f6f8b 100%
   );
-
-  --secondary-gradient: linear-gradient(135deg, #0f4b6b 0%, #0b1b2b 100%);
-
-  --accent-gradient: linear-gradient(135deg, #1a9bc0 0%, #0f4b6b 100%);
-
+  --accent-gradient: linear-gradient(135deg, #1f6f8b 0%, #4fa3c7 100%);
   --hero-gradient: linear-gradient(
     135deg,
-    #0b1b2b 0%,
-    #0f4b6b 50%,
-    #1a9bc0 100%
+    #0b3c5d 0%,
+    #1f6f8b 50%,
+    #87c7e0 100%
   );
 
-  --ocean-wave-gradient: linear-gradient(
-    180deg,
-    rgba(11, 27, 43, 0.95) 0%,
-    rgba(15, 75, 107, 0.9) 50%,
-    rgba(26, 155, 192, 0.85) 100%
-  );
-
-  /* 🎯 Table & Card Colors */
-  --table-header-bg: #0f4b6b; /* Deep ocean blue for table headers */
-  --table-border: #e2e8f0; /* Light grey borders */
+  /* 🎯 Table & Card Colors - Ocean Theme */
+  --table-header-bg: #0c4a6e; /* Deep ocean blue */
+  --table-header-text: #f0f9ff; /* Ocean foam white */
+  --table-border: #bae6fd; /* Light ocean blue */
+  --table-row-alt: #f0f9ff; /* Very light ocean */
   --card-bg: #ffffff;
   --card-shadow:
-    0 4px 6px -1px rgba(11, 27, 43, 0.1), 0 2px 4px -1px rgba(11, 27, 43, 0.06);
+    0 4px 6px -1px rgba(10, 22, 40, 0.1), 0 2px 4px -1px rgba(10, 22, 40, 0.06);
+  --card-border: rgba(14, 116, 144, 0.1);
 
-  /* 🎨 Hover States */
-  --hover-primary: #081521;
-  --hover-secondary: #0c3a54;
-  --hover-accent: #1589aa;
-  --hover-bg: #f1f5f9;
+  /* 🎨 Hover States - Ocean */
+  --hover-primary: #070f1a;
+  --hover-secondary: #093654;
+  --hover-accent: #0d9488;
+  --hover-bg: #e0f2fe;
+  --hover-ocean: #bae6fd;
 
   /* Typography - Poppins Primary Font */
   --font-family:
@@ -106,12 +113,13 @@
   --radius-2xl: 24px;
   --radius-full: 50%;
 
-  /* Shadows - Updated with Ocean Waves tint */
-  --shadow-sm: 0 1px 2px rgba(11, 27, 43, 0.05);
-  --shadow-md: 0 4px 6px rgba(11, 27, 43, 0.08);
-  --shadow-lg: 0 10px 15px rgba(11, 27, 43, 0.1);
-  --shadow-xl: 0 20px 25px rgba(11, 27, 43, 0.12);
-  --shadow-primary: 0 10px 25px rgba(11, 27, 43, 0.2);
+  /* Shadows - Ocean tinted */
+  --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.05);
+  --shadow-md: 0 4px 6px rgba(10, 22, 40, 0.08);
+  --shadow-lg: 0 10px 15px rgba(10, 22, 40, 0.1);
+  --shadow-xl: 0 20px 25px rgba(10, 22, 40, 0.12);
+  --shadow-primary: 0 10px 25px rgba(10, 22, 40, 0.2);
+  --shadow-ocean: 0 8px 30px rgba(14, 116, 144, 0.25);
 
   /* Transitions - Smooth */
   --transition-fast: 0.2s ease;

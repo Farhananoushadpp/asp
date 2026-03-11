@@ -186,43 +186,46 @@ const Authorization = () => {
 
           <div className="grid-responsive-partners">
             {partners.map((partner) => (
-              <div key={partner.id} className="partner-card">
-                {/* Heading First */}
-                <div className="partner-card-heading">
-                  <h3 className="partner-name">{partner.name}</h3>
-                </div>
+              <div key={partner.id} className="partner-card-3d-wrapper">
+                <div className="partner-card-3d">
+                  <div className="card-3d-shine"></div>
+                  {/* Heading First */}
+                  <div className="partner-card-heading">
+                    <h3 className="partner-name">{partner.name}</h3>
+                  </div>
 
-                {/* Fitted Image */}
-                <div className="partner-image-container">
-                  <img
-                    src={partner.logo}
-                    alt={`${partner.name} Logo`}
-                    className="partner-image"
-                    onError={(e) => {
-                      e.target.src = "/logo.webp";
-                    }}
-                  />
-                </div>
+                  {/* Fitted Image */}
+                  <div className="partner-image-container">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} Logo`}
+                      className="partner-image"
+                      onError={(e) => {
+                        e.target.src = "/logo.webp";
+                      }}
+                    />
+                  </div>
 
-                {/* Category */}
-                <div className="partner-category-section">
-                  <span className="partner-category">{partner.category}</span>
-                  <span className="partner-location">{partner.location}</span>
-                </div>
+                  {/* Category */}
+                  <div className="partner-category-section">
+                    <span className="partner-category">{partner.category}</span>
+                    <span className="partner-location">{partner.location}</span>
+                  </div>
 
-                {/* Description */}
-                <div className="partner-description-section">
-                  <p className="partner-description">
-                    {partner.shortDescription}
-                  </p>
-                </div>
+                  {/* Description */}
+                  <div className="partner-description-section">
+                    <p className="partner-description">
+                      {partner.shortDescription}
+                    </p>
+                  </div>
 
-                {/* Go to the Page Link */}
-                <div className="partner-card-footer">
-                  <Link to={partner.link} className="go-to-page-btn">
-                    Go to the Page
-                    <ArrowRight size={16} className="arrow-icon" />
-                  </Link>
+                  {/* Go to the Page Link */}
+                  <div className="partner-card-footer">
+                    <Link to={partner.link} className="go-to-page-btn-3d">
+                      Go to the Page
+                      <ArrowRight size={16} className="arrow-icon" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

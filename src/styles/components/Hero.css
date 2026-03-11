@@ -6,12 +6,21 @@
  * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
  */
 
-/* Custom Font - Amsterdam Signature Italic */
+/* Custom Fonts */
 @font-face {
   font-family: "Amsterdam Signature";
   src: url("./amsterdam-signature.otf") format("opentype");
   font-weight: normal;
   font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Birds of Paradise";
+  src: url("../pages/Birds of Paradise И PERSONAL USE ONLY.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
   font-display: block;
 }
 
@@ -23,7 +32,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #0a1f44 0%, #0c4b65 50%, #1a2a40 100%);
+  background: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -74,9 +83,10 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    to bottom,
-    rgba(10, 31, 68, 0.5) 0%,
-    rgba(10, 31, 68, 0.7) 100%
+    180deg,
+    rgba(10, 22, 40, 0.85) 0%,
+    rgba(12, 74, 110, 0.75) 50%,
+    rgba(10, 22, 40, 0.9) 100%
   );
   z-index: 2;
 }
@@ -217,26 +227,26 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-color), #1faf9a);
-  color: var(--white-color);
+  background: #1f6f8b;
+  color: #eaf6fb;
   border: none;
-  box-shadow: 0 4px 15px rgba(42, 186, 163, 0.3);
+  box-shadow: 0 4px 15px rgba(31, 111, 139, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(42, 186, 163, 0.4);
-  background: linear-gradient(135deg, #1faf9a, var(--accent-color));
+  box-shadow: 0 6px 20px rgba(79, 163, 199, 0.4);
+  background: #4fa3c7;
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--white-color);
-  border: none;
+  color: #eaf6fb;
+  border: 2px solid #eaf6fb;
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(234, 246, 251, 0.1);
   transform: translateY(-2px);
 }
 
@@ -372,5 +382,72 @@
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
+  }
+}
+
+/* Scrolling Text Banner */
+.scrolling-text-banner {
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrolling-text-content {
+  display: flex;
+  /* animation: scroll-left 20s linear infinite; */
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrolling-text {
+  color: #ffffff;
+  font-family: "Birds of Paradise", cursive;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 3px;
+  padding: 0 100px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments for scrolling text */
+@media (max-width: 768px) {
+  .scrolling-text {
+    font-size: 1.4rem;
+    letter-spacing: 2.5px;
+    padding: 0 80px;
+  }
+
+  .scrolling-text-banner {
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrolling-text {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    padding: 0 60px;
+  }
+
+  .scrolling-text-banner {
+    padding: 4px 0;
   }
 }
