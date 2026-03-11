@@ -1,8 +1,9 @@
 /**
- * ASP Global Marine Trading LLC - Redesigned Footer Styles
+ * ASP Global Marine Trading LLC - Ocean Wave Footer Styles
  *
- * Modern, professional footer design with elegant typography
- * Fonts: Amsterdam Signature for tagline, Poppins for everything else
+ * Modern footer design with ocean wave SVG background
+ * Newsletter subscription and maritime floating animations
+ * ASP Ocean Blue Theme
  */
 
 /* Custom Font - Amsterdam Signature Italic */
@@ -14,35 +15,151 @@
   font-display: block;
 }
 
-/* Footer Container */
+/* Footer Container with Ocean Gradient */
 .footer {
-  background: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
+  background: linear-gradient(180deg, #1b5f9c 0%, #2b6fa6 50%, #3b7eb7 100%);
   color: #eaf6fb;
   position: relative;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
+  padding-top: 120px;
 }
 
-/* Decorative Background Pattern */
-.footer::before {
-  content: "";
+/* Ocean Wave Background */
+.footer-wave-background {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(14, 116, 144, 0.1) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(42, 186, 163, 0.08) 0%,
-      transparent 50%
-    );
+  width: 100%;
+  height: 120px;
+  z-index: 0;
   pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  animation: footer-wave-move 8s ease-in-out infinite;
+}
+
+.footer-wave.wave-2 {
+  animation-delay: -4s;
+  opacity: 0.7;
+}
+
+@keyframes footer-wave-move {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+}
+
+/* Floating Maritime Icons */
+.footer-floating-icon {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.15);
+  z-index: 1;
+  animation: float-icon 6s ease-in-out infinite;
+}
+
+.footer-floating-icon.ship-icon {
+  top: 30%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.footer-floating-icon.anchor-icon {
+  bottom: 40%;
+  left: 8%;
+  animation-delay: -3s;
+}
+
+@keyframes float-icon {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.newsletter-content p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.75rem;
+  min-width: 400px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.newsletter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: #ffffff;
+  color: #1b5f9c;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Content Wrapper */
@@ -59,7 +176,7 @@
   display: grid;
   grid-template-columns: 1.2fr 2fr;
   gap: 80px;
-  padding: 70px 0 50px;
+  padding: 50px 0;
 }
 
 /* Brand Section - Left Column */
@@ -80,20 +197,20 @@
   width: auto;
   filter: brightness(1.1);
   transition: transform 0.3s ease;
-  transform: scale(1.05); /* Permanent hover size */
+  transform: scale(1.05);
 }
 
 .footer-logo-image.footer-logo-first {
-  max-width: 120px;
+  max-width: 220px;
 }
 
 .footer-logo-image.footer-logo-second {
-  max-width: 180px;
-  height: 30px;
+  max-width: 120px;
+  height: 50px;
 }
 
 .footer-logo-image:hover {
-  transform: scale(1.05); /* Maintain same size on hover */
+  transform: scale(1.05);
 }
 
 .footer-brand-text {

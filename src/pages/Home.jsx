@@ -6,6 +6,7 @@
  */
 
 import Hero from "../components/Hero.jsx";
+import { Link } from "react-router-dom";
 import {
   Ship,
   Shield,
@@ -15,6 +16,8 @@ import {
   Package,
   Users,
   CheckCircle,
+  Settings,
+  Clock,
 } from "lucide-react";
 import "../styles/pages/Home.css";
 import { useState, useEffect } from "react";
@@ -142,60 +145,104 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Our Services Section */}
-      <section className="services-section">
+      {/* Our Services Section - Modern 8-Card Grid */}
+      <section className="services-section-modern">
         <div className="container">
-          <div className="services-header">
-            <span className="section-label">What We Offer</span>
-            <h2 className="section-title">Our Services</h2>
-            <p className="section-subtitle">
-              Comprehensive marine solutions tailored to your operational needs
+          <div className="section-header-modern">
+            <span className="section-tag">What We Offer</span>
+            <h2 className="section-title-modern">Our Comprehensive Services</h2>
+            <p className="section-subtitle-modern">
+              Premium marine solutions tailored to your operational needs
             </p>
           </div>
 
-          <div className="services-grid">
-            <div className="service-card">
-              <div className="service-icon">
-                <Ship size={40} />
+          <div className="services-grid-8">
+            <div className="service-card-modern">
+              <div className="service-icon-modern">
+                <Ship size={48} />
               </div>
-              <h3>Marine Equipment</h3>
-              <p>
-                High-quality marine equipment and machinery for vessels of all
-                types, ensuring operational excellence and reliability.
+              <h3 className="service-title-modern">Marine Equipment</h3>
+              <p className="service-desc-modern">
+                High-quality marine equipment and machinery for vessels of all types
               </p>
+              <Link to="/products" className="service-link">Learn More →</Link>
             </div>
 
-            <div className="service-card">
-              <div className="service-icon">
-                <Package size={40} />
+            <div className="service-card-modern">
+              <div className="service-icon-modern">
+                <Package size={48} />
               </div>
-              <h3>Spare Parts Supply</h3>
-              <p>
-                Genuine spare parts and consumables for marine engines, deck
-                equipment, and mechanical systems with fast delivery.
+              <h3 className="service-title-modern">Spare Parts Supply</h3>
+              <p className="service-desc-modern">
+                Genuine spare parts for engines, deck equipment, and mechanical systems
               </p>
+              <Link to="/products" className="service-link">Learn More →</Link>
             </div>
 
-            <div className="service-card">
-              <div className="service-icon">
-                <Shield size={40} />
+            <div className="service-card-modern">
+              <div className="service-icon-modern">
+                <Shield size={48} />
               </div>
-              <h3>Safety Solutions</h3>
-              <p>
-                Comprehensive safety equipment and solutions meeting
-                international maritime safety standards and regulations.
+              <h3 className="service-title-modern">Safety Solutions</h3>
+              <p className="service-desc-modern">
+                Comprehensive safety equipment meeting international maritime standards
               </p>
+              <Link to="/products" className="service-link">Learn More →</Link>
             </div>
 
-            <div className="service-card">
-              <div className="service-icon">
-                <Anchor size={40} />
+            <div className="service-card-modern">
+              <div className="service-icon-modern">
+                <Anchor size={48} />
               </div>
-              <h3>Offshore Support</h3>
-              <p>
-                Specialized offshore installation support with technical
-                expertise and logistics solutions for remote operations.
+              <h3 className="service-title-modern">Offshore Support</h3>
+              <p className="service-desc-modern">
+                Specialized offshore installation support with technical expertise
               </p>
+              <Link to="/contact" className="service-link">Learn More →</Link>
+            </div>
+
+            <div className="service-card-modern">
+              <div className="service-icon-modern">
+                <Settings size={48} />
+              </div>
+              <h3 className="service-title-modern">Technical Support</h3>
+              <p className="service-desc-modern">
+                Expert technical guidance and consultation for marine systems
+              </p>
+              <Link to="/contact" className="service-link">Learn More →</Link>
+            </div>
+
+            <div className="service-card-modern">
+              <div className="service-icon-modern">
+                <Globe size={48} />
+              </div>
+              <h3 className="service-title-modern">Global Network</h3>
+              <p className="service-desc-modern">
+                Worldwide sourcing and distribution across 50+ countries
+              </p>
+              <Link to="/about" className="service-link">Learn More →</Link>
+            </div>
+
+            <div className="service-card-modern">
+              <div className="service-icon-modern">
+                <Award size={48} />
+              </div>
+              <h3 className="service-title-modern">Quality Assurance</h3>
+              <p className="service-desc-modern">
+                ISO 9001:2015 certified quality management and compliance
+              </p>
+              <Link to="/about" className="service-link">Learn More →</Link>
+            </div>
+
+            <div className="service-card-modern">
+              <div className="service-icon-modern">
+                <Clock size={48} />
+              </div>
+              <h3 className="service-title-modern">24/7 Service</h3>
+              <p className="service-desc-modern">
+                Round-the-clock support for urgent marine equipment needs
+              </p>
+              <Link to="/contact" className="service-link">Learn More →</Link>
             </div>
           </div>
         </div>

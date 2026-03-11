@@ -1,14 +1,18 @@
 /**
  * ASP Global Marine Trading LLC - Footer Section
  *
- * Modern footer design with clean layout
- * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ * Modern footer design with ocean wave SVG
+ * Newsletter subscription and maritime theme
+ * ASP Ocean Blue Theme
  */
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Ship, Anchor, Send, MapPin, Phone, Mail, Clock } from "lucide-react";
 import "../styles/components/Footer.css";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
   useEffect(() => {
     // Use Font Loading API for better font loading detection
     const loadFont = async () => {
@@ -27,7 +31,6 @@ const Footer = () => {
         }
       } catch (error) {
         console.log("Font loading failed, using fallback");
-        // Still show the headline with fallback font
         const headline = document.querySelector(".footer-headline");
         if (headline) {
           headline.classList.add("font-loaded");
@@ -35,12 +38,60 @@ const Footer = () => {
       }
     };
 
-    // Start font loading
     loadFont();
   }, []);
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    alert(`Thank you for subscribing with: ${email}`);
+    setEmail("");
+  };
+
   return (
     <footer className="footer">
+      {/* Ocean Wave SVG Background */}
+      <div className="footer-wave-background">
+        <svg className="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path fill="#1b5f9c" fillOpacity="0.2" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+        </svg>
+        <svg className="footer-wave wave-2" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path fill="#2b6fa6" fillOpacity="0.3" d="M0,96L48,90.7C96,85,192,75,288,74.7C384,75,480,85,576,90.7C672,96,768,96,864,90.7C960,85,1056,75,1152,74.7C1248,75,1344,85,1392,90.7L1440,96L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+        </svg>
+      </div>
+
+      {/* Floating Maritime Icons */}
+      <div className="footer-floating-icon ship-icon">
+        <Ship size={32} />
+      </div>
+      <div className="footer-floating-icon anchor-icon">
+        <Anchor size={28} />
+      </div>
+
       <div className="footer-content">
+        {/* Newsletter Section */}
+        <div className="footer-newsletter">
+          <div className="newsletter-content">
+            <h3 className="newsletter-title">Stay Updated</h3>
+            <p className="newsletter-desc">
+              Subscribe to our newsletter for the latest marine industry news and product updates
+            </p>
+          </div>
+          <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="newsletter-input"
+            />
+            <button type="submit" className="newsletter-btn">
+              <Send size={18} />
+              <span>Subscribe</span>
+            </button>
+          </form>
+        </div>
+
         {/* Top Section - Main Content */}
         <div className="footer-main">
           {/* Company Branding */}

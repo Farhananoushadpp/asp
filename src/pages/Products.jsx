@@ -135,6 +135,15 @@ const ProductsPage = () => {
           <div className="grid-responsive-5">
             {productCategories.map((category) => (
               <div key={category.id} className="category-card">
+                <div className="category-image">
+                  <img 
+                    src={category.image} 
+                    alt={category.title}
+                    onError={(e) => {
+                      e.target.src = `/products/enginestores/1.webp`; // Fallback image
+                    }}
+                  />
+                </div>
                 <div className="category-content">
                   <h3>{category.title}</h3>
                   <p>{category.description}</p>

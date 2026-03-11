@@ -23,6 +23,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/pages/About.css";
 
 const About = () => {
@@ -191,113 +192,89 @@ const About = () => {
         className="container-full"
         style={{ maxWidth: "1200px", margin: "0 auto" }}
       >
-        {/* Who We Are Section */}
-        <section className="about-section" id="who-we-are">
-          <div className="section-header">
-            {/* <span className="section-label">Company Overview</span> */}
-            <h2>Who We Are</h2>
+        {/* Who We Are Section - Modern Split Layout */}
+      <section className="about-section" id="who-we-are">
+        <div className="section-header">
+          <span className="section-label">Company Overview</span>
+          <h2>Who We Are</h2>
+          <p>
+            Your trusted partner in marine and offshore solutions since 2006
+          </p>
+        </div>
+
+        <div className="about-split-layout">
+          <div className="about-image-carousel">
+            <div className="carousel-container">
+              {cardImages.slice(0, 4).map((card, index) => (
+                <div
+                  key={card.id}
+                  className={`about-carousel-slide ${index === activeCard % 4 ? "active" : ""}`}
+                >
+                  <img src={card.src} alt={card.title} />
+                  <div className="slide-overlay">
+                    <span className="slide-title">{card.title}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Carousel Indicators */}
+            <div className="carousel-dots">
+              {cardImages.slice(0, 4).map((_, index) => (
+                <span
+                  key={index}
+                  className={`carousel-dot ${index === activeCard % 4 ? "active" : ""}`}
+                  onClick={() => setActiveCard(index)}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="about-content-text">
+            <h3 className="about-subtitle">Marine Excellence Since 2006</h3>
             <p>
-              Your trusted partner in marine and offshore solutions since 2006
+              ASP Global Marine is a specialized marine and offshore product
+              solution provider delivering high-quality equipment, spare
+              parts, and consumables to vessels and offshore installations
+              worldwide. With a strong focus on operational reliability and
+              compliance requirements of the maritime industry, ASP Global
+              offers product solutions for equipment/mechanical systems,
+              safety items, deck/engine stores and engine spares.
             </p>
+            <p>
+              This is backed by extensive sourcing capabilities and technical
+              product knowledge, which enables ASP Global marine to serve
+              shipowners, ship managers, operators, and marine service
+              companies throughout the maritime sector.
+            </p>
+            <div className="about-cta">
+              <Link to="/products" className="btn btn-primary">
+                Explore Our Products
+              </Link>
+              <Link to="/contact" className="btn btn-outline">
+                Get In Touch
+              </Link>
+            </div>
           </div>
+        </div>
 
-          <div className="content-with-icon">
-            <div className="content-text">
-              <p>
-                ASP Global Marine is a specialized marine and offshore product
-                solution provider delivering high-quality equipment, spare
-                parts, and consumables to vessels and offshore installations
-                worldwide. With a strong focus on operational reliability and
-                compliance requirements of the maritime industry, ASP Global
-                offers product solutions for equipment/mechanical systems,
-                safety items, deck/engine stores and engine spares.
-              </p>
-              <p>
-                This is backed by extensive sourcing capabilities and technical
-                product knowledge, which enables ASP Global marine to serve
-                shipowners, ship managers, operators, and marine service
-                companies throughout the maritime sector.
-              </p>
-            </div>
-            <div className="content-icon">
-              {/* Interactive Card Carousel */}
-              <div
-                className="card-carousel"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                onClick={handleCardClick}
-              >
-                <div className="cards-container">
-                  {cardImages.map((card, index) => (
-                    <div
-                      key={card.id}
-                      className={`carousel-card ${
-                        index === activeCard ? "active" : ""
-                      } ${
-                        index ===
-                        (activeCard - 1 + cardImages.length) % cardImages.length
-                          ? "exit"
-                          : ""
-                      }`}
-                      style={{
-                        zIndex: index === activeCard ? 10 : 1,
-                      }}
-                    >
-                      <div className="card-image-wrapper">
-                        <img
-                          src={card.src}
-                          alt={card.title}
-                          className="card-image"
-                        />
-                      </div>
-                      <div className="card-overlay">
-                        <h4 className="card-title">{card.title}</h4>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                {/* Card indicators */}
-                <div className="card-indicators">
-                  {cardImages.map((_, index) => (
-                    <span
-                      key={index}
-                      className={`indicator ${
-                        index === activeCard ? "active" : ""
-                      }`}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setActiveCard(index);
-                      }}
-                    />
-                  ))}
-                </div>
-                {/* Touch instruction */}
-                <div className="touch-hint">
-                  {/* <span>Click or hover to view next</span> */}
-                </div>
-              </div>
-            </div>
+        <div className="stats-grid">
+          <div className="stat-item">
+            <div className="stat-number">18+</div>
+            <div className="stat-label">Years Experience</div>
           </div>
-
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number">18+</div>
-              <div className="stat-label">Years Experience</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">500+</div>
-              <div className="stat-label">Global Clients</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">50+</div>
-              <div className="stat-label">Countries Served</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">9500+</div>
-              <div className="stat-label">Products</div>
-            </div>
+          <div className="stat-item">
+            <div className="stat-number">500+</div>
+            <div className="stat-label">Global Clients</div>
           </div>
-        </section>
+          <div className="stat-item">
+            <div className="stat-number">50+</div>
+            <div className="stat-label">Countries Served</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">9500+</div>
+            <div className="stat-label">Products</div>
+          </div>
+        </div>
+      </section>
 
         {/* Mission & Vision */}
         <section className="std-section" id="mission-vision">

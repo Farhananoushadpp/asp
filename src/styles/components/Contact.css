@@ -1,94 +1,161 @@
 /**
  * ASP Global Marine Trading LLC - Contact Section Styles
- * Standard professional design
+ * Enhanced Ocean Blue Theme with Modern Business Cards
  */
 
 .contact-std {
   padding: 5rem 2rem;
-  background: transparent;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-std::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(27, 95, 156, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(59, 126, 183, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .std-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Section Title */
 .section-title-center {
   text-align: center;
   margin-bottom: 3rem;
+  position: relative;
 }
 
 .section-title-center svg {
-  color: #0b3c5d;
+  color: #1b5f9c;
   margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(27, 95, 156, 0.2));
 }
 
 .section-title-center h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #0b3c5d;
+  color: #0d3a5c;
   margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.section-title-center h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1b5f9c 0%, #3b7eb7 100%);
+  border-radius: 2px;
 }
 
 .section-title-center p {
-  color: #0f4c75;
-  font-size: 1.1rem;
+  color: #334155;
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* Contact Layout */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 2rem;
+  gap: 3rem;
+  align-items: start;
 }
 
 /* Info Cards */
 .info-cards {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .info-card {
-  background: white;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(11, 60, 93, 0.06);
-  border: 1px solid rgba(31, 111, 139, 0.2);
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 20px rgba(27, 95, 156, 0.08),
+    0 1px 3px rgba(27, 95, 156, 0.1);
+  border: 1px solid rgba(27, 95, 156, 0.1);
   display: flex;
   gap: 1rem;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #1b5f9c 0%, #3b7eb7 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .info-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 8px 30px rgba(27, 95, 156, 0.15),
+    0 4px 12px rgba(27, 95, 156, 0.1);
+  border-color: rgba(27, 95, 156, 0.2);
+}
+
+.info-card:hover::before {
+  opacity: 1;
 }
 
 .info-icon {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
-  border-radius: 10px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #1b5f9c 0%, #2b6fa6 100%);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #eaf6fb;
+  color: #ffffff;
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(27, 95, 156, 0.25);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(27, 95, 156, 0.35);
 }
 
 .info-content h4 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: #0b3c5d;
+  color: #0d3a5c;
   margin-bottom: 0.5rem;
 }
 
 .info-content p {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.95rem;
+  color: #475569;
   margin-bottom: 0.25rem;
+  line-height: 1.5;
 }
 
 .info-content p:last-child {
@@ -97,12 +164,170 @@
 
 /* NFC Section */
 .nfc-section {
-  background: white;
+  background: linear-gradient(135deg, #1b5f9c 0%, #2b6fa6 100%);
   padding: 1.5rem;
+  border-radius: 16px;
+  margin-top: 1rem;
+  box-shadow: 0 8px 24px rgba(27, 95, 156, 0.2);
+}
+
+.nfc-section h4 {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.nfc-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nfc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid #e8f4f8;
-  margin-top: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nfc-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Card */
+.form-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 
+    0 10px 40px rgba(27, 95, 156, 0.1),
+    0 2px 8px rgba(27, 95, 156, 0.08);
+  border: 1px solid rgba(27, 95, 156, 0.1);
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.form-header svg {
+  color: #1b5f9c;
+  width: 32px;
+  height: 32px;
+}
+
+.form-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d3a5c;
+  margin: 0;
+}
+
+.form-header p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Form Styles */
+.contact-form-std {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row-std {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group-std {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group-std label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group-std label svg {
+  color: #1b5f9c;
+  width: 16px;
+  height: 16px;
+}
+
+.form-group-std input,
+.form-group-std textarea,
+.form-group-std select {
+  padding: 0.875rem 1.25rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group-std input:focus,
+.form-group-std textarea:focus,
+.form-group-std select:focus {
+  outline: none;
+  border-color: #1b5f9c;
+  box-shadow: 0 0 0 3px rgba(27, 95, 156, 0.1);
+  transform: translateY(-1px);
+}
+
+.form-group-std textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn-std {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1b5f9c 0%, #2b6fa6 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(27, 95, 156, 0.25);
+}
+
+.submit-btn-std:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(27, 95, 156, 0.35);
 }
 
 .nfc-section h4 {
@@ -359,6 +584,44 @@
   align-items: center;
   padding-top: 1rem;
   border-top: 1px solid #e8f4f8;
+  position: relative;
+}
+
+/* NFC QR Code Section */
+.nfc-qr-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.qr-code img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  border: 2px solid #e8f4f8;
+  background: white;
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+
+.qr-code img:hover {
+  transform: scale(1.05);
+  border-color: #4291ab;
+  box-shadow: 0 4px 12px rgba(66, 145, 171, 0.2);
+}
+
+.qr-label {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 500;
+  text-align: center;
 }
 
 .nfc-chip {
@@ -368,6 +631,7 @@
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
 }
 
 .chip-lines {
@@ -401,11 +665,121 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+/* Enhanced NFC Card Design */
+.nfc-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 1px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(66, 145, 171, 0.1);
+}
+
+.nfc-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(66, 145, 171, 0.05) 0%,
+    transparent 70%
+  );
+  animation: nfc-card-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes nfc-card-shimmer {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+}
+
+.nfc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.nfc-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nfc-company-info h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0d3a5c;
+  margin-bottom: 0.25rem;
+}
+
+.nfc-company-info p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.nfc-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.nfc-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nfc-contact-item:hover {
+  background: rgba(240, 249, 255, 0.9);
+  transform: translateX(4px);
+}
+
+.nfc-contact-item svg {
+  color: #4291ab;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.nfc-contact-item span {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}
+
 .nfc-actions {
   display: flex;
   gap: 0.75rem;
   padding: 1.25rem;
   background: #f8fafc;
+  border-radius: 0 0 16px 16px;
+  margin: -1.5rem -1.5rem 0 -1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .nfc-action-btn {

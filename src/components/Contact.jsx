@@ -326,6 +326,19 @@ const Contact = () => {
                 </div>
 
                 <div className="nfc-card-footer">
+                  <div className="nfc-qr-section">
+                    <div className="qr-code">
+                      <img 
+                        src={`/qr-${selectedPerson}.png`} 
+                        alt={`${nfcCard[selectedPerson].name} QR Code`}
+                        onError={(e) => {
+                          // Fallback placeholder QR code
+                          e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23f0f0f0'/%3E%3Ctext x='40' y='45' text-anchor='middle' font-family='Arial' font-size='8' fill='%23666'%3EQR CODE%3C/text%3E%3C/svg%3E";
+                        }}
+                      />
+                      <span className="qr-label">Scan for Contact</span>
+                    </div>
+                  </div>
                   <div className="nfc-chip">
                     <div className="chip-lines"></div>
                   </div>
