@@ -14,7 +14,7 @@
   font-display: block;
 }
 
-/* Footer Container with Reduced Size */
+/* Footer Container with Reduced Size - Mobile Optimized */
 .footer {
   background: #0a2f4a;
   color: #eaf6fb;
@@ -24,7 +24,20 @@
   padding-top: 60px;
 }
 
-/* Newsletter Section */
+/* Mobile Footer Optimization */
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 30px;
+  }
+}
+
+/* Newsletter Section - Mobile Responsive */
 .footer-newsletter {
   display: flex;
   align-items: center;
@@ -36,6 +49,22 @@
   padding: 2rem 3rem;
   margin-bottom: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Newsletter */
+@media (max-width: 768px) {
+  .footer-newsletter {
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-newsletter {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
 }
 
 .newsletter-content h3 {
@@ -205,7 +234,6 @@
 }
 
 .footer-headline::before {
-  content: '"';
   position: absolute;
   left: 0;
   top: 0;
@@ -471,17 +499,33 @@
   }
 
   .footer-main {
-    padding: 25px 0 20px;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 50px;
   }
 
-  .footer-links-section {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .footer-logo {
+    gap: 12px;
+  }
+
+  .footer-logo-image.footer-logo-first {
+    height: 60px;
+    max-width: 180px;
+  }
+
+  .footer-logo-image.footer-logo-second {
+    height: 25px;
+    max-width: 120px;
+  }
+
+  .footer-company-name {
+    font-size: 1.3rem;
   }
 
   .footer-headline {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+
+  .footer-headline {
     padding-left: 16px;
   }
 
@@ -496,6 +540,34 @@
   }
 }
 
+@media (max-width: 600px) {
+  .footer-content {
+    padding: 0 22px;
+  }
+
+  .footer-logo {
+    gap: 10px;
+  }
+
+  .footer-logo-image.footer-logo-first {
+    height: 55px;
+    max-width: 160px;
+  }
+
+  .footer-logo-image.footer-logo-second {
+    height: 22px;
+    max-width: 100px;
+  }
+
+  .footer-company-name {
+    font-size: 1.25rem;
+  }
+
+  .footer-headline {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 480px) {
   .footer-content {
     padding: 0 20px;
@@ -503,6 +575,7 @@
 
   .footer-logo-image.footer-logo-first {
     height: 50px;
+    max-width: 140px;
   }
 
   .footer-logo-image.footer-logo-second {

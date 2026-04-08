@@ -6,6 +6,21 @@
 
 .products-page {
   min-height: calc(100vh - 160px);
+  min-height: calc(100dvh - 160px); /* Dynamic viewport for mobile */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Mobile Products Page */
+@media (max-width: 768px) {
+  .products-page {
+    min-height: calc(100dvh - 140px);
+  }
+}
+
+@media (max-width: 480px) {
+  .products-page {
+    min-height: calc(100dvh - 120px);
+  }
 }
 
 /* Section Header */

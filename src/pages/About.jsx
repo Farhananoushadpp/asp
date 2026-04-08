@@ -41,7 +41,7 @@ const About = () => {
       image: "/about2.webp",
       heading: "Trusted Industry Partner",
       description:
-        "Serving 500+ global clients since 2006 with ISO 9001:2015 certified quality management and SOLAS compliant safety standards.",
+        "Serving 500+ global clients since 2021 with ISO 9001:2015 certified quality management and SOLAS compliant safety standards.",
     },
     {
       id: 3,
@@ -492,7 +492,7 @@ const About = () => {
             <div className="message-body">
               <p>
                 Welcome to ASP Global Marine Trading LLC. Since our
-                establishment in 2005, we have been committed to excellence in
+                establishment in 2021, we have been committed to excellence in
                 the marine and offshore industry. Our journey has been guided by
                 a simple yet powerful principle: delivering quality products and
                 services that our clients can rely on, every time.

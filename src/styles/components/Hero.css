@@ -23,29 +23,40 @@
   font-display: block;
 }
 
-/* Hero Section Container - Increased Height */
+/* Hero Section Container - Fixed Layout */
 .hero {
   position: relative;
   min-height: 85vh;
+  min-height: 85dvh; /* Dynamic viewport for mobile */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  margin-top: 0;
+  width: 100%;
+  margin: 0;
   padding: 0;
   border: none;
   border-radius: 0;
   box-shadow: none;
   outline: none;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  left: 0;
+  right: 0;
   max-width: none;
+}
+
+/* Mobile Hero Optimization */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    min-height: 70dvh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+    min-height: 60dvh;
+  }
 }
 
 /* Video Background Styles */
@@ -71,7 +82,7 @@
   }
 }
 
-/* Video Background Container */
+/* Video Background Container - Mobile Optimized */
 .hero-video-background {
   position: absolute;
   top: 0;
@@ -92,6 +103,21 @@
   transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
+}
+
+/* Mobile Video Optimization */
+@media (max-width: 768px) {
+  .hero-video {
+    /* Reduce video quality for mobile performance */
+    filter: brightness(0.9) contrast(1.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-video {
+    /* Further optimization for small mobile */
+    filter: brightness(0.85) contrast(1.15);
+  }
 }
 
 /* Video Overlay with Reduced Ocean Blue Gradient */

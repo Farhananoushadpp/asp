@@ -1,7 +1,7 @@
 /**
  * ASP Global Marine Trading LLC - Utility Classes
  * 
- * Common utility classes for styling
+ * Common utility classes for styling with touch-friendly enhancements
  */
 
 /* Background colors */
@@ -23,6 +23,40 @@
 
 .bg-background {
   background-color: var(--background-color);
+}
+
+/* Touch-friendly button utilities */
+.btn-touch {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px 20px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-touch-large {
+  min-height: 48px;
+  min-width: 48px;
+  padding: 14px 24px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Interactive touch targets */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.touch-target-large {
+  min-height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Border radius */
@@ -48,6 +82,19 @@
 
 .rounded-full {
   border-radius: var(--radius-full);
+}
+
+/* Text alignment */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 /* Shadows */
@@ -132,9 +179,16 @@
   height: auto;
 }
 
+/* Dynamic viewport height for mobile */
+.h-screen {
+  height: 100vh;
+  height: 100dvh;
+}
+
 /* Min Height */
 .min-h-screen {
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Overflow */
@@ -144,10 +198,12 @@
 
 .overflow-auto {
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .overflow-scroll {
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Cursor */
@@ -162,6 +218,9 @@
 /* Select none */
 .select-none {
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /* Opacity */
@@ -175,4 +234,21 @@
 
 .opacity-100 {
   opacity: 1;
+}
+
+/* Mobile-first responsive utilities */
+@media (hover: hover) {
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+
+  .hover\:scale-110:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (hover: none) {
+  .active\:scale-95:active {
+    transform: scale(0.95);
+  }
 }

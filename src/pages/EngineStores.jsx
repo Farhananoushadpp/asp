@@ -99,6 +99,18 @@ const EngineStores = () => {
     },
     {
       id: 8,
+      name: "Marine Lube Oil",
+      image: "/products/enginestores/Asset 44.webp",
+      category: "Lubricants",
+      description:
+        "Premium marine-grade lubricating oil for engine protection and performance",
+      whatsappMessage:
+        "Hi, I'm interested in Marine Lube Oil. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Marine Lube Oil\n\nDear ASP Global Marine Trading,\n\nI'm interested in Marine Lube Oil. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 9,
       name: "Clamp Meter",
       image: "/products/enginestores/Asset%208.webp",
       category: "Clamp Meter",
@@ -109,7 +121,63 @@ const EngineStores = () => {
         "Subject: Inquiry about Clamp Meter\n\nDear ASP Global Marine Trading,\n\nI'm interested in Clamp Meter. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 9,
+      id: 10,
+      name: "Pressure Gauge",
+      image: "/products/enginestores/Asset 43.webp",
+      category: "Instruments",
+      description:
+        "Marine-grade pressure gauge for accurate pressure monitoring",
+      whatsappMessage:
+        "Hi, I'm interested in Pressure Gauge. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Pressure Gauge\n\nDear ASP Global Marine Trading,\n\nI'm interested in Pressure Gauge. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 11,
+      name: "Temperature Sensor",
+      image: "/products/enginestores/Asset 42.webp",
+      category: "Instruments",
+      description: "Precision temperature sensor for engine monitoring systems",
+      whatsappMessage:
+        "Hi, I'm interested in Temperature Sensor. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Temperature Sensor\n\nDear ASP Global Marine Trading,\n\nI'm interested in Temperature Sensor. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 12,
+      name: "Marine Valves",
+      image: "/products/enginestores/Asset 41.webp",
+      category: "Valves",
+      description: "Heavy-duty marine valves for fluid control systems",
+      whatsappMessage:
+        "Hi, I'm interested in Marine Valves. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Marine Valves\n\nDear ASP Global Marine Trading,\n\nI'm interested in Marine Valves. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 13,
+      name: "Marine Hoses",
+      image: "/products/enginestores/Asset 40.webp",
+      category: "Hoses",
+      description: "High-pressure marine hoses for fluid transfer applications",
+      whatsappMessage:
+        "Hi, I'm interested in Marine Hoses. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Marine Hoses\n\nDear ASP Global Marine Trading,\n\nI'm interested in Marine Hoses. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 14,
+      name: "Hand Pump",
+      image: "/products/enginestores/Asset 39.webp",
+      category: "Pumps",
+      description: "Manual hand pump for emergency fluid transfer operations",
+      whatsappMessage:
+        "Hi, I'm interested in Hand Pump. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Hand Pump\n\nDear ASP Global Marine Trading,\n\nI'm interested in Hand Pump. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 15,
       name: "Gas/Smoke Detectors",
       image: "/products/enginestores/Asset%209.webp",
       category: "Gas/Smoke Detectors",
@@ -120,7 +188,7 @@ const EngineStores = () => {
         "Subject: Inquiry about Gas/Smoke Detectors\n\nDear ASP Global Marine Trading,\n\nI'm interested in Gas/Smoke Detectors. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 10,
+      id: 16,
       name: "Magnetic Drilling Machine",
       image: "/products/enginestores/Asset%2010.webp",
       category: "Drilling Machine",
@@ -131,7 +199,7 @@ const EngineStores = () => {
         "Subject: Inquiry about Magnetic Drilling Machine\n\nDear ASP Global Marine Trading,\n\nI'm interested in Magnetic Drilling Machine. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 11,
+      id: 17,
       name: "Adhesives",
       image: "/products/enginestores/Asset%2011.webp",
       category: "Adhesives",
@@ -143,7 +211,7 @@ const EngineStores = () => {
         "Subject: Inquiry about Adhesives\n\nDear ASP Global Marine Trading,\n\nI'm interested in Adhesives. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 12,
+      id: 18,
       name: "CRC",
       image: "/products/enginestores/Asset%2012.webp",
       category: "CRC",
@@ -155,7 +223,7 @@ const EngineStores = () => {
         "Subject: Inquiry about CRC\n\nDear ASP Global Marine Trading,\n\nI'm interested in CRC. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 13,
+      id: 19,
       name: "Explosion Proof Hand Lamp",
       image: "/products/enginestores/Asset%2013.webp",
       category: "Explossion Proof Hand Lamp",

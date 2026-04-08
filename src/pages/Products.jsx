@@ -95,7 +95,7 @@ const ProductsPage = () => {
     },
     {
       id: "hvac-compressors",
-      title: "HVAC Compressors",
+      title: "HVAC Compressors & Spares",
       description:
         "Marine HVAC systems, compressors, and climate control solutions for comfortable vessel environments.",
       image: "/cate5.webp",

@@ -96,105 +96,175 @@ const DeckStoresGeneral = () => {
       description: "Industrial rust remover for metal surface treatment",
       whatsappMessage:
         "Hi, I'm interested in Rust Remover. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Rust Remover\n\nDear ASP Global Marine Trading,\n\nI'm interested in Rust Remover. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 9,
+      name: "Oil Absorbent Kit",
+      image: "/products/deck/oil-absorbent-kit.webp",
+      category: "Safety Equipment",
+      description:
+        "Marine oil absorbent kit for spill cleanup and environmental protection",
+      whatsappMessage:
+        "Hi, I'm interested in Oil Absorbent Kit. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Oil Absorbent Kit\n\nDear ASP Global Marine Trading,\n\nI'm interested in Oil Absorbent Kit. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 10,
+      name: "Lifting Belt",
+      image: "/products/deck/lifting-belt.webp",
+      category: "Lifting Equipment",
+      description: "Heavy-duty lifting belt for safe cargo handling operations",
+      whatsappMessage:
+        "Hi, I'm interested in Lifting Belt. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Lifting Belt\n\nDear ASP Global Marine Trading,\n\nI'm interested in Lifting Belt. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 11,
+      name: "Chisel",
+      image: "/products/deck/chisel.webp",
+      category: "Tools",
+      description:
+        "Professional chisel for metal cutting and shaping applications",
+      whatsappMessage:
+        "Hi, I'm interested in Chisel. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Chisel\n\nDear ASP Global Marine Trading,\n\nI'm interested in Chisel. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 12,
+      name: "Duct Tape",
+      image: "/products/deck/duct-tape.webp",
+      category: "Adhesives",
+      description: "Heavy-duty marine duct tape for sealing and repairs",
+      whatsappMessage:
+        "Hi, I'm interested in Duct Tape. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Duct Tape\n\nDear ASP Global Marine Trading,\n\nI'm interested in Duct Tape. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 13,
       name: "Cotton Rags",
       image: "/products/deck/Asset%2058.webp",
       category: "Cotton Rags",
       description: "Heavy-duty cotton rags for deck cleaning",
       whatsappMessage:
         "Hi, I'm interested in Cotton Rags. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Cotton Rags\n\nDear ASP Global Marine Trading,\n\nI'm interested in Cotton Rags. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 10,
+      id: 14,
       name: "Angle & Paint Brushes",
       image: "/products/deck/Asset%2059.webp",
       category: "Angle & Paint Brushes",
       description: "Professional angle & paint brushes for deck maintenance",
       whatsappMessage:
         "Hi, I'm interested in Angle & Paint Brushes. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Angle & Paint Brushes\n\nDear ASP Global Marine Trading,\n\nI'm interested in Angle & Paint Brushes. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 11,
+      id: 15,
       name: "Needle Gun",
       image: "/products/deck/Asset%2061.webp",
       category: "Needle Gun",
       description: "Marine needle gun for precise coating application",
       whatsappMessage:
         "Hi, I'm interested in Needle Gun. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Needle Gun\n\nDear ASP Global Marine Trading,\n\nI'm interested in Needle Gun. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 12,
+      id: 16,
       name: "Chipping Hammer",
       image: "/products/deck/Asset%2062.webp",
       category: "Chipping Hammer",
       description: "Heavy-duty chipping hammer for surface preparation",
       whatsappMessage:
         "Hi, I'm interested in Chipping Hammer. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Chipping Hammer\n\nDear ASP Global Marine Trading,\n\nI'm interested in Chipping Hammer. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 13,
+      id: 17,
       name: "Ventilation Fan",
       image: "/products/deck/Asset%2063.webp",
       category: "Ventilation Fan",
       description: "Industrial ventilation fan for engine room cooling",
       whatsappMessage:
         "Hi, I'm interested in Ventilation Fan. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Ventilation Fan\n\nDear ASP Global Marine Trading,\n\nI'm interested in Ventilation Fan. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 14,
+      id: 18,
       name: "Wire Cup Brush",
       image: "/products/deck/Asset%2064.webp",
       category: "Wire Cup Brush",
       description: "Wire cup brush for metal cleaning & preparation",
       whatsappMessage:
         "Hi, I'm interested in Wire Cup Brush. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Wire Cup Brush\n\nDear ASP Global Marine Trading,\n\nI'm interested in Wire Cup Brush. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 15,
+      id: 19,
       name: "High Pressure Washing Machine",
       image: "/products/deck/Asset%2065.webp",
       category: "High Pressure Washing Machine ",
       description: "High-pressure washer for deck cleaning operations",
       whatsappMessage:
         "Hi, I'm interested in High Pressure Washing Machine. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about High Pressure Washing Machine\n\nDear ASP Global Marine Trading,\n\nI'm interested in High Pressure Washing Machine. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 16,
+      id: 20,
       name: "Walkie Talkie",
       image: "/products/deck/Asset%2066.webp",
       category: "Walkie Talkie",
       description: "Marine walkie talkie for vessel communication",
       whatsappMessage:
         "Hi, I'm interested in Walkie Talkie. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Walkie Talkie\n\nDear ASP Global Marine Trading,\n\nI'm interested in Walkie Talkie. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 17,
+      id: 21,
       name: "Search Light",
       image: "/products/deck/Asset%2067.webp",
       category: "Search Light",
       description: "Powerful search light for nighttime operations",
       whatsappMessage:
         "Hi, I'm interested in Search Light. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Search Light\n\nDear ASP Global Marine Trading,\n\nI'm interested in Search Light. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 18,
+      id: 22,
       name: "Grease Tape",
       image: "/products/deck/Asset%2068.webp",
       category: "Grease Tape",
       description: "Marine grease tape for lubrication & sealing",
       whatsappMessage:
         "Hi, I'm interested in Grease Tape. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Grease Tape\n\nDear ASP Global Marine Trading,\n\nI'm interested in Grease Tape. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 19,
+      id: 23,
       name: "Hoses",
       image: "/products/deck/Asset%2069.webp",
       category: "Hoses",
       description: "Flexible marine hoses for fluid transfer",
       whatsappMessage:
         "Hi, I'm interested in Hoses. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Hoses\n\nDear ASP Global Marine Trading,\n\nI'm interested in Hoses. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 20,
@@ -268,15 +338,15 @@ const DeckStoresGeneral = () => {
       whatsappMessage:
         "Hi, I'm interested in Paint. Please provide more information and pricing.",
     },
-    {
-      id: 28,
-      name: "Marine Communication Equipment",
-      image: "/products/deck/Asset%2080.webp",
-      category: "Communication",
-      description: "Advanced marine communication systems",
-      whatsappMessage:
-        "Hi, I'm interested in Marine Communication Equipment. Please provide more information and pricing.",
-    },
+    // {
+    //   id: 28,
+    //   name: "Marine Communication Equipment",
+    //   image: "/products/deck/Asset%2080.webp",
+    //   category: "Communication",
+    //   description: "Advanced marine communication systems",
+    //   whatsappMessage:
+    //     "Hi, I'm interested in Marine Communication Equipment. Please provide more information and pricing.",
+    // },
     {
       id: 29,
       name: "Wire Rope spelter socket",
@@ -367,15 +437,15 @@ const DeckStoresGeneral = () => {
       whatsappMessage:
         "Hi, I'm interested in Tarpaulin. Please provide more information and pricing.",
     },
-    {
-      id: 39,
-      name: "Marine Environmental Systems",
-      image: "/products/deck/Asset%2092.webp",
-      category: "Environmental Systems",
-      description: "Eco-friendly marine environmental systems",
-      whatsappMessage:
-        "Hi, I'm interested in Marine Environmental Systems. Please provide more information and pricing.",
-    },
+    // {
+    //   id: 39,
+    //   name: "Marine Environmental Systems",
+    //   image: "/products/deck/Asset%2092.webp",
+    //   category: "Environmental Systems",
+    //   description: "Eco-friendly marine environmental systems",
+    //   whatsappMessage:
+    //     "Hi, I'm interested in Marine Environmental Systems. Please provide more information and pricing.",
+    // },
     {
       id: 40,
       name: "Dusting Mop",

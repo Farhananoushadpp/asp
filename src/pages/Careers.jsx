@@ -45,7 +45,7 @@ const Careers = () => {
       <PageHero
         title="Join Our Team"
         subtitle="Build Your Career in Marine Industry"
-        badge="Career Opportunities"
+        badges={[{ text: "Career Opportunities" }]}
         backgroundImage="/ocean.webp"
       />
 
@@ -62,10 +62,10 @@ const Careers = () => {
               difference in global marine equipment supply.
             </p>
             <p>
-              Join our dynamic team in Dubai and contribute to supplying
-              high-quality marine equipment and spare parts to customers
-              worldwide. We believe in nurturing talent, fostering growth, and
-              providing a supportive work environment.
+              Join our dynamic team and contribute to supplying high-quality
+              marine equipment and spare parts to customers worldwide. We
+              believe in nurturing talent, fostering growth, and providing a
+              supportive work environment.
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ const Careers = () => {
                 opportunities for professional development.
               </p>
               <p>
-                Join our team of experts in Dubai and contribute to supplying
+                Join our team of experts and contribute to supplying
                 high-quality marine equipment and spare parts to customers
                 worldwide. We value talent, innovation, and dedication to
                 excellence.

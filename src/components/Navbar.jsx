@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -8,16 +8,52 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    // Prevent body scroll when menu is open
+    if (!isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
     setProductsDropdownOpen(false);
+    document.body.style.overflow = "unset";
   };
 
   const toggleProductsDropdown = () => {
     setProductsDropdownOpen(!productsDropdownOpen);
   };
+
+  // Handle escape key to close menu
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+    }
+  };
+
+  // Close menu when clicking outside
+  const handleOutsideClick = (e) => {
+    if (
+      isMenuOpen &&
+      !e.target.closest(".nav-menu") &&
+      !e.target.closest(".hamburger")
+    ) {
+      closeMenu();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
 
   const isActive = (path) => {
     if (path === "/products") {
@@ -30,17 +66,25 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="nav-container">
         <div className="logo-container">
-          <Link to="/" className="logo-link">
+          <Link
+            to="/"
+            className="logo-link"
+            aria-label="ASP Global Marine Trading LLC Home"
+          >
             <img
               src="/logo.webp"
               alt="ASP Global Marine Trading LLC"
               className="logo-image logo-first"
             />
           </Link>
-          <Link to="/" className="logo-link">
+          <Link
+            to="/"
+            className="logo-link"
+            aria-label="ASP Global Marine Trading LLC Home"
+          >
             <img
               src="/asp.webp"
               alt="ASP Global Marine Trading LLC"
@@ -54,48 +98,63 @@ const Navbar = () => {
           <p className="nav-group-name">Part of Ocean Serenity Group</p>
         </div> */}
 
-        <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
-          <ul className="nav-list">
-            <li>
+        <div
+          id="navigation-menu"
+          className={`nav-menu ${isMenuOpen ? "active" : ""}`}
+          role="menubar"
+        >
+          <ul className="nav-list" role="none">
+            <li role="none">
               <Link
                 to="/"
                 className={`nav-link ${isActive("/") ? "active" : ""}`}
                 onClick={closeMenu}
+                role="menuitem"
+                aria-current={isActive("/") ? "page" : undefined}
               >
                 <span className="nav-text">Home</span>
               </Link>
             </li>
-            <li>
+            <li role="none">
               <Link
                 to="/about"
                 className={`nav-link ${isActive("/about") ? "active" : ""}`}
                 onClick={closeMenu}
+                role="menuitem"
+                aria-current={isActive("/about") ? "page" : undefined}
               >
                 <span className="nav-text">About Us</span>
               </Link>
             </li>
             <li
               className={`nav-dropdown ${productsDropdownOpen ? "active" : ""}`}
+              role="none"
             >
               <button
                 className={`nav-link dropdown-toggle ${isActive("/products") ? "active" : ""}`}
                 onClick={toggleProductsDropdown}
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded={productsDropdownOpen}
+                aria-current={isActive("/products") ? "page" : undefined}
               >
                 <span className="nav-text">Products</span>
               </button>
-              <div className="dropdown-menu">
+              <div className="dropdown-menu" role="menu">
                 <Link
                   to="/products"
                   className="dropdown-item dropdown-main"
                   onClick={closeMenu}
+                  role="menuitem"
                 >
                   View All Products
                 </Link>
-                <div className="dropdown-divider"></div>
+                <div className="dropdown-divider" role="separator"></div>
                 <Link
                   to="/products/engine-stores"
                   className="dropdown-item"
                   onClick={closeMenu}
+                  role="menuitem"
                 >
                   Engine Stores
                 </Link>
@@ -132,7 +191,7 @@ const Navbar = () => {
                   className="dropdown-item"
                   onClick={closeMenu}
                 >
-                  Purifiers & Separators
+                  Purifiers & Separators & Spares
                 </Link>
                 <Link
                   to="/products/air-compressor-spares"
@@ -178,29 +237,35 @@ const Navbar = () => {
                 </Link>
               </div>
             </li>
-            <li>
+            <li role="none">
               <Link
                 to="/authorizations"
                 className={`nav-link ${isActive("/authorizations") ? "active" : ""}`}
                 onClick={closeMenu}
+                role="menuitem"
+                aria-current={isActive("/authorizations") ? "page" : undefined}
               >
                 <span className="nav-text">Authorizations</span>
               </Link>
             </li>
-            <li>
-              {/* <Link
+            <li role="none">
+              <Link
                 to="/certifications"
                 className={`nav-link ${isActive("/certifications") ? "active" : ""}`}
                 onClick={closeMenu}
+                role="menuitem"
+                aria-current={isActive("/certifications") ? "page" : undefined}
               >
                 <span className="nav-text">Certifications</span>
-              </Link> */}
+              </Link>
             </li>
-            <li>
+            <li role="none">
               <Link
                 to="/contact"
                 className={`nav-link ${isActive("/contact") ? "active" : ""}`}
                 onClick={closeMenu}
+                role="menuitem"
+                aria-current={isActive("/contact") ? "page" : undefined}
               >
                 <span className="nav-text">Contact Us</span>
               </Link>
@@ -214,14 +279,17 @@ const Navbar = () => {
           </a>
         </div> */}
 
-        <div
+        <button
           className={`hamburger ${isMenuOpen ? "active" : ""}`}
           onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="navigation-menu"
         >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
-        </div>
+        </button>
       </div>
     </nav>
   );

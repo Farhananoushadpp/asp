@@ -34,7 +34,7 @@ const LSAFFA = () => {
     },
     {
       id: 3,
-      name: "Fire Nose Couplings",
+      name: "Fire Coupling Seal",
       image: "/products/lsa&ffa/Asset%2047.webp",
       category: "Fire Coupling Seal",
       description: "Watertight fire coupling seals for hose connections",
@@ -94,27 +94,80 @@ const LSAFFA = () => {
       description: "Portable aluminum gangway for ship-to-shore transfers",
       whatsappMessage:
         "Hi, I'm interested in Aluminum Gangway. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Aluminum Gangway\n\nDear ASP Global Marine Trading,\n\nI'm interested in Aluminum Gangway. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 10,
+      name: "Fire Hoses",
+      image: "/products/lsa&ffa/Asset 78 (2).webp",
+      category: "Fire Fighting",
+      description:
+        "Marine-grade fire hoses for emergency fire suppression operations",
+      whatsappMessage:
+        "Hi, I'm interested in Fire Hoses. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Fire Hoses\n\nDear ASP Global Marine Trading,\n\nI'm interested in Fire Hoses. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 11,
+      name: "Foam Life Jacket",
+      image: "/products/lsa&ffa/Asset 75 (2).webp",
+      category: "Life Saving",
+      description: "Marine foam life jacket for personal flotation and safety",
+      whatsappMessage:
+        "Hi, I'm interested in Foam Life Jacket. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Foam Life Jacket\n\nDear ASP Global Marine Trading,\n\nI'm interested in Foam Life Jacket. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 12,
+      name: "First Aid Kit",
+      image: "/products/lsa&ffa/Asset 58 (2).webp",
+      category: "Medical",
+      description:
+        "Comprehensive marine first aid kit for emergency medical response",
+      whatsappMessage:
+        "Hi, I'm interested in First Aid Kit. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about First Aid Kit\n\nDear ASP Global Marine Trading,\n\nI'm interested in First Aid Kit. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 13,
+      name: "Gas Detector",
+      image: "/products/lsa&ffa/Asset 61 (2).webp",
+      category: "Safety Equipment",
+      description:
+        "Marine gas detector for hazardous gas monitoring and detection",
+      whatsappMessage:
+        "Hi, I'm interested in Gas Detector. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Gas Detector\n\nDear ASP Global Marine Trading,\n\nI'm interested in Gas Detector. Please provide more information and pricing.\n\nThank you.",
+    },
+    {
+      id: 14,
       name: "Pilot Ladder",
       image: "/products/lsa&ffa/Asset%2054.webp",
       category: "Pilot Ladder",
       description: "Marine pilot ladder for safe boarding operations",
       whatsappMessage:
         "Hi, I'm interested in Pilot Ladder. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Pilot Ladder\n\nDear ASP Global Marine Trading,\n\nI'm interested in Pilot Ladder. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 11,
+      id: 15,
       name: "Breathing Apparatus",
       image: "/products/lsa&ffa/Asset%2055.webp",
       category: "Safety Equipment",
       description: "Professional respiratory protection equipment for safety",
       whatsappMessage:
         "Hi, I'm interested in Breathing Apparatus. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Breathing Apparatus\n\nDear ASP Global Marine Trading,\n\nI'm interested in Breathing Apparatus. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 12,
+      id: 16,
       name: "Oxygen Resuscitator",
       image: "/products/lsa&ffa/Asset%2056.webp",
       category: "Fire Safety",
@@ -122,63 +175,77 @@ const LSAFFA = () => {
         "Portable oxygen resuscitator for emergency breathing support",
       whatsappMessage:
         "Hi, I'm interested in Oxygen Resuscitator. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Oxygen Resuscitator\n\nDear ASP Global Marine Trading,\n\nI'm interested in Oxygen Resuscitator. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 13,
+      id: 17,
       name: "Water Proof Torch",
       image: "/products/lsa&ffa/Asset%2058.webp",
       category: "Water Proof Torch",
       description: "Marine waterproof torch for wet environment operations",
       whatsappMessage:
         "Hi, I'm interested in Water Proof Torch. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Water Proof Torch\n\nDear ASP Global Marine Trading,\n\nI'm interested in Water Proof Torch. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 14,
+      id: 18,
       name: "Binoculars",
       image: "/products/lsa&ffa/Asset%2059.webp",
       category: "Binoculars",
       description: "7x50 marine binoculars for navigation & lookout duties",
       whatsappMessage:
         "Hi, I'm interested in Binoculars. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Binoculars\n\nDear ASP Global Marine Trading,\n\nI'm interested in Binoculars. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 15,
+      id: 19,
       name: "Fire Axe",
       image: "/products/lsa&ffa/Asset%2061.webp",
       category: "Fire Axe",
       description: "Insulated fire axe for emergency forcible entry operations",
       whatsappMessage:
         "Hi, I'm interested in Fire Axe. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Fire Axe\n\nDear ASP Global Marine Trading,\n\nI'm interested in Fire Axe. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 16,
+      id: 20,
       name: "Safety Helmet",
       image: "/products/lsa&ffa/Asset%2062.webp",
       category: "Safety Helmet",
       description: "Impact-resistant safety helmet for worker protection",
       whatsappMessage:
         "Hi, I'm interested in Safety Helmet. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Safety Helmet\n\nDear ASP Global Marine Trading,\n\nI'm interested in Safety Helmet. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 17,
+      id: 21,
       name: "Towing Stretcher",
       image: "/products/lsa&ffa/Asset%2063.webp",
       category: "Towing Stretcher",
       description: "Collapsible towing stretcher for casualty transport",
       whatsappMessage:
         "Hi, I'm interested in Towing Stretcher. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Towing Stretcher\n\nDear ASP Global Marine Trading,\n\nI'm interested in Towing Stretcher. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 18,
+      id: 22,
       name: "Pyrotechnics",
       image: "/products/lsa&ffa/Asset%2064.webp",
       category: "Pyrotechnics",
       description: "Marine pyrotechnics for visual distress signaling",
       whatsappMessage:
         "Hi, I'm interested in Pyrotechnics. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about Pyrotechnics\n\nDear ASP Global Marine Trading,\n\nI'm interested in Pyrotechnics. Please provide more information and pricing.\n\nThank you.",
     },
     {
-      id: 19,
+      id: 23,
       name: "HRU",
       image: "/products/lsa&ffa/Asset%2065.webp",
       category: "HRU",
@@ -186,6 +253,8 @@ const LSAFFA = () => {
         "Hydrostatic release unit for automatic life raft deployment",
       whatsappMessage:
         "Hi, I'm interested in HRU. Please provide more information and pricing.",
+      emailMessage:
+        "Subject: Inquiry about HRU\n\nDear ASP Global Marine Trading,\n\nI'm interested in HRU. Please provide more information and pricing.\n\nThank you.",
     },
     {
       id: 20,

@@ -17,6 +17,9 @@ import {
   Building,
   MessageSquare,
   AlertCircle,
+  Upload,
+  FileText,
+  Paperclip,
 } from "lucide-react";
 import "../styles/components/Contact.css";
 
@@ -29,6 +32,9 @@ const Contact = () => {
     subject: "",
     message: "",
     urgencyLevel: "normal",
+    tradingList: null,
+    vatCertificate: null,
+    enquiryAttachment: null,
   });
   const [showNFC, setShowNFC] = useState(false);
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -40,20 +46,31 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const formDataObj = new FormData();
-      formDataObj.append("name", formData.name);
-      formDataObj.append("email", formData.email);
-      formDataObj.append("company", formData.company || "Not provided");
-      formDataObj.append("phone", formData.phone || "Not provided");
-      formDataObj.append("subject", formData.subject);
-      formDataObj.append("message", formData.message);
-      formDataObj.append("urgency", formData.urgencyLevel);
-
-      // Netlify Forms - automatically handles submission
-      // Netlify will send to sales@aspglobalmarine.com based on your Netlify dashboard settings
-      const response = await fetch("/", {
+      // Formspree endpoint
+      const response = await fetch("https://formspree.io/f/xjgpgjey", {
         method: "POST",
-        body: formDataObj,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || "Not provided",
+          phone: formData.phone || "Not provided",
+          subject: formData.subject,
+          message: formData.message,
+          urgency: formData.urgencyLevel,
+          tradingList: formData.tradingList
+            ? formData.tradingList.name
+            : "No file uploaded",
+          vatCertificate: formData.vatCertificate
+            ? formData.vatCertificate.name
+            : "No file uploaded",
+          enquiryAttachment: formData.enquiryAttachment
+            ? formData.enquiryAttachment.name
+            : "No file uploaded",
+        }),
       });
 
       if (response.ok) {
@@ -68,14 +85,20 @@ const Contact = () => {
           subject: "",
           message: "",
           urgencyLevel: "normal",
+          tradingList: null,
+          vatCertificate: null,
+          enquiryAttachment: null,
         });
       } else {
-        throw new Error("Form submission failed");
+        const errorData = await response.json();
+        alert(
+          `Error sending message: ${errorData.error || "Please try again."}`,
+        );
       }
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Form submission error:", error);
       alert(
-        "Failed to send message. Please contact us directly at sales@aspglobalmarine.com",
+        "Error sending message. Please try again or contact us directly at saes@aspglobalmarine.com",
       );
     } finally {
       setIsSubmitting(false);
@@ -83,11 +106,18 @@ const Contact = () => {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    const { name, value, type, files } = e.target;
+    if (type === "file") {
+      setFormData({
+        ...formData,
+        [name]: files[0] || null,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const showPersonNFC = (person) => {
@@ -193,7 +223,7 @@ const Contact = () => {
                 <div className="qr-code-card">
                   <div className="qr-code-image">
                     <img
-                      src="/qr-arun.svg"
+                      src="/arun.png"
                       alt="Arun V.V QR Code"
                       onError={(e) => {
                         // Fallback placeholder QR code
@@ -204,15 +234,15 @@ const Contact = () => {
                   </div>
                   <div className="qr-code-info">
                     <h5>Arun V.V</h5>
-                    <p>Senior Marine Consultant</p>
-                    <small>Scan for direct contact</small>
+                    <p>Advisor-Technical & Commercial</p>
+                    {/* <small>Scan for direct contact</small> */}
                   </div>
                 </div>
 
                 <div className="qr-code-card">
                   <div className="qr-code-image">
                     <img
-                      src="/qr-yoosaf.svg"
+                      src="/yoosaf.png"
                       alt="Yoosaf N QR Code"
                       onError={(e) => {
                         // Fallback placeholder QR code
@@ -223,8 +253,8 @@ const Contact = () => {
                   </div>
                   <div className="qr-code-info">
                     <h5>Yoosaf N</h5>
-                    <p>Marine Equipment Specialist</p>
-                    <small>Scan for direct contact</small>
+                    <p>Operation Manager</p>
+                    {/* <small>Scan for direct contact</small> */}
                   </div>
                 </div>
               </div>
@@ -265,7 +295,6 @@ const Contact = () => {
               className="contact-form-std"
               name="contact"
               method="POST"
-              data-netlify="true"
             >
               <div className="form-row-std">
                 <div className="form-group-std">
@@ -362,6 +391,86 @@ const Contact = () => {
                     Critical - Immediate response
                   </option>
                 </select>
+              </div>
+
+              {/* File Upload Fields */}
+              <div className="form-row-std">
+                <div className="form-group-std">
+                  <label>
+                    <FileText size={16} /> Trade License
+                  </label>
+                  <div className="file-upload-wrapper">
+                    <input
+                      type="file"
+                      name="tradingList"
+                      onChange={handleChange}
+                      accept=".pdf,.doc,.docx,.xls,.xlsx"
+                      className="file-input"
+                      id="tradingList"
+                    />
+                    <label htmlFor="tradingList" className="file-input-label">
+                      <Upload size={16} />
+                      <span className="file-text">
+                        {formData.tradingList
+                          ? formData.tradingList.name
+                          : "Choose file (PDF, DOC, XLS)"}
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div className="form-group-std">
+                  <label>
+                    <FileText size={16} /> VAT Certificate
+                  </label>
+                  <div className="file-upload-wrapper">
+                    <input
+                      type="file"
+                      name="vatCertificate"
+                      onChange={handleChange}
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      className="file-input"
+                      id="vatCertificate"
+                    />
+                    <label
+                      htmlFor="vatCertificate"
+                      className="file-input-label"
+                    >
+                      <Upload size={16} />
+                      <span className="file-text">
+                        {formData.vatCertificate
+                          ? formData.vatCertificate.name
+                          : "Choose file (PDF, JPG, PNG)"}
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="form-group-std">
+                <label>
+                  <Paperclip size={16} /> Enquiry Attachment
+                </label>
+                <div className="file-upload-wrapper">
+                  <input
+                    type="file"
+                    name="enquiryAttachment"
+                    onChange={handleChange}
+                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip,.rar"
+                    className="file-input"
+                    id="enquiryAttachment"
+                  />
+                  <label
+                    htmlFor="enquiryAttachment"
+                    className="file-input-label"
+                  >
+                    <Upload size={16} />
+                    <span className="file-text">
+                      {formData.enquiryAttachment
+                        ? formData.enquiryAttachment.name
+                        : "Choose file (PDF, DOC, Images, ZIP)"}
+                    </span>
+                  </label>
+                </div>
               </div>
 
               <button
