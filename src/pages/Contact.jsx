@@ -11,7 +11,7 @@ import Contact from "../components/Contact.jsx";
 
 const ContactPage = () => {
   return (
-    <div className="container-full contact-page">
+    <div className="contact-page">
       {/* Hero Section - Using PageHero Component */}
       <PageHero
         title="Get In Touch"
@@ -26,7 +26,9 @@ const ContactPage = () => {
         backgroundImage="/contact.jpg"
       />
 
-      <Contact />
+      <div className="contact-container">
+        <Contact />
+      </div>
     </div>
   );
 };

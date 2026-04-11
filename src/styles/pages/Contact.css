@@ -8,6 +8,17 @@
   min-height: calc(100vh - 160px);
 }
 
+/* Contact Page Hero - Use Universal PageHero Alignment */
+.contact-page .page-hero,
+.contact-page section.page-hero,
+.contact-page div.page-hero,
+.contact-page main .page-hero {
+  /* Height Optimization - Match PageHero */
+  height: 50vh !important;
+  min-height: 350px !important;
+  padding: 40px 0 60px 0 !important;
+}
+
 .page-header {
   text-align: center;
   padding: var(--spacing-4xl) 0;

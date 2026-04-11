@@ -15,6 +15,7 @@
 /* Component Styles */
 @import "./components/Navbar.css";
 @import "./components/Hero.css";
+@import "./components/PageHero.css";
 @import "./components/About.css";
 @import "./components/Products.css";
 @import "./components/Strengths.css";
@@ -45,6 +46,43 @@
   border: none;
   outline: none;
   background: transparent;
+}
+
+/* Ultra-Aggressive PageHero Height Override - Force Apply */
+.page-hero {
+  height: 50vh !important;
+  min-height: 350px !important;
+  padding: 40px 0 60px 0 !important;
+}
+
+section.page-hero,
+div.page-hero,
+main .page-hero {
+  height: 50vh !important;
+  min-height: 350px !important;
+  padding: 40px 0 60px 0 !important;
+}
+
+@media (max-width: 768px) {
+  .page-hero,
+  section.page-hero,
+  div.page-hero,
+  main .page-hero {
+    height: 45vh !important;
+    min-height: 300px !important;
+    padding: 30px 0 50px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero,
+  section.page-hero,
+  div.page-hero,
+  main .page-hero {
+    height: 40vh !important;
+    min-height: 250px !important;
+    padding: 20px 0 40px 0 !important;
+  }
 }
 
 /* WhatsApp Floating Button - Mobile Optimized */

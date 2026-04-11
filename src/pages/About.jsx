@@ -206,16 +206,6 @@ const About = () => {
                   </div>
                 ))}
               </div>
-              {/* Carousel Indicators */}
-              <div className="carousel-dots">
-                {cardImages.slice(0, 4).map((_, index) => (
-                  <span
-                    key={index}
-                    className={`carousel-dot ${index === activeCard % 4 ? "active" : ""}`}
-                    onClick={() => setActiveCard(index)}
-                  />
-                ))}
-              </div>
             </div>
             <div className="about-content-text">
               <h3 className="about-subtitle">Marine Excellence Since 2021</h3>

@@ -233,7 +233,6 @@ pre code {
 .text-4xl {
   font-size: var(--font-size-4xl);
 }
-
 /* Text Weights */
 .font-light {
   font-weight: 300;
@@ -274,7 +273,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+menu 
 /* Enhanced heading hierarchy with Montserrat */
 h1,
 h2,
